@@ -84,13 +84,48 @@
             <Label x:Name="energyLevel"  Grid.Column="1" HorizontalAlignment="Right" Margin="10,15,0,0" VerticalAlignment="Top" Height="38" Width="63" RenderTransformOrigin="-0.032,0.667" Content="100%" FontWeight="Bold" FontSize="14" Foreground="Black"/>
             <Label x:Name="hungryLevel" Grid.Column="2" HorizontalAlignment="Right" Margin="10,15,0,0" VerticalAlignment="Top" Height="35" Width="63" RenderTransformOrigin="-0.032,0.667" Content="100%" FontSize="14" FontWeight="Bold" Foreground="Black"/>
             <Label x:Name="funnyLevel" Grid.Column="4" HorizontalAlignment="Right" Margin="10,15,0,0" VerticalAlignment="Top" Height="37" Width="63" RenderTransformOrigin="-0.032,0.667" Content="100%" Foreground="Black" FontWeight="Bold" FontSize="14"/>
-            <Viewbox Grid.ColumnSpan="5" Margin="5,5,4.999,5" Grid.Row="2">
-                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Simplified Arabic Fixed" FontWeight="Bold" TextAlignment="Center">
-                    <Run Language="eses" Text="¡Hola Mundo"/></TextBlock>
-            </Viewbox>
-            <Viewbox Grid.ColumnSpan="3" Grid.Column="1" Margin="100,100,100,10" Grid.Row="1">
-                <Ellipse Fill="#FFF4F4F5" Height="278.333" Stroke="Black" Width="300"/>
-            </Viewbox>
+            <Ellipse Fill="Black" Margin="86.512,297.174,44.645,87.819" Grid.Column="2" Grid.Row="1" />
+
+            <Image Grid.Column="2" Margin="86.512,308.375,38.778,135.763" Grid.Row="1" Source="PicsArt_02-26-09.34.49.png" Stretch="Fill"/>
+            <Ellipse Grid.Column="2" Fill="Black" HorizontalAlignment="Left" Height="110.801" Margin="119.479,197.574,0,0" Grid.Row="1" VerticalAlignment="Top" Width="99.2"/>
+            <Ellipse Grid.ColumnSpan="2" Grid.Column="1" Fill="White" HorizontalAlignment="Left" Height="92.266" Margin="124.38,240.841,0,0" Grid.Row="1" VerticalAlignment="Top" Width="110.4"/>
+            <Path Grid.Column="1" Data="M292.118,300.2 L291.50806,316.2071 290.51762,342.19989" Fill="White" HorizontalAlignment="Left" Height="42" Margin="172.413,248.174,0,0" Grid.Row="1" Stretch="Fill" VerticalAlignment="Top" Width="1.6"/>
+            <Path Grid.Column="2" Data="M300.118,309" Fill="White" HorizontalAlignment="Left" Height="0" Margin="0.312,256.974,0,0" Grid.Row="1" Stretch="Fill" VerticalAlignment="Top" Width="0"/>
+            <Path Grid.Column="1" Data="M292.118,304.6" Fill="White" HorizontalAlignment="Left" Height="0" Margin="174.013,252.574,0,0" Grid.Row="1" Stretch="Fill" VerticalAlignment="Top" Width="0"/>
+            <Path Grid.Column="2" Data="M285.318,305 C276.79185,311.18564 275.718,310.33506 275.718,323.4 275.718,329.2257 273.59896,338.30607 279.718,342.2 282.35311,343.87689 285.59906,344.47652 288.118,346.2 291.01914,348.18499 292.34618,352.50315 295.718,353.8 303.36053,356.73943 308.21421,356.2 316.518,356.2 316.518,355.93333 316.518,355.66667 316.518,355.4 314.98491,355.14449 315.47277,355.32898 314.118,354.2 315.30954,353.90211 316.01839,353.8&#xD;&#xA;317.318,353.8 317.318,348.31727 312.118,344.85568 312.118,339 312.118,342.2 312.118,345.4 312.118,348.6 311.36322,347.62956 311.01134,347.27 310.118,346.6 310.118,342.7323 307.718,340.77027 307.718,336.6 300.52927,336.6 299.95912,331.88225 296.118,324.2 296.58365,326.99389 297.03078,327.22819 291.318,325.8 287.70254,324.89613 288.17247,322.33495 286.118,319.4 281.44968,312.73097&#xD;&#xA;282.62737,313.0719 285.318,305 z" Fill="White" HorizontalAlignment="Left" Height="46.039" Margin="133.357,210.935,0,0" Grid.Row="1" Stretch="Fill" VerticalAlignment="Top" Width="30.355"/>
+            <Path Grid.Column="2" Data="M285.318,305 C276.79185,311.18564 275.718,310.33506 275.718,323.4 275.718,329.2257 273.59896,338.30607 279.718,342.2 282.35311,343.87689 285.59906,344.47652 288.118,346.2 291.01914,348.18499 292.34618,352.50315 295.718,353.8 303.36053,356.73943 308.21421,356.2 316.518,356.2 316.518,355.93333 316.518,355.66667 316.518,355.4 314.98491,355.14449 315.47277,355.32898 314.118,354.2 315.30954,353.90211 316.01839,353.8&#xA;317.318,353.8 317.318,348.31727 312.118,344.85568 312.118,339 312.118,342.2 312.118,345.4 312.118,348.6 311.36322,347.62956 311.01134,347.27 310.118,346.6 310.118,342.7323 307.718,340.77027 307.718,336.6 300.52927,336.6 299.95912,331.88225 296.118,324.2 296.58365,326.99389 297.03078,327.22819 291.318,325.8 287.70254,324.89613 288.17247,322.33495 286.118,319.4 281.44968,312.73097&#xA;282.62737,313.0719 285.318,305 z" Fill="White" HorizontalAlignment="Left" Height="46.039" Margin="174.512,211.335,0,0" Grid.Row="1" Stretch="Fill" VerticalAlignment="Top" Width="30.355" RenderTransformOrigin="0.5,0.5">
+                <Path.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform ScaleY="1" ScaleX="-1"/>
+                        <SkewTransform AngleY="0" AngleX="0"/>
+                        <RotateTransform Angle="0"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Path.RenderTransform>
+            </Path>
+            <Path Grid.Column="1" Data="M271.88467,311.2 C273.28485,317.50083 274.73014,323.44151 276.15133,329.6 278.36988,339.21369 276.74901,338.83217 286.55133,343.73333 294.57637,351.75837 300.576,350.95466 312.95133,340.53333 318.5725,335.79972 312.62535,315.00878 317.48467,312.8 313.65474,313.43832 315.40107,312.38413 314.018,316.53333 313.27813,318.75295 311.03708,318.90746 308.95133,320 305.18986,321.9703 299.49798,321.76556 295.08467,322.13333 290.60472,322.50666 286.51058,321.86667&#xD;&#xA;282.018,321.86667 275.31633,321.86667 275.80779,319.26813 271.618,314.4" Fill="Red" HorizontalAlignment="Left" Height="55.881" Margin="66.855,257.415,0,0" Grid.Row="1" Stretch="Fill" VerticalAlignment="Top" Width="58.918" RenderTransformOrigin="0.5,0.5">
+                <Path.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="6.73"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Path.RenderTransform>
+            </Path>
+            <Path Grid.Column="2" Data="M107.16255,0 C56.521035,163.7852 7.4775326,26.058172 0.12357539,3.5386581 L0,3.1585004 0.21180642,3.4648704 C10.629336,18.457426 57.960397,77.863357 107.16255,1.3001682E-05 L107.15763,2.5041604E-05 z" Fill="Red" HorizontalAlignment="Left" Height="61.305" Margin="129.65,242.07,0,0" Grid.Row="1" Stretch="Fill" VerticalAlignment="Top" Width="76.762" RenderTransformOrigin="0.496,0.43"/>
+            <Path Grid.Column="2" Data="M270.75133,335.4 C274.40477,334.22147 278.83894,328.64958 276.08467,339.66667 274.78669,344.85856 277.59047,345.73634 277.95133,350.06667 278.12911,350.06667 278.30689,350.06667 278.48467,350.06667 277.26347,349.21183 276.84886,349.47365 276.08467,348.2 270.32481,345.32007 271.17785,343.72194 271.818,335.4" Fill="White" HorizontalAlignment="Left" Height="14.454" Margin="160.279,272.974,0,0" Grid.Row="1" Stretch="Fill" VerticalAlignment="Top" Width="3.433"/>
+            <Path Grid.Column="2" Data="M270.75133,335.4 C274.40477,334.22147 278.83894,328.64958 276.08467,339.66667 274.78669,344.85856 277.59047,345.73634 277.95133,350.06667 278.12911,350.06667 278.30689,350.06667 278.48467,350.06667 277.26347,349.21183 276.84886,349.47365 276.08467,348.2 270.32481,345.32007 271.17785,343.72194 271.818,335.4" Fill="White" HorizontalAlignment="Left" Height="14.454" Margin="172.712,272.974,0,0" Grid.Row="1" Stretch="Fill" VerticalAlignment="Top" Width="3.433" RenderTransformOrigin="0.5,0.5">
+                <Path.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform ScaleY="1" ScaleX="-1"/>
+                        <SkewTransform AngleY="0" AngleX="0"/>
+                        <RotateTransform Angle="0"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Path.RenderTransform>
+            </Path>
+
         </Grid>
     </Grid>
 </Window>

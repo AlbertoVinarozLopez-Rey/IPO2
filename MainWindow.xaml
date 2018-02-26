@@ -49,7 +49,7 @@
                         <ImageBrush ImageSource="venom-apetito.jpg" Stretch="UniformToFill"/>
                     </Button.Background> Comer
                 </Button>
-                <Button x:Name="BDiversion" Style="{StaticResource estiloBorde}" Height="97"  Click="BDiversion_Click"  Width="100" Margin="10,10,8.182,10">
+                <Button x:Name="BDiversion" Style="{StaticResource estiloBorde}" Height="97"  Click="BDiversion_Click"  Width="100" Margin="3,10,15.4,10">
                     <Button.Background>
                         <ImageBrush ImageSource="venom-diversion.jpg" Stretch="UniformToFill"/>
                     </Button.Background> Jugar
@@ -75,8 +75,8 @@
                 <ColumnDefinition Width="0.2*"></ColumnDefinition>
                 <ColumnDefinition Width="0.13*"></ColumnDefinition>
             </Grid.ColumnDefinitions>
-            <ProgressBar x:Name="PBenergia"  Margin="10,10,10,10"  Height="24" Grid.Column="2" Background="#FFFBFAFA" BorderBrush="#FF0C0B0B" Value="100"/>
-            <ProgressBar x:Name="PBapetito"  Margin="10,10,10,10" Height="24" Grid.ColumnSpan="2" Grid.Column="0" Background="#FFFBFAFA" BorderBrush="#FF0C0B0B" Foreground="#FFF1153D" Value="100"/>
+            <ProgressBar x:Name="PBapetito"  Margin="10,10,10,10"  Height="24" Grid.Column="2" Background="#FFFBFAFA" BorderBrush="#FF0C0B0B" Value="100"/>
+            <ProgressBar x:Name="PBenergia"  Margin="10,10,10,10" Height="24" Grid.ColumnSpan="2" Grid.Column="0" Background="#FFFBFAFA" BorderBrush="#FF0C0B0B" Foreground="#FFF1153D" Value="100"/>
             <ProgressBar x:Name="PBdiversion"  Margin="10,10,10,10" Height="24" Grid.ColumnSpan="2" Grid.Column="3" Background="#FFFBFAFA" BorderBrush="#FF0C0B0B" Foreground="#FF2F7BE8" Value="100" />
             <Label x:Name="LEnergia" Content="Energía" HorizontalAlignment="Left" VerticalAlignment="Top" FontWeight="Bold" FontFamily="Calibri" FontSize="22" Margin="10,10,0,0" Height="31" Width="279.273"  Grid.ColumnSpan="2" />
             <Label x:Name="LApetito" Content="Apetito" HorizontalAlignment="Left" VerticalAlignment="Top" FontWeight="Bold" FontFamily="Calibri" FontSize="22" Margin="10,10,0,0" Grid.Column="2" Width="279.272"  />

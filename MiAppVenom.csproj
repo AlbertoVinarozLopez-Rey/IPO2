@@ -103,8 +103,5 @@
   <ItemGroup>
     <Resource Include="Presentacion\Recursos\venom-background.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Resource Include="venom-energia.png" />
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

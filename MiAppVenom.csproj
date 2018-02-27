@@ -62,7 +62,7 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Avatar.cs" />
+    <Compile Include="Dominio\Avatar.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -95,19 +95,16 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="venom-apetito.jpg" />
+    <Resource Include="Presentacion\Recursos\logo-venom.png" />
+    <Resource Include="Presentacion\Recursos\venom-diversion.png" />
+    <Resource Include="Presentacion\Recursos\venom-apetito.png" />
+    <Resource Include="Presentacion\Recursos\venom-energia.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="venom-diversion.jpg" />
+    <Resource Include="Presentacion\Recursos\venom-background.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="venom-energia.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="venom-background.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="PicsArt_02-26-09.34.49.png" />
+    <Resource Include="venom-energia.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

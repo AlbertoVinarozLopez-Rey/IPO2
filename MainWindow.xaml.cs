@@ -9,6 +9,7 @@ using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
+using System.Windows.Media.Animation;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
@@ -26,11 +27,13 @@ namespace MiAppVenom
         DispatcherTimer temporizador;
         int intervalo;
 
+        public object StoryBoard { get; private set; }
+
         public MainWindow()
         {
             InitializeComponent();
             miAvatar = new Avatar(100, 100, 100);
-            intervalo = 2000;
+            intervalo = 9000;
             temporizador = new DispatcherTimer
             {
                 Interval = TimeSpan.FromMilliseconds(intervalo)
@@ -54,6 +57,29 @@ namespace MiAppVenom
             this.energyLevel.Content = this.PBenergia.Value + "%";
             this.funnyLevel.Content = this.PBdiversion.Value + "%";
             this.hungryLevel.Content = this.PBapetito.Value + "%";
+            controlCansado();
+            controlHambre();
+        }
+
+        private void controlHambre()
+        {
+            if (miAvatar.Apetito <= 25)
+            {
+
+                Storyboard sbHambre = (Storyboard)this.FindResource("animHambreKey");
+                sbHambre.Begin();
+            }
+
+        }
+
+        private void controlCansado()
+        {
+            if (miAvatar.Energia <= 25) { 
+
+            Storyboard sbCansado = (Storyboard)this.FindResource("animCansadoKey");
+            sbCansado.Begin();
+        }
+            
         }
 
         private int aleatorizar(int max)

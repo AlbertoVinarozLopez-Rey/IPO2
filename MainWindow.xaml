@@ -48,15 +48,6 @@
             <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="telaraniaIzq">
                 <EasingDoubleKeyFrame KeyTime="0:0:0.9" Value="-19.741"/>
             </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="path">
-                <EasingDoubleKeyFrame KeyTime="0:0:0.9" Value="114"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="path">
-                <EasingDoubleKeyFrame KeyTime="0:0:0.9" Value="22.6"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="path">
-                <EasingDoubleKeyFrame KeyTime="0:0:0.9" Value="0.638"/>
-            </DoubleAnimationUsingKeyFrames>
         </Storyboard>
         <Storyboard x:Key="animSoñar" AutoReverse="True">
             <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="z1">
@@ -200,7 +191,7 @@
                 <EasingDoubleKeyFrame KeyTime="0:0:3" Value="1.151"/>
             </DoubleAnimationUsingKeyFrames>
         </Storyboard>
-        <Storyboard x:Key="animDespertarBueno" AutoReverse="False">
+        <Storyboard x:Key="animDespertar" AutoReverse="False">
             <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)" Storyboard.TargetName="cabeza">
                 <EasingDoubleKeyFrame KeyTime="0" Value="-15.989"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:2" Value="0.086"/>
@@ -419,24 +410,372 @@
             </DoubleAnimationUsingKeyFrames>
 
         </Storyboard>
-        <Storyboard x:Key="animJugarYoyo">
+        <Storyboard x:Key="animJugarYoyo" AutoReverse="True">
             <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)" Storyboard.TargetName="telaraniaIzq">
                 <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="-38.367"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.3" Value="12.184"/>
             </DoubleAnimationUsingKeyFrames>
             <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="telaraniaIzq">
                 <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="7.585"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.3" Value="-4.015"/>
             </DoubleAnimationUsingKeyFrames>
             <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="telaraniaIzq">
                 <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="6.259"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.3" Value="0.659"/>
             </DoubleAnimationUsingKeyFrames>
             <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="brazoIzq">
                 <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="-1.6"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.3" Value="1.2"/>
             </DoubleAnimationUsingKeyFrames>
             <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="brazoIzq">
                 <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="-27.2"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.3" Value="2"/>
             </DoubleAnimationUsingKeyFrames>
             <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)" Storyboard.TargetName="brazoIzq">
                 <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="-23.411"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.3" Value="0.392"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="cir_yoyo">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="cir_yoyo">
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.5" Value="{x:Static Visibility.Visible}"/>
+            </ObjectAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="hilo">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="hilo">
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.5" Value="{x:Static Visibility.Visible}"/>
+            </ObjectAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="cir_yoyo">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="-6"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.3" Value="-53.2"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3" Value="-53.6"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:4.5" Value="-54"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:6" Value="-53.6"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="cir_yoyo">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="16.8"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.3" Value="25.6"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3" Value="68"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:4.5" Value="28.8"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:6" Value="69.2"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="hilo">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="16.8"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.3" Value="16.788"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3" Value="38.209"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:4.5" Value="15.815"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:6" Value="38.217"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="hilo">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="-4.4"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.3" Value="-47.193"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3" Value="-47.704"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:4.5" Value="-47.779"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:6" Value="-47.704"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)" Storyboard.TargetName="hilo">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="-51.959"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.3" Value="2.155"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3" Value="-0.192"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="hilo">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.3" Value="5.424"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3" Value="15.724"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:4.5" Value="7.193"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:6" Value="15.727"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="animTelaraña" AutoReverse="True">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)" Storyboard.TargetName="brazoDer">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="34.592"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.7" Value="51.108"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="77.028"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.1" Value="77.028"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="132.983"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.9" Value="155.572"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.2" Value="180.852"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="brazoDer">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="-1.137"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="5.158"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.7" Value="20.758"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="47.158"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.1" Value="46.558"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.3" Value="76.958"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="95.358"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="103.358"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.9" Value="119.758"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.2" Value="130.558"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="brazoDer">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="-17.71"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="-42.274"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.7" Value="-61.074"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="-78.274"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.1" Value="-81.874"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.3" Value="-84.674"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="-76.807"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="-69.874"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.9" Value="-47.074"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.2" Value="-16.274"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="brazoDer">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="-1.035"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="brazoDer">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="0.983"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="telaraniaDer">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="-16.815"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="-29.215"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.7" Value="-38.815"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="-51.615"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.1" Value="-53.215"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.3" Value="-52.815"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="-55.215"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="-51.215"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.9" Value="-46.815"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.2" Value="-35.215"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="telaraniaDer">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="-0.941"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="-1.341"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.7" Value="-9.741"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="-26.941"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.1" Value="-30.541"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.3" Value="-40.541"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="-58.941"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="-67.741"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.9" Value="-74.941"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.2" Value="-82.541"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)" Storyboard.TargetName="telaraniaDer">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="-12.828"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="28.448"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.7" Value="28.448"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="64.48"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.1" Value="64.48"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.3" Value="99.357"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="99.357"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="115.631"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.9" Value="140.316"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.2" Value="181.998"/>
+            </DoubleAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="tela">
+                <DiscreteObjectKeyFrame KeyTime="0:0:2.2" Value="{x:Static Visibility.Visible}"/>
+            </ObjectAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="tela">
+                <EasingDoubleKeyFrame KeyTime="0:0:2.2" Value="0.134"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3" Value="0.606"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:5" Value="0.714"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="tela">
+                <EasingDoubleKeyFrame KeyTime="0:0:2.2" Value="0.129"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3" Value="0.614"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:5" Value="6.036"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="tela">
+                <EasingDoubleKeyFrame KeyTime="0:0:2.2" Value="-106.667"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3" Value="-105.867"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:5" Value="-106.401"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="tela">
+                <EasingDoubleKeyFrame KeyTime="0:0:2.2" Value="-80.4"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3" Value="-116.933"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:5" Value="-500.933"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="tela">
+                <EasingDoubleKeyFrame KeyTime="0:0:2.2" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="cvVenom">
+                <EasingDoubleKeyFrame KeyTime="0:0:5" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:6" Value="-856.4"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:6.5" Value="-856.4"/>
+            </DoubleAnimationUsingKeyFrames>
+
+
+
+
+
+        </Storyboard>
+        <Storyboard x:Key="animComer">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="boca">
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="1.22"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3" Value="0.974"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="boca">
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="-0.248"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3" Value="0.029"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="boca">
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="4.917"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3" Value="-0.57"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="dientes">
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="1.249"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3" Value="1.026"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="dientes">
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="-0.098"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3" Value="-0.161"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="dientes">
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="4.987"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3" Value="-0.327"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)" Storyboard.TargetName="dientes">
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="11.588"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="dientes">
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="1.008"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3" Value="0.981"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="lengua">
+                <EasingDoubleKeyFrame KeyTime="0:0:1.7" Value="1.261"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="lengua">
+                <EasingDoubleKeyFrame KeyTime="0:0:1.7" Value="1.712"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.9" Value="0.93"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="lengua">
+                <EasingDoubleKeyFrame KeyTime="0:0:1.7" Value="1.067"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.9" Value="6.432"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="lengua">
+                <EasingDoubleKeyFrame KeyTime="0:0:1.7" Value="19.734"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.9" Value="-0.898"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)" Storyboard.TargetName="lengua">
+                <EasingDoubleKeyFrame KeyTime="0:0:1.7" Value="14.577"/>
+            </DoubleAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="saliva1">
+                <DiscreteObjectKeyFrame KeyTime="0:0:1.7" Value="{x:Static Visibility.Visible}"/>
+            </ObjectAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="saliva1">
+                <EasingDoubleKeyFrame KeyTime="0:0:1.7" Value="-365.333"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2" Value="-365.333"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.4" Value="-363.2"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="saliva1">
+                <EasingDoubleKeyFrame KeyTime="0:0:1.7" Value="-240.667"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2" Value="-240.667"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.4" Value="5.333"/>
+            </DoubleAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="saliva2">
+                <DiscreteObjectKeyFrame KeyTime="0:0:1.7" Value="{x:Static Visibility.Visible}"/>
+            </ObjectAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="saliva2">
+                <EasingDoubleKeyFrame KeyTime="0:0:1.7" Value="-366.933"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2" Value="-366.933"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.4" Value="-364.8"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="saliva2">
+                <EasingDoubleKeyFrame KeyTime="0:0:1.7" Value="-229.2"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2" Value="-229.2"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.4" Value="16.8"/>
+            </DoubleAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="saliva3">
+                <DiscreteObjectKeyFrame KeyTime="0:0:1.7" Value="{x:Static Visibility.Visible}"/>
+            </ObjectAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="saliva3">
+                <EasingDoubleKeyFrame KeyTime="0:0:1.7" Value="-340.267"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2" Value="-340.267"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.4" Value="-338.134"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="saliva3">
+                <EasingDoubleKeyFrame KeyTime="0:0:1.7" Value="-245.867"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2" Value="-245.867"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.4" Value="0.133"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="saliva1">
+                <EasingDoubleKeyFrame KeyTime="0:0:1.7" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3" Value="0.6"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.4" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="saliva2">
+                <EasingDoubleKeyFrame KeyTime="0:0:1.7" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3" Value="0.6"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.4" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="saliva3">
+                <EasingDoubleKeyFrame KeyTime="0:0:1.7" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3" Value="0.6"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.4" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+
+        </Storyboard>
+        <Storyboard x:Key="animSaciado" AutoReverse="True">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)" Storyboard.TargetName="brazoIzq">
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="-45.706"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="-58.318"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2" Value="-37.814"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="brazoIzq">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="-2.4"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="-16"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="-28"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2" Value="-10"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="brazoIzq">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="-28.6"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="-54.8"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="-66.4"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2" Value="-45.6"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)" Storyboard.TargetName="telaraniaIzq">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="-19.716"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="-44.37"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="telaraniaIzq">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="9.185"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="26.385"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="34.785"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2" Value="18.785"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="telaraniaIzq">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="-1.341"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="-6.141"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="-11.741"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2" Value="-0.941"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)" Storyboard.TargetName="brazoDer">
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="42.416"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="52.814"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2" Value="34.358"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="brazoDer">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="1.8"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="12.4"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="22.8"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2" Value="7.6"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="brazoDer">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="-28.2"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="-57.2"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="-66"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2" Value="-42.4"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)" Storyboard.TargetName="telaraniaDer">
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="41.634"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="telaraniaDer">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="-20.815"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="-30.415"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="-42.015"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2" Value="-26.415"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="telaraniaDer">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="-1.741"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="-12.541"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="-11.741"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2" Value="-0.541"/>
             </DoubleAnimationUsingKeyFrames>
         </Storyboard>
 
@@ -447,10 +786,13 @@
             <BeginStoryboard Storyboard="{StaticResource animHambreKey}"/>
             <BeginStoryboard Storyboard="{StaticResource animDiversion}"/>
             <BeginStoryboard x:Name="animSoñar_BeginStoryboard" Storyboard="{StaticResource animSoñar}"/>
-            <BeginStoryboard Storyboard="{StaticResource animDespertar}"/>
+            <BeginStoryboard x:Name="animDespertar_BeginStoryboard" Storyboard="{StaticResource animDespertar}"/>
             <BeginStoryboard Storyboard="{StaticResource animParpadear}"/>
             <BeginStoryboard Storyboard="{StaticResource animDormir}"/>
             <BeginStoryboard Storyboard="{StaticResource animJugarYoyo}"/>
+            <BeginStoryboard Storyboard="{StaticResource animTelaraña}"/>
+            <BeginStoryboard Storyboard="{StaticResource animComer}"/>
+            <BeginStoryboard Storyboard="{StaticResource animSaciado}"/>
         </EventTrigger>
     </Window.Triggers>
 
@@ -517,23 +859,15 @@
             <Label x:Name="hungryLevel" Grid.Column="2" HorizontalAlignment="Right" Margin="10,15,0,0" VerticalAlignment="Top" Height="35" Width="63" RenderTransformOrigin="-0.032,0.667" Content="100%" FontSize="14" FontWeight="Bold" Foreground="Black"/>
             <Label x:Name="funnyLevel" Grid.Column="4" HorizontalAlignment="Right" Margin="10,15,0,0" VerticalAlignment="Top" Height="37" Width="63" RenderTransformOrigin="-0.032,0.667" Content="100%" Foreground="Black" FontWeight="Bold" FontSize="14"/>
             <Viewbox x:Name="vbVenom" Grid.Column="2" Margin="55.098,192.441,51.782,4.609" Grid.Row="1" Grid.RowSpan="2" Stretch="Fill">
-                <Canvas x:Name="cvVenom" Height="430.324" Width="192.926">
-                    <Path x:Name="brazoIzq" HorizontalAlignment="Left" VerticalAlignment="Top" Data="M5.1751814,70.435661 L5.2052455,70.508705 C5.3010292,70.764107 5.3509598,71.020515 5.3509608,71.25161 5.2969017,70.927315 5.2399025,70.704033 5.1944924,70.516975 z M17.679184,0 L19.337257,0.3826828 C22.592135,1.0487289 25.962219,1.3985062 29.413998,1.3985062 32.002834,1.3985062 34.545715,1.2017593 37.028507,0.82239532 L38.561237,0.54867554 38.308258,0.86647797 C37.709717,1.586731 37.020447,2.1928787 35.720402,2.1210632 35.84811,8.923996 37.074131,11.821991 34.588589,18.443069 32.584198,23.782417 31.030741,29.751221 27.929054,34.502609 25.905153,37.602913 25.364347,40.200287 25.24741,42.25441 L25.243855,42.345619 25.247263,42.345367 25.242161,42.389076 25.224003,42.854309 C25.185526,44.604889 25.404594,45.91214 25.109043,46.746727 L25.073422,46.824989 25.018648,47.694046 C24.912632,48.966393 25.39884,49.684265 27.018553,50.494209 27.141453,50.555679 27.309792,50.608978 27.511501,50.650208 L27.710785,50.684967 28.005989,50.985573 C28.983206,51.967125 29.962595,52.898125 30.78709,54.134872 32.688923,54.895607 33.75272,56.066185 34.787041,58.134819 39.999157,60.219658 43.283436,64.511192 36.920349,73.60128 35.570942,71.577171 36.001267,66.654716 34.520386,65.068031 33.890156,64.392815 31.490637,63.879799 29.50914,63.40374 L29.32206,63.358467 29.325687,63.383446 C29.331177,63.442039 29.334003,63.503639 29.334009,63.568352 29.231762,63.585396 29.032887,63.568932 28.82242,63.542427 L28.66354,63.520638 28.634749,63.598763 C28.515772,63.886925 28.276463,64.185738 27.880201,64.492531 L27.84549,64.518333 27.83255,64.562096 C27.50412,65.609077 26.963131,65.794579 25.800873,67.168159 25.676485,67.315163 24.940207,68.66906 24.448706,68.758064 L24.428495,68.759193 24.39007,68.986061 C24.100832,70.723335 23.835838,72.511665 23.608177,74.268715 L23.481358,75.277229 23.517214,75.430489 C24.019344,77.600853 24.181768,79.056389 22.950876,81.517464 22.933292,81.447136 22.918205,81.376701 22.905319,81.306175 L22.903889,81.296822 22.879921,81.68644 C22.819597,82.721031 22.787186,83.679771 22.787182,84.534447 22.422487,83.440376 22.054577,82.39576 21.693352,81.381264 L21.664503,81.300377 21.625065,81.336739 C21.527897,81.408577 21.39588,81.42318 21.217428,81.384926 20.337984,81.196434 20.90793,80.66317 20.417549,80.118172 19.401032,78.988441 20.082867,77.74073 19.551008,76.251198 19.394863,75.813881 19.388104,75.323128 19.429905,74.821022 L19.443689,74.676628 19.34516,74.329857 C18.733091,72.121773 18.275303,69.831093 18.084665,67.23748 L18.073309,67.060585 18.068653,67.055443 C17.830833,66.810616 17.559139,66.601051 17.288872,66.454216 L17.213268,66.415321 17.166452,66.553322 C16.667864,68.093834 16.390648,69.757607 16.295507,71.483696 L16.27861,71.883354 16.368376,72.306129 C17.038853,75.329964 18.014799,78.418098 17.508709,81.485176 L17.476805,81.657143 17.509838,81.785149 C17.734463,82.628136 17.98398,83.458 18.253908,84.267784 17.274031,82.308067 15.547793,78.270851 13.98729,77.334557 13.987294,75.532097 13.724799,73.671776 13.396679,71.777534 L13.276547,71.100838 13.196682,71.046516 C12.963664,70.87281 12.754225,70.650703 12.467121,70.268089 12.004695,69.651817 11.415568,68.907677 11.885737,67.966759 L11.915665,67.910835 11.890661,67.822243 C11.625178,66.862434 11.218974,65.01783 11.759118,64.478996 L11.759519,64.478661 11.734979,64.461494 C11.350493,64.19976 10.971589,63.989052 10.616978,63.918144 10.651935,63.86573 10.691289,63.805016 10.734621,63.738441 L10.799549,63.639076 10.764723,63.6343 10.711326,63.721138 C10.598191,63.91967 10.498412,64.125145 10.410873,64.337074 L10.355907,64.477989 10.474587,64.933174 C10.569755,65.306419 10.65152,65.68029 10.66769,66.068352 10.679315,66.347389 10.679518,66.572411 10.663389,66.775368 L10.656117,66.8498 10.850997,67.434273 10.755377,67.529884 10.701689,67.240166 10.644334,66.941689 10.615676,67.123772 10.57523,67.291542 10.578893,67.372993 C10.582423,67.474342 10.584246,67.583534 10.584251,67.700951 L10.755377,67.529884 10.809687,67.82296 C11.255263,70.303215 11.397241,72.227043 10.748275,74.823006 L10.743298,74.842201 10.750391,74.892082 C10.924098,76.160286 11.053981,77.431206 11.053981,78.667854 10.876216,78.667854 10.698422,78.667854 10.520661,78.667854 9.1955424,75.355034 7.3206864,73.422295 7.3206873,69.06797 7.3206864,68.942024 7.3199349,68.81739 7.3185382,68.693977 L7.3139449,68.426491 7.3159252,68.690926 C7.3186112,69.072975 7.3206864,69.464714 7.3206873,69.867989 7.2404671,69.386665 7.1241761,68.900581 6.9811349,68.4105 L6.8785162,68.077904 6.7704111,67.986977 C5.7103119,67.079079 5.2998352,66.311821 5.0007482,64.068367 4.9878731,63.971794 5.0081253,63.856499 5.0573993,63.738792 L5.1061798,63.640984 4.7877856,62.897758 C4.6451226,62.558617 4.5057488,62.219009 4.3724308,61.879135 L4.212915,61.462196 4.1337543,61.704399 C3.8312335,62.715439 3.8519969,63.691139 4.1508265,65.185066 4.4570656,66.716087 5.6006928,67.394676 5.2176142,69.118324 5.0658989,69.800941 5.0883446,70.058235 5.1687465,70.408562 L5.1751814,70.435661 5.1423045,70.355797 C4.9143868,69.847923 4.5063363,69.365181 3.9508064,69.118324 3.1744895,68.773338 3.0681928,68.435204 3.0364185,67.921501 L3.0310593,67.811104 2.9366477,67.697792 2.9198394,67.698845 C2.8947156,67.70002 2.87145,67.700661 2.8503242,67.700661 L2.8302708,67.570137 2.7173603,67.434639 C2.7173627,67.345161 2.7182784,67.254112 2.7199848,67.161644 L2.7210114,67.122353 2.7213972,67.123039 2.7848282,67.2342 2.7441473,66.781776 2.7372165,66.630196 2.7273593,66.880165 2.7210114,67.122353 2.6344529,66.968849 C1.3344783,64.652382 -1.0193444,59.966179 0.48609088,59.37793 L0.56360434,59.353905 0.47591488,59.06617 C-0.001365907,57.377548 -0.026172881,55.296326 2.9095359,54.283478 L2.9486392,54.270576 3.0234614,54.157257 C3.5783933,53.414352 4.7621766,52.932289 5.5189009,52.160767 L5.6168709,52.055229 5.6836691,51.918236 C5.8546753,51.576248 5.94627,51.400009 6.0909849,51.2724 L6.0951376,51.269043 6.0966425,51.265213 C6.1359215,51.150223 6.1654168,51.029289 6.1836505,50.901649 6.4658165,48.926476 7.0708428,48.40873 8.0536614,47.975853 L8.1304179,47.943253 8.1751357,47.718979 C8.390462,46.686172 8.6856661,45.772476 9.4006443,44.700249 L9.4526005,44.796616 9.5089932,44.598099 9.4909068,44.311539 9.4451619,43.883339 9.4941893,43.601875 C9.4137774,43.588432 9.5751925,43.557503 9.8374739,43.494568 L9.8483019,43.491882 9.9510336,43.157089 C10.550553,41.241013 11.150073,39.324768 11.150071,37.552719 11.150073,35.440399 11.256919,33.171127 11.498124,30.942909 L11.631784,29.838867 11.27045,28.694427 C10.750197,26.903305 10.43487,25.100761 10.752099,23.593361 11.365674,20.677956 11.333972,17.076126 11.81875,13.993431 12.520389,9.5316772 15.776042,5.2133408 17.618727,0.85916901 L17.807451,0.3873291 17.775148,0.30230713 z" Height="84.534" RenderTransformOrigin="2.30761249380008,0.117507941373549" Stretch="Fill" Canvas.Top="176.135" Width="40.421">
-                        <Path.RenderTransform>
-                            <TransformGroup>
-                                <ScaleTransform/>
-                                <SkewTransform/>
-                                <RotateTransform/>
-                                <TranslateTransform/>
-                            </TransformGroup>
-                        </Path.RenderTransform>
-                        <Path.Fill>
-                            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                                <GradientStop Color="Black" Offset="0"/>
-                                <GradientStop Color="Black" Offset="1"/>
-                            </LinearGradientBrush>
-                        </Path.Fill>
-                    </Path>
+                <Canvas x:Name="cvVenom" Height="430.324" Width="192.926" RenderTransformOrigin="0.5,0.5">
+                    <Canvas.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Canvas.RenderTransform>
                     <Path x:Name="cuello" Data="M51.266327,0.80099138 L60.332996,13.468186 C56.586124,15.111614 51.298336,13.969537 48.332996,16.934999 46.695347,15.297282 46.268906,15.369554 44.332996,14.401555 44.513611,14.085468 44.69381,13.787093 44.873173,13.504621 L44.940304,13.400689 44.53376,13.416597 C42.679089,13.480346 40.801239,13.470589 38.96603,13.799954 38.113148,13.953025 37.067223,14.672327 36.232635,14.533246 35.019264,14.331029 33.844856,13.291228 33.432568,12.466713 32.811752,11.225196 34.190033,11.967457 34.899273,11.400114 36.54903,10.080422 39.325909,9.450054 41.299427,9.2002609 42.269119,9.2884147 43.432499,8.9336183 44.632839,8.9336183 44.632839,6.2436373 47.777386,4.0820716 49.499626,2.9340179 50.182854,2.4785726 50.812405,2.65626&#xA;51.223434,2.9803458 L51.314716,3.0588582 51.321888,2.8644023 C51.338474,2.2503891 51.321068,1.5674067 51.266327,0.80099138 z M6.9333191,0 L11.093179,5.811795 11.147025,5.7894137 C12.20133,5.3760593 13.577668,5.5245674 14.716352,6.4004567 15.809194,7.2410829 16.764561,7.3245476 17.982878,7.9336994 19.164764,8.5246313 19.183434,8.798724 20.649429,9.0002907 L22.049368,10.400202 C22.124184,10.448998 22.470358,10.496095 22.582674,10.533533 22.871872,10.919109 23.11795,11.561708 23.58263,11.933444 24.391203,12.580292 24.557747,13.066562 22.982656,14.466613 21.768549,15.545794 19.980829,15.28958 18.182869,15.13324 16.628458,14.998072 14.866014,14.463365 13.405791,13.461729 L13.347082,13.420202 12.961282,13.485181 C9.7543755,13.996304 6.223999,13.909909 3.9999998,16.134001 2.3623352,14.496298 1.9359131,14.568567 0,13.60057 3.8530884,6.8573702 7.5172424,8.175082 6.9333191,0 z" Fill="Black" HorizontalAlignment="Left" Height="16.935" Stretch="Fill" VerticalAlignment="Top" Width="60.333" Canvas.Left="63.481" Canvas.Top="103.666"/>
                     <Path x:Name="cuerpo" HorizontalAlignment="Left" Height="149.202" VerticalAlignment="Top" Canvas.Top="116.267" Canvas.Left="16.663" Data="M6.0099325,148.86607 L6.1276192,148.86607 6.1245631,149.20198 z M1.5572068,148.86607 L1.5693757,148.86607 1.5912968,148.93532 z M111.27214,118.18065 L111.27214,118.75861 111.28883,118.73406 C111.35895,118.58234 111.3678,118.4231 111.31205,118.25716 z M41.954296,118.18064 L41.914375,118.25715 C41.858631,118.4231 41.867481,118.58233 41.937611,118.73406 L41.954296,118.75861 z M47.215149,0 L76.271217,0 76.955208,0 106.52238,0 106.57616,0.14149203 C106.66885,0.34955012 106.77531,0.54351159 106.85089,0.73241594 107.13234,0.83472689 107.4022,1.0018553 107.65102,1.1990025 L107.87645,1.1179533 108.1446,1.3068822 C109.69039,2.5596403 110.87018,5.4591239 111.6048,7.8365482 L111.62146,7.8921517 112.40903,8.049703 C115.94024,8.8396533 118.86603,10.420594 120.63561,12.449495 L120.93594,12.814723 121.14805,12.855727 C125.29321,13.669624 135.06044,16.114794 136.10851,19.536887 L136.13396,19.641507 136.34863,19.764473 C137.2939,20.338284 138.14531,21.019821 138.87903,21.788452 L139.19293,22.133787 139.19527,22.135218 C140.28151,22.896954 140.86757,24.225663 141.29088,25.716891 L141.30991,25.790598 141.39915,26.062317 C141.50439,26.415924 141.58992,26.776377 141.65466,27.142744 L141.66954,27.243922 141.78842,27.765999 C142.40222,30.531882 142.97549,33.243294 145.40396,33.627816 146.8589,39.127873 151.73338,43.927155 152.98416,49.87024 153.36368,51.673622 153.29002,53.006649 152.81429,54.477974 L152.71629,54.760529 152.74507,55.380932 C152.81726,57.066384 152.84981,58.929695 152.76913,60.638607 L152.70088,61.666054 129.57201,61.666054 C129.28081,61.666054 129.0034,61.725067 128.75108,61.831787 L128.59248,61.917874 128.55272,61.86879 C127.36369,60.547089 125.64453,60.254387 124.14359,59.335755 L124.01534,59.249173 123.5241,60.166142 C121.7752,63.412884 120.10293,66.437912 119.22885,68.398072 116.57069,74.358918 114.92664,82.668915 113.6292,88.875862 111.56539,98.749115 111.71614,109.25401 111.47549,119.39935 L111.27214,119.41097 111.27214,122.12801 76.271217,122.12801 41.954296,122.12799 41.954296,119.41097 41.750946,119.39935 C41.510292,109.25401 41.661034,98.749115 39.597221,88.875862 38.299797,82.668915 36.655731,74.358918 33.997581,68.398072 33.123497,66.437912 31.451231,63.41288 29.702331,60.166138 L29.211084,59.249169 29.082853,59.335751 C27.081592,60.560593 24.692385,60.672673 23.689112,63.594773 23.220535,63.787083 22.859297,64.091828 22.540377,64.43853 L22.517317,64.46605 0.95784252,64.46605 0.86089282,64.082909 C0.35008915,61.824715 0.35502919,58.330468 0.48134559,55.380932 L0.51013648,54.760525 0.41214275,54.47797 C-0.063590945,53.006646 -0.13725448,51.673619 0.2422616,49.870236 1.4930443,43.927155 6.3675279,39.127873 7.8224649,33.627816 10.250936,33.243294 10.824211,30.53188 11.438,27.765997 L11.556894,27.243916 11.57176,27.142739 C11.636511,26.776375 11.72204,26.415922 11.827277,26.062311 L11.916524,25.790596 11.935556,25.716891 C12.358851,24.225661 12.944917,22.896954 14.031152,22.135218 L14.033499,22.133786 14.347392,21.788452 C15.08111,21.01982 15.932531,20.338284 16.877809,19.764468 L17.09248,19.641507 17.117918,19.536887 C18.165996,16.11479 27.933222,13.669624 32.078384,12.855727 L32.290478,12.814723 32.590816,12.449495 C34.360409,10.420594 37.286194,8.8396533 40.817413,8.049703 L41.60498,7.8921517 41.621643,7.8365482 C42.356251,5.4591235 43.53603,2.55964 45.081825,1.3068822 L45.383675,1.0942059 45.601856,1.0176768 C46.131084,0.83838107 46.745392,0.65138557 46.98452,0.3326247 47.186302,0.18132152 47.087665,0.37031104 47.184502,0.066046461 z" Stretch="Fill" Width="153.226">
                         <Path.Fill>
@@ -610,33 +944,7 @@
                             </TransformGroup>
                         </Path.RenderTransform>
                     </Path>
-                    <Path x:Name="piernas" HorizontalAlignment="Left" VerticalAlignment="Top" Data="M61.000605,0.00012965183 C63.081667,0.0048298816 65.089842,0.13781846 66.977602,0.4542952 L67.506357,0.55473884 67.743124,0.51998849 C77.800058,-0.75551574 90.85594,2.6319649 100.2287,2.9205392 106.4662,16.561287 111.02218,28.279543 112.97848,44.90346 114.88551,61.108778 113.61596,73.218916 113.61596,88.917815 113.61596,91.160895 113.74211,92.908659 113.77148,94.270476 L113.77489,94.587012 113.88448,94.845015 C114.00455,95.172529 114.1113,95.514159 114.20421,95.870314 115.95109,102.56647 111.31164,110.06195 110.68699,117.55736 109.26198,134.65732 104.38569,147.85997 105.31926,163.36848 L105.34991,163.79101 105.39174,163.85087 C106.11534,164.98714 106.60734,166.69487 107.15965,169.27939 108.69722,176.47427 117.35029,176.57802 121.51718,181.45276 135.23304,185.73157 132.68867,184.88904 132.68867,193.72482 132.2121,193.72482 132.36563,195.32579 131.88907,195.32579 127.66763,203.55659 111.24882,195.50546 104.4909,194.62701 102.19166,189.24739 94.191595,192.2276 92.191717,186.32768 90.191862,181.52772 90.87335,178.56219 90.482832,174.60278 90.271017,172.45521 90.57588,169.97566&#xA;90.775175,167.60245 L90.834951,166.83163 90.526205,166.8298 90.485922,166.17471 C90.616743,164.82464 90.612242,163.3855 90.506117,161.8921 L90.457289,161.30934 90.434057,161.24013 90.451567,161.24104 90.430517,160.98982 C89.674322,153.11853 86.352446,143.96846 85.202284,138.43512 82.125814,123.63434 78.603998,128.92866 78.603998,114.07004 78.603998,105.82039 79.744944,102.72089 80.156042,95.614241 L80.190554,94.962721 80.04637,94.771574 C79.553793,94.094557 79.04093,93.270125 78.487848,92.263006 72.976263,82.22682 71.701967,64.626433 69.92111,52.015299 L69.780905,51.045241 70.292192,50.841841 C70.91115,50.565699 71.492216,50.215643 72.025057,49.802393 L72.183695,49.673109 69.74703,50.810866 69.780905,51.045241 69.66099,51.092947 C68.803564,51.393847 67.884901,51.556998 66.929499,51.556998 65.643377,51.556998 64.423841,51.261347 63.330637,50.732008 L62.814417,50.453738 61.391436,49.4317 61.512213,49.540198 C61.880251,49.855181 62.27424,50.138724 62.690351,50.386862 L62.814417,50.453738 63.863001,51.206869 C61.985868,63.879061 58.159353,81.709608 52.46998,92.069525 L52.380907,92.23184 52.592913,92.2965 C52.780783,101.94043 54.271002,104.64187 54.271002,114.07004 54.271002,128.92866 50.749184,123.63435 47.672716,138.43512 46.522551,143.96846 43.200678,153.11853 42.444479,160.98984 L42.423431,161.24106 42.440945,161.24013 42.417707,161.30934 42.368877,161.8921 C42.262758,163.3855 42.258257,164.82464 42.389074,166.17473 L42.348791,166.8298 42.040047,166.83165 42.099825,167.60245 C42.299116,169.97568 42.603979,172.45523 42.392164,174.6028 42.001646,178.56219 42.683138,181.52772 40.683285,186.32768 38.683407,192.22761 30.683343,189.2474 28.384105,194.62701 21.626176,195.50546 5.2073698,203.55661 0.9859314,195.32579 0.5093689,195.32579 0.66290665,193.72484 0.18632317,193.72484 0.18632317,184.88904 -2.3580379,185.73157 11.35782,181.45276 15.524711,176.57803 24.177779,176.47429 25.715349,169.27939 26.267662,166.69488 26.759657,164.98715&#xA;27.483258,163.85087 L27.52509,163.79101 27.555739,163.36848 C28.489308,147.85998 23.613019,134.65732 22.188007,117.55736 21.563354,110.06195 16.923914,102.56647 18.670786,95.870314 18.856612,95.157995 19.097809,94.503821 19.390097,93.904349 L19.833093,93.105658 19.846202,92.772131 C19.893684,91.635496 19.958044,90.286009 19.958044,88.683813 19.958044,72.984915 18.688496,60.874785 20.595537,44.669459 22.551831,28.045534 27.107811,16.327282 33.345315,2.6865325 41.27611,2.442364 51.843927,-0.020563553 61.000605,0.00012965183 z" Height="198.998" RenderTransformOrigin="0.374133604635443,0.248346695255381" Stretch="Fill" Width="132.875" Canvas.Left="60.051" Canvas.Top="231.326">
-                        <Path.Fill>
-                            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                                <GradientStop Color="Black" Offset="0"/>
-                                <GradientStop Color="Black" Offset="1"/>
-                            </LinearGradientBrush>
-                        </Path.Fill>
-                        <Path.RenderTransform>
-                            <TransformGroup>
-                                <ScaleTransform ScaleY="1" ScaleX="-1"/>
-                                <SkewTransform AngleY="0" AngleX="0"/>
-                                <RotateTransform Angle="0"/>
-                                <TranslateTransform/>
-                            </TransformGroup>
-                        </Path.RenderTransform>
-                    </Path>
                     <Path Data="M428.018,278.7" Fill="White" HorizontalAlignment="Left" Height="0" Stretch="Fill" VerticalAlignment="Top" Width="0" Canvas.Left="53.114" Canvas.Top="34.233"/>
-                    <Rectangle x:Name="telaraniaDerecha_Copy" Fill="White" HorizontalAlignment="Left" Height="9.431" VerticalAlignment="Top" Width="12.27" RenderTransformOrigin="0.5,0.5" RadiusY="2.109" RadiusX="2.109" Canvas.Left="164.799" Canvas.Top="230.521">
-                        <Rectangle.RenderTransform>
-                            <TransformGroup>
-                                <ScaleTransform ScaleY="1" ScaleX="-1"/>
-                                <SkewTransform AngleY="0" AngleX="0"/>
-                                <RotateTransform Angle="12.828"/>
-                                <TranslateTransform/>
-                            </TransformGroup>
-                        </Rectangle.RenderTransform>
-                    </Rectangle>
                     <Path x:Name="brazoDer" HorizontalAlignment="Left" VerticalAlignment="Top" Data="M5.1751814,70.435661 L5.2052455,70.508705 C5.3010292,70.764107 5.3509598,71.020515 5.3509608,71.25161 5.2969017,70.927315 5.2399025,70.704033 5.1944924,70.516975 z M17.679184,0 L19.337257,0.3826828 C22.592135,1.0487289 25.962219,1.3985062 29.413998,1.3985062 32.002834,1.3985062 34.545715,1.2017593 37.028507,0.82239532 L38.561237,0.54867554 38.308258,0.86647797 C37.709717,1.586731 37.020447,2.1928787 35.720402,2.1210632 35.84811,8.923996 37.074131,11.821991 34.588589,18.443069 32.584198,23.782417 31.030741,29.751221 27.929054,34.502609 25.905153,37.602913 25.364347,40.200287 25.24741,42.25441 L25.243855,42.345619 25.247263,42.345367 25.242161,42.389076 25.224003,42.854309 C25.185526,44.604889 25.404594,45.91214 25.109043,46.746727 L25.073422,46.824989 25.018648,47.694046 C24.912632,48.966393 25.39884,49.684265 27.018553,50.494209 27.141453,50.555679 27.309792,50.608978 27.511501,50.650208 L27.710785,50.684967 28.005989,50.985573 C28.983206,51.967125 29.962595,52.898125 30.78709,54.134872 32.688923,54.895607 33.75272,56.066185 34.787041,58.134819 39.999157,60.219658 43.283436,64.511192 36.920349,73.60128 35.570942,71.577171 36.001267,66.654716 34.520386,65.068031 33.890156,64.392815 31.490637,63.879799 29.50914,63.40374 L29.32206,63.358467 29.325687,63.383446 C29.331177,63.442039 29.334003,63.503639 29.334009,63.568352 29.231762,63.585396 29.032887,63.568932 28.82242,63.542427 L28.66354,63.520638 28.634749,63.598763 C28.515772,63.886925 28.276463,64.185738 27.880201,64.492531 L27.84549,64.518333 27.83255,64.562096 C27.50412,65.609077 26.963131,65.794579 25.800873,67.168159 25.676485,67.315163 24.940207,68.66906 24.448706,68.758064 L24.428495,68.759193 24.39007,68.986061 C24.100832,70.723335 23.835838,72.511665 23.608177,74.268715 L23.481358,75.277229 23.517214,75.430489 C24.019344,77.600853 24.181768,79.056389 22.950876,81.517464 22.933292,81.447136 22.918205,81.376701 22.905319,81.306175 L22.903889,81.296822 22.879921,81.68644 C22.819597,82.721031 22.787186,83.679771 22.787182,84.534447 22.422487,83.440376 22.054577,82.39576 21.693352,81.381264 L21.664503,81.300377 21.625065,81.336739 C21.527897,81.408577 21.39588,81.42318 21.217428,81.384926 20.337984,81.196434 20.90793,80.66317 20.417549,80.118172 19.401032,78.988441 20.082867,77.74073 19.551008,76.251198 19.394863,75.813881 19.388104,75.323128 19.429905,74.821022 L19.443689,74.676628 19.34516,74.329857 C18.733091,72.121773 18.275303,69.831093 18.084665,67.23748 L18.073309,67.060585 18.068653,67.055443 C17.830833,66.810616 17.559139,66.601051 17.288872,66.454216 L17.213268,66.415321 17.166452,66.553322 C16.667864,68.093834 16.390648,69.757607 16.295507,71.483696 L16.27861,71.883354 16.368376,72.306129 C17.038853,75.329964 18.014799,78.418098 17.508709,81.485176 L17.476805,81.657143 17.509838,81.785149 C17.734463,82.628136 17.98398,83.458 18.253908,84.267784 17.274031,82.308067 15.547793,78.270851 13.98729,77.334557 13.987294,75.532097 13.724799,73.671776 13.396679,71.777534 L13.276547,71.100838 13.196682,71.046516 C12.963664,70.87281 12.754225,70.650703 12.467121,70.268089 12.004695,69.651817 11.415568,68.907677 11.885737,67.966759 L11.915665,67.910835 11.890661,67.822243 C11.625178,66.862434 11.218974,65.01783 11.759118,64.478996 L11.759519,64.478661 11.734979,64.461494 C11.350493,64.19976 10.971589,63.989052 10.616978,63.918144 10.651935,63.86573 10.691289,63.805016 10.734621,63.738441 L10.799549,63.639076 10.764723,63.6343 10.711326,63.721138 C10.598191,63.91967 10.498412,64.125145 10.410873,64.337074 L10.355907,64.477989 10.474587,64.933174 C10.569755,65.306419 10.65152,65.68029 10.66769,66.068352 10.679315,66.347389 10.679518,66.572411 10.663389,66.775368 L10.656117,66.8498 10.850997,67.434273 10.755377,67.529884 10.701689,67.240166 10.644334,66.941689 10.615676,67.123772 10.57523,67.291542 10.578893,67.372993 C10.582423,67.474342 10.584246,67.583534 10.584251,67.700951 L10.755377,67.529884 10.809687,67.82296 C11.255263,70.303215 11.397241,72.227043 10.748275,74.823006 L10.743298,74.842201 10.750391,74.892082 C10.924098,76.160286 11.053981,77.431206 11.053981,78.667854 10.876216,78.667854 10.698422,78.667854 10.520661,78.667854 9.1955424,75.355034 7.3206864,73.422295 7.3206873,69.06797 7.3206864,68.942024 7.3199349,68.81739 7.3185382,68.693977 L7.3139449,68.426491 7.3159252,68.690926 C7.3186112,69.072975 7.3206864,69.464714 7.3206873,69.867989 7.2404671,69.386665 7.1241761,68.900581 6.9811349,68.4105 L6.8785162,68.077904 6.7704111,67.986977 C5.7103119,67.079079 5.2998352,66.311821 5.0007482,64.068367 4.9878731,63.971794 5.0081253,63.856499 5.0573993,63.738792 L5.1061798,63.640984 4.7877856,62.897758 C4.6451226,62.558617 4.5057488,62.219009 4.3724308,61.879135 L4.212915,61.462196 4.1337543,61.704399 C3.8312335,62.715439 3.8519969,63.691139 4.1508265,65.185066 4.4570656,66.716087 5.6006928,67.394676 5.2176142,69.118324 5.0658989,69.800941 5.0883446,70.058235 5.1687465,70.408562 L5.1751814,70.435661 5.1423045,70.355797 C4.9143868,69.847923 4.5063363,69.365181 3.9508064,69.118324 3.1744895,68.773338 3.0681928,68.435204 3.0364185,67.921501 L3.0310593,67.811104 2.9366477,67.697792 2.9198394,67.698845 C2.8947156,67.70002 2.87145,67.700661 2.8503242,67.700661 L2.8302708,67.570137 2.7173603,67.434639 C2.7173627,67.345161 2.7182784,67.254112 2.7199848,67.161644 L2.7210114,67.122353 2.7213972,67.123039 2.7848282,67.2342 2.7441473,66.781776 2.7372165,66.630196 2.7273593,66.880165 2.7210114,67.122353 2.6344529,66.968849 C1.3344783,64.652382 -1.0193444,59.966179 0.48609088,59.37793 L0.56360434,59.353905 0.47591488,59.06617 C-0.001365907,57.377548 -0.026172881,55.296326 2.9095359,54.283478 L2.9486392,54.270576 3.0234614,54.157257 C3.5783933,53.414352 4.7621766,52.932289 5.5189009,52.160767 L5.6168709,52.055229 5.6836691,51.918236 C5.8546753,51.576248 5.94627,51.400009 6.0909849,51.2724 L6.0951376,51.269043 6.0966425,51.265213 C6.1359215,51.150223 6.1654168,51.029289 6.1836505,50.901649 6.4658165,48.926476 7.0708428,48.40873 8.0536614,47.975853 L8.1304179,47.943253 8.1751357,47.718979 C8.390462,46.686172 8.6856661,45.772476 9.4006443,44.700249 L9.4526005,44.796616 9.5089932,44.598099 9.4909068,44.311539 9.4451619,43.883339 9.4941893,43.601875 C9.4137774,43.588432 9.5751925,43.557503 9.8374739,43.494568 L9.8483019,43.491882 9.9510336,43.157089 C10.550553,41.241013 11.150073,39.324768 11.150071,37.552719 11.150073,35.440399 11.256919,33.171127 11.498124,30.942909 L11.631784,29.838867 11.27045,28.694427 C10.750197,26.903305 10.43487,25.100761 10.752099,23.593361 11.365674,20.677956 11.333972,17.076126 11.81875,13.993431 12.520389,9.5316772 15.776042,5.2133408 17.618727,0.85916901 L17.807451,0.3873291 17.775148,0.30230713 z" Height="84.534" RenderTransformOrigin="2.30761249380008,0.117507941373549" Stretch="Fill" Canvas.Top="174.135" Width="40.421">
                         <Path.RenderTransform>
                             <TransformGroup>
@@ -653,16 +961,6 @@
                             </LinearGradientBrush>
                         </Path.Fill>
                     </Path>
-                    <Rectangle x:Name="telaraniaIzq" Fill="White" HorizontalAlignment="Left" Height="9.431" VerticalAlignment="Top" Width="12.27" RenderTransformOrigin="0.801,-0.684" RadiusY="2.109" RadiusX="2.109" Canvas.Left="10.799" Canvas.Top="224.521">
-                        <Rectangle.RenderTransform>
-                            <TransformGroup>
-                                <ScaleTransform ScaleY="1" ScaleX="-1"/>
-                                <SkewTransform AngleY="0" AngleX="0"/>
-                                <RotateTransform Angle="12.828"/>
-                                <TranslateTransform X="-4.815" Y="-0.541"/>
-                            </TransformGroup>
-                        </Rectangle.RenderTransform>
-                    </Rectangle>
                     <Rectangle x:Name="telaraniaDer" Fill="White" HorizontalAlignment="Left" Height="9.431" VerticalAlignment="Top" Width="12.27" RenderTransformOrigin="0.801,-0.684" RadiusY="2.109" RadiusX="2.109" Canvas.Left="166.799" Canvas.Top="222.121">
                         <Rectangle.RenderTransform>
                             <TransformGroup>
@@ -743,67 +1041,93 @@
                             </Path.RenderTransform>
                         </Path>
                     </Canvas>
+                    <Path x:Name="piernas" HorizontalAlignment="Left" VerticalAlignment="Top" Data="M61.000605,0.00012965183 C63.081667,0.0048298816 65.089842,0.13781846 66.977602,0.4542952 L67.506357,0.55473884 67.743124,0.51998849 C77.800058,-0.75551574 90.85594,2.6319649 100.2287,2.9205392 106.4662,16.561287 111.02218,28.279543 112.97848,44.90346 114.88551,61.108778 113.61596,73.218916 113.61596,88.917815 113.61596,91.160895 113.74211,92.908659 113.77148,94.270476 L113.77489,94.587012 113.88448,94.845015 C114.00455,95.172529 114.1113,95.514159 114.20421,95.870314 115.95109,102.56647 111.31164,110.06195 110.68699,117.55736 109.26198,134.65732 104.38569,147.85997 105.31926,163.36848 L105.34991,163.79101 105.39174,163.85087 C106.11534,164.98714 106.60734,166.69487 107.15965,169.27939 108.69722,176.47427 117.35029,176.57802 121.51718,181.45276 135.23304,185.73157 132.68867,184.88904 132.68867,193.72482 132.2121,193.72482 132.36563,195.32579 131.88907,195.32579 127.66763,203.55659 111.24882,195.50546 104.4909,194.62701 102.19166,189.24739 94.191595,192.2276 92.191717,186.32768 90.191862,181.52772 90.87335,178.56219 90.482832,174.60278 90.271017,172.45521 90.57588,169.97566&#xA;90.775175,167.60245 L90.834951,166.83163 90.526205,166.8298 90.485922,166.17471 C90.616743,164.82464 90.612242,163.3855 90.506117,161.8921 L90.457289,161.30934 90.434057,161.24013 90.451567,161.24104 90.430517,160.98982 C89.674322,153.11853 86.352446,143.96846 85.202284,138.43512 82.125814,123.63434 78.603998,128.92866 78.603998,114.07004 78.603998,105.82039 79.744944,102.72089 80.156042,95.614241 L80.190554,94.962721 80.04637,94.771574 C79.553793,94.094557 79.04093,93.270125 78.487848,92.263006 72.976263,82.22682 71.701967,64.626433 69.92111,52.015299 L69.780905,51.045241 70.292192,50.841841 C70.91115,50.565699 71.492216,50.215643 72.025057,49.802393 L72.183695,49.673109 69.74703,50.810866 69.780905,51.045241 69.66099,51.092947 C68.803564,51.393847 67.884901,51.556998 66.929499,51.556998 65.643377,51.556998 64.423841,51.261347 63.330637,50.732008 L62.814417,50.453738 61.391436,49.4317 61.512213,49.540198 C61.880251,49.855181 62.27424,50.138724 62.690351,50.386862 L62.814417,50.453738 63.863001,51.206869 C61.985868,63.879061 58.159353,81.709608 52.46998,92.069525 L52.380907,92.23184 52.592913,92.2965 C52.780783,101.94043 54.271002,104.64187 54.271002,114.07004 54.271002,128.92866 50.749184,123.63435 47.672716,138.43512 46.522551,143.96846 43.200678,153.11853 42.444479,160.98984 L42.423431,161.24106 42.440945,161.24013 42.417707,161.30934 42.368877,161.8921 C42.262758,163.3855 42.258257,164.82464 42.389074,166.17473 L42.348791,166.8298 42.040047,166.83165 42.099825,167.60245 C42.299116,169.97568 42.603979,172.45523 42.392164,174.6028 42.001646,178.56219 42.683138,181.52772 40.683285,186.32768 38.683407,192.22761 30.683343,189.2474 28.384105,194.62701 21.626176,195.50546 5.2073698,203.55661 0.9859314,195.32579 0.5093689,195.32579 0.66290665,193.72484 0.18632317,193.72484 0.18632317,184.88904 -2.3580379,185.73157 11.35782,181.45276 15.524711,176.57803 24.177779,176.47429 25.715349,169.27939 26.267662,166.69488 26.759657,164.98715&#xA;27.483258,163.85087 L27.52509,163.79101 27.555739,163.36848 C28.489308,147.85998 23.613019,134.65732 22.188007,117.55736 21.563354,110.06195 16.923914,102.56647 18.670786,95.870314 18.856612,95.157995 19.097809,94.503821 19.390097,93.904349 L19.833093,93.105658 19.846202,92.772131 C19.893684,91.635496 19.958044,90.286009 19.958044,88.683813 19.958044,72.984915 18.688496,60.874785 20.595537,44.669459 22.551831,28.045534 27.107811,16.327282 33.345315,2.6865325 41.27611,2.442364 51.843927,-0.020563553 61.000605,0.00012965183 z" Height="198.998" RenderTransformOrigin="0.374133604635443,0.248346695255381" Stretch="Fill" Width="132.875" Canvas.Left="60.051" Canvas.Top="231.326">
+                        <Path.Fill>
+                            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                <GradientStop Color="Black" Offset="0"/>
+                                <GradientStop Color="Black" Offset="1"/>
+                            </LinearGradientBrush>
+                        </Path.Fill>
+                        <Path.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform ScaleY="1" ScaleX="-1"/>
+                                <SkewTransform AngleY="0" AngleX="0"/>
+                                <RotateTransform Angle="0"/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </Path.RenderTransform>
+                    </Path>
+                    <Path x:Name="tela" Data="M41.505044,30.931232 L36.225291,43.750975 45.366706,34.959533 45.070963,34.73435 42.546263,32.595389 C41.990824,32.124818 41.624456,31.564353 41.522877,31.097946 z M24.455005,29.916922 L24.293642,30.131201 C24.126504,30.328119 23.924457,30.52063 23.692924,30.697231 L21.061948,32.704045 C20.714661,32.968939 20.35037,33.160422 20.011403,33.271029 L19.860423,33.309288 29.908615,42.97279 z M35.080403,29.852289 L35.080339,40.22884 39.008564,30.690756 38.705204,30.642742 35.468266,29.955957 z M32.68045,28.471445 L32.376403,28.667063 C32.151409,28.793916 31.895192,28.904543 31.616835,28.990038 L28.453658,29.961536 C28.036124,30.089777 27.628069,30.14325 27.271767,30.129624 L27.138917,30.115563 32.680359,43.381719 z M35.08047,18.201338 L35.080411,27.736273 35.100309,27.734982 C35.358591,27.733347 35.636295,27.761061 35.921143,27.821497 L39.158083,28.508284 C39.30051,28.538502 39.437978,28.575472 39.569266,28.618181 L39.821978,28.715706 43.11233,20.726423 42.889433,20.717356 C42.632409,20.691833 42.359159,20.63508 42.082241,20.545034 L35.710664,18.473186 C35.572205,18.428164 35.439381,18.376949 35.313313,18.320673 z M19.499225,18.052845 L19.305512,18.310087 C19.138374,18.507002 18.936334,18.699516 18.704803,18.876112 L11.063187,24.704838 10.975647,24.764664 18.716229,32.208901 18.746725,32.127653 C18.930447,31.739219 19.275606,31.322363 19.738658,30.969169 L22.369633,28.96235 C22.832687,28.609152 23.325962,28.38648 23.749144,28.311996 L23.783305,28.308861 z M32.680513,17.100077 L32.314376,17.187981 C32.178596,17.21295 32.037445,17.231411 31.892277,17.242525 L22.309325,17.976177 22.07056,17.981979 26.505322,28.598757 26.740579,28.40004 C27.027808,28.188774 27.395536,28.003979 27.813079,27.875738 L30.976243,26.904238 C31.532961,26.733253 32.072821,26.695183 32.495619,26.771862 L32.680456,26.821438 z M15.836716,9.2848473 L4.1825905,18.174191 4.1477699,18.198179 9.4060669,23.255173 9.4153976,23.245361 C9.5157413,23.150539 9.624136,23.058266 9.7398949,22.969959 L17.381506,17.141222 C17.84456,16.788036 18.337818,16.565369 18.761009,16.490887 L18.843609,16.483301 z M51.075829,8.364418 L50.978863,8.3851242 50.787111,8.3935204 46.208613,19.510544 46.450139,19.545918 C46.868706,19.643057 47.349284,19.891937 47.792659,20.269531 L52.893469,24.613527 C53.780224,25.368717 54.182379,26.352787 53.791706,26.811512 53.401035,27.270239 52.365475,27.029907 51.47872,26.274721 L46.377908,21.930719 C46.045376,21.64753 45.780991,21.332146 45.601002,21.024351 L45.592328,21.006929 41.768456,30.291653 41.817192,30.259649 C42.288604,30.007457 43.179129,30.271778 43.956738,30.930579 L46.481442,33.06954 C46.592529,33.163654 46.696054,33.261367 46.791409,33.361198 L46.898622,33.48626 64.392513,16.662098 51.809908,9.1048164 C51.560284,8.9548874 51.351515,8.76371 51.187731,8.5463676 z M35.080551,4.5796204 L35.080481,16.221951 35.206423,16.210712 C35.562898,16.20293 35.970022,16.263086 36.385403,16.398153 L42.75698,18.470001 C43.033897,18.560049 43.288268,18.674866 43.511148,18.805391 L43.818963,19.010654 48.393606,7.9030037 z M32.680579,4.5014267 L17.808796,7.542366 17.77716,7.6055527 17.717083,7.687809 17.794554,7.8085403 C17.862225,7.9290619 17.924756,8.0569878 17.98088,8.1913338 L21.235738,15.983425 21.330779,15.948719 C21.578144,15.874413 21.852417,15.822798 22.142757,15.80057 L31.725704,15.066919 C32.016048,15.044693 32.294978,15.053955 32.550774,15.089741 L32.680524,15.115681 z M33.880588,0 C34.129115,0 34.359991,0.13277435 34.551508,0.36017609 L34.582748,0.40331268 34.788584,0.39429855 C34.92829,0.40150452 35.069624,0.42225266 35.210882,0.45751953 L50.562908,4.2898903 50.695524,4.2382813 C50.86891,4.1942673 51.037333,4.19981 51.190535,4.2629051 51.26713,4.2944489 51.3363,4.3388901 51.397833,4.394619 L51.5581,4.5925255 51.87851,4.7815514 C52.043577,4.9015999 52.188745,5.0431099 52.310484,5.2005005 L52.424614,5.3719826 52.697369,5.3372116 C53.097809,5.3242188 53.510998,5.4243622 53.885429,5.64925 L67.942497,14.092115 C68.597759,14.485674 68.971504,15.163473 68.989044,15.85264 68.991547,15.951094 68.986782,16.049778 68.974529,16.1479 68.958195,16.278728 68.928551,16.408554 68.885078,16.535492 68.841606,16.662432 68.784306,16.786484 68.712662,16.905762 68.28281,17.621433 67.458687,17.962011 66.652252,17.83457 L66.626015,17.827801 66.457306,18.006062 35.861891,47.430175 34.36911,47.430174 34.36911,139.72108 C34.36911,140.88585 33.921395,141.83007 33.36911,141.83007 32.816825,141.83007 32.36911,140.88585 32.369109,139.72108 L32.369109,47.430173 31.081158,47.430172 0.90130043,18.405731 C0.061790466,17.598356 -0.24636078,16.556622 0.21302795,16.078945 0.38529396,15.899813 0.64104843,15.825447 0.93770218,15.845028 L1.0534992,15.863981 1.1812973,15.592987 C1.3200569,15.358873 1.5064182,15.145788 1.7379494,14.969196 L14.775867,5.0243492 C14.891632,4.9360466 15.013205,4.8610535 15.138643,4.7991371 L15.160072,4.7909889 15.29847,4.5438652 C15.599321,4.1100769 16.070684,3.7834358 16.641264,3.6667709 L32.70668,0.38175964 C32.849319,0.35259247 32.991413,0.33792877 33.131289,0.33672714 L33.225654,0.34492874 33.4135,0.16573715 C33.557068,0.059017181 33.714902,-3.8146973E-06 33.880588,0 z" Fill="White" HorizontalAlignment="Left" Height="141.83" Stretch="Fill" VerticalAlignment="Top" Width="68.99" Canvas.Left="217.731" Canvas.Top="123.639" Visibility="Hidden" RenderTransformOrigin="0.5,0.5">
+                        <Path.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform/>
+                                <SkewTransform/>
+                                <RotateTransform/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </Path.RenderTransform>
+                    </Path>
+                    <Path x:Name="saliva1" Data="M631.518,265.7 C630.99814,267.8537 624.91665,279.65911 632.318,278.9 637.25472,278.39367 635.27498,272.25063 631.518,265.7 z" Fill="#FF06CA79" HorizontalAlignment="Left" Height="13.235" Stretch="Fill" VerticalAlignment="Top" Width="6.584" RenderTransformOrigin="0.5,0.5" OpacityMask="Black" Visibility="Hidden" Canvas.Left="452.891" Canvas.Top="387.7">
+                        <Path.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform/>
+                                <SkewTransform/>
+                                <RotateTransform/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </Path.RenderTransform>
+                    </Path>
+                    <Path x:Name="saliva2" Data="M631.518,265.7 C630.99814,267.8537 624.91665,279.65911 632.318,278.9 637.25472,278.39367 635.27498,272.25063 631.518,265.7 z" HorizontalAlignment="Left" Height="13.235" Stretch="Fill" VerticalAlignment="Top" Width="6.584" RenderTransformOrigin="0.5,0.5" Fill="#FF06CA79" Visibility="Hidden" Canvas.Left="466.059" Canvas.Top="393.7">
+                        <Path.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform/>
+                                <SkewTransform/>
+                                <RotateTransform/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </Path.RenderTransform>
+                    </Path>
+                    <Path x:Name="saliva3" Data="M631.518,265.7 C630.99814,267.8537 624.91665,279.65911 632.318,278.9 637.25472,278.39367 635.27498,272.25063 631.518,265.7 z" Fill="#FF06CA79" HorizontalAlignment="Left" Height="13.235" Stretch="Fill" VerticalAlignment="Top" Width="6.584" RenderTransformOrigin="0.5,0.5" Visibility="Hidden" Canvas.Left="459.475" Canvas.Top="398.9">
+                        <Path.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform/>
+                                <SkewTransform/>
+                                <RotateTransform/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </Path.RenderTransform>
+                    </Path>
+                    <Path x:Name="brazoIzq" HorizontalAlignment="Left" VerticalAlignment="Top" Data="M5.1751814,70.435661 L5.2052455,70.508705 C5.3010292,70.764107 5.3509598,71.020515 5.3509608,71.25161 5.2969017,70.927315 5.2399025,70.704033 5.1944924,70.516975 z M17.679184,0 L19.337257,0.3826828 C22.592135,1.0487289 25.962219,1.3985062 29.413998,1.3985062 32.002834,1.3985062 34.545715,1.2017593 37.028507,0.82239532 L38.561237,0.54867554 38.308258,0.86647797 C37.709717,1.586731 37.020447,2.1928787 35.720402,2.1210632 35.84811,8.923996 37.074131,11.821991 34.588589,18.443069 32.584198,23.782417 31.030741,29.751221 27.929054,34.502609 25.905153,37.602913 25.364347,40.200287 25.24741,42.25441 L25.243855,42.345619 25.247263,42.345367 25.242161,42.389076 25.224003,42.854309 C25.185526,44.604889 25.404594,45.91214 25.109043,46.746727 L25.073422,46.824989 25.018648,47.694046 C24.912632,48.966393 25.39884,49.684265 27.018553,50.494209 27.141453,50.555679 27.309792,50.608978 27.511501,50.650208 L27.710785,50.684967 28.005989,50.985573 C28.983206,51.967125 29.962595,52.898125 30.78709,54.134872 32.688923,54.895607 33.75272,56.066185 34.787041,58.134819 39.999157,60.219658 43.283436,64.511192 36.920349,73.60128 35.570942,71.577171 36.001267,66.654716 34.520386,65.068031 33.890156,64.392815 31.490637,63.879799 29.50914,63.40374 L29.32206,63.358467 29.325687,63.383446 C29.331177,63.442039 29.334003,63.503639 29.334009,63.568352 29.231762,63.585396 29.032887,63.568932 28.82242,63.542427 L28.66354,63.520638 28.634749,63.598763 C28.515772,63.886925 28.276463,64.185738 27.880201,64.492531 L27.84549,64.518333 27.83255,64.562096 C27.50412,65.609077 26.963131,65.794579 25.800873,67.168159 25.676485,67.315163 24.940207,68.66906 24.448706,68.758064 L24.428495,68.759193 24.39007,68.986061 C24.100832,70.723335 23.835838,72.511665 23.608177,74.268715 L23.481358,75.277229 23.517214,75.430489 C24.019344,77.600853 24.181768,79.056389 22.950876,81.517464 22.933292,81.447136 22.918205,81.376701 22.905319,81.306175 L22.903889,81.296822 22.879921,81.68644 C22.819597,82.721031 22.787186,83.679771 22.787182,84.534447 22.422487,83.440376 22.054577,82.39576 21.693352,81.381264 L21.664503,81.300377 21.625065,81.336739 C21.527897,81.408577 21.39588,81.42318 21.217428,81.384926 20.337984,81.196434 20.90793,80.66317 20.417549,80.118172 19.401032,78.988441 20.082867,77.74073 19.551008,76.251198 19.394863,75.813881 19.388104,75.323128 19.429905,74.821022 L19.443689,74.676628 19.34516,74.329857 C18.733091,72.121773 18.275303,69.831093 18.084665,67.23748 L18.073309,67.060585 18.068653,67.055443 C17.830833,66.810616 17.559139,66.601051 17.288872,66.454216 L17.213268,66.415321 17.166452,66.553322 C16.667864,68.093834 16.390648,69.757607 16.295507,71.483696 L16.27861,71.883354 16.368376,72.306129 C17.038853,75.329964 18.014799,78.418098 17.508709,81.485176 L17.476805,81.657143 17.509838,81.785149 C17.734463,82.628136 17.98398,83.458 18.253908,84.267784 17.274031,82.308067 15.547793,78.270851 13.98729,77.334557 13.987294,75.532097 13.724799,73.671776 13.396679,71.777534 L13.276547,71.100838 13.196682,71.046516 C12.963664,70.87281 12.754225,70.650703 12.467121,70.268089 12.004695,69.651817 11.415568,68.907677 11.885737,67.966759 L11.915665,67.910835 11.890661,67.822243 C11.625178,66.862434 11.218974,65.01783 11.759118,64.478996 L11.759519,64.478661 11.734979,64.461494 C11.350493,64.19976 10.971589,63.989052 10.616978,63.918144 10.651935,63.86573 10.691289,63.805016 10.734621,63.738441 L10.799549,63.639076 10.764723,63.6343 10.711326,63.721138 C10.598191,63.91967 10.498412,64.125145 10.410873,64.337074 L10.355907,64.477989 10.474587,64.933174 C10.569755,65.306419 10.65152,65.68029 10.66769,66.068352 10.679315,66.347389 10.679518,66.572411 10.663389,66.775368 L10.656117,66.8498 10.850997,67.434273 10.755377,67.529884 10.701689,67.240166 10.644334,66.941689 10.615676,67.123772 10.57523,67.291542 10.578893,67.372993 C10.582423,67.474342 10.584246,67.583534 10.584251,67.700951 L10.755377,67.529884 10.809687,67.82296 C11.255263,70.303215 11.397241,72.227043 10.748275,74.823006 L10.743298,74.842201 10.750391,74.892082 C10.924098,76.160286 11.053981,77.431206 11.053981,78.667854 10.876216,78.667854 10.698422,78.667854 10.520661,78.667854 9.1955424,75.355034 7.3206864,73.422295 7.3206873,69.06797 7.3206864,68.942024 7.3199349,68.81739 7.3185382,68.693977 L7.3139449,68.426491 7.3159252,68.690926 C7.3186112,69.072975 7.3206864,69.464714 7.3206873,69.867989 7.2404671,69.386665 7.1241761,68.900581 6.9811349,68.4105 L6.8785162,68.077904 6.7704111,67.986977 C5.7103119,67.079079 5.2998352,66.311821 5.0007482,64.068367 4.9878731,63.971794 5.0081253,63.856499 5.0573993,63.738792 L5.1061798,63.640984 4.7877856,62.897758 C4.6451226,62.558617 4.5057488,62.219009 4.3724308,61.879135 L4.212915,61.462196 4.1337543,61.704399 C3.8312335,62.715439 3.8519969,63.691139 4.1508265,65.185066 4.4570656,66.716087 5.6006928,67.394676 5.2176142,69.118324 5.0658989,69.800941 5.0883446,70.058235 5.1687465,70.408562 L5.1751814,70.435661 5.1423045,70.355797 C4.9143868,69.847923 4.5063363,69.365181 3.9508064,69.118324 3.1744895,68.773338 3.0681928,68.435204 3.0364185,67.921501 L3.0310593,67.811104 2.9366477,67.697792 2.9198394,67.698845 C2.8947156,67.70002 2.87145,67.700661 2.8503242,67.700661 L2.8302708,67.570137 2.7173603,67.434639 C2.7173627,67.345161 2.7182784,67.254112 2.7199848,67.161644 L2.7210114,67.122353 2.7213972,67.123039 2.7848282,67.2342 2.7441473,66.781776 2.7372165,66.630196 2.7273593,66.880165 2.7210114,67.122353 2.6344529,66.968849 C1.3344783,64.652382 -1.0193444,59.966179 0.48609088,59.37793 L0.56360434,59.353905 0.47591488,59.06617 C-0.001365907,57.377548 -0.026172881,55.296326 2.9095359,54.283478 L2.9486392,54.270576 3.0234614,54.157257 C3.5783933,53.414352 4.7621766,52.932289 5.5189009,52.160767 L5.6168709,52.055229 5.6836691,51.918236 C5.8546753,51.576248 5.94627,51.400009 6.0909849,51.2724 L6.0951376,51.269043 6.0966425,51.265213 C6.1359215,51.150223 6.1654168,51.029289 6.1836505,50.901649 6.4658165,48.926476 7.0708428,48.40873 8.0536614,47.975853 L8.1304179,47.943253 8.1751357,47.718979 C8.390462,46.686172 8.6856661,45.772476 9.4006443,44.700249 L9.4526005,44.796616 9.5089932,44.598099 9.4909068,44.311539 9.4451619,43.883339 9.4941893,43.601875 C9.4137774,43.588432 9.5751925,43.557503 9.8374739,43.494568 L9.8483019,43.491882 9.9510336,43.157089 C10.550553,41.241013 11.150073,39.324768 11.150071,37.552719 11.150073,35.440399 11.256919,33.171127 11.498124,30.942909 L11.631784,29.838867 11.27045,28.694427 C10.750197,26.903305 10.43487,25.100761 10.752099,23.593361 11.365674,20.677956 11.333972,17.076126 11.81875,13.993431 12.520389,9.5316772 15.776042,5.2133408 17.618727,0.85916901 L17.807451,0.3873291 17.775148,0.30230713 z" Height="84.534" RenderTransformOrigin="2.30761249380008,0.117507941373549" Stretch="Fill" Canvas.Top="176.135" Width="40.421">
+                        <Path.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform/>
+                                <SkewTransform/>
+                                <RotateTransform/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </Path.RenderTransform>
+                        <Path.Fill>
+                            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                <GradientStop Color="Black" Offset="0"/>
+                                <GradientStop Color="Black" Offset="1"/>
+                            </LinearGradientBrush>
+                        </Path.Fill>
+                    </Path>
+                    <Rectangle x:Name="telaraniaIzq" Fill="White" HorizontalAlignment="Left" Height="9.431" VerticalAlignment="Top" Width="12.27" RenderTransformOrigin="0.801,-0.684" RadiusY="2.109" RadiusX="2.109" Canvas.Left="10.799" Canvas.Top="224.521">
+                        <Rectangle.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform ScaleY="1" ScaleX="-1"/>
+                                <SkewTransform AngleY="0" AngleX="0"/>
+                                <RotateTransform Angle="12.828"/>
+                                <TranslateTransform X="-4.815" Y="-0.541"/>
+                            </TransformGroup>
+                        </Rectangle.RenderTransform>
+                    </Rectangle>
 
                 </Canvas>
 
             </Viewbox>
             <Path Grid.Column="3" Data="M620.718,261.3" Fill="White" HorizontalAlignment="Left" Height="0" Margin="21.106,209.274,0,0" Grid.Row="1" Stretch="Fill" VerticalAlignment="Top" Width="0"/>
-            <Path x:Name="saliva1" Grid.Column="2" Data="M631.518,265.7 C630.99814,267.8537 624.91665,279.65911 632.318,278.9 637.25472,278.39367 635.27498,272.25063 631.518,265.7 z" Fill="#FF06CA79" HorizontalAlignment="Left" Height="13.235" Margin="153.085,335.674,0,0" Grid.Row="1" Stretch="Fill" VerticalAlignment="Top" Width="6.584" RenderTransformOrigin="0.5,0.5" OpacityMask="Black" Visibility="Hidden">
-                <Path.RenderTransform>
-                    <TransformGroup>
-                        <ScaleTransform/>
-                        <SkewTransform/>
-                        <RotateTransform/>
-                        <TranslateTransform/>
-                    </TransformGroup>
-                </Path.RenderTransform>
-            </Path>
-            <Path x:Name="saliva2" Grid.Column="2" Data="M631.518,265.7 C630.99814,267.8537 624.91665,279.65911 632.318,278.9 637.25472,278.39367 635.27498,272.25063 631.518,265.7 z" HorizontalAlignment="Left" Height="13.235" Margin="166.253,341.674,0,0" Grid.Row="1" Stretch="Fill" VerticalAlignment="Top" Width="6.584" RenderTransformOrigin="0.5,0.5" Fill="#FF06CA79" Visibility="Hidden">
-                <Path.RenderTransform>
-                    <TransformGroup>
-                        <ScaleTransform/>
-                        <SkewTransform/>
-                        <RotateTransform/>
-                        <TranslateTransform/>
-                    </TransformGroup>
-                </Path.RenderTransform>
-            </Path>
-            <Path x:Name="saliva3" Grid.Column="2" Data="M631.518,265.7 C630.99814,267.8537 624.91665,279.65911 632.318,278.9 637.25472,278.39367 635.27498,272.25063 631.518,265.7 z" Fill="#FF06CA79" HorizontalAlignment="Left" Height="13.235" Margin="159.669,346.874,0,0" Grid.Row="1" Stretch="Fill" VerticalAlignment="Top" Width="6.584" RenderTransformOrigin="0.5,0.5" Visibility="Hidden">
-                <Path.RenderTransform>
-                    <TransformGroup>
-                        <ScaleTransform/>
-                        <SkewTransform/>
-                        <RotateTransform/>
-                        <TranslateTransform/>
-                    </TransformGroup>
-                </Path.RenderTransform>
-            </Path>
-            <Path x:Name="cuerpo_Copy1" HorizontalAlignment="Left" VerticalAlignment="Top" Data="M5.1751814,70.435661 L5.2052455,70.508705 C5.3010292,70.764107 5.3509598,71.020515 5.3509608,71.25161 5.2969017,70.927315 5.2399025,70.704033 5.1944924,70.516975 z M17.679184,0 L19.337257,0.3826828 C22.592135,1.0487289 25.962219,1.3985062 29.413998,1.3985062 32.002834,1.3985062 34.545715,1.2017593 37.028507,0.82239532 L38.561237,0.54867554 38.308258,0.86647797 C37.709717,1.586731 37.020447,2.1928787 35.720402,2.1210632 35.84811,8.923996 37.074131,11.821991 34.588589,18.443069 32.584198,23.782417 31.030741,29.751221 27.929054,34.502609 25.905153,37.602913 25.364347,40.200287 25.24741,42.25441 L25.243855,42.345619 25.247263,42.345367 25.242161,42.389076 25.224003,42.854309 C25.185526,44.604889 25.404594,45.91214 25.109043,46.746727 L25.073422,46.824989 25.018648,47.694046 C24.912632,48.966393 25.39884,49.684265 27.018553,50.494209 27.141453,50.555679 27.309792,50.608978 27.511501,50.650208 L27.710785,50.684967 28.005989,50.985573 C28.983206,51.967125 29.962595,52.898125 30.78709,54.134872 32.688923,54.895607 33.75272,56.066185 34.787041,58.134819 39.999157,60.219658 43.283436,64.511192 36.920349,73.60128 35.570942,71.577171 36.001267,66.654716 34.520386,65.068031 33.890156,64.392815 31.490637,63.879799 29.50914,63.40374 L29.32206,63.358467 29.325687,63.383446 C29.331177,63.442039 29.334003,63.503639 29.334009,63.568352 29.231762,63.585396 29.032887,63.568932 28.82242,63.542427 L28.66354,63.520638 28.634749,63.598763 C28.515772,63.886925 28.276463,64.185738 27.880201,64.492531 L27.84549,64.518333 27.83255,64.562096 C27.50412,65.609077 26.963131,65.794579 25.800873,67.168159 25.676485,67.315163 24.940207,68.66906 24.448706,68.758064 L24.428495,68.759193 24.39007,68.986061 C24.100832,70.723335 23.835838,72.511665 23.608177,74.268715 L23.481358,75.277229 23.517214,75.430489 C24.019344,77.600853 24.181768,79.056389 22.950876,81.517464 22.933292,81.447136 22.918205,81.376701 22.905319,81.306175 L22.903889,81.296822 22.879921,81.68644 C22.819597,82.721031 22.787186,83.679771 22.787182,84.534447 22.422487,83.440376 22.054577,82.39576 21.693352,81.381264 L21.664503,81.300377 21.625065,81.336739 C21.527897,81.408577 21.39588,81.42318 21.217428,81.384926 20.337984,81.196434 20.90793,80.66317 20.417549,80.118172 19.401032,78.988441 20.082867,77.74073 19.551008,76.251198 19.394863,75.813881 19.388104,75.323128 19.429905,74.821022 L19.443689,74.676628 19.34516,74.329857 C18.733091,72.121773 18.275303,69.831093 18.084665,67.23748 L18.073309,67.060585 18.068653,67.055443 C17.830833,66.810616 17.559139,66.601051 17.288872,66.454216 L17.213268,66.415321 17.166452,66.553322 C16.667864,68.093834 16.390648,69.757607 16.295507,71.483696 L16.27861,71.883354 16.368376,72.306129 C17.038853,75.329964 18.014799,78.418098 17.508709,81.485176 L17.476805,81.657143 17.509838,81.785149 C17.734463,82.628136 17.98398,83.458 18.253908,84.267784 17.274031,82.308067 15.547793,78.270851 13.98729,77.334557 13.987294,75.532097 13.724799,73.671776 13.396679,71.777534 L13.276547,71.100838 13.196682,71.046516 C12.963664,70.87281 12.754225,70.650703 12.467121,70.268089 12.004695,69.651817 11.415568,68.907677 11.885737,67.966759 L11.915665,67.910835 11.890661,67.822243 C11.625178,66.862434 11.218974,65.01783 11.759118,64.478996 L11.759519,64.478661 11.734979,64.461494 C11.350493,64.19976 10.971589,63.989052 10.616978,63.918144 10.651935,63.86573 10.691289,63.805016 10.734621,63.738441 L10.799549,63.639076 10.764723,63.6343 10.711326,63.721138 C10.598191,63.91967 10.498412,64.125145 10.410873,64.337074 L10.355907,64.477989 10.474587,64.933174 C10.569755,65.306419 10.65152,65.68029 10.66769,66.068352 10.679315,66.347389 10.679518,66.572411 10.663389,66.775368 L10.656117,66.8498 10.850997,67.434273 10.755377,67.529884 10.701689,67.240166 10.644334,66.941689 10.615676,67.123772 10.57523,67.291542 10.578893,67.372993 C10.582423,67.474342 10.584246,67.583534 10.584251,67.700951 L10.755377,67.529884 10.809687,67.82296 C11.255263,70.303215 11.397241,72.227043 10.748275,74.823006 L10.743298,74.842201 10.750391,74.892082 C10.924098,76.160286 11.053981,77.431206 11.053981,78.667854 10.876216,78.667854 10.698422,78.667854 10.520661,78.667854 9.1955424,75.355034 7.3206864,73.422295 7.3206873,69.06797 7.3206864,68.942024 7.3199349,68.81739 7.3185382,68.693977 L7.3139449,68.426491 7.3159252,68.690926 C7.3186112,69.072975 7.3206864,69.464714 7.3206873,69.867989 7.2404671,69.386665 7.1241761,68.900581 6.9811349,68.4105 L6.8785162,68.077904 6.7704111,67.986977 C5.7103119,67.079079 5.2998352,66.311821 5.0007482,64.068367 4.9878731,63.971794 5.0081253,63.856499 5.0573993,63.738792 L5.1061798,63.640984 4.7877856,62.897758 C4.6451226,62.558617 4.5057488,62.219009 4.3724308,61.879135 L4.212915,61.462196 4.1337543,61.704399 C3.8312335,62.715439 3.8519969,63.691139 4.1508265,65.185066 4.4570656,66.716087 5.6006928,67.394676 5.2176142,69.118324 5.0658989,69.800941 5.0883446,70.058235 5.1687465,70.408562 L5.1751814,70.435661 5.1423045,70.355797 C4.9143868,69.847923 4.5063363,69.365181 3.9508064,69.118324 3.1744895,68.773338 3.0681928,68.435204 3.0364185,67.921501 L3.0310593,67.811104 2.9366477,67.697792 2.9198394,67.698845 C2.8947156,67.70002 2.87145,67.700661 2.8503242,67.700661 L2.8302708,67.570137 2.7173603,67.434639 C2.7173627,67.345161 2.7182784,67.254112 2.7199848,67.161644 L2.7210114,67.122353 2.7213972,67.123039 2.7848282,67.2342 2.7441473,66.781776 2.7372165,66.630196 2.7273593,66.880165 2.7210114,67.122353 2.6344529,66.968849 C1.3344783,64.652382 -1.0193444,59.966179 0.48609088,59.37793 L0.56360434,59.353905 0.47591488,59.06617 C-0.001365907,57.377548 -0.026172881,55.296326 2.9095359,54.283478 L2.9486392,54.270576 3.0234614,54.157257 C3.5783933,53.414352 4.7621766,52.932289 5.5189009,52.160767 L5.6168709,52.055229 5.6836691,51.918236 C5.8546753,51.576248 5.94627,51.400009 6.0909849,51.2724 L6.0951376,51.269043 6.0966425,51.265213 C6.1359215,51.150223 6.1654168,51.029289 6.1836505,50.901649 6.4658165,48.926476 7.0708428,48.40873 8.0536614,47.975853 L8.1304179,47.943253 8.1751357,47.718979 C8.390462,46.686172 8.6856661,45.772476 9.4006443,44.700249 L9.4526005,44.796616 9.5089932,44.598099 9.4909068,44.311539 9.4451619,43.883339 9.4941893,43.601875 C9.4137774,43.588432 9.5751925,43.557503 9.8374739,43.494568 L9.8483019,43.491882 9.9510336,43.157089 C10.550553,41.241013 11.150073,39.324768 11.150071,37.552719 11.150073,35.440399 11.256919,33.171127 11.498124,30.942909 L11.631784,29.838867 11.27045,28.694427 C10.750197,26.903305 10.43487,25.100761 10.752099,23.593361 11.365674,20.677956 11.333972,17.076126 11.81875,13.993431 12.520389,9.5316772 15.776042,5.2133408 17.618727,0.85916901 L17.807451,0.3873291 17.775148,0.30230713 z" Height="84.534" RenderTransformOrigin="2.30761249380008,0.117507941373549" Stretch="Fill" Width="40.421" Margin="0,128.909,0,0" Grid.Row="1">
-                <Path.RenderTransform>
-                    <TransformGroup>
-                        <ScaleTransform/>
-                        <SkewTransform/>
-                        <RotateTransform/>
-                        <TranslateTransform/>
-                    </TransformGroup>
-                </Path.RenderTransform>
-                <Path.Fill>
-                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                        <GradientStop Color="Black" Offset="0"/>
-                        <GradientStop Color="#FF141111" Offset="1"/>
-                    </LinearGradientBrush>
-                </Path.Fill>
-            </Path>
-            <Path x:Name="path" Data="M6.5999999,64 C10.24508,64 13.2,68.715561 13.2,74.532501 13.2,80.349442 10.24508,85.065002 6.5999999,85.065002 2.9549208,85.065002 0,80.349442 0,74.532501 0,68.715561 2.9549208,64 6.5999999,64 z M5.6129998,0 C6.2757418,0 6.8130002,0.94423145 6.8130007,2.109 L6.8130007,61.890999 C6.8130002,63.055767 6.2757418,64 5.6129998,64 4.9502584,64 4.4130001,63.055767 4.4130001,61.890999 L4.4130001,2.109 C4.4130001,0.94423145 4.9502584,0 5.6129998,0 z" Fill="White" HorizontalAlignment="Left" Height="85.065" Margin="92,384.409,0,0" Grid.Row="1" Stretch="Fill" VerticalAlignment="Top" Width="13.2" Grid.Column="1" RenderTransformOrigin="0.5,0.5">
-                <Path.RenderTransform>
-                    <TransformGroup>
-                        <ScaleTransform/>
-                        <SkewTransform/>
-                        <RotateTransform/>
-                        <TranslateTransform/>
-                    </TransformGroup>
-                </Path.RenderTransform>
-            </Path>
 
         </Grid>
     </Grid>

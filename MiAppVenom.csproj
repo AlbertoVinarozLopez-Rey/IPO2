@@ -62,7 +62,13 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="bbdd_VenomGotchiDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bbdd_VenomGotchiDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Dominio\Avatar.cs" />
+    <Compile Include="Dominio\Logro.cs" />
     <Compile Include="Dominio\Comida.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
@@ -70,6 +76,8 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Persistencia\GestorUsuario.cs" />
+    <Compile Include="Persistencia\GestorBD.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -87,6 +95,17 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="bbdd_VenomGotchiDataSet.xsc">
+      <DependentUpon>bbdd_VenomGotchiDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="bbdd_VenomGotchiDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>bbdd_VenomGotchiDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="bbdd_VenomGotchiDataSet.xss">
+      <DependentUpon>bbdd_VenomGotchiDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -179,7 +198,9 @@
     <Resource Include="Presentacion\Resources\estrella.png" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Persistencia\" />
+    <Content Include="bbdd_VenomGotchi.mdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

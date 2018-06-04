@@ -145,5 +145,9 @@ namespace MiAppVenom
                 this.funnyLevel.Content = this.PBdiversion.Value + "%";
             }
         }
+        private void dormir(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

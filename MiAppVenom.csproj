@@ -142,5 +142,43 @@
     <Resource Include="Presentacion\Resources\zanahoria.png" />
     <Resource Include="Presentacion\Resources\z_dormir.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Presentacion\Resources\pz1-1.png" />
+    <Resource Include="Presentacion\Resources\pz1-2.png" />
+    <Resource Include="Presentacion\Resources\pz1-3.png" />
+    <Resource Include="Presentacion\Resources\pz2-1.png" />
+    <Resource Include="Presentacion\Resources\pz2-2.png" />
+    <Resource Include="Presentacion\Resources\pz2-3.png" />
+    <Resource Include="Presentacion\Resources\pz3-1.png" />
+    <Resource Include="Presentacion\Resources\pz3-2.png" />
+    <Resource Include="Presentacion\Resources\pz3-3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Presentacion\Resources\venom_eyes.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Presentacion\Resources\bateria.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Presentacion\Resources\consola.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Presentacion\Resources\restaurante.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Presentacion\Resources\rompecabezas.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Presentacion\Resources\medalla.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Presentacion\Resources\monedas.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Presentacion\Resources\estrella.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Persistencia\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

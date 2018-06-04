@@ -1,11 +1,11 @@
-﻿<Window x:Class="MiAppVenom.MainWindow"
+﻿<Window x:Name="ventana" x:Class="MiAppVenom.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MiAppVenom"
         mc:Ignorable="d"
-        Title="MainWindow" Height="768" Width="1024">
+        ResizeMode="CanMinimize" Width="1440" Height="900" Icon="Presentacion/Resources/venom_eyes.jpg" WindowStartupLocation="CenterScreen" Title="VenomGotchi" BorderThickness="0">
     <Window.Resources>
         <Style x:Key="estiloBorde" TargetType="Button">
             <Setter Property="OverridesDefaultStyle" Value="True"/>
@@ -596,11 +596,6 @@
                 <EasingDoubleKeyFrame KeyTime="0:0:6" Value="-856.4"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:6.5" Value="-856.4"/>
             </DoubleAnimationUsingKeyFrames>
-
-
-
-
-
         </Storyboard>
         <Storyboard x:Key="animComer">
             <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="boca">
@@ -778,9 +773,98 @@
                 <EasingDoubleKeyFrame KeyTime="0:0:2" Value="-0.541"/>
             </DoubleAnimationUsingKeyFrames>
         </Storyboard>
-
-
+        <Storyboard x:Key="abrir_puzzle">
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="border_puzzle">
+                <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Visible}"/>
+                <DiscreteObjectKeyFrame KeyTime="0:0:1" Value="{x:Static Visibility.Visible}"/>
+            </ObjectAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="border_puzzle">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="cerrar_puzzle">
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="border_puzzle">
+                <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Visible}"/>
+            </ObjectAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="border_puzzle">
+                <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="mostrarBotones">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="btnDormir">
+                <EasingDoubleKeyFrame KeyTime="0" Value="174"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="btnDormir">
+                <EasingDoubleKeyFrame KeyTime="0" Value="75.6"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="1.2"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="btnTelaraña">
+                <EasingDoubleKeyFrame KeyTime="0" Value="-172.8"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="btnTelaraña">
+                <EasingDoubleKeyFrame KeyTime="0" Value="74.4"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="btnJugarYoyo">
+                <EasingDoubleKeyFrame KeyTime="0" Value="1.2"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="btnJugarYoyo">
+                <EasingDoubleKeyFrame KeyTime="0" Value="220.8"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="1.2"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="btnDormir">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="btnJugarYoyo">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="btnTelaraña">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="ocultarBotones">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="btnDormir">
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="174"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="btnDormir">
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="78"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="btnTelaraña">
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="-174"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="btnTelaraña">
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="78"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="btnJugarYoyo">
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="3.6"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="btnJugarYoyo">
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="226.8"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="btnDormir">
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="btnJugarYoyo">
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="btnTelaraña">
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
     </Window.Resources>
+
+    <Window.Background>
+        <ImageBrush ImageSource="Presentacion/Recursos/venom-background.png"/>
+    </Window.Background>
+
     <Window.Triggers>
         <EventTrigger RoutedEvent="FrameworkElement.Loaded">
             <BeginStoryboard Storyboard="{StaticResource animHambreKey}"/>
@@ -793,73 +877,180 @@
             <BeginStoryboard Storyboard="{StaticResource animTelaraña}"/>
             <BeginStoryboard Storyboard="{StaticResource animComer}"/>
             <BeginStoryboard Storyboard="{StaticResource animSaciado}"/>
+            <BeginStoryboard Storyboard="{StaticResource abrir_puzzle}"/>
+            <BeginStoryboard Storyboard="{StaticResource cerrar_puzzle}"/>
+            <BeginStoryboard Storyboard="{StaticResource mostrarBotones}"/>
+            <BeginStoryboard Storyboard="{StaticResource ocultarBotones}"/>
         </EventTrigger>
     </Window.Triggers>
 
-    <Grid>
+    <Grid x:Name="gridPrincipal">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="60*"/>
+            <ColumnDefinition Width="221*"/>
+            <ColumnDefinition Width="200"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"/>
+            <RowDefinition/>
+            <RowDefinition Height="100"/>
+        </Grid.RowDefinitions>
         <Grid.Background>
-            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                <GradientStop Color="Black" Offset="0"/>
-                <GradientStop Color="White" Offset="1"/>
-            </LinearGradientBrush>
+            <ImageBrush ImageSource="Presentacion/Recursos/venom-background.png"/>
         </Grid.Background>
-        <DockPanel LastChildFill="False">
-            <StackPanel Background="#FF252129" Height="714" Width="118.182" Margin="0,60.121,0,0">
-                <Button x:Name="BEnergia" Style="{StaticResource estiloBorde}" Height="97"  Click="BEnergia_Click" Width="100" Margin="10,10,8.182,10">
-                    <Button.Background>
-                        <ImageBrush ImageSource="/Presentacion/Recursos/venom-energia.png" Stretch="UniformToFill"/>
-                    </Button.Background> Dormir
-                </Button>
-                <Button x:Name="BApetito" Style="{StaticResource estiloBorde}" Height="97"  Click="BApetito_Click" Width="100" Margin="10,10,8.182,10">
-                    <Button.Background>
-                        <ImageBrush ImageSource="/Presentacion/Recursos/venom-apetito.png" Stretch="UniformToFill"/>
-                    </Button.Background> Comer
-                </Button>
-                <Button x:Name="BDiversion" Style="{StaticResource estiloBorde}" Height="97"  Click="BDiversion_Click"  Width="100" Margin="3,10,15.4,10">
-                    <Button.Background>
-                        <ImageBrush ImageSource="/Presentacion/Recursos/venom-diversion.png" Stretch="UniformToFill"/>
-                    </Button.Background> Jugar
-                </Button>
-            </StackPanel>
-
-        </DockPanel>
-        <Label  Content="APP VENOM" HorizontalAlignment="Left" VerticalAlignment="Top" Height="38" Width="1016"  Margin="0,16,0,0" Foreground="White"/>
-        <Button Content="Notificaciones"  HorizontalAlignment="Right" VerticalAlignment="Top" Height="38" Width="167" Margin="0,10,10,0"></Button>
-        <Grid x:Name="grid" Margin="118.182,59,0,0" RenderTransformOrigin="0.5,0.5" >
-            <Grid.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </Grid.RenderTransform>
-            <Grid.Background>
-                <ImageBrush ImageSource="/Presentacion/Recursos/venom-background.png" Stretch="UniformToFill"/>
-            </Grid.Background>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="51*"></RowDefinition>
-                <RowDefinition Height="561*"></RowDefinition>
-                <RowDefinition Height="54*"></RowDefinition>
-            </Grid.RowDefinitions>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="0.13*"></ColumnDefinition>
-                <ColumnDefinition Width="0.2*"></ColumnDefinition>
-                <ColumnDefinition Width="0.33*"></ColumnDefinition>
-                <ColumnDefinition Width="0.2*"></ColumnDefinition>
-                <ColumnDefinition Width="0.13*"></ColumnDefinition>
-            </Grid.ColumnDefinitions>
-            <ProgressBar x:Name="PBapetito"  Margin="10,10,10,10"  Height="24" Grid.Column="2" Background="#FFFBFAFA" BorderBrush="#FF0C0B0B" Value="100"/>
-            <ProgressBar x:Name="PBenergia"  Margin="10,10,10,10" Height="24" Grid.ColumnSpan="2" Grid.Column="0" Background="#FFFBFAFA" BorderBrush="#FF0C0B0B" Foreground="#FFF1153D" Value="100"/>
-            <ProgressBar x:Name="PBdiversion"  Margin="10,10,10,10" Height="24" Grid.ColumnSpan="2" Grid.Column="3" Background="#FFFBFAFA" BorderBrush="#FF0C0B0B" Foreground="#FF2F7BE8" Value="100" />
-            <Label x:Name="LEnergia" Content="Energía" HorizontalAlignment="Left" VerticalAlignment="Top" FontWeight="Bold" FontFamily="Calibri" FontSize="22" Margin="10,10,0,0" Height="31" Width="279.273"  Grid.ColumnSpan="2" />
-            <Label x:Name="LApetito" Content="Apetito" HorizontalAlignment="Left" VerticalAlignment="Top" FontWeight="Bold" FontFamily="Calibri" FontSize="22" Margin="10,10,0,0" Grid.Column="2" Width="279.272"  />
-            <Label x:Name="LDiversion" Content="Diversión" HorizontalAlignment="Left" VerticalAlignment="Top" FontWeight="Bold" FontFamily="Calibri" FontSize="22" Margin="10,10,0,0" Width="279.273" Grid.Column="3" Grid.ColumnSpan="2" />
-            <Label x:Name="energyLevel"  Grid.Column="1" HorizontalAlignment="Right" Margin="10,15,0,0" VerticalAlignment="Top" Height="38" Width="63" RenderTransformOrigin="-0.032,0.667" Content="100%" FontWeight="Bold" FontSize="14" Foreground="Black"/>
-            <Label x:Name="hungryLevel" Grid.Column="2" HorizontalAlignment="Right" Margin="10,15,0,0" VerticalAlignment="Top" Height="35" Width="63" RenderTransformOrigin="-0.032,0.667" Content="100%" FontSize="14" FontWeight="Bold" Foreground="Black"/>
-            <Label x:Name="funnyLevel" Grid.Column="4" HorizontalAlignment="Right" Margin="10,15,0,0" VerticalAlignment="Top" Height="37" Width="63" RenderTransformOrigin="-0.032,0.667" Content="100%" Foreground="Black" FontWeight="Bold" FontSize="14"/>
-            <Viewbox x:Name="vbVenom" Grid.Column="2" Margin="55.098,192.441,51.782,4.609" Grid.Row="1" Grid.RowSpan="2" Stretch="Fill">
-                <Canvas x:Name="cvVenom" Height="430.324" Width="192.926" RenderTransformOrigin="0.5,0.5">
+        <DockPanel x:Name="DockCentral"  Grid.Column="1" LastChildFill="False" Margin="-5,-4.333,5,4.333" Grid.RowSpan="2">
+            <Canvas x:Name="cvVenom" Margin="376.956,0,404.556,0" Width="189" VerticalAlignment="Bottom" Height="472.4" HorizontalAlignment="Center" DockPanel.Dock="Bottom" RenderTransformOrigin="0.5,0.5">
+                <Canvas.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Canvas.RenderTransform>
+                <Path x:Name="cuello" Data="M51.266327,0.80099138 L60.332996,13.468186 C56.586124,15.111614 51.298336,13.969537 48.332996,16.934999 46.695347,15.297282 46.268906,15.369554 44.332996,14.401555 44.513611,14.085468 44.69381,13.787093 44.873173,13.504621 L44.940304,13.400689 44.53376,13.416597 C42.679089,13.480346 40.801239,13.470589 38.96603,13.799954 38.113148,13.953025 37.067223,14.672327 36.232635,14.533246 35.019264,14.331029 33.844856,13.291228 33.432568,12.466713 32.811752,11.225196 34.190033,11.967457 34.899273,11.400114 36.54903,10.080422 39.325909,9.450054 41.299427,9.2002609 42.269119,9.2884147 43.432499,8.9336183 44.632839,8.9336183 44.632839,6.2436373 47.777386,4.0820716 49.499626,2.9340179 50.182854,2.4785726 50.812405,2.65626&#xA;51.223434,2.9803458 L51.314716,3.0588582 51.321888,2.8644023 C51.338474,2.2503891 51.321068,1.5674067 51.266327,0.80099138 z M6.9333191,0 L11.093179,5.811795 11.147025,5.7894137 C12.20133,5.3760593 13.577668,5.5245674 14.716352,6.4004567 15.809194,7.2410829 16.764561,7.3245476 17.982878,7.9336994 19.164764,8.5246313 19.183434,8.798724 20.649429,9.0002907 L22.049368,10.400202 C22.124184,10.448998 22.470358,10.496095 22.582674,10.533533 22.871872,10.919109 23.11795,11.561708 23.58263,11.933444 24.391203,12.580292 24.557747,13.066562 22.982656,14.466613 21.768549,15.545794 19.980829,15.28958 18.182869,15.13324 16.628458,14.998072 14.866014,14.463365 13.405791,13.461729 L13.347082,13.420202 12.961282,13.485181 C9.7543755,13.996304 6.223999,13.909909 3.9999998,16.134001 2.3623352,14.496298 1.9359131,14.568567 0,13.60057 3.8530884,6.8573702 7.5172424,8.175082 6.9333191,0 z" Fill="Black" HorizontalAlignment="Left" Height="16.935" Stretch="Fill" VerticalAlignment="Top" Width="60.333" Canvas.Left="63.481" Canvas.Top="103.666"/>
+                <Path x:Name="cuerpo" HorizontalAlignment="Left" Height="149.202" VerticalAlignment="Top" Canvas.Top="116.267" Canvas.Left="16.663" Data="M6.0099325,148.86607 L6.1276192,148.86607 6.1245631,149.20198 z M1.5572068,148.86607 L1.5693757,148.86607 1.5912968,148.93532 z M111.27214,118.18065 L111.27214,118.75861 111.28883,118.73406 C111.35895,118.58234 111.3678,118.4231 111.31205,118.25716 z M41.954296,118.18064 L41.914375,118.25715 C41.858631,118.4231 41.867481,118.58233 41.937611,118.73406 L41.954296,118.75861 z M47.215149,0 L76.271217,0 76.955208,0 106.52238,0 106.57616,0.14149203 C106.66885,0.34955012 106.77531,0.54351159 106.85089,0.73241594 107.13234,0.83472689 107.4022,1.0018553 107.65102,1.1990025 L107.87645,1.1179533 108.1446,1.3068822 C109.69039,2.5596403 110.87018,5.4591239 111.6048,7.8365482 L111.62146,7.8921517 112.40903,8.049703 C115.94024,8.8396533 118.86603,10.420594 120.63561,12.449495 L120.93594,12.814723 121.14805,12.855727 C125.29321,13.669624 135.06044,16.114794 136.10851,19.536887 L136.13396,19.641507 136.34863,19.764473 C137.2939,20.338284 138.14531,21.019821 138.87903,21.788452 L139.19293,22.133787 139.19527,22.135218 C140.28151,22.896954 140.86757,24.225663 141.29088,25.716891 L141.30991,25.790598 141.39915,26.062317 C141.50439,26.415924 141.58992,26.776377 141.65466,27.142744 L141.66954,27.243922 141.78842,27.765999 C142.40222,30.531882 142.97549,33.243294 145.40396,33.627816 146.8589,39.127873 151.73338,43.927155 152.98416,49.87024 153.36368,51.673622 153.29002,53.006649 152.81429,54.477974 L152.71629,54.760529 152.74507,55.380932 C152.81726,57.066384 152.84981,58.929695 152.76913,60.638607 L152.70088,61.666054 129.57201,61.666054 C129.28081,61.666054 129.0034,61.725067 128.75108,61.831787 L128.59248,61.917874 128.55272,61.86879 C127.36369,60.547089 125.64453,60.254387 124.14359,59.335755 L124.01534,59.249173 123.5241,60.166142 C121.7752,63.412884 120.10293,66.437912 119.22885,68.398072 116.57069,74.358918 114.92664,82.668915 113.6292,88.875862 111.56539,98.749115 111.71614,109.25401 111.47549,119.39935 L111.27214,119.41097 111.27214,122.12801 76.271217,122.12801 41.954296,122.12799 41.954296,119.41097 41.750946,119.39935 C41.510292,109.25401 41.661034,98.749115 39.597221,88.875862 38.299797,82.668915 36.655731,74.358918 33.997581,68.398072 33.123497,66.437912 31.451231,63.41288 29.702331,60.166138 L29.211084,59.249169 29.082853,59.335751 C27.081592,60.560593 24.692385,60.672673 23.689112,63.594773 23.220535,63.787083 22.859297,64.091828 22.540377,64.43853 L22.517317,64.46605 0.95784252,64.46605 0.86089282,64.082909 C0.35008915,61.824715 0.35502919,58.330468 0.48134559,55.380932 L0.51013648,54.760525 0.41214275,54.47797 C-0.063590945,53.006646 -0.13725448,51.673619 0.2422616,49.870236 1.4930443,43.927155 6.3675279,39.127873 7.8224649,33.627816 10.250936,33.243294 10.824211,30.53188 11.438,27.765997 L11.556894,27.243916 11.57176,27.142739 C11.636511,26.776375 11.72204,26.415922 11.827277,26.062311 L11.916524,25.790596 11.935556,25.716891 C12.358851,24.225661 12.944917,22.896954 14.031152,22.135218 L14.033499,22.133786 14.347392,21.788452 C15.08111,21.01982 15.932531,20.338284 16.877809,19.764468 L17.09248,19.641507 17.117918,19.536887 C18.165996,16.11479 27.933222,13.669624 32.078384,12.855727 L32.290478,12.814723 32.590816,12.449495 C34.360409,10.420594 37.286194,8.8396533 40.817413,8.049703 L41.60498,7.8921517 41.621643,7.8365482 C42.356251,5.4591235 43.53603,2.55964 45.081825,1.3068822 L45.383675,1.0942059 45.601856,1.0176768 C46.131084,0.83838107 46.745392,0.65138557 46.98452,0.3326247 47.186302,0.18132152 47.087665,0.37031104 47.184502,0.066046461 z" Stretch="Fill" Width="153.226">
+                    <Path.Fill>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <GradientStop Color="Black" Offset="0"/>
+                            <GradientStop Color="Black" Offset="1"/>
+                        </LinearGradientBrush>
+                    </Path.Fill>
+                </Path>
+                <Image x:Name="logoVenom" Source="/Presentacion/Recursos/logo-venom.png" Stretch="Fill" Height="78.141" Canvas.Left="50.865" Canvas.Top="139.734" Width="86.516"/>
+                <Path x:Name="cabeza" Data="M39.106888,0 C56.49355,-7.1054274E-15 71.514092,13.40721 78.58783,32.835907 L78.601921,32.875851 78.606697,33.699146 C78.751045,46.880795 79.750901,57.938259 74.791252,70.833366 71.949517,78.221863 71.476013,85.806236 66.791252,92.833389 63.52504,97.732704 63.135628,108.25565 57.19125,110.63341 L57.105202,110.82903 56.155869,111.37866 C50.915695,114.31195 45.154423,115.934 39.106888,115.934 33.059353,115.934 27.298083,114.31195 22.057911,111.37866 L21.697726,111.17014 21.593594,110.9334 C15.649205,108.55565 15.25979,98.032707 11.993572,93.133385 7.3087972,86.106232 6.8352874,78.521866 3.9935506,71.133362 -0.96611187,58.238258 0.033740907,47.180794 0.1780953,33.999146 L0.19350882,31.339085 0.59321561,30.336485 C8.0102952,12.26671 22.476172,-7.1054274E-15 39.106888,0 z" Fill="Black" HorizontalAlignment="Left" Height="115.934" Stretch="Fill" VerticalAlignment="Top" Width="78.785" Canvas.Left="54.474" RenderTransformOrigin="0.5,0.5">
+                    <Path.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Path.RenderTransform>
+                </Path>
+                <Path x:Name="ojoIzquierdo" Data="M285.318,305 C276.79185,311.18564 275.718,310.33506 275.718,323.4 275.718,329.2257 273.59896,338.30607 279.718,342.2 282.35311,343.87689 285.59906,344.47652 288.118,346.2 291.01914,348.18499 292.34618,352.50315 295.718,353.8 303.36053,356.73943 308.21421,356.2 316.518,356.2 316.518,355.93333 316.518,355.66667 316.518,355.4 314.98491,355.14449 315.47277,355.32898 314.118,354.2 315.30954,353.90211 316.01839,353.8&#xA;317.318,353.8 317.318,348.31727 312.118,344.85568 312.118,339 312.118,342.2 312.118,345.4 312.118,348.6 311.36322,347.62956 311.01134,347.27 310.118,346.6 310.118,342.7323 307.718,340.77027 307.718,336.6 300.52927,336.6 299.95912,331.88225 296.118,324.2 296.58365,326.99389 297.03078,327.22819 291.318,325.8 287.70254,324.89613 288.17247,322.33495 286.118,319.4 281.44968,312.73097&#xA;282.62737,313.0719 285.318,305 z" Fill="White" HorizontalAlignment="Left" Height="46.039" Stretch="Fill" VerticalAlignment="Top" Width="30.355" Panel.ZIndex="5" Canvas.Left="58.259" Canvas.Top="18.994" RenderTransformOrigin="0.5,0.5">
+                    <Path.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Path.RenderTransform>
+                </Path>
+                <Path x:Name="ojoDerecho" Data="M285.318,305 C276.79185,311.18564 275.718,310.33506 275.718,323.4 275.718,329.2257 273.59896,338.30607 279.718,342.2 282.35311,343.87689 285.59906,344.47652 288.118,346.2 291.01914,348.18499 292.34618,352.50315 295.718,353.8 303.36053,356.73943 308.21421,356.2 316.518,356.2 316.518,355.93333 316.518,355.66667 316.518,355.4 314.98491,355.14449 315.47277,355.32898 314.118,354.2 315.30954,353.90211 316.01839,353.8&#xA;317.318,353.8 317.318,348.31727 312.118,344.85568 312.118,339 312.118,342.2 312.118,345.4 312.118,348.6 311.36322,347.62956 311.01134,347.27 310.118,346.6 310.118,342.7323 307.718,340.77027 307.718,336.6 300.52927,336.6 299.95912,331.88225 296.118,324.2 296.58365,326.99389 297.03078,327.22819 291.318,325.8 287.70254,324.89613 288.17247,322.33495 286.118,319.4 281.44968,312.73097&#xA;282.62737,313.0719 285.318,305 z" Fill="White" HorizontalAlignment="Left" Height="46.039" Stretch="Fill" VerticalAlignment="Top" Width="30.355" RenderTransformOrigin="0.5,0.5" Panel.ZIndex="5" Canvas.Left="99.414" Canvas.Top="18.894">
+                    <Path.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform ScaleY="1" ScaleX="-1"/>
+                            <SkewTransform AngleY="0" AngleX="0"/>
+                            <RotateTransform Angle="0"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Path.RenderTransform>
+                </Path>
+                <Path x:Name="boca" Data="M58.478523,11.129907 L57.562794,11.647479 C57.387356,11.971352 57.214699,12.284878 57.044537,12.588387 L56.801395,13.018045 57.079227,12.8093 C57.303261,12.636173 57.5271,12.45956 57.750725,12.279419 L58.161152,11.941975 58.167419,11.893455 C58.210537,11.646399 58.285271,11.426083 58.404858,11.231445 z M60.179337,10.168604 L59.89064,10.331776 59.94838,10.317139 60.041615,10.296864 z M68.765999,0 L68.743523,0.30582583 C68.556999,3.0280367 68.507065,5.5573972 68.496918,6.6883482 L68.496841,6.6982454 68.397087,7.0262479 C65.836548,15.395639 63.294773,22.557329 60.781654,28.639824 L60.560341,29.170524 60.426773,29.386433 C57.051388,34.765884 53.3853,39.844921 50.361469,45.514553 49.486729,47.154678 49.114002,48.583809 48.912983,50.055031 L48.898457,50.173435 48.879589,50.196907 C39.017513,62.278938 29.913271,59.575329 22.259701,51.061954 L22.192686,50.985763 22.170675,50.899753 C19.38496,40.263256 14.875302,33.573528 8.8337955,27.3381 L8.0606871,26.551813 7.5802922,25.410854 C3.9774067,16.716087 1.3876297,8.5535554 0.064660192,4.2099808 L0,3.9971622 0.090227313,3.9766306 C0.38699806,3.9068638 0.67149812,3.8354641 0.94410008,3.7625536 L1.0201241,3.7415568 1.0868429,3.8058244 C3.4136138,6.0211796 6.7431626,8.8290299 10.786469,11.490471 L11.126447,11.711545 11.786781,11.913776 C20.211748,14.419077 28.258345,14.580724 37.562843,14.580724 47.378887,14.580724 53.235996,13.315361 60.487396,9.8188418 L60.629765,9.7491206 60.64468,9.7352294 C63.182575,7.3112668 65.683167,4.3991245 68.120773,0.93306208 z" HorizontalAlignment="Left" Height="58.368" RenderTransformOrigin="0.498975295088151,0.3826943460188" Stretch="Fill" VerticalAlignment="Top" Width="68.766" Canvas.Left="59.059" Canvas.Top="57.833">
+                    <Path.Fill>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <GradientStop Color="Black" Offset="0"/>
+                            <GradientStop Color="#FFFF0F06" Offset="1"/>
+                        </LinearGradientBrush>
+                    </Path.Fill>
+                    <Path.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="2.889"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Path.RenderTransform>
+                </Path>
+                <Path x:Name="dientes" Fill="White" HorizontalAlignment="Left" VerticalAlignment="Top" Data="M30.537159,39.977944 L30.542828,40.009585 C31.10353,43.340505 30.173424,44.411868 31.690349,48.415042 35.013062,57.183726 32.018506,53.060466 30.211733,52.466483 L30.672639,52.357226 C28.785137,45.586131 28.107187,44.360602 30.038535,41.404716 30.10651,40.490973 30.270982,40.433606 30.524547,40.000443 z M30.714234,39.625381 C30.668959,39.728801 30.625751,39.816594 30.584641,39.89325 L30.537159,39.977944 30.48378,39.680009 C30.560597,39.661799 30.637416,39.64359 30.714234,39.625381 z M34.354408,38.123158 C35.818928,43.755544 34.88398,47.331424 37.539198,52.725959 37.216818,52.633327 37.395634,53.428374 37.221867,53.712825 37.09235,53.92485 36.875336,54.047851 36.702076,54.215362 36.416275,54.491672 35.830776,54.580661 35.460034,54.736094 31.922457,48.298121 34.29748,45.272882 34.354408,38.123158 z M25.831016,36.871684 L25.83648,36.902457 C26.375791,40.142592 25.44043,41.191651 26.930412,45.08048 30.194107,53.598693 27.2294,49.602107 25.42894,49.034915 L25.889845,48.925662 C24.046924,42.343762 23.377535,41.154569 25.32431,38.264155 25.397829,37.373942 25.562414,37.317056 25.818283,36.893672 z M26.01001,36.527261 C25.964161,36.628251 25.920475,36.714013 25.87895,36.788915 L25.831016,36.871684 25.779554,36.581887 C25.856372,36.563678 25.933191,36.54547 26.01001,36.527261 z M42.129049,34.636447 C45.371038,41.004182 48.845022,42.642953 48.555128,49.988204 48.154236,50.015681 47.590963,50.199 47.212076,50.080249 46.982384,50.008258 46.733429,49.995708 46.522985,49.864272 46.240644,49.687938 46.045696,48.896716 45.798765,49.124297 45.765364,43.108279 43.333334,40.330518 42.129049,34.636447 z M22.75334,33.283786 L22.75317,33.305297 C22.699871,35.567195 21.592635,36.204474 22.356183,38.991385 24.028673,45.095929 21.83635,42.109033 20.17036,41.566978 L20.642618,41.531737 C20.016968,36.872987 19.573571,36.002448 22.00526,34.192609 22.237602,33.590146 22.409456,33.565341 22.736882,33.297729 z M22.991071,33.063584 C22.927881,33.128718 22.869554,33.183623 22.815302,33.23129 L22.75334,33.283786 22.754941,33.081204 C22.833651,33.075332 22.912361,33.069457 22.991071,33.063584 z M46.01535,32.507691 L46.036669,32.522145 C46.456738,32.795627 46.629412,32.773076 47.098019,33.559625 50.144314,35.335595 50.085072,36.735869 51.419357,43.638101 L51.880264,43.528848 C50.529751,44.871243 49.69232,49.902854 48.749832,40.569951 48.319563,36.309192 47.009686,35.768804 46.024403,32.538527 z M45.930105,32.217307 L46.01535,32.507691 45.935089,32.453275 C45.864115,32.403188 45.786293,32.344083 45.69965,32.271934 45.776468,32.253724 45.853287,32.235517 45.930105,32.217307 z M13.399383,29.106913 L13.479641,29.161327 C13.515129,29.186371 13.552329,29.213669 13.591486,29.243725 13.630644,29.273781 13.67176,29.306594 13.715082,29.342669 13.638264,29.360878 13.561445,29.379086 13.484627,29.397296 z M29.839252,28.584846 L29.91951,28.639261 C29.990485,28.689348 30.068306,28.748454 30.15495,28.820602 30.078133,28.838811 30.001314,28.85702 29.924496,28.87523 z M20.63309,28.276162 L20.628134,28.297794 C20.108978,30.405139 18.895261,30.770332 19.066015,33.540328 19.440031,39.60781 17.914202,36.351548 16.397927,35.495261 L16.86675,35.561072 C17.217288,31.066765 16.963707,30.15864 19.713962,28.972357 20.038402,28.49637 20.210834,28.4706 20.530594,28.326199 z M20.676136,28.08828 C20.754274,28.099248 20.832412,28.110217 20.91055,28.121185 20.835344,28.168967 20.767001,28.208187 20.704137,28.241478 L20.63309,28.276162 z M48.63986,27.363927 L48.660456,27.375314 C49.0667,27.590127 49.238693,27.564686 49.67404,28.210073 52.627771,29.593195 52.51716,30.77547 53.583967,36.542516 L54.044874,36.433261 C52.656481,37.614896 51.639961,41.886449 51.05158,34.056378 50.782969,30.481706 49.504622,30.075129 48.64769,27.389575 z M48.566124,27.122386 L48.63986,27.363927 48.562323,27.321061 C48.493824,27.281496 48.418879,27.234587 48.335669,27.177014 48.412487,27.158805 48.489305,27.140595 48.566124,27.122386 z M20.76048,26.835905 L20.78773,26.850708 C20.869526,26.896106 20.960704,26.951737 21.064812,27.024113 20.987994,27.042322 20.911176,27.060531 20.834358,27.07874 20.82095,27.032754 20.807421,26.98741 20.793778,26.942683 z M40.706442,26.555408 L40.759821,26.853346 C40.683002,26.871555 40.606184,26.889765 40.529366,26.907974 40.57464,26.804555 40.617847,26.716761 40.65896,26.640104 z M44.541937,25.115834 L44.591791,25.397417 C44.516472,25.415271 44.441153,25.433125 44.365833,25.450979 44.410967,25.352724 44.453951,25.269275 44.494795,25.196384 z M50.672274,23.532319 L50.693214,23.537398 C51.105442,23.629681 51.270184,23.574698 51.746838,24.009098 54.729033,24.535613 54.721087,25.513138 56.240934,29.959926 L56.678957,29.77939 C55.431158,31.012139 54.803896,34.667399 53.574846,28.457743 53.01375,25.62284 51.739223,25.550142 50.682026,23.55148 z M8.5215197,23.378889 L8.5966234,23.411427 C8.6629028,23.441584 8.735281,23.477588 8.8154192,23.522127 8.7386007,23.540337 8.6617823,23.558546 8.5849638,23.576755 z M50.580427,23.351891 L50.672274,23.532319 50.593437,23.513199 C50.523651,23.494937 50.446989,23.47203 50.361414,23.44216 50.434418,23.412069 50.507423,23.38198 50.580427,23.351891 z M5.4153624,22.989173 L5.4929619,23.032299 C5.5615139,23.0721 5.6365261,23.119285 5.7198124,23.177185 5.6429939,23.195394 5.5661755,23.213603 5.489357,23.231812 z M51.890581,19.966594 L51.92874,20.216568 C51.834019,20.239021 51.7393,20.261474 51.644581,20.283926 51.708662,20.191439 51.768845,20.112498 51.825495,20.043269 z M53.150984,19.033364 L53.171148,19.04003 C53.569017,19.163882 53.738306,19.125347 54.161673,19.582588 57.055799,20.343376 56.93849,21.279459 57.945642,25.671419 L58.399599,25.536045 C57.025965,26.610185 55.995592,30.059143 55.473768,24.002803 55.235544,21.237895 53.9816,21.058723 53.158495,19.052562 z M53.080233,18.852566 L53.150984,19.033364 53.075056,19.008266 C53.007994,18.98477 52.934645,18.956231 52.853251,18.920254 52.928911,18.897691 53.004572,18.875129 53.080233,18.852566 z M12.750525,15.61634 C12.926857,15.612109 13.094339,15.625646 13.233111,15.679793 13.45745,15.767332 13.704983,15.796876 13.906145,15.94241 14.176031,16.137656 14.317604,16.940436 14.579176,16.730249 14.210128,22.735079 16.450682,25.672926 17.271312,31.436599 14.462802,24.861431 11.106553,22.988774 11.887044,15.679793 12.138165,15.679793 12.456637,15.62339 12.750525,15.61634 z M9.3909073,15.526142 C9.4061289,15.526484 9.4213085,15.528336 9.4364481,15.531767 L9.4673061,15.542051 9.4732695,15.543293 9.4760132,15.544953 9.4817448,15.546863 C9.4968052,15.553519 9.5118275,15.561824 9.5268145,15.571845 L9.5479755,15.588488 9.5548735,15.592661 9.5598412,15.59782 9.5716696,15.607123 C9.586587,15.620645 9.6014709,15.635952 9.6163254,15.653114 L9.6300211,15.670704 9.6358032,15.676709 9.6496935,15.69597 9.6607952,15.710228 9.667758,15.72102 9.6760416,15.732507 9.6927557,15.759761 9.7050934,15.778881 9.7101965,15.788201 9.7161427,15.797897 9.7364082,15.836065 9.7492342,15.859486 9.7524376,15.866255 9.7561178,15.873187 9.7825441,15.92987 9.793232,15.952453 9.7945185,15.955556 9.7959776,15.958685 C9.8092461,15.988919 9.8224964,16.020906 9.8357315,16.054697 L9.8364487,16.056627 9.837101,16.058199 9.8446522,16.078726 9.875391,16.161532 9.8782549,16.170069 9.8808546,16.177135 9.8931599,16.214496 9.9149666,16.279499 9.9200115,16.296024 9.9245071,16.309675 9.9367523,16.350867 9.9544678,16.408902 9.9617205,16.434859 9.9680738,16.456232 9.9792347,16.497541 9.993906,16.550051 10.003435,16.587115 10.011568,16.617219 10.021253,16.656422 10.033292,16.703253 10.045206,16.753389 10.055003,16.79305 10.063007,16.828299&#xA;10.072637,16.868816 10.087135,16.934552 10.098395,16.984137 10.104636,17.013897 10.111948,17.047047 10.129438,17.13216 10.141756,17.190895 10.146152,17.213496 10.151239,17.238253 10.172795,17.350474 10.185101,17.413736 10.187627,17.427683 10.190519,17.442743 10.220851,17.611142 10.228445,17.653073 10.229083,17.656845 10.229799,17.660823 C10.242894,17.735815 10.255991,17.813124 10.269091,17.892801 L10.270513,17.9017 10.271801,17.90932 10.282199,17.974884 10.308403,18.138986 10.311977,18.162672 10.315184,18.182889 10.327622,18.266334 10.347748,18.399683 10.353533,18.440152 10.358607,18.474194 10.37054,18.559127 10.387133,18.675201 10.395162,18.734371 10.402085,18.783649 10.412807,18.864409 10.426571,18.965848 10.436941,19.046202 10.445632,19.111666 10.454826,19.184782 10.466073,19.271932 10.478906,19.376282 10.489264,19.458659 10.496778,19.521619&#xA;10.505649,19.593759 10.521238,19.726573 10.53299,19.82504 10.538689,19.875238 10.545309,19.931636 10.56418,20.099789 10.57683,20.211225 10.580688,20.246893 10.585063,20.285872 10.608789,20.506645 10.620795,20.617624 10.622751,20.636565 10.624923,20.656775 10.664854,21.044211 10.664899,21.044652 10.708574,21.43953 10.724913,21.565328 10.75734,21.813141 10.778872,21.956067 10.810967,22.166715 10.83597,22.311594 10.869234,22.501541 10.897056,22.643754&#xA;10.931894,22.818764 10.962223,22.956784 10.998723,23.119649 11.031293,23.252714 11.069504,23.405485 11.104105,23.533376 11.143989,23.677427 11.180466,23.800312 11.221962,23.936769 11.260154,24.054878 11.303185,24.184705 11.342972,24.298473 11.38743,24.422478 11.428664,24.532291 11.467158,24.632326 11.561123,24.860624 11.657409,25.089296 11.749257,25.291891 11.848728,25.507277 11.947865,25.712312 12.050926,25.922969 12.189708,26.201195 12.272672,26.367053&#xA;12.316527,26.455837 12.40828,26.64012 12.436634,26.698993 12.47957,26.785917 12.532959,26.899003 12.609322,27.057562 12.644316,27.134872 12.687093,27.22548 C12.721624,27.30104 12.756101,27.377892 12.790483,27.456251 L12.802941,27.485311 12.809812,27.50049 12.854064,27.604552 12.8933,27.696071 12.900748,27.714335 12.909298,27.734445 12.955995,27.849827 12.995304,27.94623 13.001234,27.961609 13.007986,27.978292 13.05738,28.10721 13.096252,28.208018 13.100681,28.220229 13.105653,28.233204 13.158905,28.380741 13.1959,28.482729 13.198807,28.491288 13.20208,28.500357 13.262618,28.679211 13.294008,28.771651 13.295444,28.776191 13.297046,28.780923 C13.328433,28.876811 13.35954,28.97513 13.39033,29.076077 L13.399383,29.106913 13.378063,29.092459 13.250486,29.013618 13.120094,28.936838 13.118758,28.936011 13.100909,28.925585 C13.059618,28.901268 13.02007,28.87726 12.981204,28.851401 L12.977338,28.84855 12.972246,28.8454 C12.948389,28.829305 12.92476,28.812445 12.90111,28.794319 L12.877823,28.775142 12.86559,28.766119 12.855483,28.756744 12.829855,28.73564 C12.805918,28.714478 12.781714,28.691547 12.756996,28.666345 L12.751288,28.660111 12.747701,28.656785 C12.72751,28.635839 12.706959,28.613352 12.685915,28.589053 L12.683238,28.585803 12.681049,28.583413 12.669314,28.568898 12.621171,28.510451 12.609394,28.494789 12.600532,28.483829 12.583234,28.460002 12.552674,28.419362 12.52942,28.385873 12.513959,28.364574 12.499736,28.343122 12.47963,28.314166 12.439764,28.252667 12.419847,28.22263 12.411602,28.209227 12.401242,28.193245 C12.374133,28.150136 12.346001,28.104137 12.316713,28.054978 12.221516,27.999479 12.129352,27.944347 12.040084,27.889402 11.950815,27.834457 11.864442,27.7797 11.780828,27.724952 11.697212,27.670202 11.616356,27.615461 11.538119,27.56055 11.459884,27.505637 11.384269,27.450554 11.311137,27.395121 11.238006,27.339686 11.167357,27.283902 11.099056,27.227588 11.030754,27.171273 10.964799,27.114429 10.901052,27.056874 10.837306,26.999321 10.775768,26.941058&#xA;10.716302,26.881907 10.656837,26.822755 10.599442,26.762714 10.543983,26.701606 10.377603,26.518279 10.228632,26.325341 10.093363,26.117947 10.048274,26.048815 10.004706,25.978078 9.9625244,25.905555 9.9203424,25.833031 9.8795462,25.758722 9.8399973,25.682449 9.8004475,25.606174 9.7621469,25.527936 9.7249565,25.447554 9.6877651,25.36717 9.6516857,25.284643 9.6165791,25.199793 9.5463648,25.030089 9.4800444,24.851093 9.4165182,24.661366 9.3847551,24.566504&#xA;9.3536911,24.468958 9.3231878,24.36855 9.2926846,24.268143 9.262743,24.164874 9.2332249,24.058563 9.2037077,23.952252 9.174614,23.842901 9.1458073,23.730329 9.0881929,23.505185 9.0317268,23.267158 8.9753084,23.014815 8.91889,22.762471 8.8625202,22.49581 8.8051004,22.213398 8.776391,22.072191 8.7474184,21.927046 8.7180471,21.777785 8.688674,21.628522 8.6589022,21.475143 8.6285934,21.317467 8.5982847,21.159791 8.5674391,20.997818 8.5359192,20.831369&#xA;8.5043983,20.66492 8.4722033,20.493995 8.4391975,20.318414 8.3731842,19.967253 8.3039255,19.597469 8.2303209,19.207629 8.1935186,19.012709 8.1556301,18.812774 8.116518,18.607646 8.0774059,18.402518 8.0370703,18.192196 7.9953737,17.976501 L7.5344687,18.085757 7.6659079,17.941674 7.7096891,17.886365 7.7943058,17.777534 7.8450871,17.705511 7.9198475,17.597014 7.9725094,17.515342 8.0337391,17.418052 8.1498566,17.220716 8.2891092,16.979297 8.4608088,16.669321 8.4835682,16.628189 8.5398617,16.526163 8.5487471,16.510394 8.565959,16.479288 8.6144199,16.393841 8.6531286,16.325142 8.6595116,16.314336 8.6691208,16.297391 8.7342501,16.187786 8.7641315,16.137191 8.7667809,16.133042 8.7704096,16.126935&#xA; C8.8038721,16.07239 8.8370409,16.020303 8.869936,15.971226 L8.8714161,15.969144 8.8730192,15.966633 8.8908682,15.941786 8.9678144,15.833568 8.9737902,15.826354 8.9799395,15.817794 9.009263,15.783534 9.0641584,15.717269 9.0746479,15.707143 9.0850401,15.695001 9.1144094,15.668757 9.1590796,15.625633 9.1741056,15.615414 9.1884699,15.602579 C9.2055769,15.589945 9.22262,15.578758 9.239604,15.569107 L9.2483101,15.564947 9.2526932,15.561967 9.2596598,15.559525 9.2903757,15.54485 C9.3072414,15.538361 9.3240499,15.533497 9.3408041,15.530349 L9.3435698,15.530117 9.3451109,15.529577 C9.3604212,15.526968 9.3756857,15.5258 9.3909073,15.526142 z M17.278213,15.48906 C17.715496,15.48137 18.07116,16.549506 18.34138,20.11283 18.613628,23.702937 19.892684,24.112526 20.752505,26.810335 L20.76048,26.835905 20.739752,26.824646 C20.333194,26.608511 20.161185,26.633886 19.725092,25.985324 16.769279,24.593363 16.878732,23.406183 15.805906,17.613595 L15.344999,17.72285 C16.103812,17.074666 16.750456,15.49834 17.278213,15.48906 z M20.99159,15.326808 L21.021244,15.329058 21.076899,15.329876 21.154216,15.339145 21.199858,15.342607 21.224651,15.347589 21.239233,15.349336 21.25401,15.353487 21.296549,15.362034 C21.327773,15.369997 21.35793,15.379516 21.386842,15.390798 21.442927,15.412677 21.500461,15.430933 21.558358,15.448284 21.616254,15.465634 21.674513,15.48208 21.732047,15.50034 21.789582,15.518599 21.846391,15.538672 21.90139,15.563278 21.928889,15.57558 21.955935,15.589016 21.982394,15.603925 22.008851,15.618832 22.03472,15.635213 22.059865,15.653408 22.076733,15.665609 22.0931,15.680184 22.109026,15.696737 22.124952,15.71329 22.140438,15.73182&#xA;22.155544,15.751933 22.170649,15.772045 22.185375,15.79374 22.199782,15.816621 22.214189,15.839501 22.228276,15.863568 22.242104,15.888426 22.297419,15.987858 22.348593,16.099942 22.399509,16.199355 22.463153,16.323623 22.52639,16.428094 22.596799,16.463315 L22.639965,16.47574 22.685214,16.469172 C22.700686,16.463553 22.716565,16.454373 22.732913,16.441236 22.663719,17.56714 22.686266,18.585222 22.773995,19.534326 22.803238,19.850693 22.839724,20.159396 22.882468,20.461874 23.053444,21.671785 23.324558,22.782086 23.632848,23.884851 23.786994,24.436234 23.950433,24.985732 24.115297,25.544855 24.19773,25.824417 24.280517,26.106385 24.362677,26.392199 24.444838,26.678012 24.52637,26.96767 24.606291,27.262611 24.925976,28.442379 25.219876,29.706685&#xA;25.425032,31.147603 25.161735,30.531179 24.893623,29.956087 24.624558,29.413972 24.53487,29.233266 24.445076,29.056225 24.355318,28.882539 23.90653,28.014106 23.458665,27.22954 23.029593,26.490164 22.943779,26.342289 22.858716,26.196221 22.774548,26.051652 22.606211,25.762512 22.441454,25.479366 22.281419,25.199738 22.041367,24.780294 21.81194,24.368766 21.596998,23.956798 21.525351,23.819474 21.455313,23.682102 21.387028,23.544372 21.182172,23.131182&#xA;20.993088,22.714767 20.823636,22.286773 20.654184,21.858779 20.504364,21.419207 20.378035,20.959702 20.335926,20.806533 20.296426,20.651149 20.25968,20.493242 20.149442,20.019519 20.063982,19.523079 20.00716,18.995567 19.98822,18.81973 19.972461,18.64044 19.960027,18.457388 19.947594,18.274336 19.938485,18.087523 19.932845,17.896638 19.910283,17.133099 19.943208,16.30442 20.04077,15.390798 L20.24434,15.381016 20.316741,15.374881 20.500948,15.357203 20.649333,15.343882 20.725706,15.336644 20.735832,15.336116 20.748196,15.335006 20.773434,15.334157 20.904252,15.327337 20.954113,15.32807 z M25.830775,15.004076 C26.27221,15.013997 26.677704,16.293614 27.104767,20.522585 27.535038,24.783345 28.844915,25.323733 29.830199,28.554009 L29.839252,28.584846 29.817932,28.570393 C29.397863,28.29691 29.225189,28.319461 28.756581,27.532912 25.710287,25.756942 25.76953,24.356668 24.435243,17.454435 L23.974337,17.563689 C24.712899,16.829566 25.298012,14.992102 25.830775,15.004076 z M29.642621,14.325028 C29.818954,14.320534 29.986436,14.333819 30.125208,14.387757 30.349547,14.474959 30.59708,14.504132 30.798242,14.649364 31.068129,14.844205 31.209701,15.646772 31.471275,15.436194 31.102225,21.441577 33.342779,24.376061 34.163408,30.138501 31.354899,23.56755 27.99865,21.699931 28.779141,14.389778 29.030262,14.389401 29.348735,14.33252 29.642621,14.325028 z M5.5773239,14.127297 C5.9874144,14.164807 6.2795105,15.073523 6.3984013,17.911276 6.5224619,20.87247 7.7726154,21.159398 8.514782,23.357878 L8.5215197,23.378889 8.5015697,23.370246 C8.1076841,23.207889 7.9363003,23.235915 7.530695,22.71675 4.6597338,21.6849 4.8162737,20.697553 3.988637,15.945554 L3.5277309,16.054808 C4.327754,15.470997 5.050065,14.079068 5.5773239,14.127297 z M58.306765,13.497337 L58.34189,13.71365 C58.269548,13.730799 58.197203,13.747947 58.124861,13.765096 58.172018,13.686881 58.21649,13.620248 58.258467,13.561903 z M35.123157,13.038239 C39.40029,19.066251 36.902658,21.8987 36.18515,29.605289 34.726861,24.095267 36.185076,20.089781 33.404709,15.181351 L33.151227,14.752592 33.188862,14.741924 C33.236702,14.724692 33.230659,14.707888 33.122169,14.703442 L33.151227,14.752592 33.143638,14.754743 C32.946337,14.800672 32.433367,14.827297 32.61474,14.586561 32.811374,14.325562 33.120079,14.138115 33.372737,13.913898 33.789515,13.544047 34.600667,13.299617 35.123157,13.038239 z M38.369001,12.581593 C38.928148,12.59057 40.128481,13.769882 41.031866,14.066873 L40.570961,14.176127 C42.458462,20.947225 43.136412,22.172752 41.205065,25.128639 41.137089,26.042381 40.972618,26.09975 40.719053,26.532911 L40.706442,26.555408 40.700773,26.523771 C40.14007,23.19285 41.070177,22.121488 39.553251,18.118313 37.891893,13.733971 37.809855,12.572615 38.369001,12.581593 z M42.366283,11.907757 C42.913385,11.911758 44.078587,13.018376 44.960255,13.292225 L44.508345,13.399347 C46.301289,19.793329 46.954922,20.947895 45.041292,23.761319 44.967466,24.626766 44.806059,24.68239 44.554459,25.094439 L44.541937,25.115834 44.536644,25.085934 C44.014582,21.93757 44.93334,20.915993 43.480904,17.138999 41.890177,13.002376 41.819181,11.903758 42.366283,11.907757 z M60.858183,11.676689 L60.900984,11.925562 C60.828642,11.942711 60.7563,11.959859 60.683954,11.977007 60.728823,11.889075 60.771376,11.814312 60.811705,11.748952 z M1.9275532,11.642291 C1.9445438,11.641634 1.9614124,11.642586 1.978157,11.645232 2.3949223,11.711074 2.7354774,12.825452 2.9963799,16.265901 3.2686291,19.85601 4.5476837,20.265598 5.407505,22.963408 L5.4153624,22.989173 5.3947506,22.977718 C4.9881945,22.761583 4.816185,22.786959 4.3800907,22.138396 1.4242783,20.746435 1.5337315,19.559256 0.46090508,13.766667 L0,13.875923 C0.7560997,13.230053 1.4008369,11.662659 1.9275532,11.642291 z M47.940479,10.231023 C51.776638,15.375551 49.193542,18.03677 48.079334,24.948576 46.939831,20.035489 48.646467,16.344879 46.031452,12.030317 L45.929766,11.866485 45.966446,11.855093 C46.013926,11.837136 46.008953,11.822477 45.903633,11.824382 L45.929766,11.866485 45.921751,11.868973 C45.727299,11.92061 45.226746,11.972112 45.416218,11.747602 45.621634,11.504194 45.932121,11.320319 46.19006,11.106682 46.615549,10.754285 47.41799,10.492403 47.940479,10.231023 z M50.302273,8.2274699 C50.979116,8.185051 52.328798,9.0858974 53.397181,9.2589059 L52.828871,9.3936205 C54.51335,15.014252 55.225828,16.001419 52.621939,18.701937 52.458181,19.489338 52.253748,19.553127 51.907869,19.946229 L51.890581,19.966594 51.88653,19.94005 C51.503647,17.142126 52.726278,16.142708 51.2444,12.855633 49.621428,9.2555766 49.625431,8.2698903 50.302273,8.2274699 z M55.16593,5.2032404 C58.929266,10.66806 56.942339,13.086058 56.600134,19.867025 55.202452,14.953277 56.284506,11.464955 53.805307,7.0384607 L53.579905,6.6514482 53.610907,6.6432791 C53.65019,6.629653 53.644598,6.6146154 53.554064,6.6070824 L53.579905,6.6514482 53.573652,6.6530952 C53.410795,6.6870918 52.984304,6.6935511 53.127432,6.4870129 53.282598,6.2630901 53.533575,6.1078377 53.736635,5.9182549 54.071604,5.6055336 54.739294,5.4166679 55.16593,5.2032404 z M56.813829,3.3437862 C57.333502,3.322957 58.392534,4.1306601 59.21837,4.3045826 L58.784315,4.4074726 C60.209902,9.290411 60.780767,10.157696 58.840139,12.424466 58.732359,13.099234 58.576574,13.149457 58.319593,13.480189 L58.306765,13.497337 58.303034,13.47437 C57.943884,11.054253 58.861288,10.221376 57.645449,7.354178 56.313845,4.2139759 56.294161,3.3646154 56.813829,3.3437862 z M59.006369,2.7656555E-05 C59.529539,-0.0059642792 60.624731,0.95520687 61.463194,1.1827183 L61.029139,1.2856073 C62.633047,6.9253378 63.238153,7.9379554 61.359236,10.466625 61.27363,11.2355 61.118299,11.28765 60.870531,11.657493 L60.858183,11.676689 60.85364,11.650261 C60.408922,8.8669953 61.305307,7.944911 59.981695,4.6203203 58.532061,0.97917557 58.483202,0.0060195923 59.006369,2.7656555E-05 z" Height="54.736" RenderTransformOrigin="0.362673010243029,0.424529846708653" Stretch="Fill" Width="62.523" Panel.ZIndex="5" Canvas.Left="59.94" Canvas.Top="57.129">
+                    <Path.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform AngleY="0.086"/>
+                            <RotateTransform Angle="13.254"/>
+                            <TranslateTransform X="0.001" Y="-0.004"/>
+                        </TransformGroup>
+                    </Path.RenderTransform>
+                </Path>
+                <Path x:Name="lengua" Data="M315.368,301.45 C314.28492,309.39259 312.71477,308.37782 322.968,312.65 331.35744,316.1456 322.568,317.37345 322.568,326.65 322.568,332.9209 331.859,331.6865 335.168,336.65 336.00101,337.89952 345.93782,348.12544 348.768,341.05 350.8659,340.21084 351.55833,336.26329 353.168,334.05 355.07155,331.43262 357.32097,331.85 361.368,331.85 360.17561,331.19961 360.81401,330.02253 359.168,329.45 358.01458,329.04881 356.77013,328.32742&#xA;355.568,328.05 352.80234,327.41177 350.25647,327.85461 347.768,328.85 347.22514,329.66429 346.48951,330.38924 345.568,330.85 344.57615,333.57758 341.71261,335.52015 336.968,331.25 335.38023,329.82101 335.56383,328.23423 333.368,327.45 331.32772,326.72133 331.06554,326.06477 331.568,323.05 334.44086,321.13476 337.82084,316.96707 336.968,311.85 335.91673,311.21924 335.92745,310.29424 335.168,309.25 334.06597,307.73471&#xA;333.61112,308.31078 331.768,307.85 329.57126,307.30081 326.86214,306.51015 325.368,304.85 322.82051,302.01946 326.91778,301.11872 321.568,300.45 318.55844,300.0738 316.83462,300.7947 315.368,301.45 z" HorizontalAlignment="Left" Height="54.5" Stretch="Fill" VerticalAlignment="Top" Width="46.79" Fill="#FFFF0049" RenderTransformOrigin="0.5,0.5" Canvas.Left="79.214" Canvas.Top="81.868">
+                    <Path.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="21.99"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Path.RenderTransform>
+                </Path>
+                <Path x:Name="brazoDer" HorizontalAlignment="Left" VerticalAlignment="Top" Data="M5.1751814,70.435661 L5.2052455,70.508705 C5.3010292,70.764107 5.3509598,71.020515 5.3509608,71.25161 5.2969017,70.927315 5.2399025,70.704033 5.1944924,70.516975 z M17.679184,0 L19.337257,0.3826828 C22.592135,1.0487289 25.962219,1.3985062 29.413998,1.3985062 32.002834,1.3985062 34.545715,1.2017593 37.028507,0.82239532 L38.561237,0.54867554 38.308258,0.86647797 C37.709717,1.586731 37.020447,2.1928787 35.720402,2.1210632 35.84811,8.923996 37.074131,11.821991 34.588589,18.443069 32.584198,23.782417 31.030741,29.751221 27.929054,34.502609 25.905153,37.602913 25.364347,40.200287 25.24741,42.25441 L25.243855,42.345619 25.247263,42.345367 25.242161,42.389076 25.224003,42.854309 C25.185526,44.604889 25.404594,45.91214 25.109043,46.746727 L25.073422,46.824989 25.018648,47.694046 C24.912632,48.966393 25.39884,49.684265 27.018553,50.494209 27.141453,50.555679 27.309792,50.608978 27.511501,50.650208 L27.710785,50.684967 28.005989,50.985573 C28.983206,51.967125 29.962595,52.898125 30.78709,54.134872 32.688923,54.895607 33.75272,56.066185 34.787041,58.134819 39.999157,60.219658 43.283436,64.511192 36.920349,73.60128 35.570942,71.577171 36.001267,66.654716 34.520386,65.068031 33.890156,64.392815 31.490637,63.879799 29.50914,63.40374 L29.32206,63.358467 29.325687,63.383446 C29.331177,63.442039 29.334003,63.503639 29.334009,63.568352 29.231762,63.585396 29.032887,63.568932 28.82242,63.542427 L28.66354,63.520638 28.634749,63.598763 C28.515772,63.886925 28.276463,64.185738 27.880201,64.492531 L27.84549,64.518333 27.83255,64.562096 C27.50412,65.609077 26.963131,65.794579 25.800873,67.168159 25.676485,67.315163 24.940207,68.66906 24.448706,68.758064 L24.428495,68.759193 24.39007,68.986061 C24.100832,70.723335 23.835838,72.511665 23.608177,74.268715 L23.481358,75.277229 23.517214,75.430489 C24.019344,77.600853 24.181768,79.056389 22.950876,81.517464 22.933292,81.447136 22.918205,81.376701 22.905319,81.306175 L22.903889,81.296822 22.879921,81.68644 C22.819597,82.721031 22.787186,83.679771 22.787182,84.534447 22.422487,83.440376 22.054577,82.39576 21.693352,81.381264 L21.664503,81.300377 21.625065,81.336739 C21.527897,81.408577 21.39588,81.42318 21.217428,81.384926 20.337984,81.196434 20.90793,80.66317 20.417549,80.118172 19.401032,78.988441 20.082867,77.74073 19.551008,76.251198 19.394863,75.813881 19.388104,75.323128 19.429905,74.821022 L19.443689,74.676628 19.34516,74.329857 C18.733091,72.121773 18.275303,69.831093 18.084665,67.23748 L18.073309,67.060585 18.068653,67.055443 C17.830833,66.810616 17.559139,66.601051 17.288872,66.454216 L17.213268,66.415321 17.166452,66.553322 C16.667864,68.093834 16.390648,69.757607 16.295507,71.483696 L16.27861,71.883354 16.368376,72.306129 C17.038853,75.329964 18.014799,78.418098 17.508709,81.485176 L17.476805,81.657143 17.509838,81.785149 C17.734463,82.628136 17.98398,83.458 18.253908,84.267784 17.274031,82.308067 15.547793,78.270851 13.98729,77.334557 13.987294,75.532097 13.724799,73.671776 13.396679,71.777534 L13.276547,71.100838 13.196682,71.046516 C12.963664,70.87281 12.754225,70.650703 12.467121,70.268089 12.004695,69.651817 11.415568,68.907677 11.885737,67.966759 L11.915665,67.910835 11.890661,67.822243 C11.625178,66.862434 11.218974,65.01783 11.759118,64.478996 L11.759519,64.478661 11.734979,64.461494 C11.350493,64.19976 10.971589,63.989052 10.616978,63.918144 10.651935,63.86573 10.691289,63.805016 10.734621,63.738441 L10.799549,63.639076 10.764723,63.6343 10.711326,63.721138 C10.598191,63.91967 10.498412,64.125145 10.410873,64.337074 L10.355907,64.477989 10.474587,64.933174 C10.569755,65.306419 10.65152,65.68029 10.66769,66.068352 10.679315,66.347389 10.679518,66.572411 10.663389,66.775368 L10.656117,66.8498 10.850997,67.434273 10.755377,67.529884 10.701689,67.240166 10.644334,66.941689 10.615676,67.123772 10.57523,67.291542 10.578893,67.372993 C10.582423,67.474342 10.584246,67.583534 10.584251,67.700951 L10.755377,67.529884 10.809687,67.82296 C11.255263,70.303215 11.397241,72.227043 10.748275,74.823006 L10.743298,74.842201 10.750391,74.892082 C10.924098,76.160286 11.053981,77.431206 11.053981,78.667854 10.876216,78.667854 10.698422,78.667854 10.520661,78.667854 9.1955424,75.355034 7.3206864,73.422295 7.3206873,69.06797 7.3206864,68.942024 7.3199349,68.81739 7.3185382,68.693977 L7.3139449,68.426491 7.3159252,68.690926 C7.3186112,69.072975 7.3206864,69.464714 7.3206873,69.867989 7.2404671,69.386665 7.1241761,68.900581 6.9811349,68.4105 L6.8785162,68.077904 6.7704111,67.986977 C5.7103119,67.079079 5.2998352,66.311821 5.0007482,64.068367 4.9878731,63.971794 5.0081253,63.856499 5.0573993,63.738792 L5.1061798,63.640984 4.7877856,62.897758 C4.6451226,62.558617 4.5057488,62.219009 4.3724308,61.879135 L4.212915,61.462196 4.1337543,61.704399 C3.8312335,62.715439 3.8519969,63.691139 4.1508265,65.185066 4.4570656,66.716087 5.6006928,67.394676 5.2176142,69.118324 5.0658989,69.800941 5.0883446,70.058235 5.1687465,70.408562 L5.1751814,70.435661 5.1423045,70.355797 C4.9143868,69.847923 4.5063363,69.365181 3.9508064,69.118324 3.1744895,68.773338 3.0681928,68.435204 3.0364185,67.921501 L3.0310593,67.811104 2.9366477,67.697792 2.9198394,67.698845 C2.8947156,67.70002 2.87145,67.700661 2.8503242,67.700661 L2.8302708,67.570137 2.7173603,67.434639 C2.7173627,67.345161 2.7182784,67.254112 2.7199848,67.161644 L2.7210114,67.122353 2.7213972,67.123039 2.7848282,67.2342 2.7441473,66.781776 2.7372165,66.630196 2.7273593,66.880165 2.7210114,67.122353 2.6344529,66.968849 C1.3344783,64.652382 -1.0193444,59.966179 0.48609088,59.37793 L0.56360434,59.353905 0.47591488,59.06617 C-0.001365907,57.377548 -0.026172881,55.296326 2.9095359,54.283478 L2.9486392,54.270576 3.0234614,54.157257 C3.5783933,53.414352 4.7621766,52.932289 5.5189009,52.160767 L5.6168709,52.055229 5.6836691,51.918236 C5.8546753,51.576248 5.94627,51.400009 6.0909849,51.2724 L6.0951376,51.269043 6.0966425,51.265213 C6.1359215,51.150223 6.1654168,51.029289 6.1836505,50.901649 6.4658165,48.926476 7.0708428,48.40873 8.0536614,47.975853 L8.1304179,47.943253 8.1751357,47.718979 C8.390462,46.686172 8.6856661,45.772476 9.4006443,44.700249 L9.4526005,44.796616 9.5089932,44.598099 9.4909068,44.311539 9.4451619,43.883339 9.4941893,43.601875 C9.4137774,43.588432 9.5751925,43.557503 9.8374739,43.494568 L9.8483019,43.491882 9.9510336,43.157089 C10.550553,41.241013 11.150073,39.324768 11.150071,37.552719 11.150073,35.440399 11.256919,33.171127 11.498124,30.942909 L11.631784,29.838867 11.27045,28.694427 C10.750197,26.903305 10.43487,25.100761 10.752099,23.593361 11.365674,20.677956 11.333972,17.076126 11.81875,13.993431 12.520389,9.5316772 15.776042,5.2133408 17.618727,0.85916901 L17.807451,0.3873291 17.775148,0.30230713 z" Height="84.534" RenderTransformOrigin="2.30761249380008,0.117507941373549" Stretch="Fill" Canvas.Top="174.135" Width="40.421">
+                    <Path.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform ScaleY="1" ScaleX="-1"/>
+                            <SkewTransform AngleY="0" AngleX="0"/>
+                            <RotateTransform Angle="0"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Path.RenderTransform>
+                    <Path.Fill>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <GradientStop Color="Black" Offset="0"/>
+                            <GradientStop Color="Black" Offset="1"/>
+                        </LinearGradientBrush>
+                    </Path.Fill>
+                </Path>
+                <Rectangle x:Name="telaraniaDer" Fill="White" HorizontalAlignment="Left" Height="9.431" VerticalAlignment="Top" Width="12.27" RenderTransformOrigin="0.801,-0.684" RadiusY="2.109" RadiusX="2.109" Canvas.Left="166.799" Canvas.Top="222.121">
+                    <Rectangle.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform ScaleY="1" ScaleX="1"/>
+                            <SkewTransform AngleY="0" AngleX="0"/>
+                            <RotateTransform Angle="-12.828"/>
+                            <TranslateTransform X="-4.815" Y="-0.541"/>
+                        </TransformGroup>
+                    </Rectangle.RenderTransform>
+                </Rectangle>
+                <Image x:Name="z1" Height="39" Source="Presentacion/Resources/z_dormir.png" Stretch="Fill" Width="46" Canvas.Top="27" Canvas.Left="139.272" Visibility="Hidden" RenderTransformOrigin="0.5,0.5">
+                    <Image.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Image.RenderTransform>
+                </Image>
+                <Image x:Name="z2" Height="39" Source="Presentacion/Resources/z_dormir.png" Stretch="Fill" Width="46" Canvas.Top="3" Canvas.Left="178.772" Visibility="Hidden" RenderTransformOrigin="0.5,0.5">
+                    <Image.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Image.RenderTransform>
+                </Image>
+                <Image x:Name="z3" Height="39" Source="Presentacion/Resources/z_dormir.png" Stretch="Fill" Width="46" Canvas.Top="-31.5" Canvas.Left="149.772" Visibility="Hidden" RenderTransformOrigin="0.5,0.5">
+                    <Image.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Image.RenderTransform>
+                </Image>
+                <Image x:Name="water_drop_png" Height="18.654" Source="Presentacion/Resources/water drop.png" Stretch="Fill" Width="10.052" Canvas.Left="72.264" Canvas.Top="112.75" RenderTransformOrigin="0.5,0.5" Visibility="Hidden">
+                    <Image.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Image.RenderTransform>
+                </Image>
+                <Canvas x:Name="yoyo" Height="18.188" Canvas.Left="58.259" Canvas.Top="217.875" Width="22" RenderTransformOrigin="0.5,0.5">
                     <Canvas.RenderTransform>
                         <TransformGroup>
                             <ScaleTransform/>
@@ -868,17 +1059,17 @@
                             <TranslateTransform/>
                         </TransformGroup>
                     </Canvas.RenderTransform>
-                    <Path x:Name="cuello" Data="M51.266327,0.80099138 L60.332996,13.468186 C56.586124,15.111614 51.298336,13.969537 48.332996,16.934999 46.695347,15.297282 46.268906,15.369554 44.332996,14.401555 44.513611,14.085468 44.69381,13.787093 44.873173,13.504621 L44.940304,13.400689 44.53376,13.416597 C42.679089,13.480346 40.801239,13.470589 38.96603,13.799954 38.113148,13.953025 37.067223,14.672327 36.232635,14.533246 35.019264,14.331029 33.844856,13.291228 33.432568,12.466713 32.811752,11.225196 34.190033,11.967457 34.899273,11.400114 36.54903,10.080422 39.325909,9.450054 41.299427,9.2002609 42.269119,9.2884147 43.432499,8.9336183 44.632839,8.9336183 44.632839,6.2436373 47.777386,4.0820716 49.499626,2.9340179 50.182854,2.4785726 50.812405,2.65626&#xA;51.223434,2.9803458 L51.314716,3.0588582 51.321888,2.8644023 C51.338474,2.2503891 51.321068,1.5674067 51.266327,0.80099138 z M6.9333191,0 L11.093179,5.811795 11.147025,5.7894137 C12.20133,5.3760593 13.577668,5.5245674 14.716352,6.4004567 15.809194,7.2410829 16.764561,7.3245476 17.982878,7.9336994 19.164764,8.5246313 19.183434,8.798724 20.649429,9.0002907 L22.049368,10.400202 C22.124184,10.448998 22.470358,10.496095 22.582674,10.533533 22.871872,10.919109 23.11795,11.561708 23.58263,11.933444 24.391203,12.580292 24.557747,13.066562 22.982656,14.466613 21.768549,15.545794 19.980829,15.28958 18.182869,15.13324 16.628458,14.998072 14.866014,14.463365 13.405791,13.461729 L13.347082,13.420202 12.961282,13.485181 C9.7543755,13.996304 6.223999,13.909909 3.9999998,16.134001 2.3623352,14.496298 1.9359131,14.568567 0,13.60057 3.8530884,6.8573702 7.5172424,8.175082 6.9333191,0 z" Fill="Black" HorizontalAlignment="Left" Height="16.935" Stretch="Fill" VerticalAlignment="Top" Width="60.333" Canvas.Left="63.481" Canvas.Top="103.666"/>
-                    <Path x:Name="cuerpo" HorizontalAlignment="Left" Height="149.202" VerticalAlignment="Top" Canvas.Top="116.267" Canvas.Left="16.663" Data="M6.0099325,148.86607 L6.1276192,148.86607 6.1245631,149.20198 z M1.5572068,148.86607 L1.5693757,148.86607 1.5912968,148.93532 z M111.27214,118.18065 L111.27214,118.75861 111.28883,118.73406 C111.35895,118.58234 111.3678,118.4231 111.31205,118.25716 z M41.954296,118.18064 L41.914375,118.25715 C41.858631,118.4231 41.867481,118.58233 41.937611,118.73406 L41.954296,118.75861 z M47.215149,0 L76.271217,0 76.955208,0 106.52238,0 106.57616,0.14149203 C106.66885,0.34955012 106.77531,0.54351159 106.85089,0.73241594 107.13234,0.83472689 107.4022,1.0018553 107.65102,1.1990025 L107.87645,1.1179533 108.1446,1.3068822 C109.69039,2.5596403 110.87018,5.4591239 111.6048,7.8365482 L111.62146,7.8921517 112.40903,8.049703 C115.94024,8.8396533 118.86603,10.420594 120.63561,12.449495 L120.93594,12.814723 121.14805,12.855727 C125.29321,13.669624 135.06044,16.114794 136.10851,19.536887 L136.13396,19.641507 136.34863,19.764473 C137.2939,20.338284 138.14531,21.019821 138.87903,21.788452 L139.19293,22.133787 139.19527,22.135218 C140.28151,22.896954 140.86757,24.225663 141.29088,25.716891 L141.30991,25.790598 141.39915,26.062317 C141.50439,26.415924 141.58992,26.776377 141.65466,27.142744 L141.66954,27.243922 141.78842,27.765999 C142.40222,30.531882 142.97549,33.243294 145.40396,33.627816 146.8589,39.127873 151.73338,43.927155 152.98416,49.87024 153.36368,51.673622 153.29002,53.006649 152.81429,54.477974 L152.71629,54.760529 152.74507,55.380932 C152.81726,57.066384 152.84981,58.929695 152.76913,60.638607 L152.70088,61.666054 129.57201,61.666054 C129.28081,61.666054 129.0034,61.725067 128.75108,61.831787 L128.59248,61.917874 128.55272,61.86879 C127.36369,60.547089 125.64453,60.254387 124.14359,59.335755 L124.01534,59.249173 123.5241,60.166142 C121.7752,63.412884 120.10293,66.437912 119.22885,68.398072 116.57069,74.358918 114.92664,82.668915 113.6292,88.875862 111.56539,98.749115 111.71614,109.25401 111.47549,119.39935 L111.27214,119.41097 111.27214,122.12801 76.271217,122.12801 41.954296,122.12799 41.954296,119.41097 41.750946,119.39935 C41.510292,109.25401 41.661034,98.749115 39.597221,88.875862 38.299797,82.668915 36.655731,74.358918 33.997581,68.398072 33.123497,66.437912 31.451231,63.41288 29.702331,60.166138 L29.211084,59.249169 29.082853,59.335751 C27.081592,60.560593 24.692385,60.672673 23.689112,63.594773 23.220535,63.787083 22.859297,64.091828 22.540377,64.43853 L22.517317,64.46605 0.95784252,64.46605 0.86089282,64.082909 C0.35008915,61.824715 0.35502919,58.330468 0.48134559,55.380932 L0.51013648,54.760525 0.41214275,54.47797 C-0.063590945,53.006646 -0.13725448,51.673619 0.2422616,49.870236 1.4930443,43.927155 6.3675279,39.127873 7.8224649,33.627816 10.250936,33.243294 10.824211,30.53188 11.438,27.765997 L11.556894,27.243916 11.57176,27.142739 C11.636511,26.776375 11.72204,26.415922 11.827277,26.062311 L11.916524,25.790596 11.935556,25.716891 C12.358851,24.225661 12.944917,22.896954 14.031152,22.135218 L14.033499,22.133786 14.347392,21.788452 C15.08111,21.01982 15.932531,20.338284 16.877809,19.764468 L17.09248,19.641507 17.117918,19.536887 C18.165996,16.11479 27.933222,13.669624 32.078384,12.855727 L32.290478,12.814723 32.590816,12.449495 C34.360409,10.420594 37.286194,8.8396533 40.817413,8.049703 L41.60498,7.8921517 41.621643,7.8365482 C42.356251,5.4591235 43.53603,2.55964 45.081825,1.3068822 L45.383675,1.0942059 45.601856,1.0176768 C46.131084,0.83838107 46.745392,0.65138557 46.98452,0.3326247 47.186302,0.18132152 47.087665,0.37031104 47.184502,0.066046461 z" Stretch="Fill" Width="153.226">
-                        <Path.Fill>
-                            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                                <GradientStop Color="Black" Offset="0"/>
-                                <GradientStop Color="Black" Offset="1"/>
-                            </LinearGradientBrush>
-                        </Path.Fill>
-                    </Path>
-                    <Image x:Name="logoVenom" Source="/Presentacion/Recursos/logo-venom.png" Stretch="Fill" Height="78.141" Canvas.Left="50.865" Canvas.Top="139.734" Width="86.516"/>
-                    <Path x:Name="cabeza" Data="M39.106888,0 C56.49355,-7.1054274E-15 71.514092,13.40721 78.58783,32.835907 L78.601921,32.875851 78.606697,33.699146 C78.751045,46.880795 79.750901,57.938259 74.791252,70.833366 71.949517,78.221863 71.476013,85.806236 66.791252,92.833389 63.52504,97.732704 63.135628,108.25565 57.19125,110.63341 L57.105202,110.82903 56.155869,111.37866 C50.915695,114.31195 45.154423,115.934 39.106888,115.934 33.059353,115.934 27.298083,114.31195 22.057911,111.37866 L21.697726,111.17014 21.593594,110.9334 C15.649205,108.55565 15.25979,98.032707 11.993572,93.133385 7.3087972,86.106232 6.8352874,78.521866 3.9935506,71.133362 -0.96611187,58.238258 0.033740907,47.180794 0.1780953,33.999146 L0.19350882,31.339085 0.59321561,30.336485 C8.0102952,12.26671 22.476172,-7.1054274E-15 39.106888,0 z" Fill="Black" HorizontalAlignment="Left" Height="115.934" Stretch="Fill" VerticalAlignment="Top" Width="78.785" Canvas.Left="54.474" RenderTransformOrigin="0.5,0.5">
+                    <Ellipse x:Name="cir_yoyo" Height="22" Width="22" Fill="#FF0E89C3" Stroke="Black" RenderTransformOrigin="0.5,0.5" Visibility="Hidden" Opacity="0">
+                        <Ellipse.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform/>
+                                <SkewTransform/>
+                                <RotateTransform/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </Ellipse.RenderTransform>
+                    </Ellipse>
+                    <Path x:Name="hilo" Data="M41.166667,226.66633 L40.833333,327.99967" Fill="White" Height="5.25" Canvas.Left="4.333" Stretch="Fill" Stroke="White" Canvas.Top="6.333" Width="1.334" Visibility="Hidden" Opacity="0" RenderTransformOrigin="0.5,0.5">
                         <Path.RenderTransform>
                             <TransformGroup>
                                 <ScaleTransform/>
@@ -888,248 +1079,432 @@
                             </TransformGroup>
                         </Path.RenderTransform>
                     </Path>
-                    <Path x:Name="ojoIzquierdo" Data="M285.318,305 C276.79185,311.18564 275.718,310.33506 275.718,323.4 275.718,329.2257 273.59896,338.30607 279.718,342.2 282.35311,343.87689 285.59906,344.47652 288.118,346.2 291.01914,348.18499 292.34618,352.50315 295.718,353.8 303.36053,356.73943 308.21421,356.2 316.518,356.2 316.518,355.93333 316.518,355.66667 316.518,355.4 314.98491,355.14449 315.47277,355.32898 314.118,354.2 315.30954,353.90211 316.01839,353.8&#xA;317.318,353.8 317.318,348.31727 312.118,344.85568 312.118,339 312.118,342.2 312.118,345.4 312.118,348.6 311.36322,347.62956 311.01134,347.27 310.118,346.6 310.118,342.7323 307.718,340.77027 307.718,336.6 300.52927,336.6 299.95912,331.88225 296.118,324.2 296.58365,326.99389 297.03078,327.22819 291.318,325.8 287.70254,324.89613 288.17247,322.33495 286.118,319.4 281.44968,312.73097&#xA;282.62737,313.0719 285.318,305 z" Fill="White" HorizontalAlignment="Left" Height="46.039" Stretch="Fill" VerticalAlignment="Top" Width="30.355" Panel.ZIndex="5" Canvas.Left="58.259" Canvas.Top="18.994" RenderTransformOrigin="0.5,0.5">
-                        <Path.RenderTransform>
-                            <TransformGroup>
-                                <ScaleTransform/>
-                                <SkewTransform/>
-                                <RotateTransform/>
-                                <TranslateTransform/>
-                            </TransformGroup>
-                        </Path.RenderTransform>
-                    </Path>
-                    <Path x:Name="ojoDerecho" Data="M285.318,305 C276.79185,311.18564 275.718,310.33506 275.718,323.4 275.718,329.2257 273.59896,338.30607 279.718,342.2 282.35311,343.87689 285.59906,344.47652 288.118,346.2 291.01914,348.18499 292.34618,352.50315 295.718,353.8 303.36053,356.73943 308.21421,356.2 316.518,356.2 316.518,355.93333 316.518,355.66667 316.518,355.4 314.98491,355.14449 315.47277,355.32898 314.118,354.2 315.30954,353.90211 316.01839,353.8&#xA;317.318,353.8 317.318,348.31727 312.118,344.85568 312.118,339 312.118,342.2 312.118,345.4 312.118,348.6 311.36322,347.62956 311.01134,347.27 310.118,346.6 310.118,342.7323 307.718,340.77027 307.718,336.6 300.52927,336.6 299.95912,331.88225 296.118,324.2 296.58365,326.99389 297.03078,327.22819 291.318,325.8 287.70254,324.89613 288.17247,322.33495 286.118,319.4 281.44968,312.73097&#xA;282.62737,313.0719 285.318,305 z" Fill="White" HorizontalAlignment="Left" Height="46.039" Stretch="Fill" VerticalAlignment="Top" Width="30.355" RenderTransformOrigin="0.5,0.5" Panel.ZIndex="5" Canvas.Left="99.414" Canvas.Top="18.894">
-                        <Path.RenderTransform>
-                            <TransformGroup>
-                                <ScaleTransform ScaleY="1" ScaleX="-1"/>
-                                <SkewTransform AngleY="0" AngleX="0"/>
-                                <RotateTransform Angle="0"/>
-                                <TranslateTransform/>
-                            </TransformGroup>
-                        </Path.RenderTransform>
-                    </Path>
-                    <Path x:Name="boca" Data="M58.478523,11.129907 L57.562794,11.647479 C57.387356,11.971352 57.214699,12.284878 57.044537,12.588387 L56.801395,13.018045 57.079227,12.8093 C57.303261,12.636173 57.5271,12.45956 57.750725,12.279419 L58.161152,11.941975 58.167419,11.893455 C58.210537,11.646399 58.285271,11.426083 58.404858,11.231445 z M60.179337,10.168604 L59.89064,10.331776 59.94838,10.317139 60.041615,10.296864 z M68.765999,0 L68.743523,0.30582583 C68.556999,3.0280367 68.507065,5.5573972 68.496918,6.6883482 L68.496841,6.6982454 68.397087,7.0262479 C65.836548,15.395639 63.294773,22.557329 60.781654,28.639824 L60.560341,29.170524 60.426773,29.386433 C57.051388,34.765884 53.3853,39.844921 50.361469,45.514553 49.486729,47.154678 49.114002,48.583809 48.912983,50.055031 L48.898457,50.173435 48.879589,50.196907 C39.017513,62.278938 29.913271,59.575329 22.259701,51.061954 L22.192686,50.985763 22.170675,50.899753 C19.38496,40.263256 14.875302,33.573528 8.8337955,27.3381 L8.0606871,26.551813 7.5802922,25.410854 C3.9774067,16.716087 1.3876297,8.5535554 0.064660192,4.2099808 L0,3.9971622 0.090227313,3.9766306 C0.38699806,3.9068638 0.67149812,3.8354641 0.94410008,3.7625536 L1.0201241,3.7415568 1.0868429,3.8058244 C3.4136138,6.0211796 6.7431626,8.8290299 10.786469,11.490471 L11.126447,11.711545 11.786781,11.913776 C20.211748,14.419077 28.258345,14.580724 37.562843,14.580724 47.378887,14.580724 53.235996,13.315361 60.487396,9.8188418 L60.629765,9.7491206 60.64468,9.7352294 C63.182575,7.3112668 65.683167,4.3991245 68.120773,0.93306208 z" HorizontalAlignment="Left" Height="58.368" RenderTransformOrigin="0.498975295088151,0.3826943460188" Stretch="Fill" VerticalAlignment="Top" Width="68.766" Canvas.Left="59.059" Canvas.Top="57.833">
-                        <Path.Fill>
-                            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                                <GradientStop Color="Black" Offset="0"/>
-                                <GradientStop Color="#FFFF0F06" Offset="1"/>
-                            </LinearGradientBrush>
-                        </Path.Fill>
-                        <Path.RenderTransform>
-                            <TransformGroup>
-                                <ScaleTransform/>
-                                <SkewTransform/>
-                                <RotateTransform Angle="2.889"/>
-                                <TranslateTransform/>
-                            </TransformGroup>
-                        </Path.RenderTransform>
-                    </Path>
-                    <Path x:Name="dientes" Fill="White" HorizontalAlignment="Left" VerticalAlignment="Top" Data="M30.537159,39.977944 L30.542828,40.009585 C31.10353,43.340505 30.173424,44.411868 31.690349,48.415042 35.013062,57.183726 32.018506,53.060466 30.211733,52.466483 L30.672639,52.357226 C28.785137,45.586131 28.107187,44.360602 30.038535,41.404716 30.10651,40.490973 30.270982,40.433606 30.524547,40.000443 z M30.714234,39.625381 C30.668959,39.728801 30.625751,39.816594 30.584641,39.89325 L30.537159,39.977944 30.48378,39.680009 C30.560597,39.661799 30.637416,39.64359 30.714234,39.625381 z M34.354408,38.123158 C35.818928,43.755544 34.88398,47.331424 37.539198,52.725959 37.216818,52.633327 37.395634,53.428374 37.221867,53.712825 37.09235,53.92485 36.875336,54.047851 36.702076,54.215362 36.416275,54.491672 35.830776,54.580661 35.460034,54.736094 31.922457,48.298121 34.29748,45.272882 34.354408,38.123158 z M25.831016,36.871684 L25.83648,36.902457 C26.375791,40.142592 25.44043,41.191651 26.930412,45.08048 30.194107,53.598693 27.2294,49.602107 25.42894,49.034915 L25.889845,48.925662 C24.046924,42.343762 23.377535,41.154569 25.32431,38.264155 25.397829,37.373942 25.562414,37.317056 25.818283,36.893672 z M26.01001,36.527261 C25.964161,36.628251 25.920475,36.714013 25.87895,36.788915 L25.831016,36.871684 25.779554,36.581887 C25.856372,36.563678 25.933191,36.54547 26.01001,36.527261 z M42.129049,34.636447 C45.371038,41.004182 48.845022,42.642953 48.555128,49.988204 48.154236,50.015681 47.590963,50.199 47.212076,50.080249 46.982384,50.008258 46.733429,49.995708 46.522985,49.864272 46.240644,49.687938 46.045696,48.896716 45.798765,49.124297 45.765364,43.108279 43.333334,40.330518 42.129049,34.636447 z M22.75334,33.283786 L22.75317,33.305297 C22.699871,35.567195 21.592635,36.204474 22.356183,38.991385 24.028673,45.095929 21.83635,42.109033 20.17036,41.566978 L20.642618,41.531737 C20.016968,36.872987 19.573571,36.002448 22.00526,34.192609 22.237602,33.590146 22.409456,33.565341 22.736882,33.297729 z M22.991071,33.063584 C22.927881,33.128718 22.869554,33.183623 22.815302,33.23129 L22.75334,33.283786 22.754941,33.081204 C22.833651,33.075332 22.912361,33.069457 22.991071,33.063584 z M46.01535,32.507691 L46.036669,32.522145 C46.456738,32.795627 46.629412,32.773076 47.098019,33.559625 50.144314,35.335595 50.085072,36.735869 51.419357,43.638101 L51.880264,43.528848 C50.529751,44.871243 49.69232,49.902854 48.749832,40.569951 48.319563,36.309192 47.009686,35.768804 46.024403,32.538527 z M45.930105,32.217307 L46.01535,32.507691 45.935089,32.453275 C45.864115,32.403188 45.786293,32.344083 45.69965,32.271934 45.776468,32.253724 45.853287,32.235517 45.930105,32.217307 z M13.399383,29.106913 L13.479641,29.161327 C13.515129,29.186371 13.552329,29.213669 13.591486,29.243725 13.630644,29.273781 13.67176,29.306594 13.715082,29.342669 13.638264,29.360878 13.561445,29.379086 13.484627,29.397296 z M29.839252,28.584846 L29.91951,28.639261 C29.990485,28.689348 30.068306,28.748454 30.15495,28.820602 30.078133,28.838811 30.001314,28.85702 29.924496,28.87523 z M20.63309,28.276162 L20.628134,28.297794 C20.108978,30.405139 18.895261,30.770332 19.066015,33.540328 19.440031,39.60781 17.914202,36.351548 16.397927,35.495261 L16.86675,35.561072 C17.217288,31.066765 16.963707,30.15864 19.713962,28.972357 20.038402,28.49637 20.210834,28.4706 20.530594,28.326199 z M20.676136,28.08828 C20.754274,28.099248 20.832412,28.110217 20.91055,28.121185 20.835344,28.168967 20.767001,28.208187 20.704137,28.241478 L20.63309,28.276162 z M48.63986,27.363927 L48.660456,27.375314 C49.0667,27.590127 49.238693,27.564686 49.67404,28.210073 52.627771,29.593195 52.51716,30.77547 53.583967,36.542516 L54.044874,36.433261 C52.656481,37.614896 51.639961,41.886449 51.05158,34.056378 50.782969,30.481706 49.504622,30.075129 48.64769,27.389575 z M48.566124,27.122386 L48.63986,27.363927 48.562323,27.321061 C48.493824,27.281496 48.418879,27.234587 48.335669,27.177014 48.412487,27.158805 48.489305,27.140595 48.566124,27.122386 z M20.76048,26.835905 L20.78773,26.850708 C20.869526,26.896106 20.960704,26.951737 21.064812,27.024113 20.987994,27.042322 20.911176,27.060531 20.834358,27.07874 20.82095,27.032754 20.807421,26.98741 20.793778,26.942683 z M40.706442,26.555408 L40.759821,26.853346 C40.683002,26.871555 40.606184,26.889765 40.529366,26.907974 40.57464,26.804555 40.617847,26.716761 40.65896,26.640104 z M44.541937,25.115834 L44.591791,25.397417 C44.516472,25.415271 44.441153,25.433125 44.365833,25.450979 44.410967,25.352724 44.453951,25.269275 44.494795,25.196384 z M50.672274,23.532319 L50.693214,23.537398 C51.105442,23.629681 51.270184,23.574698 51.746838,24.009098 54.729033,24.535613 54.721087,25.513138 56.240934,29.959926 L56.678957,29.77939 C55.431158,31.012139 54.803896,34.667399 53.574846,28.457743 53.01375,25.62284 51.739223,25.550142 50.682026,23.55148 z M8.5215197,23.378889 L8.5966234,23.411427 C8.6629028,23.441584 8.735281,23.477588 8.8154192,23.522127 8.7386007,23.540337 8.6617823,23.558546 8.5849638,23.576755 z M50.580427,23.351891 L50.672274,23.532319 50.593437,23.513199 C50.523651,23.494937 50.446989,23.47203 50.361414,23.44216 50.434418,23.412069 50.507423,23.38198 50.580427,23.351891 z M5.4153624,22.989173 L5.4929619,23.032299 C5.5615139,23.0721 5.6365261,23.119285 5.7198124,23.177185 5.6429939,23.195394 5.5661755,23.213603 5.489357,23.231812 z M51.890581,19.966594 L51.92874,20.216568 C51.834019,20.239021 51.7393,20.261474 51.644581,20.283926 51.708662,20.191439 51.768845,20.112498 51.825495,20.043269 z M53.150984,19.033364 L53.171148,19.04003 C53.569017,19.163882 53.738306,19.125347 54.161673,19.582588 57.055799,20.343376 56.93849,21.279459 57.945642,25.671419 L58.399599,25.536045 C57.025965,26.610185 55.995592,30.059143 55.473768,24.002803 55.235544,21.237895 53.9816,21.058723 53.158495,19.052562 z M53.080233,18.852566 L53.150984,19.033364 53.075056,19.008266 C53.007994,18.98477 52.934645,18.956231 52.853251,18.920254 52.928911,18.897691 53.004572,18.875129 53.080233,18.852566 z M12.750525,15.61634 C12.926857,15.612109 13.094339,15.625646 13.233111,15.679793 13.45745,15.767332 13.704983,15.796876 13.906145,15.94241 14.176031,16.137656 14.317604,16.940436 14.579176,16.730249 14.210128,22.735079 16.450682,25.672926 17.271312,31.436599 14.462802,24.861431 11.106553,22.988774 11.887044,15.679793 12.138165,15.679793 12.456637,15.62339 12.750525,15.61634 z M9.3909073,15.526142 C9.4061289,15.526484 9.4213085,15.528336 9.4364481,15.531767 L9.4673061,15.542051 9.4732695,15.543293 9.4760132,15.544953 9.4817448,15.546863 C9.4968052,15.553519 9.5118275,15.561824 9.5268145,15.571845 L9.5479755,15.588488 9.5548735,15.592661 9.5598412,15.59782 9.5716696,15.607123 C9.586587,15.620645 9.6014709,15.635952 9.6163254,15.653114 L9.6300211,15.670704 9.6358032,15.676709 9.6496935,15.69597 9.6607952,15.710228 9.667758,15.72102 9.6760416,15.732507 9.6927557,15.759761 9.7050934,15.778881 9.7101965,15.788201 9.7161427,15.797897 9.7364082,15.836065 9.7492342,15.859486 9.7524376,15.866255 9.7561178,15.873187 9.7825441,15.92987 9.793232,15.952453 9.7945185,15.955556 9.7959776,15.958685 C9.8092461,15.988919 9.8224964,16.020906 9.8357315,16.054697 L9.8364487,16.056627 9.837101,16.058199 9.8446522,16.078726 9.875391,16.161532 9.8782549,16.170069 9.8808546,16.177135 9.8931599,16.214496 9.9149666,16.279499 9.9200115,16.296024 9.9245071,16.309675 9.9367523,16.350867 9.9544678,16.408902 9.9617205,16.434859 9.9680738,16.456232 9.9792347,16.497541 9.993906,16.550051 10.003435,16.587115 10.011568,16.617219 10.021253,16.656422 10.033292,16.703253 10.045206,16.753389 10.055003,16.79305 10.063007,16.828299&#xA;10.072637,16.868816 10.087135,16.934552 10.098395,16.984137 10.104636,17.013897 10.111948,17.047047 10.129438,17.13216 10.141756,17.190895 10.146152,17.213496 10.151239,17.238253 10.172795,17.350474 10.185101,17.413736 10.187627,17.427683 10.190519,17.442743 10.220851,17.611142 10.228445,17.653073 10.229083,17.656845 10.229799,17.660823 C10.242894,17.735815 10.255991,17.813124 10.269091,17.892801 L10.270513,17.9017 10.271801,17.90932 10.282199,17.974884 10.308403,18.138986 10.311977,18.162672 10.315184,18.182889 10.327622,18.266334 10.347748,18.399683 10.353533,18.440152 10.358607,18.474194 10.37054,18.559127 10.387133,18.675201 10.395162,18.734371 10.402085,18.783649 10.412807,18.864409 10.426571,18.965848 10.436941,19.046202 10.445632,19.111666 10.454826,19.184782 10.466073,19.271932 10.478906,19.376282 10.489264,19.458659 10.496778,19.521619&#xA;10.505649,19.593759 10.521238,19.726573 10.53299,19.82504 10.538689,19.875238 10.545309,19.931636 10.56418,20.099789 10.57683,20.211225 10.580688,20.246893 10.585063,20.285872 10.608789,20.506645 10.620795,20.617624 10.622751,20.636565 10.624923,20.656775 10.664854,21.044211 10.664899,21.044652 10.708574,21.43953 10.724913,21.565328 10.75734,21.813141 10.778872,21.956067 10.810967,22.166715 10.83597,22.311594 10.869234,22.501541 10.897056,22.643754&#xA;10.931894,22.818764 10.962223,22.956784 10.998723,23.119649 11.031293,23.252714 11.069504,23.405485 11.104105,23.533376 11.143989,23.677427 11.180466,23.800312 11.221962,23.936769 11.260154,24.054878 11.303185,24.184705 11.342972,24.298473 11.38743,24.422478 11.428664,24.532291 11.467158,24.632326 11.561123,24.860624 11.657409,25.089296 11.749257,25.291891 11.848728,25.507277 11.947865,25.712312 12.050926,25.922969 12.189708,26.201195 12.272672,26.367053&#xA;12.316527,26.455837 12.40828,26.64012 12.436634,26.698993 12.47957,26.785917 12.532959,26.899003 12.609322,27.057562 12.644316,27.134872 12.687093,27.22548 C12.721624,27.30104 12.756101,27.377892 12.790483,27.456251 L12.802941,27.485311 12.809812,27.50049 12.854064,27.604552 12.8933,27.696071 12.900748,27.714335 12.909298,27.734445 12.955995,27.849827 12.995304,27.94623 13.001234,27.961609 13.007986,27.978292 13.05738,28.10721 13.096252,28.208018 13.100681,28.220229 13.105653,28.233204 13.158905,28.380741 13.1959,28.482729 13.198807,28.491288 13.20208,28.500357 13.262618,28.679211 13.294008,28.771651 13.295444,28.776191 13.297046,28.780923 C13.328433,28.876811 13.35954,28.97513 13.39033,29.076077 L13.399383,29.106913 13.378063,29.092459 13.250486,29.013618 13.120094,28.936838 13.118758,28.936011 13.100909,28.925585 C13.059618,28.901268 13.02007,28.87726 12.981204,28.851401 L12.977338,28.84855 12.972246,28.8454 C12.948389,28.829305 12.92476,28.812445 12.90111,28.794319 L12.877823,28.775142 12.86559,28.766119 12.855483,28.756744 12.829855,28.73564 C12.805918,28.714478 12.781714,28.691547 12.756996,28.666345 L12.751288,28.660111 12.747701,28.656785 C12.72751,28.635839 12.706959,28.613352 12.685915,28.589053 L12.683238,28.585803 12.681049,28.583413 12.669314,28.568898 12.621171,28.510451 12.609394,28.494789 12.600532,28.483829 12.583234,28.460002 12.552674,28.419362 12.52942,28.385873 12.513959,28.364574 12.499736,28.343122 12.47963,28.314166 12.439764,28.252667 12.419847,28.22263 12.411602,28.209227 12.401242,28.193245 C12.374133,28.150136 12.346001,28.104137 12.316713,28.054978 12.221516,27.999479 12.129352,27.944347 12.040084,27.889402 11.950815,27.834457 11.864442,27.7797 11.780828,27.724952 11.697212,27.670202 11.616356,27.615461 11.538119,27.56055 11.459884,27.505637 11.384269,27.450554 11.311137,27.395121 11.238006,27.339686 11.167357,27.283902 11.099056,27.227588 11.030754,27.171273 10.964799,27.114429 10.901052,27.056874 10.837306,26.999321 10.775768,26.941058&#xA;10.716302,26.881907 10.656837,26.822755 10.599442,26.762714 10.543983,26.701606 10.377603,26.518279 10.228632,26.325341 10.093363,26.117947 10.048274,26.048815 10.004706,25.978078 9.9625244,25.905555 9.9203424,25.833031 9.8795462,25.758722 9.8399973,25.682449 9.8004475,25.606174 9.7621469,25.527936 9.7249565,25.447554 9.6877651,25.36717 9.6516857,25.284643 9.6165791,25.199793 9.5463648,25.030089 9.4800444,24.851093 9.4165182,24.661366 9.3847551,24.566504&#xA;9.3536911,24.468958 9.3231878,24.36855 9.2926846,24.268143 9.262743,24.164874 9.2332249,24.058563 9.2037077,23.952252 9.174614,23.842901 9.1458073,23.730329 9.0881929,23.505185 9.0317268,23.267158 8.9753084,23.014815 8.91889,22.762471 8.8625202,22.49581 8.8051004,22.213398 8.776391,22.072191 8.7474184,21.927046 8.7180471,21.777785 8.688674,21.628522 8.6589022,21.475143 8.6285934,21.317467 8.5982847,21.159791 8.5674391,20.997818 8.5359192,20.831369&#xA;8.5043983,20.66492 8.4722033,20.493995 8.4391975,20.318414 8.3731842,19.967253 8.3039255,19.597469 8.2303209,19.207629 8.1935186,19.012709 8.1556301,18.812774 8.116518,18.607646 8.0774059,18.402518 8.0370703,18.192196 7.9953737,17.976501 L7.5344687,18.085757 7.6659079,17.941674 7.7096891,17.886365 7.7943058,17.777534 7.8450871,17.705511 7.9198475,17.597014 7.9725094,17.515342 8.0337391,17.418052 8.1498566,17.220716 8.2891092,16.979297 8.4608088,16.669321 8.4835682,16.628189 8.5398617,16.526163 8.5487471,16.510394 8.565959,16.479288 8.6144199,16.393841 8.6531286,16.325142 8.6595116,16.314336 8.6691208,16.297391 8.7342501,16.187786 8.7641315,16.137191 8.7667809,16.133042 8.7704096,16.126935&#xA; C8.8038721,16.07239 8.8370409,16.020303 8.869936,15.971226 L8.8714161,15.969144 8.8730192,15.966633 8.8908682,15.941786 8.9678144,15.833568 8.9737902,15.826354 8.9799395,15.817794 9.009263,15.783534 9.0641584,15.717269 9.0746479,15.707143 9.0850401,15.695001 9.1144094,15.668757 9.1590796,15.625633 9.1741056,15.615414 9.1884699,15.602579 C9.2055769,15.589945 9.22262,15.578758 9.239604,15.569107 L9.2483101,15.564947 9.2526932,15.561967 9.2596598,15.559525 9.2903757,15.54485 C9.3072414,15.538361 9.3240499,15.533497 9.3408041,15.530349 L9.3435698,15.530117 9.3451109,15.529577 C9.3604212,15.526968 9.3756857,15.5258 9.3909073,15.526142 z M17.278213,15.48906 C17.715496,15.48137 18.07116,16.549506 18.34138,20.11283 18.613628,23.702937 19.892684,24.112526 20.752505,26.810335 L20.76048,26.835905 20.739752,26.824646 C20.333194,26.608511 20.161185,26.633886 19.725092,25.985324 16.769279,24.593363 16.878732,23.406183 15.805906,17.613595 L15.344999,17.72285 C16.103812,17.074666 16.750456,15.49834 17.278213,15.48906 z M20.99159,15.326808 L21.021244,15.329058 21.076899,15.329876 21.154216,15.339145 21.199858,15.342607 21.224651,15.347589 21.239233,15.349336 21.25401,15.353487 21.296549,15.362034 C21.327773,15.369997 21.35793,15.379516 21.386842,15.390798 21.442927,15.412677 21.500461,15.430933 21.558358,15.448284 21.616254,15.465634 21.674513,15.48208 21.732047,15.50034 21.789582,15.518599 21.846391,15.538672 21.90139,15.563278 21.928889,15.57558 21.955935,15.589016 21.982394,15.603925 22.008851,15.618832 22.03472,15.635213 22.059865,15.653408 22.076733,15.665609 22.0931,15.680184 22.109026,15.696737 22.124952,15.71329 22.140438,15.73182&#xA;22.155544,15.751933 22.170649,15.772045 22.185375,15.79374 22.199782,15.816621 22.214189,15.839501 22.228276,15.863568 22.242104,15.888426 22.297419,15.987858 22.348593,16.099942 22.399509,16.199355 22.463153,16.323623 22.52639,16.428094 22.596799,16.463315 L22.639965,16.47574 22.685214,16.469172 C22.700686,16.463553 22.716565,16.454373 22.732913,16.441236 22.663719,17.56714 22.686266,18.585222 22.773995,19.534326 22.803238,19.850693 22.839724,20.159396 22.882468,20.461874 23.053444,21.671785 23.324558,22.782086 23.632848,23.884851 23.786994,24.436234 23.950433,24.985732 24.115297,25.544855 24.19773,25.824417 24.280517,26.106385 24.362677,26.392199 24.444838,26.678012 24.52637,26.96767 24.606291,27.262611 24.925976,28.442379 25.219876,29.706685&#xA;25.425032,31.147603 25.161735,30.531179 24.893623,29.956087 24.624558,29.413972 24.53487,29.233266 24.445076,29.056225 24.355318,28.882539 23.90653,28.014106 23.458665,27.22954 23.029593,26.490164 22.943779,26.342289 22.858716,26.196221 22.774548,26.051652 22.606211,25.762512 22.441454,25.479366 22.281419,25.199738 22.041367,24.780294 21.81194,24.368766 21.596998,23.956798 21.525351,23.819474 21.455313,23.682102 21.387028,23.544372 21.182172,23.131182&#xA;20.993088,22.714767 20.823636,22.286773 20.654184,21.858779 20.504364,21.419207 20.378035,20.959702 20.335926,20.806533 20.296426,20.651149 20.25968,20.493242 20.149442,20.019519 20.063982,19.523079 20.00716,18.995567 19.98822,18.81973 19.972461,18.64044 19.960027,18.457388 19.947594,18.274336 19.938485,18.087523 19.932845,17.896638 19.910283,17.133099 19.943208,16.30442 20.04077,15.390798 L20.24434,15.381016 20.316741,15.374881 20.500948,15.357203 20.649333,15.343882 20.725706,15.336644 20.735832,15.336116 20.748196,15.335006 20.773434,15.334157 20.904252,15.327337 20.954113,15.32807 z M25.830775,15.004076 C26.27221,15.013997 26.677704,16.293614 27.104767,20.522585 27.535038,24.783345 28.844915,25.323733 29.830199,28.554009 L29.839252,28.584846 29.817932,28.570393 C29.397863,28.29691 29.225189,28.319461 28.756581,27.532912 25.710287,25.756942 25.76953,24.356668 24.435243,17.454435 L23.974337,17.563689 C24.712899,16.829566 25.298012,14.992102 25.830775,15.004076 z M29.642621,14.325028 C29.818954,14.320534 29.986436,14.333819 30.125208,14.387757 30.349547,14.474959 30.59708,14.504132 30.798242,14.649364 31.068129,14.844205 31.209701,15.646772 31.471275,15.436194 31.102225,21.441577 33.342779,24.376061 34.163408,30.138501 31.354899,23.56755 27.99865,21.699931 28.779141,14.389778 29.030262,14.389401 29.348735,14.33252 29.642621,14.325028 z M5.5773239,14.127297 C5.9874144,14.164807 6.2795105,15.073523 6.3984013,17.911276 6.5224619,20.87247 7.7726154,21.159398 8.514782,23.357878 L8.5215197,23.378889 8.5015697,23.370246 C8.1076841,23.207889 7.9363003,23.235915 7.530695,22.71675 4.6597338,21.6849 4.8162737,20.697553 3.988637,15.945554 L3.5277309,16.054808 C4.327754,15.470997 5.050065,14.079068 5.5773239,14.127297 z M58.306765,13.497337 L58.34189,13.71365 C58.269548,13.730799 58.197203,13.747947 58.124861,13.765096 58.172018,13.686881 58.21649,13.620248 58.258467,13.561903 z M35.123157,13.038239 C39.40029,19.066251 36.902658,21.8987 36.18515,29.605289 34.726861,24.095267 36.185076,20.089781 33.404709,15.181351 L33.151227,14.752592 33.188862,14.741924 C33.236702,14.724692 33.230659,14.707888 33.122169,14.703442 L33.151227,14.752592 33.143638,14.754743 C32.946337,14.800672 32.433367,14.827297 32.61474,14.586561 32.811374,14.325562 33.120079,14.138115 33.372737,13.913898 33.789515,13.544047 34.600667,13.299617 35.123157,13.038239 z M38.369001,12.581593 C38.928148,12.59057 40.128481,13.769882 41.031866,14.066873 L40.570961,14.176127 C42.458462,20.947225 43.136412,22.172752 41.205065,25.128639 41.137089,26.042381 40.972618,26.09975 40.719053,26.532911 L40.706442,26.555408 40.700773,26.523771 C40.14007,23.19285 41.070177,22.121488 39.553251,18.118313 37.891893,13.733971 37.809855,12.572615 38.369001,12.581593 z M42.366283,11.907757 C42.913385,11.911758 44.078587,13.018376 44.960255,13.292225 L44.508345,13.399347 C46.301289,19.793329 46.954922,20.947895 45.041292,23.761319 44.967466,24.626766 44.806059,24.68239 44.554459,25.094439 L44.541937,25.115834 44.536644,25.085934 C44.014582,21.93757 44.93334,20.915993 43.480904,17.138999 41.890177,13.002376 41.819181,11.903758 42.366283,11.907757 z M60.858183,11.676689 L60.900984,11.925562 C60.828642,11.942711 60.7563,11.959859 60.683954,11.977007 60.728823,11.889075 60.771376,11.814312 60.811705,11.748952 z M1.9275532,11.642291 C1.9445438,11.641634 1.9614124,11.642586 1.978157,11.645232 2.3949223,11.711074 2.7354774,12.825452 2.9963799,16.265901 3.2686291,19.85601 4.5476837,20.265598 5.407505,22.963408 L5.4153624,22.989173 5.3947506,22.977718 C4.9881945,22.761583 4.816185,22.786959 4.3800907,22.138396 1.4242783,20.746435 1.5337315,19.559256 0.46090508,13.766667 L0,13.875923 C0.7560997,13.230053 1.4008369,11.662659 1.9275532,11.642291 z M47.940479,10.231023 C51.776638,15.375551 49.193542,18.03677 48.079334,24.948576 46.939831,20.035489 48.646467,16.344879 46.031452,12.030317 L45.929766,11.866485 45.966446,11.855093 C46.013926,11.837136 46.008953,11.822477 45.903633,11.824382 L45.929766,11.866485 45.921751,11.868973 C45.727299,11.92061 45.226746,11.972112 45.416218,11.747602 45.621634,11.504194 45.932121,11.320319 46.19006,11.106682 46.615549,10.754285 47.41799,10.492403 47.940479,10.231023 z M50.302273,8.2274699 C50.979116,8.185051 52.328798,9.0858974 53.397181,9.2589059 L52.828871,9.3936205 C54.51335,15.014252 55.225828,16.001419 52.621939,18.701937 52.458181,19.489338 52.253748,19.553127 51.907869,19.946229 L51.890581,19.966594 51.88653,19.94005 C51.503647,17.142126 52.726278,16.142708 51.2444,12.855633 49.621428,9.2555766 49.625431,8.2698903 50.302273,8.2274699 z M55.16593,5.2032404 C58.929266,10.66806 56.942339,13.086058 56.600134,19.867025 55.202452,14.953277 56.284506,11.464955 53.805307,7.0384607 L53.579905,6.6514482 53.610907,6.6432791 C53.65019,6.629653 53.644598,6.6146154 53.554064,6.6070824 L53.579905,6.6514482 53.573652,6.6530952 C53.410795,6.6870918 52.984304,6.6935511 53.127432,6.4870129 53.282598,6.2630901 53.533575,6.1078377 53.736635,5.9182549 54.071604,5.6055336 54.739294,5.4166679 55.16593,5.2032404 z M56.813829,3.3437862 C57.333502,3.322957 58.392534,4.1306601 59.21837,4.3045826 L58.784315,4.4074726 C60.209902,9.290411 60.780767,10.157696 58.840139,12.424466 58.732359,13.099234 58.576574,13.149457 58.319593,13.480189 L58.306765,13.497337 58.303034,13.47437 C57.943884,11.054253 58.861288,10.221376 57.645449,7.354178 56.313845,4.2139759 56.294161,3.3646154 56.813829,3.3437862 z M59.006369,2.7656555E-05 C59.529539,-0.0059642792 60.624731,0.95520687 61.463194,1.1827183 L61.029139,1.2856073 C62.633047,6.9253378 63.238153,7.9379554 61.359236,10.466625 61.27363,11.2355 61.118299,11.28765 60.870531,11.657493 L60.858183,11.676689 60.85364,11.650261 C60.408922,8.8669953 61.305307,7.944911 59.981695,4.6203203 58.532061,0.97917557 58.483202,0.0060195923 59.006369,2.7656555E-05 z" Height="54.736" RenderTransformOrigin="0.362673010243029,0.424529846708653" Stretch="Fill" Width="62.523" Panel.ZIndex="5" Canvas.Left="59.94" Canvas.Top="57.129">
-                        <Path.RenderTransform>
-                            <TransformGroup>
-                                <ScaleTransform/>
-                                <SkewTransform AngleY="0.086"/>
-                                <RotateTransform Angle="13.254"/>
-                                <TranslateTransform X="0.001" Y="-0.004"/>
-                            </TransformGroup>
-                        </Path.RenderTransform>
-                    </Path>
-                    <Path x:Name="lengua" Data="M315.368,301.45 C314.28492,309.39259 312.71477,308.37782 322.968,312.65 331.35744,316.1456 322.568,317.37345 322.568,326.65 322.568,332.9209 331.859,331.6865 335.168,336.65 336.00101,337.89952 345.93782,348.12544 348.768,341.05 350.8659,340.21084 351.55833,336.26329 353.168,334.05 355.07155,331.43262 357.32097,331.85 361.368,331.85 360.17561,331.19961 360.81401,330.02253 359.168,329.45 358.01458,329.04881 356.77013,328.32742&#xA;355.568,328.05 352.80234,327.41177 350.25647,327.85461 347.768,328.85 347.22514,329.66429 346.48951,330.38924 345.568,330.85 344.57615,333.57758 341.71261,335.52015 336.968,331.25 335.38023,329.82101 335.56383,328.23423 333.368,327.45 331.32772,326.72133 331.06554,326.06477 331.568,323.05 334.44086,321.13476 337.82084,316.96707 336.968,311.85 335.91673,311.21924 335.92745,310.29424 335.168,309.25 334.06597,307.73471&#xA;333.61112,308.31078 331.768,307.85 329.57126,307.30081 326.86214,306.51015 325.368,304.85 322.82051,302.01946 326.91778,301.11872 321.568,300.45 318.55844,300.0738 316.83462,300.7947 315.368,301.45 z" HorizontalAlignment="Left" Height="54.5" Stretch="Fill" VerticalAlignment="Top" Width="46.79" Fill="#FFFF0049" RenderTransformOrigin="0.5,0.5" Canvas.Left="79.214" Canvas.Top="81.868">
-                        <Path.RenderTransform>
-                            <TransformGroup>
-                                <ScaleTransform/>
-                                <SkewTransform/>
-                                <RotateTransform Angle="21.99"/>
-                                <TranslateTransform/>
-                            </TransformGroup>
-                        </Path.RenderTransform>
-                    </Path>
-                    <Path Data="M428.018,278.7" Fill="White" HorizontalAlignment="Left" Height="0" Stretch="Fill" VerticalAlignment="Top" Width="0" Canvas.Left="53.114" Canvas.Top="34.233"/>
-                    <Path x:Name="brazoDer" HorizontalAlignment="Left" VerticalAlignment="Top" Data="M5.1751814,70.435661 L5.2052455,70.508705 C5.3010292,70.764107 5.3509598,71.020515 5.3509608,71.25161 5.2969017,70.927315 5.2399025,70.704033 5.1944924,70.516975 z M17.679184,0 L19.337257,0.3826828 C22.592135,1.0487289 25.962219,1.3985062 29.413998,1.3985062 32.002834,1.3985062 34.545715,1.2017593 37.028507,0.82239532 L38.561237,0.54867554 38.308258,0.86647797 C37.709717,1.586731 37.020447,2.1928787 35.720402,2.1210632 35.84811,8.923996 37.074131,11.821991 34.588589,18.443069 32.584198,23.782417 31.030741,29.751221 27.929054,34.502609 25.905153,37.602913 25.364347,40.200287 25.24741,42.25441 L25.243855,42.345619 25.247263,42.345367 25.242161,42.389076 25.224003,42.854309 C25.185526,44.604889 25.404594,45.91214 25.109043,46.746727 L25.073422,46.824989 25.018648,47.694046 C24.912632,48.966393 25.39884,49.684265 27.018553,50.494209 27.141453,50.555679 27.309792,50.608978 27.511501,50.650208 L27.710785,50.684967 28.005989,50.985573 C28.983206,51.967125 29.962595,52.898125 30.78709,54.134872 32.688923,54.895607 33.75272,56.066185 34.787041,58.134819 39.999157,60.219658 43.283436,64.511192 36.920349,73.60128 35.570942,71.577171 36.001267,66.654716 34.520386,65.068031 33.890156,64.392815 31.490637,63.879799 29.50914,63.40374 L29.32206,63.358467 29.325687,63.383446 C29.331177,63.442039 29.334003,63.503639 29.334009,63.568352 29.231762,63.585396 29.032887,63.568932 28.82242,63.542427 L28.66354,63.520638 28.634749,63.598763 C28.515772,63.886925 28.276463,64.185738 27.880201,64.492531 L27.84549,64.518333 27.83255,64.562096 C27.50412,65.609077 26.963131,65.794579 25.800873,67.168159 25.676485,67.315163 24.940207,68.66906 24.448706,68.758064 L24.428495,68.759193 24.39007,68.986061 C24.100832,70.723335 23.835838,72.511665 23.608177,74.268715 L23.481358,75.277229 23.517214,75.430489 C24.019344,77.600853 24.181768,79.056389 22.950876,81.517464 22.933292,81.447136 22.918205,81.376701 22.905319,81.306175 L22.903889,81.296822 22.879921,81.68644 C22.819597,82.721031 22.787186,83.679771 22.787182,84.534447 22.422487,83.440376 22.054577,82.39576 21.693352,81.381264 L21.664503,81.300377 21.625065,81.336739 C21.527897,81.408577 21.39588,81.42318 21.217428,81.384926 20.337984,81.196434 20.90793,80.66317 20.417549,80.118172 19.401032,78.988441 20.082867,77.74073 19.551008,76.251198 19.394863,75.813881 19.388104,75.323128 19.429905,74.821022 L19.443689,74.676628 19.34516,74.329857 C18.733091,72.121773 18.275303,69.831093 18.084665,67.23748 L18.073309,67.060585 18.068653,67.055443 C17.830833,66.810616 17.559139,66.601051 17.288872,66.454216 L17.213268,66.415321 17.166452,66.553322 C16.667864,68.093834 16.390648,69.757607 16.295507,71.483696 L16.27861,71.883354 16.368376,72.306129 C17.038853,75.329964 18.014799,78.418098 17.508709,81.485176 L17.476805,81.657143 17.509838,81.785149 C17.734463,82.628136 17.98398,83.458 18.253908,84.267784 17.274031,82.308067 15.547793,78.270851 13.98729,77.334557 13.987294,75.532097 13.724799,73.671776 13.396679,71.777534 L13.276547,71.100838 13.196682,71.046516 C12.963664,70.87281 12.754225,70.650703 12.467121,70.268089 12.004695,69.651817 11.415568,68.907677 11.885737,67.966759 L11.915665,67.910835 11.890661,67.822243 C11.625178,66.862434 11.218974,65.01783 11.759118,64.478996 L11.759519,64.478661 11.734979,64.461494 C11.350493,64.19976 10.971589,63.989052 10.616978,63.918144 10.651935,63.86573 10.691289,63.805016 10.734621,63.738441 L10.799549,63.639076 10.764723,63.6343 10.711326,63.721138 C10.598191,63.91967 10.498412,64.125145 10.410873,64.337074 L10.355907,64.477989 10.474587,64.933174 C10.569755,65.306419 10.65152,65.68029 10.66769,66.068352 10.679315,66.347389 10.679518,66.572411 10.663389,66.775368 L10.656117,66.8498 10.850997,67.434273 10.755377,67.529884 10.701689,67.240166 10.644334,66.941689 10.615676,67.123772 10.57523,67.291542 10.578893,67.372993 C10.582423,67.474342 10.584246,67.583534 10.584251,67.700951 L10.755377,67.529884 10.809687,67.82296 C11.255263,70.303215 11.397241,72.227043 10.748275,74.823006 L10.743298,74.842201 10.750391,74.892082 C10.924098,76.160286 11.053981,77.431206 11.053981,78.667854 10.876216,78.667854 10.698422,78.667854 10.520661,78.667854 9.1955424,75.355034 7.3206864,73.422295 7.3206873,69.06797 7.3206864,68.942024 7.3199349,68.81739 7.3185382,68.693977 L7.3139449,68.426491 7.3159252,68.690926 C7.3186112,69.072975 7.3206864,69.464714 7.3206873,69.867989 7.2404671,69.386665 7.1241761,68.900581 6.9811349,68.4105 L6.8785162,68.077904 6.7704111,67.986977 C5.7103119,67.079079 5.2998352,66.311821 5.0007482,64.068367 4.9878731,63.971794 5.0081253,63.856499 5.0573993,63.738792 L5.1061798,63.640984 4.7877856,62.897758 C4.6451226,62.558617 4.5057488,62.219009 4.3724308,61.879135 L4.212915,61.462196 4.1337543,61.704399 C3.8312335,62.715439 3.8519969,63.691139 4.1508265,65.185066 4.4570656,66.716087 5.6006928,67.394676 5.2176142,69.118324 5.0658989,69.800941 5.0883446,70.058235 5.1687465,70.408562 L5.1751814,70.435661 5.1423045,70.355797 C4.9143868,69.847923 4.5063363,69.365181 3.9508064,69.118324 3.1744895,68.773338 3.0681928,68.435204 3.0364185,67.921501 L3.0310593,67.811104 2.9366477,67.697792 2.9198394,67.698845 C2.8947156,67.70002 2.87145,67.700661 2.8503242,67.700661 L2.8302708,67.570137 2.7173603,67.434639 C2.7173627,67.345161 2.7182784,67.254112 2.7199848,67.161644 L2.7210114,67.122353 2.7213972,67.123039 2.7848282,67.2342 2.7441473,66.781776 2.7372165,66.630196 2.7273593,66.880165 2.7210114,67.122353 2.6344529,66.968849 C1.3344783,64.652382 -1.0193444,59.966179 0.48609088,59.37793 L0.56360434,59.353905 0.47591488,59.06617 C-0.001365907,57.377548 -0.026172881,55.296326 2.9095359,54.283478 L2.9486392,54.270576 3.0234614,54.157257 C3.5783933,53.414352 4.7621766,52.932289 5.5189009,52.160767 L5.6168709,52.055229 5.6836691,51.918236 C5.8546753,51.576248 5.94627,51.400009 6.0909849,51.2724 L6.0951376,51.269043 6.0966425,51.265213 C6.1359215,51.150223 6.1654168,51.029289 6.1836505,50.901649 6.4658165,48.926476 7.0708428,48.40873 8.0536614,47.975853 L8.1304179,47.943253 8.1751357,47.718979 C8.390462,46.686172 8.6856661,45.772476 9.4006443,44.700249 L9.4526005,44.796616 9.5089932,44.598099 9.4909068,44.311539 9.4451619,43.883339 9.4941893,43.601875 C9.4137774,43.588432 9.5751925,43.557503 9.8374739,43.494568 L9.8483019,43.491882 9.9510336,43.157089 C10.550553,41.241013 11.150073,39.324768 11.150071,37.552719 11.150073,35.440399 11.256919,33.171127 11.498124,30.942909 L11.631784,29.838867 11.27045,28.694427 C10.750197,26.903305 10.43487,25.100761 10.752099,23.593361 11.365674,20.677956 11.333972,17.076126 11.81875,13.993431 12.520389,9.5316772 15.776042,5.2133408 17.618727,0.85916901 L17.807451,0.3873291 17.775148,0.30230713 z" Height="84.534" RenderTransformOrigin="2.30761249380008,0.117507941373549" Stretch="Fill" Canvas.Top="174.135" Width="40.421">
-                        <Path.RenderTransform>
-                            <TransformGroup>
-                                <ScaleTransform ScaleY="1" ScaleX="-1"/>
-                                <SkewTransform AngleY="0" AngleX="0"/>
-                                <RotateTransform Angle="0"/>
-                                <TranslateTransform/>
-                            </TransformGroup>
-                        </Path.RenderTransform>
-                        <Path.Fill>
-                            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                                <GradientStop Color="Black" Offset="0"/>
-                                <GradientStop Color="Black" Offset="1"/>
-                            </LinearGradientBrush>
-                        </Path.Fill>
-                    </Path>
-                    <Rectangle x:Name="telaraniaDer" Fill="White" HorizontalAlignment="Left" Height="9.431" VerticalAlignment="Top" Width="12.27" RenderTransformOrigin="0.801,-0.684" RadiusY="2.109" RadiusX="2.109" Canvas.Left="166.799" Canvas.Top="222.121">
-                        <Rectangle.RenderTransform>
-                            <TransformGroup>
-                                <ScaleTransform ScaleY="1" ScaleX="1"/>
-                                <SkewTransform AngleY="0" AngleX="0"/>
-                                <RotateTransform Angle="-12.828"/>
-                                <TranslateTransform X="-4.815" Y="-0.541"/>
-                            </TransformGroup>
-                        </Rectangle.RenderTransform>
-                    </Rectangle>
-                    <Image x:Name="z1" Height="39" Source="Presentacion/Resources/z_dormir.png" Stretch="Fill" Width="46" Canvas.Top="27" Canvas.Left="139.272" Visibility="Hidden" RenderTransformOrigin="0.5,0.5">
-                        <Image.RenderTransform>
-                            <TransformGroup>
-                                <ScaleTransform/>
-                                <SkewTransform/>
-                                <RotateTransform/>
-                                <TranslateTransform/>
-                            </TransformGroup>
-                        </Image.RenderTransform>
-                    </Image>
-                    <Image x:Name="z2" Height="39" Source="Presentacion/Resources/z_dormir.png" Stretch="Fill" Width="46" Canvas.Top="3" Canvas.Left="178.772" Visibility="Hidden" RenderTransformOrigin="0.5,0.5">
-                        <Image.RenderTransform>
-                            <TransformGroup>
-                                <ScaleTransform/>
-                                <SkewTransform/>
-                                <RotateTransform/>
-                                <TranslateTransform/>
-                            </TransformGroup>
-                        </Image.RenderTransform>
-                    </Image>
-                    <Image x:Name="z3" Height="39" Source="Presentacion/Resources/z_dormir.png" Stretch="Fill" Width="46" Canvas.Top="-31.5" Canvas.Left="149.772" Visibility="Hidden" RenderTransformOrigin="0.5,0.5">
-                        <Image.RenderTransform>
-                            <TransformGroup>
-                                <ScaleTransform/>
-                                <SkewTransform/>
-                                <RotateTransform/>
-                                <TranslateTransform/>
-                            </TransformGroup>
-                        </Image.RenderTransform>
-                    </Image>
-                    <Image x:Name="water_drop_png" Height="18.654" Source="Presentacion/Resources/water drop.png" Stretch="Fill" Width="10.052" Canvas.Left="72.264" Canvas.Top="112.75" RenderTransformOrigin="0.5,0.5" Visibility="Hidden">
-                        <Image.RenderTransform>
-                            <TransformGroup>
-                                <ScaleTransform/>
-                                <SkewTransform/>
-                                <RotateTransform/>
-                                <TranslateTransform/>
-                            </TransformGroup>
-                        </Image.RenderTransform>
-                    </Image>
-                    <Canvas x:Name="yoyo" Height="18.188" Canvas.Left="58.259" Canvas.Top="217.875" Width="22" RenderTransformOrigin="0.5,0.5">
-                        <Canvas.RenderTransform>
-                            <TransformGroup>
-                                <ScaleTransform/>
-                                <SkewTransform/>
-                                <RotateTransform/>
-                                <TranslateTransform/>
-                            </TransformGroup>
-                        </Canvas.RenderTransform>
-                        <Ellipse x:Name="cir_yoyo" Height="22" Width="22" Fill="#FF0E89C3" Stroke="Black" RenderTransformOrigin="0.5,0.5" Visibility="Hidden" Opacity="0">
-                            <Ellipse.RenderTransform>
-                                <TransformGroup>
-                                    <ScaleTransform/>
-                                    <SkewTransform/>
-                                    <RotateTransform/>
-                                    <TranslateTransform/>
-                                </TransformGroup>
-                            </Ellipse.RenderTransform>
-                        </Ellipse>
-                        <Path x:Name="hilo" Data="M41.166667,226.66633 L40.833333,327.99967" Fill="White" Height="5.25" Canvas.Left="4.333" Stretch="Fill" Stroke="White" Canvas.Top="6.333" Width="1.334" Visibility="Hidden" Opacity="0" RenderTransformOrigin="0.5,0.5">
-                            <Path.RenderTransform>
-                                <TransformGroup>
-                                    <ScaleTransform/>
-                                    <SkewTransform/>
-                                    <RotateTransform/>
-                                    <TranslateTransform/>
-                                </TransformGroup>
-                            </Path.RenderTransform>
-                        </Path>
-                    </Canvas>
-                    <Path x:Name="piernas" HorizontalAlignment="Left" VerticalAlignment="Top" Data="M61.000605,0.00012965183 C63.081667,0.0048298816 65.089842,0.13781846 66.977602,0.4542952 L67.506357,0.55473884 67.743124,0.51998849 C77.800058,-0.75551574 90.85594,2.6319649 100.2287,2.9205392 106.4662,16.561287 111.02218,28.279543 112.97848,44.90346 114.88551,61.108778 113.61596,73.218916 113.61596,88.917815 113.61596,91.160895 113.74211,92.908659 113.77148,94.270476 L113.77489,94.587012 113.88448,94.845015 C114.00455,95.172529 114.1113,95.514159 114.20421,95.870314 115.95109,102.56647 111.31164,110.06195 110.68699,117.55736 109.26198,134.65732 104.38569,147.85997 105.31926,163.36848 L105.34991,163.79101 105.39174,163.85087 C106.11534,164.98714 106.60734,166.69487 107.15965,169.27939 108.69722,176.47427 117.35029,176.57802 121.51718,181.45276 135.23304,185.73157 132.68867,184.88904 132.68867,193.72482 132.2121,193.72482 132.36563,195.32579 131.88907,195.32579 127.66763,203.55659 111.24882,195.50546 104.4909,194.62701 102.19166,189.24739 94.191595,192.2276 92.191717,186.32768 90.191862,181.52772 90.87335,178.56219 90.482832,174.60278 90.271017,172.45521 90.57588,169.97566&#xA;90.775175,167.60245 L90.834951,166.83163 90.526205,166.8298 90.485922,166.17471 C90.616743,164.82464 90.612242,163.3855 90.506117,161.8921 L90.457289,161.30934 90.434057,161.24013 90.451567,161.24104 90.430517,160.98982 C89.674322,153.11853 86.352446,143.96846 85.202284,138.43512 82.125814,123.63434 78.603998,128.92866 78.603998,114.07004 78.603998,105.82039 79.744944,102.72089 80.156042,95.614241 L80.190554,94.962721 80.04637,94.771574 C79.553793,94.094557 79.04093,93.270125 78.487848,92.263006 72.976263,82.22682 71.701967,64.626433 69.92111,52.015299 L69.780905,51.045241 70.292192,50.841841 C70.91115,50.565699 71.492216,50.215643 72.025057,49.802393 L72.183695,49.673109 69.74703,50.810866 69.780905,51.045241 69.66099,51.092947 C68.803564,51.393847 67.884901,51.556998 66.929499,51.556998 65.643377,51.556998 64.423841,51.261347 63.330637,50.732008 L62.814417,50.453738 61.391436,49.4317 61.512213,49.540198 C61.880251,49.855181 62.27424,50.138724 62.690351,50.386862 L62.814417,50.453738 63.863001,51.206869 C61.985868,63.879061 58.159353,81.709608 52.46998,92.069525 L52.380907,92.23184 52.592913,92.2965 C52.780783,101.94043 54.271002,104.64187 54.271002,114.07004 54.271002,128.92866 50.749184,123.63435 47.672716,138.43512 46.522551,143.96846 43.200678,153.11853 42.444479,160.98984 L42.423431,161.24106 42.440945,161.24013 42.417707,161.30934 42.368877,161.8921 C42.262758,163.3855 42.258257,164.82464 42.389074,166.17473 L42.348791,166.8298 42.040047,166.83165 42.099825,167.60245 C42.299116,169.97568 42.603979,172.45523 42.392164,174.6028 42.001646,178.56219 42.683138,181.52772 40.683285,186.32768 38.683407,192.22761 30.683343,189.2474 28.384105,194.62701 21.626176,195.50546 5.2073698,203.55661 0.9859314,195.32579 0.5093689,195.32579 0.66290665,193.72484 0.18632317,193.72484 0.18632317,184.88904 -2.3580379,185.73157 11.35782,181.45276 15.524711,176.57803 24.177779,176.47429 25.715349,169.27939 26.267662,166.69488 26.759657,164.98715&#xA;27.483258,163.85087 L27.52509,163.79101 27.555739,163.36848 C28.489308,147.85998 23.613019,134.65732 22.188007,117.55736 21.563354,110.06195 16.923914,102.56647 18.670786,95.870314 18.856612,95.157995 19.097809,94.503821 19.390097,93.904349 L19.833093,93.105658 19.846202,92.772131 C19.893684,91.635496 19.958044,90.286009 19.958044,88.683813 19.958044,72.984915 18.688496,60.874785 20.595537,44.669459 22.551831,28.045534 27.107811,16.327282 33.345315,2.6865325 41.27611,2.442364 51.843927,-0.020563553 61.000605,0.00012965183 z" Height="198.998" RenderTransformOrigin="0.374133604635443,0.248346695255381" Stretch="Fill" Width="132.875" Canvas.Left="60.051" Canvas.Top="231.326">
-                        <Path.Fill>
-                            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                                <GradientStop Color="Black" Offset="0"/>
-                                <GradientStop Color="Black" Offset="1"/>
-                            </LinearGradientBrush>
-                        </Path.Fill>
-                        <Path.RenderTransform>
-                            <TransformGroup>
-                                <ScaleTransform ScaleY="1" ScaleX="-1"/>
-                                <SkewTransform AngleY="0" AngleX="0"/>
-                                <RotateTransform Angle="0"/>
-                                <TranslateTransform/>
-                            </TransformGroup>
-                        </Path.RenderTransform>
-                    </Path>
-                    <Path x:Name="tela" Data="M41.505044,30.931232 L36.225291,43.750975 45.366706,34.959533 45.070963,34.73435 42.546263,32.595389 C41.990824,32.124818 41.624456,31.564353 41.522877,31.097946 z M24.455005,29.916922 L24.293642,30.131201 C24.126504,30.328119 23.924457,30.52063 23.692924,30.697231 L21.061948,32.704045 C20.714661,32.968939 20.35037,33.160422 20.011403,33.271029 L19.860423,33.309288 29.908615,42.97279 z M35.080403,29.852289 L35.080339,40.22884 39.008564,30.690756 38.705204,30.642742 35.468266,29.955957 z M32.68045,28.471445 L32.376403,28.667063 C32.151409,28.793916 31.895192,28.904543 31.616835,28.990038 L28.453658,29.961536 C28.036124,30.089777 27.628069,30.14325 27.271767,30.129624 L27.138917,30.115563 32.680359,43.381719 z M35.08047,18.201338 L35.080411,27.736273 35.100309,27.734982 C35.358591,27.733347 35.636295,27.761061 35.921143,27.821497 L39.158083,28.508284 C39.30051,28.538502 39.437978,28.575472 39.569266,28.618181 L39.821978,28.715706 43.11233,20.726423 42.889433,20.717356 C42.632409,20.691833 42.359159,20.63508 42.082241,20.545034 L35.710664,18.473186 C35.572205,18.428164 35.439381,18.376949 35.313313,18.320673 z M19.499225,18.052845 L19.305512,18.310087 C19.138374,18.507002 18.936334,18.699516 18.704803,18.876112 L11.063187,24.704838 10.975647,24.764664 18.716229,32.208901 18.746725,32.127653 C18.930447,31.739219 19.275606,31.322363 19.738658,30.969169 L22.369633,28.96235 C22.832687,28.609152 23.325962,28.38648 23.749144,28.311996 L23.783305,28.308861 z M32.680513,17.100077 L32.314376,17.187981 C32.178596,17.21295 32.037445,17.231411 31.892277,17.242525 L22.309325,17.976177 22.07056,17.981979 26.505322,28.598757 26.740579,28.40004 C27.027808,28.188774 27.395536,28.003979 27.813079,27.875738 L30.976243,26.904238 C31.532961,26.733253 32.072821,26.695183 32.495619,26.771862 L32.680456,26.821438 z M15.836716,9.2848473 L4.1825905,18.174191 4.1477699,18.198179 9.4060669,23.255173 9.4153976,23.245361 C9.5157413,23.150539 9.624136,23.058266 9.7398949,22.969959 L17.381506,17.141222 C17.84456,16.788036 18.337818,16.565369 18.761009,16.490887 L18.843609,16.483301 z M51.075829,8.364418 L50.978863,8.3851242 50.787111,8.3935204 46.208613,19.510544 46.450139,19.545918 C46.868706,19.643057 47.349284,19.891937 47.792659,20.269531 L52.893469,24.613527 C53.780224,25.368717 54.182379,26.352787 53.791706,26.811512 53.401035,27.270239 52.365475,27.029907 51.47872,26.274721 L46.377908,21.930719 C46.045376,21.64753 45.780991,21.332146 45.601002,21.024351 L45.592328,21.006929 41.768456,30.291653 41.817192,30.259649 C42.288604,30.007457 43.179129,30.271778 43.956738,30.930579 L46.481442,33.06954 C46.592529,33.163654 46.696054,33.261367 46.791409,33.361198 L46.898622,33.48626 64.392513,16.662098 51.809908,9.1048164 C51.560284,8.9548874 51.351515,8.76371 51.187731,8.5463676 z M35.080551,4.5796204 L35.080481,16.221951 35.206423,16.210712 C35.562898,16.20293 35.970022,16.263086 36.385403,16.398153 L42.75698,18.470001 C43.033897,18.560049 43.288268,18.674866 43.511148,18.805391 L43.818963,19.010654 48.393606,7.9030037 z M32.680579,4.5014267 L17.808796,7.542366 17.77716,7.6055527 17.717083,7.687809 17.794554,7.8085403 C17.862225,7.9290619 17.924756,8.0569878 17.98088,8.1913338 L21.235738,15.983425 21.330779,15.948719 C21.578144,15.874413 21.852417,15.822798 22.142757,15.80057 L31.725704,15.066919 C32.016048,15.044693 32.294978,15.053955 32.550774,15.089741 L32.680524,15.115681 z M33.880588,0 C34.129115,0 34.359991,0.13277435 34.551508,0.36017609 L34.582748,0.40331268 34.788584,0.39429855 C34.92829,0.40150452 35.069624,0.42225266 35.210882,0.45751953 L50.562908,4.2898903 50.695524,4.2382813 C50.86891,4.1942673 51.037333,4.19981 51.190535,4.2629051 51.26713,4.2944489 51.3363,4.3388901 51.397833,4.394619 L51.5581,4.5925255 51.87851,4.7815514 C52.043577,4.9015999 52.188745,5.0431099 52.310484,5.2005005 L52.424614,5.3719826 52.697369,5.3372116 C53.097809,5.3242188 53.510998,5.4243622 53.885429,5.64925 L67.942497,14.092115 C68.597759,14.485674 68.971504,15.163473 68.989044,15.85264 68.991547,15.951094 68.986782,16.049778 68.974529,16.1479 68.958195,16.278728 68.928551,16.408554 68.885078,16.535492 68.841606,16.662432 68.784306,16.786484 68.712662,16.905762 68.28281,17.621433 67.458687,17.962011 66.652252,17.83457 L66.626015,17.827801 66.457306,18.006062 35.861891,47.430175 34.36911,47.430174 34.36911,139.72108 C34.36911,140.88585 33.921395,141.83007 33.36911,141.83007 32.816825,141.83007 32.36911,140.88585 32.369109,139.72108 L32.369109,47.430173 31.081158,47.430172 0.90130043,18.405731 C0.061790466,17.598356 -0.24636078,16.556622 0.21302795,16.078945 0.38529396,15.899813 0.64104843,15.825447 0.93770218,15.845028 L1.0534992,15.863981 1.1812973,15.592987 C1.3200569,15.358873 1.5064182,15.145788 1.7379494,14.969196 L14.775867,5.0243492 C14.891632,4.9360466 15.013205,4.8610535 15.138643,4.7991371 L15.160072,4.7909889 15.29847,4.5438652 C15.599321,4.1100769 16.070684,3.7834358 16.641264,3.6667709 L32.70668,0.38175964 C32.849319,0.35259247 32.991413,0.33792877 33.131289,0.33672714 L33.225654,0.34492874 33.4135,0.16573715 C33.557068,0.059017181 33.714902,-3.8146973E-06 33.880588,0 z" Fill="White" HorizontalAlignment="Left" Height="141.83" Stretch="Fill" VerticalAlignment="Top" Width="68.99" Canvas.Left="217.731" Canvas.Top="123.639" Visibility="Hidden" RenderTransformOrigin="0.5,0.5">
-                        <Path.RenderTransform>
-                            <TransformGroup>
-                                <ScaleTransform/>
-                                <SkewTransform/>
-                                <RotateTransform/>
-                                <TranslateTransform/>
-                            </TransformGroup>
-                        </Path.RenderTransform>
-                    </Path>
-                    <Path x:Name="saliva1" Data="M631.518,265.7 C630.99814,267.8537 624.91665,279.65911 632.318,278.9 637.25472,278.39367 635.27498,272.25063 631.518,265.7 z" Fill="#FF06CA79" HorizontalAlignment="Left" Height="13.235" Stretch="Fill" VerticalAlignment="Top" Width="6.584" RenderTransformOrigin="0.5,0.5" OpacityMask="Black" Visibility="Hidden" Canvas.Left="452.891" Canvas.Top="387.7">
-                        <Path.RenderTransform>
-                            <TransformGroup>
-                                <ScaleTransform/>
-                                <SkewTransform/>
-                                <RotateTransform/>
-                                <TranslateTransform/>
-                            </TransformGroup>
-                        </Path.RenderTransform>
-                    </Path>
-                    <Path x:Name="saliva2" Data="M631.518,265.7 C630.99814,267.8537 624.91665,279.65911 632.318,278.9 637.25472,278.39367 635.27498,272.25063 631.518,265.7 z" HorizontalAlignment="Left" Height="13.235" Stretch="Fill" VerticalAlignment="Top" Width="6.584" RenderTransformOrigin="0.5,0.5" Fill="#FF06CA79" Visibility="Hidden" Canvas.Left="466.059" Canvas.Top="393.7">
-                        <Path.RenderTransform>
-                            <TransformGroup>
-                                <ScaleTransform/>
-                                <SkewTransform/>
-                                <RotateTransform/>
-                                <TranslateTransform/>
-                            </TransformGroup>
-                        </Path.RenderTransform>
-                    </Path>
-                    <Path x:Name="saliva3" Data="M631.518,265.7 C630.99814,267.8537 624.91665,279.65911 632.318,278.9 637.25472,278.39367 635.27498,272.25063 631.518,265.7 z" Fill="#FF06CA79" HorizontalAlignment="Left" Height="13.235" Stretch="Fill" VerticalAlignment="Top" Width="6.584" RenderTransformOrigin="0.5,0.5" Visibility="Hidden" Canvas.Left="459.475" Canvas.Top="398.9">
-                        <Path.RenderTransform>
-                            <TransformGroup>
-                                <ScaleTransform/>
-                                <SkewTransform/>
-                                <RotateTransform/>
-                                <TranslateTransform/>
-                            </TransformGroup>
-                        </Path.RenderTransform>
-                    </Path>
-                    <Path x:Name="brazoIzq" HorizontalAlignment="Left" VerticalAlignment="Top" Data="M5.1751814,70.435661 L5.2052455,70.508705 C5.3010292,70.764107 5.3509598,71.020515 5.3509608,71.25161 5.2969017,70.927315 5.2399025,70.704033 5.1944924,70.516975 z M17.679184,0 L19.337257,0.3826828 C22.592135,1.0487289 25.962219,1.3985062 29.413998,1.3985062 32.002834,1.3985062 34.545715,1.2017593 37.028507,0.82239532 L38.561237,0.54867554 38.308258,0.86647797 C37.709717,1.586731 37.020447,2.1928787 35.720402,2.1210632 35.84811,8.923996 37.074131,11.821991 34.588589,18.443069 32.584198,23.782417 31.030741,29.751221 27.929054,34.502609 25.905153,37.602913 25.364347,40.200287 25.24741,42.25441 L25.243855,42.345619 25.247263,42.345367 25.242161,42.389076 25.224003,42.854309 C25.185526,44.604889 25.404594,45.91214 25.109043,46.746727 L25.073422,46.824989 25.018648,47.694046 C24.912632,48.966393 25.39884,49.684265 27.018553,50.494209 27.141453,50.555679 27.309792,50.608978 27.511501,50.650208 L27.710785,50.684967 28.005989,50.985573 C28.983206,51.967125 29.962595,52.898125 30.78709,54.134872 32.688923,54.895607 33.75272,56.066185 34.787041,58.134819 39.999157,60.219658 43.283436,64.511192 36.920349,73.60128 35.570942,71.577171 36.001267,66.654716 34.520386,65.068031 33.890156,64.392815 31.490637,63.879799 29.50914,63.40374 L29.32206,63.358467 29.325687,63.383446 C29.331177,63.442039 29.334003,63.503639 29.334009,63.568352 29.231762,63.585396 29.032887,63.568932 28.82242,63.542427 L28.66354,63.520638 28.634749,63.598763 C28.515772,63.886925 28.276463,64.185738 27.880201,64.492531 L27.84549,64.518333 27.83255,64.562096 C27.50412,65.609077 26.963131,65.794579 25.800873,67.168159 25.676485,67.315163 24.940207,68.66906 24.448706,68.758064 L24.428495,68.759193 24.39007,68.986061 C24.100832,70.723335 23.835838,72.511665 23.608177,74.268715 L23.481358,75.277229 23.517214,75.430489 C24.019344,77.600853 24.181768,79.056389 22.950876,81.517464 22.933292,81.447136 22.918205,81.376701 22.905319,81.306175 L22.903889,81.296822 22.879921,81.68644 C22.819597,82.721031 22.787186,83.679771 22.787182,84.534447 22.422487,83.440376 22.054577,82.39576 21.693352,81.381264 L21.664503,81.300377 21.625065,81.336739 C21.527897,81.408577 21.39588,81.42318 21.217428,81.384926 20.337984,81.196434 20.90793,80.66317 20.417549,80.118172 19.401032,78.988441 20.082867,77.74073 19.551008,76.251198 19.394863,75.813881 19.388104,75.323128 19.429905,74.821022 L19.443689,74.676628 19.34516,74.329857 C18.733091,72.121773 18.275303,69.831093 18.084665,67.23748 L18.073309,67.060585 18.068653,67.055443 C17.830833,66.810616 17.559139,66.601051 17.288872,66.454216 L17.213268,66.415321 17.166452,66.553322 C16.667864,68.093834 16.390648,69.757607 16.295507,71.483696 L16.27861,71.883354 16.368376,72.306129 C17.038853,75.329964 18.014799,78.418098 17.508709,81.485176 L17.476805,81.657143 17.509838,81.785149 C17.734463,82.628136 17.98398,83.458 18.253908,84.267784 17.274031,82.308067 15.547793,78.270851 13.98729,77.334557 13.987294,75.532097 13.724799,73.671776 13.396679,71.777534 L13.276547,71.100838 13.196682,71.046516 C12.963664,70.87281 12.754225,70.650703 12.467121,70.268089 12.004695,69.651817 11.415568,68.907677 11.885737,67.966759 L11.915665,67.910835 11.890661,67.822243 C11.625178,66.862434 11.218974,65.01783 11.759118,64.478996 L11.759519,64.478661 11.734979,64.461494 C11.350493,64.19976 10.971589,63.989052 10.616978,63.918144 10.651935,63.86573 10.691289,63.805016 10.734621,63.738441 L10.799549,63.639076 10.764723,63.6343 10.711326,63.721138 C10.598191,63.91967 10.498412,64.125145 10.410873,64.337074 L10.355907,64.477989 10.474587,64.933174 C10.569755,65.306419 10.65152,65.68029 10.66769,66.068352 10.679315,66.347389 10.679518,66.572411 10.663389,66.775368 L10.656117,66.8498 10.850997,67.434273 10.755377,67.529884 10.701689,67.240166 10.644334,66.941689 10.615676,67.123772 10.57523,67.291542 10.578893,67.372993 C10.582423,67.474342 10.584246,67.583534 10.584251,67.700951 L10.755377,67.529884 10.809687,67.82296 C11.255263,70.303215 11.397241,72.227043 10.748275,74.823006 L10.743298,74.842201 10.750391,74.892082 C10.924098,76.160286 11.053981,77.431206 11.053981,78.667854 10.876216,78.667854 10.698422,78.667854 10.520661,78.667854 9.1955424,75.355034 7.3206864,73.422295 7.3206873,69.06797 7.3206864,68.942024 7.3199349,68.81739 7.3185382,68.693977 L7.3139449,68.426491 7.3159252,68.690926 C7.3186112,69.072975 7.3206864,69.464714 7.3206873,69.867989 7.2404671,69.386665 7.1241761,68.900581 6.9811349,68.4105 L6.8785162,68.077904 6.7704111,67.986977 C5.7103119,67.079079 5.2998352,66.311821 5.0007482,64.068367 4.9878731,63.971794 5.0081253,63.856499 5.0573993,63.738792 L5.1061798,63.640984 4.7877856,62.897758 C4.6451226,62.558617 4.5057488,62.219009 4.3724308,61.879135 L4.212915,61.462196 4.1337543,61.704399 C3.8312335,62.715439 3.8519969,63.691139 4.1508265,65.185066 4.4570656,66.716087 5.6006928,67.394676 5.2176142,69.118324 5.0658989,69.800941 5.0883446,70.058235 5.1687465,70.408562 L5.1751814,70.435661 5.1423045,70.355797 C4.9143868,69.847923 4.5063363,69.365181 3.9508064,69.118324 3.1744895,68.773338 3.0681928,68.435204 3.0364185,67.921501 L3.0310593,67.811104 2.9366477,67.697792 2.9198394,67.698845 C2.8947156,67.70002 2.87145,67.700661 2.8503242,67.700661 L2.8302708,67.570137 2.7173603,67.434639 C2.7173627,67.345161 2.7182784,67.254112 2.7199848,67.161644 L2.7210114,67.122353 2.7213972,67.123039 2.7848282,67.2342 2.7441473,66.781776 2.7372165,66.630196 2.7273593,66.880165 2.7210114,67.122353 2.6344529,66.968849 C1.3344783,64.652382 -1.0193444,59.966179 0.48609088,59.37793 L0.56360434,59.353905 0.47591488,59.06617 C-0.001365907,57.377548 -0.026172881,55.296326 2.9095359,54.283478 L2.9486392,54.270576 3.0234614,54.157257 C3.5783933,53.414352 4.7621766,52.932289 5.5189009,52.160767 L5.6168709,52.055229 5.6836691,51.918236 C5.8546753,51.576248 5.94627,51.400009 6.0909849,51.2724 L6.0951376,51.269043 6.0966425,51.265213 C6.1359215,51.150223 6.1654168,51.029289 6.1836505,50.901649 6.4658165,48.926476 7.0708428,48.40873 8.0536614,47.975853 L8.1304179,47.943253 8.1751357,47.718979 C8.390462,46.686172 8.6856661,45.772476 9.4006443,44.700249 L9.4526005,44.796616 9.5089932,44.598099 9.4909068,44.311539 9.4451619,43.883339 9.4941893,43.601875 C9.4137774,43.588432 9.5751925,43.557503 9.8374739,43.494568 L9.8483019,43.491882 9.9510336,43.157089 C10.550553,41.241013 11.150073,39.324768 11.150071,37.552719 11.150073,35.440399 11.256919,33.171127 11.498124,30.942909 L11.631784,29.838867 11.27045,28.694427 C10.750197,26.903305 10.43487,25.100761 10.752099,23.593361 11.365674,20.677956 11.333972,17.076126 11.81875,13.993431 12.520389,9.5316772 15.776042,5.2133408 17.618727,0.85916901 L17.807451,0.3873291 17.775148,0.30230713 z" Height="84.534" RenderTransformOrigin="2.30761249380008,0.117507941373549" Stretch="Fill" Canvas.Top="176.135" Width="40.421">
-                        <Path.RenderTransform>
-                            <TransformGroup>
-                                <ScaleTransform/>
-                                <SkewTransform/>
-                                <RotateTransform/>
-                                <TranslateTransform/>
-                            </TransformGroup>
-                        </Path.RenderTransform>
-                        <Path.Fill>
-                            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                                <GradientStop Color="Black" Offset="0"/>
-                                <GradientStop Color="Black" Offset="1"/>
-                            </LinearGradientBrush>
-                        </Path.Fill>
-                    </Path>
-                    <Rectangle x:Name="telaraniaIzq" Fill="White" HorizontalAlignment="Left" Height="9.431" VerticalAlignment="Top" Width="12.27" RenderTransformOrigin="0.801,-0.684" RadiusY="2.109" RadiusX="2.109" Canvas.Left="10.799" Canvas.Top="224.521">
-                        <Rectangle.RenderTransform>
-                            <TransformGroup>
-                                <ScaleTransform ScaleY="1" ScaleX="-1"/>
-                                <SkewTransform AngleY="0" AngleX="0"/>
-                                <RotateTransform Angle="12.828"/>
-                                <TranslateTransform X="-4.815" Y="-0.541"/>
-                            </TransformGroup>
-                        </Rectangle.RenderTransform>
-                    </Rectangle>
-
                 </Canvas>
+                <Path x:Name="piernas" HorizontalAlignment="Left" VerticalAlignment="Top" Data="M61.000605,0.00012965183 C63.081667,0.0048298816 65.089842,0.13781846 66.977602,0.4542952 L67.506357,0.55473884 67.743124,0.51998849 C77.800058,-0.75551574 90.85594,2.6319649 100.2287,2.9205392 106.4662,16.561287 111.02218,28.279543 112.97848,44.90346 114.88551,61.108778 113.61596,73.218916 113.61596,88.917815 113.61596,91.160895 113.74211,92.908659 113.77148,94.270476 L113.77489,94.587012 113.88448,94.845015 C114.00455,95.172529 114.1113,95.514159 114.20421,95.870314 115.95109,102.56647 111.31164,110.06195 110.68699,117.55736 109.26198,134.65732 104.38569,147.85997 105.31926,163.36848 L105.34991,163.79101 105.39174,163.85087 C106.11534,164.98714 106.60734,166.69487 107.15965,169.27939 108.69722,176.47427 117.35029,176.57802 121.51718,181.45276 135.23304,185.73157 132.68867,184.88904 132.68867,193.72482 132.2121,193.72482 132.36563,195.32579 131.88907,195.32579 127.66763,203.55659 111.24882,195.50546 104.4909,194.62701 102.19166,189.24739 94.191595,192.2276 92.191717,186.32768 90.191862,181.52772 90.87335,178.56219 90.482832,174.60278 90.271017,172.45521 90.57588,169.97566&#xA;90.775175,167.60245 L90.834951,166.83163 90.526205,166.8298 90.485922,166.17471 C90.616743,164.82464 90.612242,163.3855 90.506117,161.8921 L90.457289,161.30934 90.434057,161.24013 90.451567,161.24104 90.430517,160.98982 C89.674322,153.11853 86.352446,143.96846 85.202284,138.43512 82.125814,123.63434 78.603998,128.92866 78.603998,114.07004 78.603998,105.82039 79.744944,102.72089 80.156042,95.614241 L80.190554,94.962721 80.04637,94.771574 C79.553793,94.094557 79.04093,93.270125 78.487848,92.263006 72.976263,82.22682 71.701967,64.626433 69.92111,52.015299 L69.780905,51.045241 70.292192,50.841841 C70.91115,50.565699 71.492216,50.215643 72.025057,49.802393 L72.183695,49.673109 69.74703,50.810866 69.780905,51.045241 69.66099,51.092947 C68.803564,51.393847 67.884901,51.556998 66.929499,51.556998 65.643377,51.556998 64.423841,51.261347 63.330637,50.732008 L62.814417,50.453738 61.391436,49.4317 61.512213,49.540198 C61.880251,49.855181 62.27424,50.138724 62.690351,50.386862 L62.814417,50.453738 63.863001,51.206869 C61.985868,63.879061 58.159353,81.709608 52.46998,92.069525 L52.380907,92.23184 52.592913,92.2965 C52.780783,101.94043 54.271002,104.64187 54.271002,114.07004 54.271002,128.92866 50.749184,123.63435 47.672716,138.43512 46.522551,143.96846 43.200678,153.11853 42.444479,160.98984 L42.423431,161.24106 42.440945,161.24013 42.417707,161.30934 42.368877,161.8921 C42.262758,163.3855 42.258257,164.82464 42.389074,166.17473 L42.348791,166.8298 42.040047,166.83165 42.099825,167.60245 C42.299116,169.97568 42.603979,172.45523 42.392164,174.6028 42.001646,178.56219 42.683138,181.52772 40.683285,186.32768 38.683407,192.22761 30.683343,189.2474 28.384105,194.62701 21.626176,195.50546 5.2073698,203.55661 0.9859314,195.32579 0.5093689,195.32579 0.66290665,193.72484 0.18632317,193.72484 0.18632317,184.88904 -2.3580379,185.73157 11.35782,181.45276 15.524711,176.57803 24.177779,176.47429 25.715349,169.27939 26.267662,166.69488 26.759657,164.98715&#xA;27.483258,163.85087 L27.52509,163.79101 27.555739,163.36848 C28.489308,147.85998 23.613019,134.65732 22.188007,117.55736 21.563354,110.06195 16.923914,102.56647 18.670786,95.870314 18.856612,95.157995 19.097809,94.503821 19.390097,93.904349 L19.833093,93.105658 19.846202,92.772131 C19.893684,91.635496 19.958044,90.286009 19.958044,88.683813 19.958044,72.984915 18.688496,60.874785 20.595537,44.669459 22.551831,28.045534 27.107811,16.327282 33.345315,2.6865325 41.27611,2.442364 51.843927,-0.020563553 61.000605,0.00012965183 z" Height="198.998" RenderTransformOrigin="0.374133604635443,0.248346695255381" Stretch="Fill" Width="132.875" Canvas.Left="60.051" Canvas.Top="231.326">
+                    <Path.Fill>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <GradientStop Color="Black" Offset="0"/>
+                            <GradientStop Color="Black" Offset="1"/>
+                        </LinearGradientBrush>
+                    </Path.Fill>
+                    <Path.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform ScaleY="1" ScaleX="-1"/>
+                            <SkewTransform AngleY="0" AngleX="0"/>
+                            <RotateTransform Angle="0"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Path.RenderTransform>
+                </Path>
+                <Path x:Name="tela" Data="M41.505044,30.931232 L36.225291,43.750975 45.366706,34.959533 45.070963,34.73435 42.546263,32.595389 C41.990824,32.124818 41.624456,31.564353 41.522877,31.097946 z M24.455005,29.916922 L24.293642,30.131201 C24.126504,30.328119 23.924457,30.52063 23.692924,30.697231 L21.061948,32.704045 C20.714661,32.968939 20.35037,33.160422 20.011403,33.271029 L19.860423,33.309288 29.908615,42.97279 z M35.080403,29.852289 L35.080339,40.22884 39.008564,30.690756 38.705204,30.642742 35.468266,29.955957 z M32.68045,28.471445 L32.376403,28.667063 C32.151409,28.793916 31.895192,28.904543 31.616835,28.990038 L28.453658,29.961536 C28.036124,30.089777 27.628069,30.14325 27.271767,30.129624 L27.138917,30.115563 32.680359,43.381719 z M35.08047,18.201338 L35.080411,27.736273 35.100309,27.734982 C35.358591,27.733347 35.636295,27.761061 35.921143,27.821497 L39.158083,28.508284 C39.30051,28.538502 39.437978,28.575472 39.569266,28.618181 L39.821978,28.715706 43.11233,20.726423 42.889433,20.717356 C42.632409,20.691833 42.359159,20.63508 42.082241,20.545034 L35.710664,18.473186 C35.572205,18.428164 35.439381,18.376949 35.313313,18.320673 z M19.499225,18.052845 L19.305512,18.310087 C19.138374,18.507002 18.936334,18.699516 18.704803,18.876112 L11.063187,24.704838 10.975647,24.764664 18.716229,32.208901 18.746725,32.127653 C18.930447,31.739219 19.275606,31.322363 19.738658,30.969169 L22.369633,28.96235 C22.832687,28.609152 23.325962,28.38648 23.749144,28.311996 L23.783305,28.308861 z M32.680513,17.100077 L32.314376,17.187981 C32.178596,17.21295 32.037445,17.231411 31.892277,17.242525 L22.309325,17.976177 22.07056,17.981979 26.505322,28.598757 26.740579,28.40004 C27.027808,28.188774 27.395536,28.003979 27.813079,27.875738 L30.976243,26.904238 C31.532961,26.733253 32.072821,26.695183 32.495619,26.771862 L32.680456,26.821438 z M15.836716,9.2848473 L4.1825905,18.174191 4.1477699,18.198179 9.4060669,23.255173 9.4153976,23.245361 C9.5157413,23.150539 9.624136,23.058266 9.7398949,22.969959 L17.381506,17.141222 C17.84456,16.788036 18.337818,16.565369 18.761009,16.490887 L18.843609,16.483301 z M51.075829,8.364418 L50.978863,8.3851242 50.787111,8.3935204 46.208613,19.510544 46.450139,19.545918 C46.868706,19.643057 47.349284,19.891937 47.792659,20.269531 L52.893469,24.613527 C53.780224,25.368717 54.182379,26.352787 53.791706,26.811512 53.401035,27.270239 52.365475,27.029907 51.47872,26.274721 L46.377908,21.930719 C46.045376,21.64753 45.780991,21.332146 45.601002,21.024351 L45.592328,21.006929 41.768456,30.291653 41.817192,30.259649 C42.288604,30.007457 43.179129,30.271778 43.956738,30.930579 L46.481442,33.06954 C46.592529,33.163654 46.696054,33.261367 46.791409,33.361198 L46.898622,33.48626 64.392513,16.662098 51.809908,9.1048164 C51.560284,8.9548874 51.351515,8.76371 51.187731,8.5463676 z M35.080551,4.5796204 L35.080481,16.221951 35.206423,16.210712 C35.562898,16.20293 35.970022,16.263086 36.385403,16.398153 L42.75698,18.470001 C43.033897,18.560049 43.288268,18.674866 43.511148,18.805391 L43.818963,19.010654 48.393606,7.9030037 z M32.680579,4.5014267 L17.808796,7.542366 17.77716,7.6055527 17.717083,7.687809 17.794554,7.8085403 C17.862225,7.9290619 17.924756,8.0569878 17.98088,8.1913338 L21.235738,15.983425 21.330779,15.948719 C21.578144,15.874413 21.852417,15.822798 22.142757,15.80057 L31.725704,15.066919 C32.016048,15.044693 32.294978,15.053955 32.550774,15.089741 L32.680524,15.115681 z M33.880588,0 C34.129115,0 34.359991,0.13277435 34.551508,0.36017609 L34.582748,0.40331268 34.788584,0.39429855 C34.92829,0.40150452 35.069624,0.42225266 35.210882,0.45751953 L50.562908,4.2898903 50.695524,4.2382813 C50.86891,4.1942673 51.037333,4.19981 51.190535,4.2629051 51.26713,4.2944489 51.3363,4.3388901 51.397833,4.394619 L51.5581,4.5925255 51.87851,4.7815514 C52.043577,4.9015999 52.188745,5.0431099 52.310484,5.2005005 L52.424614,5.3719826 52.697369,5.3372116 C53.097809,5.3242188 53.510998,5.4243622 53.885429,5.64925 L67.942497,14.092115 C68.597759,14.485674 68.971504,15.163473 68.989044,15.85264 68.991547,15.951094 68.986782,16.049778 68.974529,16.1479 68.958195,16.278728 68.928551,16.408554 68.885078,16.535492 68.841606,16.662432 68.784306,16.786484 68.712662,16.905762 68.28281,17.621433 67.458687,17.962011 66.652252,17.83457 L66.626015,17.827801 66.457306,18.006062 35.861891,47.430175 34.36911,47.430174 34.36911,139.72108 C34.36911,140.88585 33.921395,141.83007 33.36911,141.83007 32.816825,141.83007 32.36911,140.88585 32.369109,139.72108 L32.369109,47.430173 31.081158,47.430172 0.90130043,18.405731 C0.061790466,17.598356 -0.24636078,16.556622 0.21302795,16.078945 0.38529396,15.899813 0.64104843,15.825447 0.93770218,15.845028 L1.0534992,15.863981 1.1812973,15.592987 C1.3200569,15.358873 1.5064182,15.145788 1.7379494,14.969196 L14.775867,5.0243492 C14.891632,4.9360466 15.013205,4.8610535 15.138643,4.7991371 L15.160072,4.7909889 15.29847,4.5438652 C15.599321,4.1100769 16.070684,3.7834358 16.641264,3.6667709 L32.70668,0.38175964 C32.849319,0.35259247 32.991413,0.33792877 33.131289,0.33672714 L33.225654,0.34492874 33.4135,0.16573715 C33.557068,0.059017181 33.714902,-3.8146973E-06 33.880588,0 z" Fill="White" HorizontalAlignment="Left" Height="141.83" Stretch="Fill" VerticalAlignment="Top" Width="68.99" Canvas.Left="217.731" Canvas.Top="123.639" Visibility="Hidden" RenderTransformOrigin="0.5,0.5">
+                    <Path.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Path.RenderTransform>
+                </Path>
+                <Path x:Name="saliva1" Data="M631.518,265.7 C630.99814,267.8537 624.91665,279.65911 632.318,278.9 637.25472,278.39367 635.27498,272.25063 631.518,265.7 z" Fill="#FF06CA79" HorizontalAlignment="Left" Height="13.235" Stretch="Fill" VerticalAlignment="Top" Width="6.584" RenderTransformOrigin="0.5,0.5" OpacityMask="Black" Visibility="Hidden" Canvas.Left="452.891" Canvas.Top="387.7">
+                    <Path.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Path.RenderTransform>
+                </Path>
+                <Path x:Name="saliva2" Data="M631.518,265.7 C630.99814,267.8537 624.91665,279.65911 632.318,278.9 637.25472,278.39367 635.27498,272.25063 631.518,265.7 z" HorizontalAlignment="Left" Height="13.235" Stretch="Fill" VerticalAlignment="Top" Width="6.584" RenderTransformOrigin="0.5,0.5" Fill="#FF06CA79" Visibility="Hidden" Canvas.Left="466.059" Canvas.Top="393.7">
+                    <Path.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Path.RenderTransform>
+                </Path>
+                <Path x:Name="saliva3" Data="M631.518,265.7 C630.99814,267.8537 624.91665,279.65911 632.318,278.9 637.25472,278.39367 635.27498,272.25063 631.518,265.7 z" Fill="#FF06CA79" HorizontalAlignment="Left" Height="13.235" Stretch="Fill" VerticalAlignment="Top" Width="6.584" RenderTransformOrigin="0.5,0.5" Visibility="Hidden" Canvas.Left="459.475" Canvas.Top="398.9">
+                    <Path.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Path.RenderTransform>
+                </Path>
+                <Path x:Name="brazoIzq" HorizontalAlignment="Left" VerticalAlignment="Top" Data="M5.1751814,70.435661 L5.2052455,70.508705 C5.3010292,70.764107 5.3509598,71.020515 5.3509608,71.25161 5.2969017,70.927315 5.2399025,70.704033 5.1944924,70.516975 z M17.679184,0 L19.337257,0.3826828 C22.592135,1.0487289 25.962219,1.3985062 29.413998,1.3985062 32.002834,1.3985062 34.545715,1.2017593 37.028507,0.82239532 L38.561237,0.54867554 38.308258,0.86647797 C37.709717,1.586731 37.020447,2.1928787 35.720402,2.1210632 35.84811,8.923996 37.074131,11.821991 34.588589,18.443069 32.584198,23.782417 31.030741,29.751221 27.929054,34.502609 25.905153,37.602913 25.364347,40.200287 25.24741,42.25441 L25.243855,42.345619 25.247263,42.345367 25.242161,42.389076 25.224003,42.854309 C25.185526,44.604889 25.404594,45.91214 25.109043,46.746727 L25.073422,46.824989 25.018648,47.694046 C24.912632,48.966393 25.39884,49.684265 27.018553,50.494209 27.141453,50.555679 27.309792,50.608978 27.511501,50.650208 L27.710785,50.684967 28.005989,50.985573 C28.983206,51.967125 29.962595,52.898125 30.78709,54.134872 32.688923,54.895607 33.75272,56.066185 34.787041,58.134819 39.999157,60.219658 43.283436,64.511192 36.920349,73.60128 35.570942,71.577171 36.001267,66.654716 34.520386,65.068031 33.890156,64.392815 31.490637,63.879799 29.50914,63.40374 L29.32206,63.358467 29.325687,63.383446 C29.331177,63.442039 29.334003,63.503639 29.334009,63.568352 29.231762,63.585396 29.032887,63.568932 28.82242,63.542427 L28.66354,63.520638 28.634749,63.598763 C28.515772,63.886925 28.276463,64.185738 27.880201,64.492531 L27.84549,64.518333 27.83255,64.562096 C27.50412,65.609077 26.963131,65.794579 25.800873,67.168159 25.676485,67.315163 24.940207,68.66906 24.448706,68.758064 L24.428495,68.759193 24.39007,68.986061 C24.100832,70.723335 23.835838,72.511665 23.608177,74.268715 L23.481358,75.277229 23.517214,75.430489 C24.019344,77.600853 24.181768,79.056389 22.950876,81.517464 22.933292,81.447136 22.918205,81.376701 22.905319,81.306175 L22.903889,81.296822 22.879921,81.68644 C22.819597,82.721031 22.787186,83.679771 22.787182,84.534447 22.422487,83.440376 22.054577,82.39576 21.693352,81.381264 L21.664503,81.300377 21.625065,81.336739 C21.527897,81.408577 21.39588,81.42318 21.217428,81.384926 20.337984,81.196434 20.90793,80.66317 20.417549,80.118172 19.401032,78.988441 20.082867,77.74073 19.551008,76.251198 19.394863,75.813881 19.388104,75.323128 19.429905,74.821022 L19.443689,74.676628 19.34516,74.329857 C18.733091,72.121773 18.275303,69.831093 18.084665,67.23748 L18.073309,67.060585 18.068653,67.055443 C17.830833,66.810616 17.559139,66.601051 17.288872,66.454216 L17.213268,66.415321 17.166452,66.553322 C16.667864,68.093834 16.390648,69.757607 16.295507,71.483696 L16.27861,71.883354 16.368376,72.306129 C17.038853,75.329964 18.014799,78.418098 17.508709,81.485176 L17.476805,81.657143 17.509838,81.785149 C17.734463,82.628136 17.98398,83.458 18.253908,84.267784 17.274031,82.308067 15.547793,78.270851 13.98729,77.334557 13.987294,75.532097 13.724799,73.671776 13.396679,71.777534 L13.276547,71.100838 13.196682,71.046516 C12.963664,70.87281 12.754225,70.650703 12.467121,70.268089 12.004695,69.651817 11.415568,68.907677 11.885737,67.966759 L11.915665,67.910835 11.890661,67.822243 C11.625178,66.862434 11.218974,65.01783 11.759118,64.478996 L11.759519,64.478661 11.734979,64.461494 C11.350493,64.19976 10.971589,63.989052 10.616978,63.918144 10.651935,63.86573 10.691289,63.805016 10.734621,63.738441 L10.799549,63.639076 10.764723,63.6343 10.711326,63.721138 C10.598191,63.91967 10.498412,64.125145 10.410873,64.337074 L10.355907,64.477989 10.474587,64.933174 C10.569755,65.306419 10.65152,65.68029 10.66769,66.068352 10.679315,66.347389 10.679518,66.572411 10.663389,66.775368 L10.656117,66.8498 10.850997,67.434273 10.755377,67.529884 10.701689,67.240166 10.644334,66.941689 10.615676,67.123772 10.57523,67.291542 10.578893,67.372993 C10.582423,67.474342 10.584246,67.583534 10.584251,67.700951 L10.755377,67.529884 10.809687,67.82296 C11.255263,70.303215 11.397241,72.227043 10.748275,74.823006 L10.743298,74.842201 10.750391,74.892082 C10.924098,76.160286 11.053981,77.431206 11.053981,78.667854 10.876216,78.667854 10.698422,78.667854 10.520661,78.667854 9.1955424,75.355034 7.3206864,73.422295 7.3206873,69.06797 7.3206864,68.942024 7.3199349,68.81739 7.3185382,68.693977 L7.3139449,68.426491 7.3159252,68.690926 C7.3186112,69.072975 7.3206864,69.464714 7.3206873,69.867989 7.2404671,69.386665 7.1241761,68.900581 6.9811349,68.4105 L6.8785162,68.077904 6.7704111,67.986977 C5.7103119,67.079079 5.2998352,66.311821 5.0007482,64.068367 4.9878731,63.971794 5.0081253,63.856499 5.0573993,63.738792 L5.1061798,63.640984 4.7877856,62.897758 C4.6451226,62.558617 4.5057488,62.219009 4.3724308,61.879135 L4.212915,61.462196 4.1337543,61.704399 C3.8312335,62.715439 3.8519969,63.691139 4.1508265,65.185066 4.4570656,66.716087 5.6006928,67.394676 5.2176142,69.118324 5.0658989,69.800941 5.0883446,70.058235 5.1687465,70.408562 L5.1751814,70.435661 5.1423045,70.355797 C4.9143868,69.847923 4.5063363,69.365181 3.9508064,69.118324 3.1744895,68.773338 3.0681928,68.435204 3.0364185,67.921501 L3.0310593,67.811104 2.9366477,67.697792 2.9198394,67.698845 C2.8947156,67.70002 2.87145,67.700661 2.8503242,67.700661 L2.8302708,67.570137 2.7173603,67.434639 C2.7173627,67.345161 2.7182784,67.254112 2.7199848,67.161644 L2.7210114,67.122353 2.7213972,67.123039 2.7848282,67.2342 2.7441473,66.781776 2.7372165,66.630196 2.7273593,66.880165 2.7210114,67.122353 2.6344529,66.968849 C1.3344783,64.652382 -1.0193444,59.966179 0.48609088,59.37793 L0.56360434,59.353905 0.47591488,59.06617 C-0.001365907,57.377548 -0.026172881,55.296326 2.9095359,54.283478 L2.9486392,54.270576 3.0234614,54.157257 C3.5783933,53.414352 4.7621766,52.932289 5.5189009,52.160767 L5.6168709,52.055229 5.6836691,51.918236 C5.8546753,51.576248 5.94627,51.400009 6.0909849,51.2724 L6.0951376,51.269043 6.0966425,51.265213 C6.1359215,51.150223 6.1654168,51.029289 6.1836505,50.901649 6.4658165,48.926476 7.0708428,48.40873 8.0536614,47.975853 L8.1304179,47.943253 8.1751357,47.718979 C8.390462,46.686172 8.6856661,45.772476 9.4006443,44.700249 L9.4526005,44.796616 9.5089932,44.598099 9.4909068,44.311539 9.4451619,43.883339 9.4941893,43.601875 C9.4137774,43.588432 9.5751925,43.557503 9.8374739,43.494568 L9.8483019,43.491882 9.9510336,43.157089 C10.550553,41.241013 11.150073,39.324768 11.150071,37.552719 11.150073,35.440399 11.256919,33.171127 11.498124,30.942909 L11.631784,29.838867 11.27045,28.694427 C10.750197,26.903305 10.43487,25.100761 10.752099,23.593361 11.365674,20.677956 11.333972,17.076126 11.81875,13.993431 12.520389,9.5316772 15.776042,5.2133408 17.618727,0.85916901 L17.807451,0.3873291 17.775148,0.30230713 z" Height="84.534" RenderTransformOrigin="2.30761249380008,0.117507941373549" Stretch="Fill" Canvas.Top="176.135" Width="40.421">
+                    <Path.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Path.RenderTransform>
+                    <Path.Fill>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <GradientStop Color="Black" Offset="0"/>
+                            <GradientStop Color="Black" Offset="1"/>
+                        </LinearGradientBrush>
+                    </Path.Fill>
+                </Path>
+                <Rectangle x:Name="telaraniaIzq" Fill="White" HorizontalAlignment="Left" Height="9.431" VerticalAlignment="Top" Width="12.27" RenderTransformOrigin="0.801,-0.684" RadiusY="2.109" RadiusX="2.109" Canvas.Left="10.799" Canvas.Top="224.521">
+                    <Rectangle.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform ScaleY="1" ScaleX="-1"/>
+                            <SkewTransform AngleY="0" AngleX="0"/>
+                            <RotateTransform Angle="12.828"/>
+                            <TranslateTransform X="-4.815" Y="-0.541"/>
+                        </TransformGroup>
+                    </Rectangle.RenderTransform>
+                </Rectangle>
+                <Button x:Name="btnDormir" Content="Dormir"  Width="102.6" RenderTransformOrigin="0.5,0.5" Click="dormir" Background="#FFDDD8D8"  FontWeight="Bold" Canvas.Left="-130.8" Height="42" Canvas.Top="73.934">
+                    <Button.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Button.RenderTransform>
+                </Button>
+                <Button x:Name="btnJugarYoyo" Content="Jugar al yoyo"  Width="102.6" RenderTransformOrigin="0.5,0.5" Click="jugarYoyo" Background="#FFDDD8D8"  FontWeight="Bold" Canvas.Left="42.172" Height="42" Canvas.Top="-72.466">
+                    <Button.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Button.RenderTransform>
+                </Button>
+                <Button x:Name="btnTelaraña" Content="Lanzar telaraña"  Width="102.6" RenderTransformOrigin="0.5,0.5" Click="lanzarTela" Background="#FFDDD8D8"  FontWeight="Bold" Canvas.Left="217.731" Height="42" Canvas.Top="73.934">
+                    <Button.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Button.RenderTransform>
+                </Button>
+            </Canvas>
 
-            </Viewbox>
-            <Path Grid.Column="3" Data="M620.718,261.3" Fill="White" HorizontalAlignment="Left" Height="0" Margin="21.106,209.274,0,0" Grid.Row="1" Stretch="Fill" VerticalAlignment="Top" Width="0"/>
+
+        </DockPanel>
+        <Grid x:Name="grid_lateral_izquierdo" Margin="10" d:LayoutOverrides="LeftMargin, RightMargin, TopMargin, BottomMargin" Grid.RowSpan="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="15*"/>
+                <ColumnDefinition Width="15*"/>
+                <ColumnDefinition Width="70*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="8*"/>
+                <RowDefinition Height="16*"/>
+                <RowDefinition Height="21*"/>
+                <RowDefinition Height="8*"/>
+                <RowDefinition Height="16*"/>
+                <RowDefinition Height="21*"/>
+                <RowDefinition Height="297*"/>
+            </Grid.RowDefinitions>
+            <ProgressBar x:Name="pb_nivel" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Background="{x:Null}" BorderBrush="#FF7C7C7C" Value="80" Grid.Column="2" Grid.Row="2" Height="25" VerticalAlignment="Top" SmallChange="1" RenderTransformOrigin="0.5,0.5" Foreground="#FFA21010" Margin="5,10,-5,0">
+                <ProgressBar.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </ProgressBar.RenderTransform>
+            </ProgressBar>
+            <Label x:Name="lblIconoNivel" Content="1" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontFamily="Comic Sans MS" FontSize="18.667" Grid.Row="1" Grid.ColumnSpan="2" Grid.RowSpan="2">
+                <Label.Background>
+                    <ImageBrush ImageSource="Presentacion/Resources/estrella.png" Stretch="Uniform"/>
+                </Label.Background>
+            </Label>
+            <Label x:Name="lbl_Usuario" Content="Alberto y Jesu" Grid.Column="2" Grid.Row="1" d:LayoutOverrides="Width" FontFamily="Comic Sans MS" FontSize="14.667" VerticalAlignment="Bottom" Background="#FF0B0B0B" Foreground="White" RenderTransformOrigin="0.5,0.5">
+                <Label.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Label.RenderTransform>
+            </Label>
+            <ProgressBar x:Name="pb_monedas" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Background="{x:Null}" BorderBrush="#FF7C7C7C" Value="80" Grid.Column="2" Grid.Row="5" Height="25" VerticalAlignment="Center" Margin="5,10,-5,5.741" SmallChange="1" Maximum="1000" RenderTransformOrigin="0.5,0.5">
+                <ProgressBar.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </ProgressBar.RenderTransform>
+                <ProgressBar.Foreground>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="White" Offset="0"/>
+                        <GradientStop Color="#FFFFD949" Offset="0.443"/>
+                    </LinearGradientBrush>
+                </ProgressBar.Foreground>
+            </ProgressBar>
+            <Label x:Name="lblMonedas" Grid.ColumnSpan="2" Content="" Grid.Row="4" Grid.RowSpan="2" RenderTransformOrigin="0.5,0.5">
+                <Label.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Label.RenderTransform>
+                <Label.Background>
+                    <ImageBrush ImageSource="Presentacion/Resources/monedas.png" Stretch="Uniform"/>
+                </Label.Background>
+            </Label>
+            <Label x:Name="lbl_monedas" Content="N monedas" Grid.Column="2" Grid.Row="5" FontFamily="Comic Sans MS" FontSize="16" HorizontalContentAlignment="Right" VerticalContentAlignment="Center" RenderTransformOrigin="0.5,0.5" Margin="38.575,0,0,0" Foreground="White" HorizontalAlignment="Left">
+                <Label.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Label.RenderTransform>
+            </Label>
+            <Label x:Name="lbl_puntos_nivel" Content="12 puntos" Grid.Column="2" Grid.Row="2" FontFamily="Comic Sans MS" FontSize="16" HorizontalContentAlignment="Right" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Margin="10,5,0,0" Foreground="White" HorizontalAlignment="Left">
+                <Label.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Label.RenderTransform>
+            </Label>
+            <StackPanel Margin="0,10,-26.954,-32" Grid.Row="6" Grid.ColumnSpan="2" HorizontalAlignment="Left" Width="100">
+                <Image x:Name="btn_trofeo" Height="87.5" Source="Presentacion/Resources/medalla.png" Margin="0,10,0,0" MouseUp="mostrar_logros" RenderTransformOrigin="0.5,0.5">
+                    <Image.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Image.RenderTransform>
+                </Image>
+                <Label x:Name="lblMisLogros" Content="Logros" Height="33" Margin="10,0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontWeight="Bold" FontSize="16" FontFamily="Comic Sans MS" RenderTransformOrigin="0.5,0.5" Foreground="White">
+                    <Label.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Label.RenderTransform>
+                </Label>
+                <Image x:Name="btn_puzzle" Height="92.5" Source="Presentacion/Resources/rompecabezas.png" Margin="0,30,0,0" MouseUp="abrir_puzzle" RenderTransformOrigin="0.5,0.5">
+                    <Image.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Image.RenderTransform>
+                </Image>
+                <Label x:Name="lblPuzzle" Content="¡Puzzle!" Height="33" Margin="10,0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontWeight="Bold" FontSize="16" FontFamily="Comic Sans MS" Foreground="White" RenderTransformOrigin="0.5,0.5">
+                    <Label.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Label.RenderTransform>
+                </Label>
+                <Label x:Name="label1_Copy" Content="Ranking" Height="33" Margin="10,190,10,0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontWeight="Bold" FontSize="16" FontFamily="Comic Sans MS" Foreground="Black"/>
+                <Image x:Name="btn_ranking" Height="108" Source="Presentacion/Resources/stats.png" Margin="10,-18,10,0" MouseUp="abrir_ranking" RenderTransformOrigin="0.5,0.5">
+                    <Image.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Image.RenderTransform>
+                </Image>
+            </StackPanel>
+        </Grid>
+
+        <Grid x:Name="grid_inferior" Margin="10" Grid.Row="2" Grid.ColumnSpan="3" RenderTransformOrigin="0.5,0.5" >
+            <Grid.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Grid.RenderTransform>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="45*"/>
+                <ColumnDefinition Width="8*"/>
+                <ColumnDefinition Width="184*"/>
+                <ColumnDefinition Width="37*"/>
+                <ColumnDefinition Width="9*"/>
+                <ColumnDefinition Width="184*"/>
+                <ColumnDefinition Width="37*"/>
+                <ColumnDefinition Width="10*"/>
+                <ColumnDefinition Width="183*"/>
+                <ColumnDefinition Width="45*"/>
+            </Grid.ColumnDefinitions>
+            <ProgressBar x:Name="PBapetito"  Grid.Column="8" Margin="10.001,25,66.698,25" Height="30" VerticalAlignment="Center" Grid.ColumnSpan="2" Background="{x:Null}" BorderBrush="#FF7C7C7C" BorderThickness="2" Foreground="#FFDEA50E" Value="100"/>
+            <ProgressBar x:Name="PBenergia" Margin="68,25,27.755,25" Height="30" VerticalAlignment="Center" Grid.ColumnSpan="3" Background="{x:Null}" BorderBrush="#FF7C7C7C" BorderThickness="2" Value="100"/>
+            <ProgressBar x:Name="PBdiversion"  Grid.Column="4" Margin="10.404,25,70.106,25" Height="30" VerticalAlignment="Center" Grid.ColumnSpan="3" BorderBrush="#FF7C7C7C" BorderThickness="2" Background="{x:Null}"  Foreground="#FF0F9EBD" Value="100" />
+            <Image x:Name="energy_png" Source="Presentacion/Resources/bateria.png" Width="53" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,10,22.755,17"/>
+            <Image x:Name="game_png" Grid.Column="2" Source="Presentacion/Resources/consola.png" HorizontalAlignment="Right" Grid.ColumnSpan="3" Margin="0,0,16.902,0"/>
+            <Image x:Name="food_png" Grid.Column="6" Source="Presentacion/Resources/restaurante.png" HorizontalAlignment="Right" VerticalAlignment="Center" Grid.ColumnSpan="2" Margin="0"/>
+
+            <Label x:Name="energyLevel" Grid.ColumnSpan="3" Content="" Margin="68,25,27.755,25" FontFamily="Comic Sans MS" FontSize="16" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontWeight="Bold"/>
+            <Label x:Name="hungryLevel" Grid.ColumnSpan="2" Content="" Grid.Column="8" Margin="10,25,66.698,25" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="16" FontFamily="Comic Sans MS" FontWeight="Bold"/>
+            <Label x:Name="funnyLevel" Grid.ColumnSpan="3" Content="" Grid.Column="4" Margin="9.849,25,70.453,25" FontFamily="Comic Sans MS" FontSize="16" UseLayoutRounding="True" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontWeight="Bold"/>
 
         </Grid>
+        <Border x:Name="border_puzzle" BorderBrush="Black" BorderThickness="1" CornerRadius="10" Visibility="Hidden" Grid.ColumnSpan="2">
+            <Border.Background>
+                <ImageBrush ImageSource="Presentacion/Resources/madera.jpg"/>
+            </Border.Background>
+            <Grid x:Name="grid_tapete_puzzle" Margin="9">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="21*"/>
+                    <RowDefinition Height="167*"/>
+                    <RowDefinition Height="98*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="26*"/>
+                    <ColumnDefinition Width="159*"/>
+                    <ColumnDefinition Width="26*"/>
+                </Grid.ColumnDefinitions>
+                <Grid x:Name="grid_piezas" Margin="10,10,0,10" Grid.Row="2" Grid.ColumnSpan="3">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="1*"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="1*"/>
+                    </Grid.ColumnDefinitions>
+                    <Image x:Name="pz1_1" Margin="2" Source="Presentacion/Resources/pz2-2.png" MouseDown="mover_pieza" MouseMove="moviendo_pieza"/>
+                    <Image x:Name="pz1_2" Source="Presentacion/Resources/pz1-3.png" Grid.Row="1" Grid.Column="1" Margin="2" MouseDown="mover_pieza" AllowDrop="True" MouseMove="moviendo_pieza"/>
+                    <Image x:Name="pz1_3" Source="Presentacion/Resources/pz1-2.png" Grid.Column="3" Grid.Row="1" Margin="2" MouseDown="mover_pieza" MouseMove="moviendo_pieza"/>
+                    <Image x:Name="pz1_4" Source="Presentacion/Resources/pz3-1.png" Grid.Column="2" Margin="2" MouseDown="mover_pieza" MouseMove="moviendo_pieza"/>
+                    <Image x:Name="pz1_5" Margin="2" Source="Presentacion/Resources/pz3-3.png" Grid.Row="1" MouseDown="mover_pieza" MouseMove="moviendo_pieza"/>
+                    <Image x:Name="pz1_6" Source="Presentacion/Resources/pz1-1.png" Grid.Column="1" Margin="2" MouseDown="mover_pieza" MouseMove="moviendo_pieza"/>
+                    <Image x:Name="pz1_7" Source="Presentacion/Resources/pz2-1.png" Grid.Column="2" Grid.Row="1" Margin="2" MouseDown="mover_pieza" MouseMove="moviendo_pieza"/>
+                    <Image x:Name="pz1_8" Source="Presentacion/Resources/pz3-2.png" Grid.Column="4" Margin="2" MouseDown="mover_pieza" MouseMove="moviendo_pieza"/>
+                    <Image x:Name="pz1_9" Margin="2" Source="Presentacion/Resources/pz2-3.png" Grid.Column="3" MouseDown="mover_pieza" MouseMove="moviendo_pieza" RenderTransformOrigin="0.5,0.5">
+                        <Image.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform/>
+                                <SkewTransform/>
+                                <RotateTransform/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </Image.RenderTransform>
+                    </Image>
+                    <Button x:Name="btn_restablecer_puzzle" Content="Restablecer Puzzle" Grid.Column="4" Margin="10,35" Grid.Row="1" FontFamily="Comic Sans MS" FontSize="16" MouseUp="restablecer_puzzle"/>
+                </Grid>
+                <Grid x:Name="fondo" Grid.Column="1" Grid.Row="1" Opacity="0.6" Background="White">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="0.333*"/>
+                        <RowDefinition Height="0.333*"/>
+                        <RowDefinition Height="0.333*"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="0.333*"/>
+                        <ColumnDefinition Width="0.333*"/>
+                        <ColumnDefinition Width="0.333*"/>
+                    </Grid.ColumnDefinitions>
+                    <Rectangle Grid.Column="1" Stroke="Black">
+                        <Rectangle.Fill>
+                            <ImageBrush/>
+                        </Rectangle.Fill>
+                    </Rectangle>
+                    <Rectangle Grid.Column="2" Stroke="Black">
+                        <Rectangle.Fill>
+                            <ImageBrush/>
+                        </Rectangle.Fill>
+                    </Rectangle>
+                    <Rectangle Grid.Row="1" Stroke="Black">
+                        <Rectangle.Fill>
+                            <ImageBrush/>
+                        </Rectangle.Fill>
+                    </Rectangle>
+                    <Rectangle Grid.Column="1" Grid.Row="1" Stroke="Black">
+                        <Rectangle.Fill>
+                            <ImageBrush/>
+                        </Rectangle.Fill>
+                    </Rectangle>
+                    <Rectangle Grid.Column="2" Grid.Row="1" Stroke="Black">
+                        <Rectangle.Fill>
+                            <ImageBrush/>
+                        </Rectangle.Fill>
+                    </Rectangle>
+                    <Rectangle Grid.Row="2" Stroke="Black">
+                        <Rectangle.Fill>
+                            <ImageBrush/>
+                        </Rectangle.Fill>
+                    </Rectangle>
+                    <Rectangle Grid.Column="1" Grid.Row="2" Stroke="Black">
+                        <Rectangle.Fill>
+                            <ImageBrush/>
+                        </Rectangle.Fill>
+                    </Rectangle>
+                    <Rectangle Grid.Column="2" Grid.Row="2" Stroke="Black">
+                        <Rectangle.Fill>
+                            <ImageBrush/>
+                        </Rectangle.Fill>
+                    </Rectangle>
+                    <Rectangle Stroke="Black">
+                        <Rectangle.Fill>
+                            <ImageBrush/>
+                        </Rectangle.Fill>
+                    </Rectangle>
+                </Grid>
+                <Grid x:Name="puzzle" Grid.Column="1" Grid.Row="1">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="0.333*"/>
+                        <RowDefinition Height="0.333*"/>
+                        <RowDefinition Height="0.333*"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="0.333*"/>
+                        <ColumnDefinition Width="0.333*"/>
+                        <ColumnDefinition Width="0.333*"/>
+                    </Grid.ColumnDefinitions>
+                    <Image x:Name="pieza1" Source="Presentacion/Resources/pieza.png" AllowDrop="True" Drop="soltar_pieza" MouseDown="mover_pieza" MouseMove="moviendo_pieza"/>
+                    <Image x:Name="pieza6" Source="Presentacion/Resources/pieza.png" AllowDrop="True" Drop="soltar_pieza" MouseDown="mover_pieza" Grid.Column="2" Grid.Row="1" MouseMove="moviendo_pieza"/>
+                    <Image x:Name="pieza9" Source="Presentacion/Resources/pieza.png" AllowDrop="True" Drop="soltar_pieza" MouseDown="mover_pieza" Grid.Column="2" Grid.Row="2" MouseMove="moviendo_pieza"/>
+                    <Image x:Name="pieza8" Source="Presentacion/Resources/pieza.png" AllowDrop="True" Drop="soltar_pieza" MouseDown="mover_pieza" Grid.Column="1" Grid.Row="2" MouseMove="moviendo_pieza"/>
+                    <Image x:Name="pieza7" Source="Presentacion/Resources/pieza.png" AllowDrop="True" Drop="soltar_pieza" MouseDown="mover_pieza" Grid.Row="2" MouseMove="moviendo_pieza"/>
+                    <Image x:Name="pieza5" Source="Presentacion/Resources/pieza.png" AllowDrop="True" Drop="soltar_pieza" MouseDown="mover_pieza" Grid.Column="1" Grid.Row="1" MouseMove="moviendo_pieza"/>
+                    <Image x:Name="pieza4" Source="Presentacion/Resources/pieza.png" AllowDrop="True" Drop="soltar_pieza" MouseDown="mover_pieza" Grid.Row="1" MouseMove="moviendo_pieza"/>
+                    <Image x:Name="pieza3" Source="Presentacion/Resources/pieza.png" AllowDrop="True" Drop="soltar_pieza" MouseDown="mover_pieza" Grid.Column="2" MouseMove="moviendo_pieza"/>
+                    <Image x:Name="pieza2" Source="Presentacion/Resources/pieza.png" AllowDrop="True" Drop="soltar_pieza" MouseDown="mover_pieza" Grid.Column="1" MouseMove="moviendo_pieza"/>
+                </Grid>
+                <Image x:Name="red_cross_png1" Margin="20,0,0,0" Source="Presentacion/Resources/red_cross.png" Grid.Column="2" Height="22" HorizontalAlignment="Right" VerticalAlignment="Top" MouseUp="cerrar_puzzle"/>
+                <Label x:Name="lbl_reloj" Content="" Grid.Column="1" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontFamily="Comic Sans MS" FontSize="32" FontWeight="Bold" Foreground="#FFD6000A"/>
+                <Label x:Name="lbl_monedas_ganadas" Content="Enhorabuena,&#xD;&#xA;¡ Has ganado!" Grid.Column="1" Margin="10" Grid.Row="2" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontFamily="Comic Sans MS" FontSize="48" Visibility="Hidden"/>
+                <Label x:Name="lbl_derrota_victoria" Content="Enhorabuena,&#xD;&#xA;¡ has ganado !" Grid.Column="1" Grid.Row="1" FontFamily="Comic Sans MS" FontSize="48" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Visibility="Hidden"/>
+            </Grid>
+        </Border>
     </Grid>
 </Window>
 

@@ -15,7 +15,7 @@
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
+    <PlatformTarget>x86</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -62,10 +62,10 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="bbdd_VenomGotchiDataSet.Designer.cs">
+    <Compile Include="bbddVenomGotchiDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>bbdd_VenomGotchiDataSet.xsd</DependentUpon>
+      <DependentUpon>bbddVenomGotchiDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="Dominio\Avatar.cs" />
     <Compile Include="Dominio\Logro.cs" />
@@ -95,16 +95,16 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <None Include="bbdd_VenomGotchiDataSet.xsc">
-      <DependentUpon>bbdd_VenomGotchiDataSet.xsd</DependentUpon>
+    <None Include="bbddVenomGotchiDataSet.xsc">
+      <DependentUpon>bbddVenomGotchiDataSet.xsd</DependentUpon>
     </None>
-    <None Include="bbdd_VenomGotchiDataSet.xsd">
+    <None Include="bbddVenomGotchiDataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>bbdd_VenomGotchiDataSet.Designer.cs</LastGenOutput>
+      <LastGenOutput>bbddVenomGotchiDataSet.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="bbdd_VenomGotchiDataSet.xss">
-      <DependentUpon>bbdd_VenomGotchiDataSet.xsd</DependentUpon>
+    <None Include="bbddVenomGotchiDataSet.xss">
+      <DependentUpon>bbddVenomGotchiDataSet.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -198,10 +198,10 @@
     <Resource Include="Presentacion\Resources\estrella.png" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="bbdd_VenomGotchi.mdb">
+    <Resource Include="Presentacion\Resources\nuevo_logro.png" />
+    <Content Include="bbddVenomGotchi.accdb">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Resource Include="Presentacion\Resources\nuevo_logro.png" />
     <Content Include="Presentacion\Resources\venomHead.png" />
     <Resource Include="Presentacion\Resources\venomHead2.jpg" />
   </ItemGroup>

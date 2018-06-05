@@ -16,6 +16,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Windows.Threading;
 
+
 namespace MiAppVenom
 {
 
@@ -1502,6 +1503,8 @@ namespace MiAppVenom
         {
             try
             {
+
+
                 String con = (new Avatar()).autenticar(tb_inicio_usuario.Text.ToString(), tb_inicio_contrasena.Password.ToString());
                 switch (con)
                 {
@@ -1535,7 +1538,7 @@ namespace MiAppVenom
         {
             try {
                 new Avatar().registrar(tb_registro_usuario.Text.ToString(), tb_registro_contrasena.Password.ToString());
-                    
+                
                             tb_registro_usuario.Text = "";
                             tb_registro_contrasena.Password = "";
                             lbl_msg_registro.Content = "";
@@ -1548,6 +1551,11 @@ namespace MiAppVenom
                 }
 
             
+        }
+
+        private void lbl_flecha_right_MouseUp(object sender, MouseButtonEventArgs e)
+        {
+
         }
 
         private void volver_atras_registro(object sender, RoutedEventArgs e)

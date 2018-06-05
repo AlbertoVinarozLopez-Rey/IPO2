@@ -20,9 +20,9 @@ namespace MiAppVenom {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("bbdd_VenomGotchiDataSet")]
+    [global::System.Xml.Serialization.XmlRootAttribute("bbddVenomGotchiDataSet")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class bbdd_VenomGotchiDataSet : global::System.Data.DataSet {
+    public partial class bbddVenomGotchiDataSet : global::System.Data.DataSet {
         
         private tb_avatarDataTable tabletb_avatar;
         
@@ -34,7 +34,7 @@ namespace MiAppVenom {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public bbdd_VenomGotchiDataSet() {
+        public bbddVenomGotchiDataSet() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -45,7 +45,7 @@ namespace MiAppVenom {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        protected bbdd_VenomGotchiDataSet(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected bbddVenomGotchiDataSet(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -144,7 +144,7 @@ namespace MiAppVenom {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            bbdd_VenomGotchiDataSet cln = ((bbdd_VenomGotchiDataSet)(base.Clone()));
+            bbddVenomGotchiDataSet cln = ((bbddVenomGotchiDataSet)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -226,9 +226,9 @@ namespace MiAppVenom {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "bbdd_VenomGotchiDataSet";
+            this.DataSetName = "bbddVenomGotchiDataSet";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/bbdd_VenomGotchiDataSet.xsd";
+            this.Namespace = "http://tempuri.org/bbddVenomGotchiDataSet.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
             this.tabletb_avatar = new tb_avatarDataTable();
@@ -264,7 +264,7 @@ namespace MiAppVenom {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            bbdd_VenomGotchiDataSet ds = new bbdd_VenomGotchiDataSet();
+            bbddVenomGotchiDataSet ds = new bbddVenomGotchiDataSet();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -501,7 +501,7 @@ namespace MiAppVenom {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public tb_avatarRow Addtb_avatarRow(string usuario, int nivel, int puntos, int monedas, int apetito, int energia, int diversion, string logros, int monedasConseguidas, int partidas, int puzzles) {
+            public tb_avatarRow Addtb_avatarRow(string usuario, string nivel, string puntos, string monedas, string apetito, string energia, string diversion, string logros, string monedasConseguidas, string partidas, string puzzles) {
                 tb_avatarRow rowtb_avatarRow = ((tb_avatarRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         usuario,
@@ -562,32 +562,41 @@ namespace MiAppVenom {
             private void InitClass() {
                 this.columnusuario = new global::System.Data.DataColumn("usuario", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnusuario);
-                this.columnnivel = new global::System.Data.DataColumn("nivel", typeof(int), null, global::System.Data.MappingType.Element);
+                this.columnnivel = new global::System.Data.DataColumn("nivel", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnnivel);
-                this.columnpuntos = new global::System.Data.DataColumn("puntos", typeof(int), null, global::System.Data.MappingType.Element);
+                this.columnpuntos = new global::System.Data.DataColumn("puntos", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnpuntos);
-                this.columnmonedas = new global::System.Data.DataColumn("monedas", typeof(int), null, global::System.Data.MappingType.Element);
+                this.columnmonedas = new global::System.Data.DataColumn("monedas", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnmonedas);
-                this.columnapetito = new global::System.Data.DataColumn("apetito", typeof(int), null, global::System.Data.MappingType.Element);
+                this.columnapetito = new global::System.Data.DataColumn("apetito", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnapetito);
-                this.columnenergia = new global::System.Data.DataColumn("energia", typeof(int), null, global::System.Data.MappingType.Element);
+                this.columnenergia = new global::System.Data.DataColumn("energia", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnenergia);
-                this.columndiversion = new global::System.Data.DataColumn("diversion", typeof(int), null, global::System.Data.MappingType.Element);
+                this.columndiversion = new global::System.Data.DataColumn("diversion", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columndiversion);
                 this.columnlogros = new global::System.Data.DataColumn("logros", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnlogros);
-                this.columnmonedasConseguidas = new global::System.Data.DataColumn("monedasConseguidas", typeof(int), null, global::System.Data.MappingType.Element);
+                this.columnmonedasConseguidas = new global::System.Data.DataColumn("monedasConseguidas", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnmonedasConseguidas);
-                this.columnpartidas = new global::System.Data.DataColumn("partidas", typeof(int), null, global::System.Data.MappingType.Element);
+                this.columnpartidas = new global::System.Data.DataColumn("partidas", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnpartidas);
-                this.columnpuzzles = new global::System.Data.DataColumn("puzzles", typeof(int), null, global::System.Data.MappingType.Element);
+                this.columnpuzzles = new global::System.Data.DataColumn("puzzles", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnpuzzles);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnusuario}, true));
                 this.columnusuario.AllowDBNull = false;
                 this.columnusuario.Unique = true;
                 this.columnusuario.MaxLength = 15;
+                this.columnnivel.MaxLength = 255;
+                this.columnpuntos.MaxLength = 255;
+                this.columnmonedas.MaxLength = 255;
+                this.columnapetito.MaxLength = 255;
+                this.columnenergia.MaxLength = 255;
+                this.columndiversion.MaxLength = 255;
                 this.columnlogros.MaxLength = 536870910;
+                this.columnmonedasConseguidas.MaxLength = 255;
+                this.columnpartidas.MaxLength = 255;
+                this.columnpuzzles.MaxLength = 255;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -655,7 +664,7 @@ namespace MiAppVenom {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                bbdd_VenomGotchiDataSet ds = new bbdd_VenomGotchiDataSet();
+                bbddVenomGotchiDataSet ds = new bbddVenomGotchiDataSet();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -932,7 +941,7 @@ namespace MiAppVenom {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                bbdd_VenomGotchiDataSet ds = new bbdd_VenomGotchiDataSet();
+                bbddVenomGotchiDataSet ds = new bbddVenomGotchiDataSet();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -1018,10 +1027,10 @@ namespace MiAppVenom {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public int nivel {
+            public string nivel {
                 get {
                     try {
-                        return ((int)(this[this.tabletb_avatar.nivelColumn]));
+                        return ((string)(this[this.tabletb_avatar.nivelColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("El valor de la columna \'nivel\' de la tabla \'tb_avatar\' es DBNull.", e);
@@ -1034,10 +1043,10 @@ namespace MiAppVenom {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public int puntos {
+            public string puntos {
                 get {
                     try {
-                        return ((int)(this[this.tabletb_avatar.puntosColumn]));
+                        return ((string)(this[this.tabletb_avatar.puntosColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("El valor de la columna \'puntos\' de la tabla \'tb_avatar\' es DBNull.", e);
@@ -1050,10 +1059,10 @@ namespace MiAppVenom {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public int monedas {
+            public string monedas {
                 get {
                     try {
-                        return ((int)(this[this.tabletb_avatar.monedasColumn]));
+                        return ((string)(this[this.tabletb_avatar.monedasColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("El valor de la columna \'monedas\' de la tabla \'tb_avatar\' es DBNull.", e);
@@ -1066,10 +1075,10 @@ namespace MiAppVenom {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public int apetito {
+            public string apetito {
                 get {
                     try {
-                        return ((int)(this[this.tabletb_avatar.apetitoColumn]));
+                        return ((string)(this[this.tabletb_avatar.apetitoColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("El valor de la columna \'apetito\' de la tabla \'tb_avatar\' es DBNull.", e);
@@ -1082,10 +1091,10 @@ namespace MiAppVenom {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public int energia {
+            public string energia {
                 get {
                     try {
-                        return ((int)(this[this.tabletb_avatar.energiaColumn]));
+                        return ((string)(this[this.tabletb_avatar.energiaColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("El valor de la columna \'energia\' de la tabla \'tb_avatar\' es DBNull.", e);
@@ -1098,10 +1107,10 @@ namespace MiAppVenom {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public int diversion {
+            public string diversion {
                 get {
                     try {
-                        return ((int)(this[this.tabletb_avatar.diversionColumn]));
+                        return ((string)(this[this.tabletb_avatar.diversionColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("El valor de la columna \'diversion\' de la tabla \'tb_avatar\' es DBNull.", e);
@@ -1130,10 +1139,10 @@ namespace MiAppVenom {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public int monedasConseguidas {
+            public string monedasConseguidas {
                 get {
                     try {
-                        return ((int)(this[this.tabletb_avatar.monedasConseguidasColumn]));
+                        return ((string)(this[this.tabletb_avatar.monedasConseguidasColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("El valor de la columna \'monedasConseguidas\' de la tabla \'tb_avatar\' es DBNull.", e);
@@ -1146,10 +1155,10 @@ namespace MiAppVenom {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public int partidas {
+            public string partidas {
                 get {
                     try {
-                        return ((int)(this[this.tabletb_avatar.partidasColumn]));
+                        return ((string)(this[this.tabletb_avatar.partidasColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("El valor de la columna \'partidas\' de la tabla \'tb_avatar\' es DBNull.", e);
@@ -1162,10 +1171,10 @@ namespace MiAppVenom {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public int puzzles {
+            public string puzzles {
                 get {
                     try {
-                        return ((int)(this[this.tabletb_avatar.puzzlesColumn]));
+                        return ((string)(this[this.tabletb_avatar.puzzlesColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("El valor de la columna \'puzzles\' de la tabla \'tb_avatar\' es DBNull.", e);
@@ -1442,7 +1451,7 @@ namespace MiAppVenom {
         }
     }
 }
-namespace MiAppVenom.bbdd_VenomGotchiDataSetTableAdapters {
+namespace MiAppVenom.bbddVenomGotchiDataSetTableAdapters {
     
     
     /// <summary>
@@ -1584,23 +1593,23 @@ namespace MiAppVenom.bbdd_VenomGotchiDataSetTableAdapters {
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_usuario", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "usuario", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_nivel", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "nivel", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_nivel", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "nivel", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_nivel", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "nivel", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_puntos", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "puntos", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_puntos", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "puntos", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_puntos", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "puntos", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_monedas", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "monedas", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_monedas", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "monedas", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_monedas", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "monedas", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_apetito", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "apetito", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_apetito", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "apetito", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_apetito", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "apetito", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_energia", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "energia", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_energia", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "energia", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_energia", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "energia", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_diversion", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "diversion", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_diversion", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "diversion", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_diversion", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "diversion", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_monedasConseguidas", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "monedasConseguidas", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_monedasConseguidas", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "monedasConseguidas", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_monedasConseguidas", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "monedasConseguidas", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_partidas", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "partidas", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_partidas", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "partidas", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_partidas", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "partidas", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_puzzles", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "puzzles", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_puzzles", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "puzzles", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_puzzles", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "puzzles", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.InsertCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
             this._adapter.InsertCommand.CommandText = "INSERT INTO `tb_avatar` (`usuario`, `nivel`, `puntos`, `monedas`, `apetito`, `ene" +
@@ -1608,57 +1617,57 @@ namespace MiAppVenom.bbdd_VenomGotchiDataSetTableAdapters {
                 "S (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("usuario", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "usuario", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("nivel", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "nivel", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("puntos", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "puntos", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("monedas", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "monedas", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("apetito", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "apetito", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("energia", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "energia", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("diversion", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "diversion", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("nivel", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "nivel", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("puntos", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "puntos", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("monedas", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "monedas", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("apetito", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "apetito", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("energia", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "energia", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("diversion", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "diversion", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("logros", global::System.Data.OleDb.OleDbType.LongVarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "logros", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("monedasConseguidas", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "monedasConseguidas", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("partidas", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "partidas", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("puzzles", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "puzzles", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("monedasConseguidas", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "monedasConseguidas", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("partidas", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "partidas", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("puzzles", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "puzzles", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
             this._adapter.UpdateCommand.CommandText = @"UPDATE `tb_avatar` SET `usuario` = ?, `nivel` = ?, `puntos` = ?, `monedas` = ?, `apetito` = ?, `energia` = ?, `diversion` = ?, `logros` = ?, `monedasConseguidas` = ?, `partidas` = ?, `puzzles` = ? WHERE ((`usuario` = ?) AND ((? = 1 AND `nivel` IS NULL) OR (`nivel` = ?)) AND ((? = 1 AND `puntos` IS NULL) OR (`puntos` = ?)) AND ((? = 1 AND `monedas` IS NULL) OR (`monedas` = ?)) AND ((? = 1 AND `apetito` IS NULL) OR (`apetito` = ?)) AND ((? = 1 AND `energia` IS NULL) OR (`energia` = ?)) AND ((? = 1 AND `diversion` IS NULL) OR (`diversion` = ?)) AND ((? = 1 AND `monedasConseguidas` IS NULL) OR (`monedasConseguidas` = ?)) AND ((? = 1 AND `partidas` IS NULL) OR (`partidas` = ?)) AND ((? = 1 AND `puzzles` IS NULL) OR (`puzzles` = ?)))";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("usuario", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "usuario", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("nivel", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "nivel", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("puntos", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "puntos", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("monedas", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "monedas", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("apetito", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "apetito", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("energia", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "energia", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("diversion", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "diversion", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("nivel", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "nivel", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("puntos", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "puntos", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("monedas", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "monedas", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("apetito", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "apetito", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("energia", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "energia", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("diversion", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "diversion", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("logros", global::System.Data.OleDb.OleDbType.LongVarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "logros", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("monedasConseguidas", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "monedasConseguidas", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("partidas", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "partidas", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("puzzles", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "puzzles", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("monedasConseguidas", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "monedasConseguidas", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("partidas", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "partidas", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("puzzles", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "puzzles", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_usuario", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "usuario", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_nivel", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "nivel", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_nivel", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "nivel", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_nivel", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "nivel", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_puntos", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "puntos", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_puntos", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "puntos", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_puntos", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "puntos", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_monedas", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "monedas", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_monedas", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "monedas", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_monedas", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "monedas", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_apetito", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "apetito", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_apetito", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "apetito", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_apetito", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "apetito", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_energia", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "energia", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_energia", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "energia", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_energia", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "energia", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_diversion", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "diversion", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_diversion", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "diversion", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_diversion", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "diversion", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_monedasConseguidas", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "monedasConseguidas", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_monedasConseguidas", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "monedasConseguidas", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_monedasConseguidas", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "monedasConseguidas", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_partidas", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "partidas", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_partidas", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "partidas", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_partidas", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "partidas", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_puzzles", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "puzzles", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_puzzles", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "puzzles", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_puzzles", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "puzzles", global::System.Data.DataRowVersion.Original, false, null));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.OleDb.OleDbConnection();
-            this._connection.ConnectionString = global::MiAppVenom.Properties.Settings.Default.bbdd_VenomGotchiConnectionString;
+            this._connection.ConnectionString = global::MiAppVenom.Properties.Settings.Default.bbddConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1676,7 +1685,7 @@ namespace MiAppVenom.bbdd_VenomGotchiDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(bbdd_VenomGotchiDataSet.tb_avatarDataTable dataTable) {
+        public virtual int Fill(bbddVenomGotchiDataSet.tb_avatarDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -1689,9 +1698,9 @@ namespace MiAppVenom.bbdd_VenomGotchiDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual bbdd_VenomGotchiDataSet.tb_avatarDataTable GetData() {
+        public virtual bbddVenomGotchiDataSet.tb_avatarDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            bbdd_VenomGotchiDataSet.tb_avatarDataTable dataTable = new bbdd_VenomGotchiDataSet.tb_avatarDataTable();
+            bbddVenomGotchiDataSet.tb_avatarDataTable dataTable = new bbddVenomGotchiDataSet.tb_avatarDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -1699,14 +1708,14 @@ namespace MiAppVenom.bbdd_VenomGotchiDataSetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(bbdd_VenomGotchiDataSet.tb_avatarDataTable dataTable) {
+        public virtual int Update(bbddVenomGotchiDataSet.tb_avatarDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(bbdd_VenomGotchiDataSet dataSet) {
+        public virtual int Update(bbddVenomGotchiDataSet dataSet) {
             return this.Adapter.Update(dataSet, "tb_avatar");
         }
         
@@ -1729,84 +1738,84 @@ namespace MiAppVenom.bbdd_VenomGotchiDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(string Original_usuario, global::System.Nullable<int> Original_nivel, global::System.Nullable<int> Original_puntos, global::System.Nullable<int> Original_monedas, global::System.Nullable<int> Original_apetito, global::System.Nullable<int> Original_energia, global::System.Nullable<int> Original_diversion, global::System.Nullable<int> Original_monedasConseguidas, global::System.Nullable<int> Original_partidas, global::System.Nullable<int> Original_puzzles) {
+        public virtual int Delete(string Original_usuario, string Original_nivel, string Original_puntos, string Original_monedas, string Original_apetito, string Original_energia, string Original_diversion, string Original_monedasConseguidas, string Original_partidas, string Original_puzzles) {
             if ((Original_usuario == null)) {
                 throw new global::System.ArgumentNullException("Original_usuario");
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[0].Value = ((string)(Original_usuario));
             }
-            if ((Original_nivel.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[2].Value = ((int)(Original_nivel.Value));
-            }
-            else {
+            if ((Original_nivel == null)) {
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
-            if ((Original_puntos.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[4].Value = ((int)(Original_puntos.Value));
-            }
             else {
+                this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_nivel));
+            }
+            if ((Original_puntos == null)) {
                 this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
-            if ((Original_monedas.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[6].Value = ((int)(Original_monedas.Value));
-            }
             else {
+                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[4].Value = ((string)(Original_puntos));
+            }
+            if ((Original_monedas == null)) {
                 this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[6].Value = global::System.DBNull.Value;
             }
-            if ((Original_apetito.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[8].Value = ((int)(Original_apetito.Value));
-            }
             else {
+                this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[6].Value = ((string)(Original_monedas));
+            }
+            if ((Original_apetito == null)) {
                 this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[8].Value = global::System.DBNull.Value;
             }
-            if ((Original_energia.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[9].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[10].Value = ((int)(Original_energia.Value));
-            }
             else {
+                this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[8].Value = ((string)(Original_apetito));
+            }
+            if ((Original_energia == null)) {
                 this.Adapter.DeleteCommand.Parameters[9].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[10].Value = global::System.DBNull.Value;
             }
-            if ((Original_diversion.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[11].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[12].Value = ((int)(Original_diversion.Value));
-            }
             else {
+                this.Adapter.DeleteCommand.Parameters[9].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[10].Value = ((string)(Original_energia));
+            }
+            if ((Original_diversion == null)) {
                 this.Adapter.DeleteCommand.Parameters[11].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[12].Value = global::System.DBNull.Value;
             }
-            if ((Original_monedasConseguidas.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[13].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[14].Value = ((int)(Original_monedasConseguidas.Value));
-            }
             else {
+                this.Adapter.DeleteCommand.Parameters[11].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[12].Value = ((string)(Original_diversion));
+            }
+            if ((Original_monedasConseguidas == null)) {
                 this.Adapter.DeleteCommand.Parameters[13].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[14].Value = global::System.DBNull.Value;
             }
-            if ((Original_partidas.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[15].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[16].Value = ((int)(Original_partidas.Value));
-            }
             else {
+                this.Adapter.DeleteCommand.Parameters[13].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[14].Value = ((string)(Original_monedasConseguidas));
+            }
+            if ((Original_partidas == null)) {
                 this.Adapter.DeleteCommand.Parameters[15].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[16].Value = global::System.DBNull.Value;
             }
-            if ((Original_puzzles.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[17].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[18].Value = ((int)(Original_puzzles.Value));
-            }
             else {
+                this.Adapter.DeleteCommand.Parameters[15].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[16].Value = ((string)(Original_partidas));
+            }
+            if ((Original_puzzles == null)) {
                 this.Adapter.DeleteCommand.Parameters[17].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[18].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[17].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[18].Value = ((string)(Original_puzzles));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -1828,48 +1837,48 @@ namespace MiAppVenom.bbdd_VenomGotchiDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string usuario, global::System.Nullable<int> nivel, global::System.Nullable<int> puntos, global::System.Nullable<int> monedas, global::System.Nullable<int> apetito, global::System.Nullable<int> energia, global::System.Nullable<int> diversion, string logros, global::System.Nullable<int> monedasConseguidas, global::System.Nullable<int> partidas, global::System.Nullable<int> puzzles) {
+        public virtual int Insert(string usuario, string nivel, string puntos, string monedas, string apetito, string energia, string diversion, string logros, string monedasConseguidas, string partidas, string puzzles) {
             if ((usuario == null)) {
                 throw new global::System.ArgumentNullException("usuario");
             }
             else {
                 this.Adapter.InsertCommand.Parameters[0].Value = ((string)(usuario));
             }
-            if ((nivel.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[1].Value = ((int)(nivel.Value));
-            }
-            else {
+            if ((nivel == null)) {
                 this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
-            if ((puntos.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[2].Value = ((int)(puntos.Value));
-            }
             else {
+                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(nivel));
+            }
+            if ((puntos == null)) {
                 this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
-            if ((monedas.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[3].Value = ((int)(monedas.Value));
-            }
             else {
+                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(puntos));
+            }
+            if ((monedas == null)) {
                 this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
             }
-            if ((apetito.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[4].Value = ((int)(apetito.Value));
-            }
             else {
+                this.Adapter.InsertCommand.Parameters[3].Value = ((string)(monedas));
+            }
+            if ((apetito == null)) {
                 this.Adapter.InsertCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
-            if ((energia.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[5].Value = ((int)(energia.Value));
-            }
             else {
+                this.Adapter.InsertCommand.Parameters[4].Value = ((string)(apetito));
+            }
+            if ((energia == null)) {
                 this.Adapter.InsertCommand.Parameters[5].Value = global::System.DBNull.Value;
             }
-            if ((diversion.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[6].Value = ((int)(diversion.Value));
+            else {
+                this.Adapter.InsertCommand.Parameters[5].Value = ((string)(energia));
+            }
+            if ((diversion == null)) {
+                this.Adapter.InsertCommand.Parameters[6].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[6].Value = global::System.DBNull.Value;
+                this.Adapter.InsertCommand.Parameters[6].Value = ((string)(diversion));
             }
             if ((logros == null)) {
                 this.Adapter.InsertCommand.Parameters[7].Value = global::System.DBNull.Value;
@@ -1877,23 +1886,23 @@ namespace MiAppVenom.bbdd_VenomGotchiDataSetTableAdapters {
             else {
                 this.Adapter.InsertCommand.Parameters[7].Value = ((string)(logros));
             }
-            if ((monedasConseguidas.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[8].Value = ((int)(monedasConseguidas.Value));
-            }
-            else {
+            if ((monedasConseguidas == null)) {
                 this.Adapter.InsertCommand.Parameters[8].Value = global::System.DBNull.Value;
             }
-            if ((partidas.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[9].Value = ((int)(partidas.Value));
-            }
             else {
+                this.Adapter.InsertCommand.Parameters[8].Value = ((string)(monedasConseguidas));
+            }
+            if ((partidas == null)) {
                 this.Adapter.InsertCommand.Parameters[9].Value = global::System.DBNull.Value;
             }
-            if ((puzzles.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[10].Value = ((int)(puzzles.Value));
+            else {
+                this.Adapter.InsertCommand.Parameters[9].Value = ((string)(partidas));
+            }
+            if ((puzzles == null)) {
+                this.Adapter.InsertCommand.Parameters[10].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[10].Value = global::System.DBNull.Value;
+                this.Adapter.InsertCommand.Parameters[10].Value = ((string)(puzzles));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -1917,67 +1926,67 @@ namespace MiAppVenom.bbdd_VenomGotchiDataSetTableAdapters {
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
         public virtual int Update(
                     string usuario, 
-                    global::System.Nullable<int> nivel, 
-                    global::System.Nullable<int> puntos, 
-                    global::System.Nullable<int> monedas, 
-                    global::System.Nullable<int> apetito, 
-                    global::System.Nullable<int> energia, 
-                    global::System.Nullable<int> diversion, 
+                    string nivel, 
+                    string puntos, 
+                    string monedas, 
+                    string apetito, 
+                    string energia, 
+                    string diversion, 
                     string logros, 
-                    global::System.Nullable<int> monedasConseguidas, 
-                    global::System.Nullable<int> partidas, 
-                    global::System.Nullable<int> puzzles, 
+                    string monedasConseguidas, 
+                    string partidas, 
+                    string puzzles, 
                     string Original_usuario, 
-                    global::System.Nullable<int> Original_nivel, 
-                    global::System.Nullable<int> Original_puntos, 
-                    global::System.Nullable<int> Original_monedas, 
-                    global::System.Nullable<int> Original_apetito, 
-                    global::System.Nullable<int> Original_energia, 
-                    global::System.Nullable<int> Original_diversion, 
-                    global::System.Nullable<int> Original_monedasConseguidas, 
-                    global::System.Nullable<int> Original_partidas, 
-                    global::System.Nullable<int> Original_puzzles) {
+                    string Original_nivel, 
+                    string Original_puntos, 
+                    string Original_monedas, 
+                    string Original_apetito, 
+                    string Original_energia, 
+                    string Original_diversion, 
+                    string Original_monedasConseguidas, 
+                    string Original_partidas, 
+                    string Original_puzzles) {
             if ((usuario == null)) {
                 throw new global::System.ArgumentNullException("usuario");
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(usuario));
             }
-            if ((nivel.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[1].Value = ((int)(nivel.Value));
-            }
-            else {
+            if ((nivel == null)) {
                 this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
-            if ((puntos.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[2].Value = ((int)(puntos.Value));
-            }
             else {
+                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(nivel));
+            }
+            if ((puntos == null)) {
                 this.Adapter.UpdateCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
-            if ((monedas.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(monedas.Value));
-            }
             else {
+                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(puntos));
+            }
+            if ((monedas == null)) {
                 this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
             }
-            if ((apetito.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(apetito.Value));
-            }
             else {
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(monedas));
+            }
+            if ((apetito == null)) {
                 this.Adapter.UpdateCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
-            if ((energia.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(energia.Value));
-            }
             else {
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(apetito));
+            }
+            if ((energia == null)) {
                 this.Adapter.UpdateCommand.Parameters[5].Value = global::System.DBNull.Value;
             }
-            if ((diversion.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((int)(diversion.Value));
+            else {
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(energia));
+            }
+            if ((diversion == null)) {
+                this.Adapter.UpdateCommand.Parameters[6].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[6].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(diversion));
             }
             if ((logros == null)) {
                 this.Adapter.UpdateCommand.Parameters[7].Value = global::System.DBNull.Value;
@@ -1985,23 +1994,23 @@ namespace MiAppVenom.bbdd_VenomGotchiDataSetTableAdapters {
             else {
                 this.Adapter.UpdateCommand.Parameters[7].Value = ((string)(logros));
             }
-            if ((monedasConseguidas.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((int)(monedasConseguidas.Value));
-            }
-            else {
+            if ((monedasConseguidas == null)) {
                 this.Adapter.UpdateCommand.Parameters[8].Value = global::System.DBNull.Value;
             }
-            if ((partidas.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[9].Value = ((int)(partidas.Value));
-            }
             else {
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((string)(monedasConseguidas));
+            }
+            if ((partidas == null)) {
                 this.Adapter.UpdateCommand.Parameters[9].Value = global::System.DBNull.Value;
             }
-            if ((puzzles.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[10].Value = ((int)(puzzles.Value));
+            else {
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((string)(partidas));
+            }
+            if ((puzzles == null)) {
+                this.Adapter.UpdateCommand.Parameters[10].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[10].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((string)(puzzles));
             }
             if ((Original_usuario == null)) {
                 throw new global::System.ArgumentNullException("Original_usuario");
@@ -2009,77 +2018,77 @@ namespace MiAppVenom.bbdd_VenomGotchiDataSetTableAdapters {
             else {
                 this.Adapter.UpdateCommand.Parameters[11].Value = ((string)(Original_usuario));
             }
-            if ((Original_nivel.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[13].Value = ((int)(Original_nivel.Value));
-            }
-            else {
+            if ((Original_nivel == null)) {
                 this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[13].Value = global::System.DBNull.Value;
             }
-            if ((Original_puntos.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[15].Value = ((int)(Original_puntos.Value));
-            }
             else {
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[13].Value = ((string)(Original_nivel));
+            }
+            if ((Original_puntos == null)) {
                 this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[15].Value = global::System.DBNull.Value;
             }
-            if ((Original_monedas.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[16].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[17].Value = ((int)(Original_monedas.Value));
-            }
             else {
+                this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[15].Value = ((string)(Original_puntos));
+            }
+            if ((Original_monedas == null)) {
                 this.Adapter.UpdateCommand.Parameters[16].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[17].Value = global::System.DBNull.Value;
             }
-            if ((Original_apetito.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[18].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[19].Value = ((int)(Original_apetito.Value));
-            }
             else {
+                this.Adapter.UpdateCommand.Parameters[16].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[17].Value = ((string)(Original_monedas));
+            }
+            if ((Original_apetito == null)) {
                 this.Adapter.UpdateCommand.Parameters[18].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[19].Value = global::System.DBNull.Value;
             }
-            if ((Original_energia.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[20].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[21].Value = ((int)(Original_energia.Value));
-            }
             else {
+                this.Adapter.UpdateCommand.Parameters[18].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[19].Value = ((string)(Original_apetito));
+            }
+            if ((Original_energia == null)) {
                 this.Adapter.UpdateCommand.Parameters[20].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[21].Value = global::System.DBNull.Value;
             }
-            if ((Original_diversion.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[22].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[23].Value = ((int)(Original_diversion.Value));
-            }
             else {
+                this.Adapter.UpdateCommand.Parameters[20].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[21].Value = ((string)(Original_energia));
+            }
+            if ((Original_diversion == null)) {
                 this.Adapter.UpdateCommand.Parameters[22].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[23].Value = global::System.DBNull.Value;
             }
-            if ((Original_monedasConseguidas.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[24].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[25].Value = ((int)(Original_monedasConseguidas.Value));
-            }
             else {
+                this.Adapter.UpdateCommand.Parameters[22].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[23].Value = ((string)(Original_diversion));
+            }
+            if ((Original_monedasConseguidas == null)) {
                 this.Adapter.UpdateCommand.Parameters[24].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[25].Value = global::System.DBNull.Value;
             }
-            if ((Original_partidas.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[26].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[27].Value = ((int)(Original_partidas.Value));
-            }
             else {
+                this.Adapter.UpdateCommand.Parameters[24].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[25].Value = ((string)(Original_monedasConseguidas));
+            }
+            if ((Original_partidas == null)) {
                 this.Adapter.UpdateCommand.Parameters[26].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[27].Value = global::System.DBNull.Value;
             }
-            if ((Original_puzzles.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[28].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[29].Value = ((int)(Original_puzzles.Value));
-            }
             else {
+                this.Adapter.UpdateCommand.Parameters[26].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[27].Value = ((string)(Original_partidas));
+            }
+            if ((Original_puzzles == null)) {
                 this.Adapter.UpdateCommand.Parameters[28].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[29].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[28].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[29].Value = ((string)(Original_puzzles));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -2102,26 +2111,26 @@ namespace MiAppVenom.bbdd_VenomGotchiDataSetTableAdapters {
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
         public virtual int Update(
-                    global::System.Nullable<int> nivel, 
-                    global::System.Nullable<int> puntos, 
-                    global::System.Nullable<int> monedas, 
-                    global::System.Nullable<int> apetito, 
-                    global::System.Nullable<int> energia, 
-                    global::System.Nullable<int> diversion, 
+                    string nivel, 
+                    string puntos, 
+                    string monedas, 
+                    string apetito, 
+                    string energia, 
+                    string diversion, 
                     string logros, 
-                    global::System.Nullable<int> monedasConseguidas, 
-                    global::System.Nullable<int> partidas, 
-                    global::System.Nullable<int> puzzles, 
+                    string monedasConseguidas, 
+                    string partidas, 
+                    string puzzles, 
                     string Original_usuario, 
-                    global::System.Nullable<int> Original_nivel, 
-                    global::System.Nullable<int> Original_puntos, 
-                    global::System.Nullable<int> Original_monedas, 
-                    global::System.Nullable<int> Original_apetito, 
-                    global::System.Nullable<int> Original_energia, 
-                    global::System.Nullable<int> Original_diversion, 
-                    global::System.Nullable<int> Original_monedasConseguidas, 
-                    global::System.Nullable<int> Original_partidas, 
-                    global::System.Nullable<int> Original_puzzles) {
+                    string Original_nivel, 
+                    string Original_puntos, 
+                    string Original_monedas, 
+                    string Original_apetito, 
+                    string Original_energia, 
+                    string Original_diversion, 
+                    string Original_monedasConseguidas, 
+                    string Original_partidas, 
+                    string Original_puzzles) {
             return this.Update(Original_usuario, nivel, puntos, monedas, apetito, energia, diversion, logros, monedasConseguidas, partidas, puzzles, Original_usuario, Original_nivel, Original_puntos, Original_monedas, Original_apetito, Original_energia, Original_diversion, Original_monedasConseguidas, Original_partidas, Original_puzzles);
         }
     }
@@ -2280,7 +2289,7 @@ namespace MiAppVenom.bbdd_VenomGotchiDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.OleDb.OleDbConnection();
-            this._connection.ConnectionString = global::MiAppVenom.Properties.Settings.Default.bbdd_VenomGotchiConnectionString;
+            this._connection.ConnectionString = global::MiAppVenom.Properties.Settings.Default.bbddConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2297,7 +2306,7 @@ namespace MiAppVenom.bbdd_VenomGotchiDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(bbdd_VenomGotchiDataSet.tb_usuarioDataTable dataTable) {
+        public virtual int Fill(bbddVenomGotchiDataSet.tb_usuarioDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -2310,9 +2319,9 @@ namespace MiAppVenom.bbdd_VenomGotchiDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual bbdd_VenomGotchiDataSet.tb_usuarioDataTable GetData() {
+        public virtual bbddVenomGotchiDataSet.tb_usuarioDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            bbdd_VenomGotchiDataSet.tb_usuarioDataTable dataTable = new bbdd_VenomGotchiDataSet.tb_usuarioDataTable();
+            bbddVenomGotchiDataSet.tb_usuarioDataTable dataTable = new bbddVenomGotchiDataSet.tb_usuarioDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -2320,14 +2329,14 @@ namespace MiAppVenom.bbdd_VenomGotchiDataSetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(bbdd_VenomGotchiDataSet.tb_usuarioDataTable dataTable) {
+        public virtual int Update(bbddVenomGotchiDataSet.tb_usuarioDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(bbdd_VenomGotchiDataSet dataSet) {
+        public virtual int Update(bbddVenomGotchiDataSet dataSet) {
             return this.Adapter.Update(dataSet, "tb_usuario");
         }
         
@@ -2584,7 +2593,7 @@ namespace MiAppVenom.bbdd_VenomGotchiDataSetTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private int UpdateUpdatedRows(bbdd_VenomGotchiDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(bbddVenomGotchiDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             if ((this._tb_avatarTableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.tb_avatar.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
@@ -2612,7 +2621,7 @@ namespace MiAppVenom.bbdd_VenomGotchiDataSetTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private int UpdateInsertedRows(bbdd_VenomGotchiDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(bbddVenomGotchiDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             if ((this._tb_avatarTableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.tb_avatar.Select(null, null, global::System.Data.DataViewRowState.Added);
@@ -2638,7 +2647,7 @@ namespace MiAppVenom.bbdd_VenomGotchiDataSetTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private int UpdateDeletedRows(bbdd_VenomGotchiDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(bbddVenomGotchiDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
             if ((this._tb_usuarioTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.tb_usuario.Select(null, null, global::System.Data.DataViewRowState.Deleted);
@@ -2688,7 +2697,7 @@ namespace MiAppVenom.bbdd_VenomGotchiDataSetTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public virtual int UpdateAll(bbdd_VenomGotchiDataSet dataSet) {
+        public virtual int UpdateAll(bbddVenomGotchiDataSet dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }

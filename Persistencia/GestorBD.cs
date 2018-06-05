@@ -20,30 +20,27 @@ namespace MiAppVenom.Persistencia
         }
         private void connectTo()
         {
-            connection = new OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\bbdd_VenomGotchi.mdb");
+            connection = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\alber\Source\Repos\IPO2\bbddVenomGotchi.accdb");
             command = connection.CreateCommand();
         }
 
         public void registrarUsuario(String usuario, String pass)
         {
+            Avatar av = new Avatar(usuario, 0, 0, 0, 0, 0, 0, "", 0, 0, 0);
             try
             {
                 command.CommandText = "INSERT INTO tb_usuario (usuario, pass) VALUES ('" + usuario + "', '" + pass + "')";
                 command.CommandType = System.Data.CommandType.Text;
                 connection.Open();
                 command.ExecuteNonQuery();
+
+                actualizarAvatar(av);
             }
             catch (Exception)
             {
                 throw;
             }
-            finally
-            {
-                if (connection != null)
-                {
-                    connection.Close();
-                }
-            }
+           
         }
 
         public Avatar leerAvatar(String usuario)
@@ -51,7 +48,7 @@ namespace MiAppVenom.Persistencia
             Avatar av = new Avatar();
             try
             {
-                command.CommandText = "SELECT * FROM tb_avatar WHERE usuario='" + usuario + "')";
+                command.CommandText = "SELECT * FROM tb_avatar WHERE usuario='" + usuario + "'";
                 command.CommandType = System.Data.CommandType.Text;
                 connection.Open();
 
@@ -70,13 +67,7 @@ namespace MiAppVenom.Persistencia
             {
                 throw;
             }
-            finally
-            {
-                if (connection != null)
-                {
-                    connection.Close();
-                }
-            }
+           
             return av;
 
         }
@@ -88,7 +79,7 @@ namespace MiAppVenom.Persistencia
                 command.CommandText = "UPDATE tb_avatar SET nivel="+av.Nivel+ ", puntos=" + av.Puntos_nivel + ", monedas=" + av.Monedas + "," +
                     " apetito=" + av.Apetito + ", energia=" + av.Energia + ", diversion=" + av.Diversion + ", " +
                     "logros='"+av.Logros+"', monedasConseguidas=" + av.Monedas_conseguidas + ", partidas=" + av.Partidas_jugadas + ", puzzles=" + av.Puzzles_resueltos +
-                    " WHERE usuario='" + av.Usuario + "')";
+                    " WHERE usuario='" + av.Usuario + "'";
                 command.CommandType = System.Data.CommandType.Text;
                 connection.Open();
 
@@ -100,13 +91,7 @@ namespace MiAppVenom.Persistencia
             {
                 throw;
             }
-            finally
-            {
-                if (connection != null)
-                {
-                    connection.Close();
-                }
-            }
+           
         }
 
         public void eliminarUsuario(Avatar av)
@@ -125,13 +110,7 @@ namespace MiAppVenom.Persistencia
             {
                 throw;
             }
-            finally
-            {
-                if (connection != null)
-                {
-                    connection.Close();
-                }
-            }
+          
         }
 
         public int autenticar (String usuario, String pass)
@@ -139,27 +118,28 @@ namespace MiAppVenom.Persistencia
             int resultado=0;
             try
             {
-                command.CommandText = "SELECT COUNT(*) FROM tb_avatar WHERE usuario='" + usuario + "' AND pass='" + pass + "')";
+                command.CommandText = "SELECT usuario FROM tb_usuario WHERE usuario='" + usuario + "' AND pass='" + pass + "'";
                 command.CommandType = System.Data.CommandType.Text;
                 connection.Open();
 
-                int result = (int)command.ExecuteScalar();
-                if (result <= 0)
+                reader = command.ExecuteReader();
+                while (reader.Read())
                 {
-                    resultado = 1;
+                    if ((reader["usuario"].ToString()).Equals(usuario))
+                    {
+                        resultado = 0;
+                    }
+                    else
+                    {
+                        resultado = 1;
+                    }
                 }
-            }
+                }
             catch (Exception)
             {
                 throw;
             }
-            finally
-            {
-                if (connection != null)
-                {
-                    connection.Close();
-                }
-            }
+          
             return resultado;
       
                 

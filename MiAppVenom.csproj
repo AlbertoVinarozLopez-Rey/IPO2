@@ -201,6 +201,8 @@
     <Content Include="bbdd_VenomGotchi.mdb">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Presentacion\Resources\venomHead.png" />
+    <Resource Include="Presentacion\Resources\venomHead2.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

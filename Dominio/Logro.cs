@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MiAppVenom.Dominio
 {
-    class Logro
+    public class Logro
     {
         private int id;
         public int Id

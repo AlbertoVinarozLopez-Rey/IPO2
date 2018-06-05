@@ -46,7 +46,7 @@ namespace MiAppVenom.Persistencia
             }
         }
 
-        public Avatar LeerAvatar(String usuario)
+        public Avatar leerAvatar(String usuario)
         {
             Avatar av = new Avatar();
             try
@@ -81,6 +81,89 @@ namespace MiAppVenom.Persistencia
 
         }
 
+        public void actualizarAvatar(Avatar av)
+        {
+            try
+            {
+                command.CommandText = "UPDATE tb_avatar SET nivel="+av.Nivel+ ", puntos=" + av.Puntos_nivel + ", monedas=" + av.Monedas + "," +
+                    " apetito=" + av.Apetito + ", energia=" + av.Energia + ", diversion=" + av.Diversion + ", " +
+                    "logros='"+av.Logros+"', monedasConseguidas=" + av.Monedas_conseguidas + ", partidas=" + av.Partidas_jugadas + ", puzzles=" + av.Puzzles_resueltos +
+                    " WHERE usuario='" + av.Usuario + "')";
+                command.CommandType = System.Data.CommandType.Text;
+                connection.Open();
+
+                command.ExecuteNonQuery();
+
+                
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                if (connection != null)
+                {
+                    connection.Close();
+                }
+            }
+        }
+
+        public void eliminarUsuario(Avatar av)
+        {
+            try
+            {
+                command.CommandText = "DELETE FROM tb_usuario WHERE usuario='"+av.Usuario+"'";
+                command.CommandType = System.Data.CommandType.Text;
+                connection.Open();
+
+                command.ExecuteNonQuery();
+
+
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                if (connection != null)
+                {
+                    connection.Close();
+                }
+            }
+        }
+
+        public int autenticar (String usuario, String pass)
+        {
+            int resultado=0;
+            try
+            {
+                command.CommandText = "SELECT COUNT(*) FROM tb_avatar WHERE usuario='" + usuario + "' AND pass='" + pass + "')";
+                command.CommandType = System.Data.CommandType.Text;
+                connection.Open();
+
+                int result = (int)command.ExecuteScalar();
+                if (result <= 0)
+                {
+                    resultado = 1;
+                }
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                if (connection != null)
+                {
+                    connection.Close();
+                }
+            }
+            return resultado;
+      
+                
+        }
 
     }
 }

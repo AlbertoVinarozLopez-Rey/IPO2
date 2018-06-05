@@ -20,7 +20,7 @@ namespace MiAppVenom
         JUGANDO
     }
 
-    class Avatar
+    public class Avatar
     {
         private Hashtable logros;
         public Hashtable Logros
@@ -548,7 +548,7 @@ namespace MiAppVenom
         *********************************************************************/
         public Avatar LeerUsuario(String user)
         {
-            return this.gestor.LeerUsuario(user);
+            return this.gestor.leerAvatar(user);
         }
 
 
@@ -567,24 +567,16 @@ namespace MiAppVenom
         public String autenticar(String usuario, String pass)
         {
             String msg = null;
-            String password = this.gestor.Pass(usuario);
-            switch (password)
+            int resultado = this.gestor.autenticar(usuario, pass);
+            if (resultado == 0)
             {
-                case "0":
-                    msg = "0";
-                    break;
-
-                default:
-                    if (pass.Equals(password))
-                    {
-                        msg = pass;
-                    }
-                    else
-                    {
-                        msg = "1";
-                    }
-                    break;
+                msg = "0";
             }
+            else
+            {
+                msg = "1";
+            }
+
             return msg;
         }
 
@@ -601,9 +593,9 @@ namespace MiAppVenom
         * Return value: String 
         *
         *********************************************************************/
-        public String registrar(String user, String contra)
+        public void registrar(String user, String contra)
         {
-            return this.gestor.registrarUsuario(user, contra);
+            this.gestor.registrarUsuario(user, contra);
         }
 
 
@@ -620,7 +612,7 @@ namespace MiAppVenom
         *********************************************************************/
         public void actualizar()
         {
-            this.gestor.actualizar(this);
+            this.gestor.actualizarAvatar(this);
         }
 
 
@@ -635,10 +627,11 @@ namespace MiAppVenom
         * Return value: List<Avatar>
         *
         *********************************************************************/
-   //     public List<Avatar> get_mejores_jugadores()
-     //   {
-       //     return this.gestor.get_mejores_jugadores();
-       // }
+        //     public List<Avatar> get_mejores_jugadores()
+        //   {
+        //     return this.gestor.get_mejores_jugadores();
+        // }
 
 
     }
+}

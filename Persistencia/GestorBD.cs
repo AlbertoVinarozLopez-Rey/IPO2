@@ -26,7 +26,7 @@ namespace MiAppVenom.Persistencia
 
         public void registrarUsuario(String usuario, String pass)
         {
-            Avatar av = new Avatar(usuario, 0, 0, 0, 0, 0, 0, "", 0, 0, 0);
+            Avatar av = new Avatar(usuario, 0, 0, 0, 0, 0, 0,"", 0, 0, 0);
             try
             {
                 command.CommandText = "INSERT INTO tb_usuario (usuario, pass) VALUES ('" + usuario + "', '" + pass + "')";
@@ -34,13 +34,33 @@ namespace MiAppVenom.Persistencia
                 connection.Open();
                 command.ExecuteNonQuery();
 
-                actualizarAvatar(av);
+                insertarNuevoAvatar(av);
             }
             catch (Exception)
             {
                 throw;
             }
            
+        }
+
+        public void insertarNuevoAvatar(Avatar av)
+        {
+            String logros = "";
+            try
+            {
+                command.CommandText = "INSERT INTO tb_avatar (usuario, nivel, puntos, monedas, apetito, energia, diversion, logros, monedasConseguidas, partidas, puzzles) VALUES ('" + av.Usuario + "', " + av.Nivel + "," +
+                    " " + av.Puntos_nivel + ", " + av.Monedas +", " + av.Apetito + ", " + av.Energia + ", " + av.Diversion + ", '" + logros + "', " + av.Monedas_conseguidas + ", " + av.Partidas_jugadas + "," +
+                    " " + av.Puzzles_resueltos+ ")";
+                command.CommandType = System.Data.CommandType.Text;
+                connection.Open();
+                command.ExecuteNonQuery();
+
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+
         }
 
         public Avatar leerAvatar(String usuario)

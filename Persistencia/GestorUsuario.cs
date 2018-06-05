@@ -17,7 +17,7 @@ namespace MiAppVenom.Persistencia
 
         public void registrarUsuario(String usuario, String pass)
         {
-            gestor
+          
         }
     }
 }

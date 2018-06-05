@@ -859,6 +859,87 @@
                 <EasingDoubleKeyFrame KeyTime="0:0:1" Value="0"/>
             </DoubleAnimationUsingKeyFrames>
         </Storyboard>
+        <Storyboard x:Key="cerrarBarra">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="Barra_lateral">
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="158.4"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="lbl_flecha_right">
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="163.2"/>
+            </DoubleAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="lbl_flecha_right">
+                <DiscreteObjectKeyFrame KeyTime="0:0:1" Value="{x:Static Visibility.Hidden}"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="lbl_flecha_left">
+                <DiscreteObjectKeyFrame KeyTime="0:0:1" Value="{x:Static Visibility.Visible}"/>
+            </ObjectAnimationUsingKeyFrames>
+
+
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransformOrigin)" Storyboard.TargetName="lbl_flecha_left">
+                <EasingPointKeyFrame KeyTime="0:0:1" Value="0.62,0.323"/>
+            </PointAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="lbl_flecha_left">
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="161.6"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="grid_comidas">
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="158.4"/>
+            </DoubleAnimationUsingKeyFrames>
+
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="lbl_alimentos">
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="158.4"/>
+            </DoubleAnimationUsingKeyFrames>
+
+
+
+
+        </Storyboard>
+        <Storyboard x:Key="abrirBarra">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="Barra_lateral">
+                <EasingDoubleKeyFrame KeyTime="0" Value="158.4"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="lbl_flecha_right">
+                <EasingDoubleKeyFrame KeyTime="0" Value="163.2"/>
+            </DoubleAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="lbl_flecha_right">
+                <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Hidden}"/>
+                <DiscreteObjectKeyFrame KeyTime="0:0:1" Value="{x:Static Visibility.Visible}"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="lbl_flecha_left">
+                <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Visible}"/>
+                <DiscreteObjectKeyFrame KeyTime="0:0:1" Value="{x:Static Visibility.Hidden}"/>
+            </ObjectAnimationUsingKeyFrames>
+
+
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransformOrigin)" Storyboard.TargetName="lbl_flecha_left">
+                <EasingPointKeyFrame KeyTime="0" Value="0.62,0.323"/>
+            </PointAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="lbl_flecha_left">
+                <EasingDoubleKeyFrame KeyTime="0" Value="161.6"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="grid_comidas">
+                <EasingDoubleKeyFrame KeyTime="0" Value="158.4"/>
+            </DoubleAnimationUsingKeyFrames>
+
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="lbl_alimentos">
+                <EasingDoubleKeyFrame KeyTime="0" Value="158.4"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="grid_barra">
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="-153.6"/>
+            </DoubleAnimationUsingKeyFrames>
+
+
+
+
+
+        </Storyboard>
+        <Storyboard x:Key="ocultarAutenticacion">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="border_inicio_sesion">
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="border_fondo_registro">
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+
     </Window.Resources>
 
     <Window.Background>
@@ -881,6 +962,8 @@
             <BeginStoryboard Storyboard="{StaticResource cerrar_puzzle}"/>
             <BeginStoryboard Storyboard="{StaticResource mostrarBotones}"/>
             <BeginStoryboard Storyboard="{StaticResource ocultarBotones}"/>
+            <BeginStoryboard Storyboard="{StaticResource cerrarBarra}"/>
+            <BeginStoryboard Storyboard="{StaticResource ocultarAutenticacion}"/>
         </EventTrigger>
     </Window.Triggers>
 
@@ -1221,7 +1304,7 @@
                     </TransformGroup>
                 </ProgressBar.RenderTransform>
             </ProgressBar>
-            <Label x:Name="lblIconoNivel" Content="1" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontFamily="Comic Sans MS" FontSize="18.667" Grid.Row="1" Grid.ColumnSpan="2" Grid.RowSpan="2">
+            <Label x:Name="lblNivel" Content="1" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontFamily="Comic Sans MS" FontSize="18.667" Grid.Row="1" Grid.ColumnSpan="2" Grid.RowSpan="2">
                 <Label.Background>
                     <ImageBrush ImageSource="Presentacion/Resources/estrella.png" Stretch="Uniform"/>
                 </Label.Background>
@@ -1339,6 +1422,35 @@
                 </Image>
             </StackPanel>
         </Grid>
+        <Border x:Name="border_fondo_registro" BorderBrush="Black" BorderThickness="1" Grid.Row="1" CornerRadius="20" Background="#FF427AAB" Opacity="0.7" Margin="259,129,624.6,121.4" Grid.ColumnSpan="2"/>
+        <Border x:Name="border_inicio_sesion" BorderThickness="1" CornerRadius="20" Grid.Column="1" Grid.Row="1" Margin="10,129,649.4,121.4">
+            <Grid Margin="-40.2,9,58,8.6" Background="#00000000">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="0.1*"/>
+                    <RowDefinition Height="0.15*"/>
+                    <RowDefinition Height="0.15*"/>
+                    <RowDefinition Height="0.4*"/>
+                    <RowDefinition Height="0.1*"/>
+                    <RowDefinition Height="0.1*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.1*"/>
+                    <ColumnDefinition Width="0.3*"/>
+                    <ColumnDefinition Width="0.4*"/>
+                    <ColumnDefinition Width="0.3*"/>
+                    <ColumnDefinition Width="0.1*"/>
+                </Grid.ColumnDefinitions>
+                <Label x:Name="lblUsuario" Content="Usuario:" Grid.Column="1" Margin="0,10,39.449,10" Grid.Row="1" VerticalContentAlignment="Center" HorizontalContentAlignment="Right" FontFamily="Comic Sans MS" FontSize="16" Grid.ColumnSpan="2" Foreground="White" HorizontalAlignment="Right"/>
+                <Label x:Name="lblPass" Content="Contraseña:" Grid.Column="1" Margin="0,10,39.45,10" Grid.Row="2" VerticalContentAlignment="Center" HorizontalContentAlignment="Right" FontFamily="Comic Sans MS" FontSize="16" HorizontalAlignment="Right" Foreground="White" Grid.ColumnSpan="2" Width="107.104"/>
+                <TextBox x:Name="tb_inicio_usuario" Grid.Column="3" Margin="0,10,-52.829,10" Grid.Row="1" TextWrapping="Wrap" RenderTransformOrigin="0.511,0" VerticalContentAlignment="Center" FontFamily="Comic Sans MS" FontSize="16" Grid.ColumnSpan="2"/>
+                <PasswordBox x:Name="tb_inicio_contrasena" Grid.Column="3" Margin="0,10,-52.829,10" Grid.Row="2" FontFamily="Comic Sans MS" FontSize="16" VerticalContentAlignment="Center" Grid.ColumnSpan="2"/>
+                <Button x:Name="btn_autenticacion" Content="Iniciar Sesión" Grid.Column="3" Grid.Row="3" FontFamily="Comic Sans MS" FontSize="16" Click="autenticarse" Grid.ColumnSpan="2" Margin="0,25.48,-52.829,85.16" Background="#FFE8ECF1" Foreground="Black" FontWeight="Bold"/>
+                <Label x:Name="lblApp" Content="VenomGotchi" Grid.Column="2" FontFamily="Comic Sans MS" FontSize="16" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Grid.ColumnSpan="2" Margin="0,0,10,0" Foreground="White" HorizontalAlignment="Center" FontWeight="Bold"/>
+                <Image x:Name="venomLogo" Source="Presentacion/Recursos/logo-venom.png" Grid.Column="3" Grid.Row="3" Grid.ColumnSpan="2" Margin="52.829,80.16,-52.829,0" Grid.RowSpan="3"/>
+                <Button x:Name="btn_registrarse" Content="Registrate" Grid.Column="1" Grid.Row="4" FontFamily="Comic Sans MS" FontSize="16" Click="animacion_registro" Grid.ColumnSpan="3" Margin="23.378,0,69.449,0" Background="#FFF4EDED"/>
+                <Label x:Name="lbl_msg_inicio" Content="" Grid.Column="1" Margin="10,0" Grid.Row="5" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontFamily="Comic Sans MS" FontSize="16" Foreground="Red" Grid.ColumnSpan="3" FontWeight="Bold"/>
+            </Grid>
+        </Border>
         <Border x:Name="border_barra" Grid.Column="2" Grid.RowSpan="3" RenderTransformOrigin="0.5,0.5" d:LayoutOverrides="LeftMargin, RightMargin, TopMargin, BottomMargin">
             <Border.RenderTransform>
                 <TransformGroup>
@@ -1406,8 +1518,25 @@
                         <ImageBrush ImageSource="Presentacion/Resources/Arrow_Left.png" Stretch="Uniform"/>
                     </Label.Background>
                 </Label>
-                <Label x:Name="lbl_alimentos" Content="Alimentos" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Comic Sans MS" FontWeight="Bold" FontSize="18.667" Margin="16.296,0"/>
-                <Grid x:Name="grid_comidas" Grid.Column="2" Grid.Row="1" Grid.RowSpan="3">
+                <Label x:Name="lbl_alimentos" Content="Alimentos" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Comic Sans MS" FontWeight="Bold" FontSize="18.667" Margin="16.296,0" RenderTransformOrigin="0.5,0.5">
+                    <Label.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Label.RenderTransform>
+                </Label>
+                <Grid x:Name="grid_comidas" Grid.Column="2" Grid.Row="1" Grid.RowSpan="3" RenderTransformOrigin="0.5,0.5">
+                    <Grid.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Grid.RenderTransform>
                     <Grid.RowDefinitions>
                         <RowDefinition Height="0.1*"/>
                         <RowDefinition Height="0.1*"/>
@@ -1464,16 +1593,16 @@
                 <ColumnDefinition Width="183*"/>
                 <ColumnDefinition Width="45*"/>
             </Grid.ColumnDefinitions>
-            <ProgressBar x:Name="PBapetito"  Grid.Column="6" Margin="19.786,25,153.536,25" Height="30" VerticalAlignment="Center" Background="{x:Null}" BorderBrush="#FF7C7C7C" BorderThickness="2" Foreground="#FFDEA50E" Value="100" Grid.ColumnSpan="3"/>
-            <ProgressBar x:Name="PBenergia" Margin="68,25,117.755,25" Height="30" VerticalAlignment="Center" Grid.ColumnSpan="3" Background="{x:Null}" BorderBrush="#FF7C7C7C" BorderThickness="2" Value="100"/>
-            <ProgressBar x:Name="PBdiversion"  Grid.Column="3" Margin="30.716,25,142.486,25" Height="30" VerticalAlignment="Center" BorderBrush="#FF7C7C7C" BorderThickness="2" Background="{x:Null}"  Foreground="#FF0F9EBD" Value="100" Grid.ColumnSpan="3" />
+            <ProgressBar x:Name="pbApetito"  Grid.Column="6" Margin="19.786,25,153.536,25" Height="30" VerticalAlignment="Center" Background="{x:Null}" BorderBrush="#FF7C7C7C" BorderThickness="2" Foreground="#FFDEA50E" Value="100" Grid.ColumnSpan="3"/>
+            <ProgressBar x:Name="pbEnergia" Margin="68,25,117.755,25" Height="30" VerticalAlignment="Center" Grid.ColumnSpan="3" Background="{x:Null}" BorderBrush="#FF7C7C7C" BorderThickness="2" Value="100"/>
+            <ProgressBar x:Name="pbDiversion"  Grid.Column="3" Margin="30.716,25,142.486,25" Height="30" VerticalAlignment="Center" BorderBrush="#FF7C7C7C" BorderThickness="2" Background="{x:Null}"  Foreground="#FF0F9EBD" Value="100" Grid.ColumnSpan="3" />
             <Image x:Name="energy_png" Source="Presentacion/Resources/bateria.png" Width="53" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,10,22.755,17"/>
             <Image x:Name="game_png" Grid.Column="2" Source="Presentacion/Resources/consola.png" HorizontalAlignment="Right" RenderTransformOrigin="0.847,0.521"/>
             <Image x:Name="food_png" Grid.Column="5" Source="Presentacion/Resources/restaurante.png" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,-0.001,0"/>
 
-            <Label x:Name="energyLevel" Grid.ColumnSpan="3" Content="" Margin="68,25,117.755,25" FontFamily="Comic Sans MS" FontSize="16" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontWeight="Bold"/>
-            <Label x:Name="hungryLevel" Content="" Grid.Column="6" Margin="19.786,25,153.536,25" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="16" FontFamily="Comic Sans MS" FontWeight="Bold" Grid.ColumnSpan="3"/>
-            <Label x:Name="funnyLevel" Grid.ColumnSpan="3" Content="" Grid.Column="3" Margin="30.358,25,142.943,25" FontFamily="Comic Sans MS" FontSize="16" UseLayoutRounding="True" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontWeight="Bold"/>
+            <Label x:Name="lblEnergia" Grid.ColumnSpan="3" Content="" Margin="68,25,117.755,25" FontFamily="Comic Sans MS" FontSize="16" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontWeight="Bold"/>
+            <Label x:Name="lblApetito" Content="" Grid.Column="6" Margin="19.786,25,153.536,25" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="16" FontFamily="Comic Sans MS" FontWeight="Bold" Grid.ColumnSpan="3"/>
+            <Label x:Name="lblDiversion" Grid.ColumnSpan="3" Content="" Grid.Column="3" Margin="30.358,25,142.943,25" FontFamily="Comic Sans MS" FontSize="16" UseLayoutRounding="True" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontWeight="Bold"/>
 
         </Grid>
         <Border x:Name="border_puzzle" BorderBrush="Black" BorderThickness="1" CornerRadius="10" Visibility="Hidden" Grid.ColumnSpan="2">

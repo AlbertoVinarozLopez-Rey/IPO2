@@ -20,7 +20,7 @@ using System.Windows.Threading;
 namespace MiAppVenom
 {
 
-    public enum Animaciones_jugar
+    public enum Juegos
     {
         YOYO,
         TELARAÑA,
@@ -34,23 +34,23 @@ namespace MiAppVenom
     {
 
         //Alimentos
-        private static Comida o_sandia;
-        private static Comida o_banana;
-        private static Comida o_lata;
-        private static Comida o_coockie;
-        private static Comida o_patatas;
-        private static Comida o_cafe;
-        private static Comida o_galleta;
-        private static Comida o_pizza;
-        private static Comida o_cocktail;
-        private static Comida o_hamburguesa;
+        private static Comida com_banana;
+        private static Comida com_chips;
+        private static Comida com_cafe;
+        private static Comida com_coockies;
+        private static Comida com_sandia;
+        private static Comida com_pizza;
+        private static Comida com_vino;
+        private static Comida com_refresco;
+        private static Comida com_galleta;
+        private static Comida com_burguer;
 
         //Animaciones
-        private static Storyboard parpadear;
-        private static Storyboard animacion_dormir;
+        private static Storyboard animParpadear;
+        private static Storyboard animDormir;
 
         //Acciones
-        private static Animaciones_jugar jugar;
+        private static Juegos jugar;
         private static Boolean despertar;
 
         //Estado Intefaces
@@ -69,7 +69,6 @@ namespace MiAppVenom
         private static int cont, prox, cierre_auto_botones, prox_logro, prox_hambre;
         private static int tiempo_juego;
         private static int tiempo_comienzo;
-        public static String usuario;
 
         //Controlador de Twiiter
         //private TinyTwitter twitter;
@@ -84,6 +83,8 @@ namespace MiAppVenom
 
         //Avatar
         private Avatar avatar;
+        public static String usuario;
+
 
 
         public MainWindow()
@@ -140,16 +141,16 @@ namespace MiAppVenom
                 pbDiversion.Value = avatar.Diversion;
                 pbEnergia.Value = avatar.Energia;
 
-                o_sandia = new Comida("sandia", 5, 3, 5, 3);
-                o_banana = new Comida("banana", 6, 2, 6, 5);
-                o_lata = new Comida("lata", 7, 5, 2, 4);
-                o_coockie = new Comida("coockie", 3, 1, 3, 7);
-                o_cafe = new Comida("cafe", 6, 20, 2, 8);
-                o_patatas = new Comida("patatas", 7, 2, 20, 5);
-                o_cocktail = new Comida("cocktail", 10, 5, 7, 15);
-                o_galleta = new Comida("galleta", 12, 3, 15, 18);
-                o_pizza = new Comida("pizza", 15, 6, 20, 20);
-                o_hamburguesa = new Comida("hamburguesa", 20, 4, 25, 20);
+               // com_sandia = new Comida("sandia", 5, 3, 5, 3);
+                //com_banana = new Comida("banana", 6, 2, 6, 5);
+                com_refresco = new Comida("lata", 7, 5, 2, 4);
+                com_galleta = new Comida("coockie", 3, 1, 3, 7);
+                com_cafe = new Comida("cafe", 6, 20, 2, 8);
+                com_chips = new Comida("patatas", 7, 2, 20, 5);
+                com_vino = new Comida("cocktail", 10, 5, 7, 15);
+                com_coockies = new Comida("galleta", 12, 3, 15, 18);
+                com_pizza = new Comida("pizza", 15, 6, 20, 20);
+                com_burguer = new Comida("hamburguesa", 20, 4, 25, 20);
 
                 for (int i = 2; i <= avatar.Nivel; i++)
                 {
@@ -189,8 +190,8 @@ namespace MiAppVenom
                 */
 
                 //Inicializacion animaciones
-                parpadear = (Storyboard)this.Resources["animParpadear"];
-                animacion_dormir = (Storyboard)this.Resources["animSoñar"];
+                animParpadear = (Storyboard)this.Resources["animParpadear"];
+                animDormir = (Storyboard)this.Resources["animSoñar"];
 
 
 
@@ -513,34 +514,34 @@ namespace MiAppVenom
             switch (aux.Name)
             {
                 case "sandia":
-                    alimento = o_sandia;
+                    alimento = null;//com_sandia;
                     break;
                 case "banana":
-                    alimento = o_banana;
+                    alimento = null;// com_banana;
                     break;
                 case "lata":
-                    alimento = o_lata;
+                    alimento = com_refresco;
                     break;
                 case "coockie":
-                    alimento = o_coockie;
+                    alimento = com_galleta;
                     break;
                 case "patatas":
-                    alimento = o_patatas;
+                    alimento = com_chips;
                     break;
                 case "cafe":
-                    alimento = o_cafe;
+                    alimento = com_cafe;
                     break;
                 case "galletas":
-                    alimento = o_galleta;
+                    alimento = com_coockies;
                     break;
                 case "pizza":
-                    alimento = o_pizza;
+                    alimento = com_pizza;
                     break;
                 case "cocktail":
-                    alimento = o_cocktail;
+                    alimento = com_vino;
                     break;
                 case "hamburguesa":
-                    alimento = o_hamburguesa;
+                    alimento = com_burguer;
                     break;
             }
 
@@ -723,7 +724,7 @@ namespace MiAppVenom
                     {
                         if (!avatar.parpadeando)
                         {
-                            parpadear.Begin();
+                            animParpadear.Begin();
                             avatar.parpadear();
                         }
                         btnDormir.Content = "Dormir";
@@ -755,7 +756,7 @@ namespace MiAppVenom
                 case Estado.ENFADADO:
                     if (!avatar.estado_establecido())
                     {
-                        parpadear.Stop();
+                        animParpadear.Stop();
                         avatar.parpadeando = false;
                         ((Storyboard)this.Resources["animTriste"]).Begin();
                         devolver = 2;
@@ -847,7 +848,7 @@ namespace MiAppVenom
                         {
                             if (!avatar.parpadeando)
                             {
-                                parpadear.Stop();
+                                animParpadear.Stop();
                                 avatar.parpadeando = false;
                             }
                             ((Storyboard)this.Resources["animDormir"]).Begin();
@@ -870,7 +871,7 @@ namespace MiAppVenom
                     {
                         if (!avatar.parpadeando)
                         {
-                            parpadear.Stop();
+                            animParpadear.Stop();
                             avatar.parpadeando = false;
                         }
 
@@ -909,7 +910,7 @@ namespace MiAppVenom
                 case Estado.DORMIDO_PROFUNDAMENTE:
                     if (!avatar.estado_establecido())
                     {
-                        animacion_dormir.Begin();
+                        animDormir.Begin();
                         avatar.establecer_estado();
                         devolver = 8;
                     }
@@ -919,7 +920,7 @@ namespace MiAppVenom
                         {
                             despertar = false;
                             avatar.proximo_estado(Estado.FELIZ);
-                            animacion_dormir.Stop();
+                            animDormir.Stop();
                             ((Storyboard)this.Resources["animDespertar"]).Begin();
                             devolver = 2;
                             boca.AllowDrop = true;
@@ -945,17 +946,17 @@ namespace MiAppVenom
                         {
                             switch (jugar)
                             {
-                                case Animaciones_jugar.TELARAÑA:
+                                case Juegos.TELARAÑA:
                                     ((Storyboard)this.Resources["animTelaraña"]).Begin();
                                     devolver = 15;
-                                    jugar = Animaciones_jugar.NINGUNA;
+                                    jugar = Juegos.NINGUNA;
                                     avatar.establecer_estado();
 
                                     break;
-                                case Animaciones_jugar.YOYO:
+                                case Juegos.YOYO:
                                     ((Storyboard)this.Resources["animJugarYoyo"]).Begin();
                                     devolver = 13;
-                                    jugar = Animaciones_jugar.NINGUNA;
+                                    jugar = Juegos.NINGUNA;
                                     avatar.establecer_estado();
 
                                     break;
@@ -1211,7 +1212,7 @@ namespace MiAppVenom
                 btn_puzzle.IsEnabled = false;
                 lbl_flecha_left.IsEnabled = false;
                 ((Storyboard)this.Resources["mostrarLogros"]).Begin();
-                //cvVenom.IsEnabled = false;
+                cvVenom.IsEnabled = false;
                 estado_logros = true;
             }
         }
@@ -1226,7 +1227,7 @@ namespace MiAppVenom
                 ((Storyboard)this.Resources["cerrarLogros"]).Begin();
                 btn_puzzle.IsEnabled = true;
                 lbl_flecha_left.IsEnabled = true;
-                //cvVenom.IsEnabled = true;
+                cvVenom.IsEnabled = true;
                 estado_logros = false;
             }
         }
@@ -1624,7 +1625,7 @@ namespace MiAppVenom
                 ((Storyboard)this.Resources["ocultarBotones"]).Begin();
             }
             avatar.proximo_estado(Estado.JUGANDO);
-            jugar = Animaciones_jugar.YOYO;
+            jugar = Juegos.YOYO;
             avatar.Puntos_nivel += 15;
             avatar.Diversion += 19;
             avatar.Energia -= 3;
@@ -1639,7 +1640,7 @@ namespace MiAppVenom
                 ((Storyboard)this.Resources["ocultarBotones"]).Begin();
             }
             avatar.proximo_estado(Estado.JUGANDO);
-            jugar = Animaciones_jugar.TELARAÑA;
+            jugar = Juegos.TELARAÑA;
             avatar.Puntos_nivel += 20;
             avatar.Energia -= 7;
             avatar.Diversion += 25;

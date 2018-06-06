@@ -20,7 +20,7 @@ namespace MiAppVenom.Persistencia
         }
         private void connectTo()
         {
-            connection = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\alber\Source\Repos\IPO2\bbddVenomGotchi.accdb");
+            connection = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\alber\Source\Repos\IPO2\bbddVenomGotchi.accdb;Integrated Security=True");
             command = connection.CreateCommand();
         }
 
@@ -40,6 +40,10 @@ namespace MiAppVenom.Persistencia
             {
                 throw;
             }
+            finally
+            {
+                connection.Close();
+            }
            
         }
 
@@ -52,12 +56,17 @@ namespace MiAppVenom.Persistencia
                     " " + av.Puntos_nivel + ", " + av.Monedas +", " + av.Apetito + ", " + av.Energia + ", " + av.Diversion + ", '" + logros + "', " + av.Monedas_conseguidas + ", " + av.Partidas_jugadas + "," +
                     " " + av.Puzzles_resueltos+ ")";
                 command.CommandType = System.Data.CommandType.Text;
+                connection.Open();
                 command.ExecuteNonQuery();
 
             }
             catch (Exception)
             {
                 throw;
+            }
+            finally
+            {
+                connection.Close();
             }
 
         }
@@ -85,7 +94,11 @@ namespace MiAppVenom.Persistencia
             {
                 throw;
             }
-           
+            finally
+            {
+                connection.Close();
+            }
+
             return av;
 
         }
@@ -101,7 +114,6 @@ namespace MiAppVenom.Persistencia
                     " WHERE usuario='" + av.Usuario + "'";
                 command.CommandType = System.Data.CommandType.Text;
                 connection.Open();
-
                 command.ExecuteNonQuery();
 
                 
@@ -110,7 +122,11 @@ namespace MiAppVenom.Persistencia
             {
                 throw;
             }
-           
+            finally
+            {
+                connection.Close();
+            }
+
         }
 
         public void eliminarUsuario(Avatar av)
@@ -129,7 +145,11 @@ namespace MiAppVenom.Persistencia
             {
                 throw;
             }
-          
+            finally
+            {
+                connection.Close();
+            }
+
         }
 
         public int autenticar (String usuario, String pass)
@@ -155,7 +175,11 @@ namespace MiAppVenom.Persistencia
             {
                 e.ToString();
             }
-          
+            finally
+            {
+                connection.Close();
+            }
+
             return resultado;
       
                 

@@ -1012,9 +1012,6 @@
             </DoubleAnimationUsingKeyFrames>
         </Storyboard>
         <Storyboard x:Key="volverAutenticacion">
-            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="border_elegir_dificultad">
-                <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Hidden}"/>
-            </ObjectAnimationUsingKeyFrames>
             <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="border_inicio_sesion">
                 <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:1" Value="0"/>
@@ -1023,6 +1020,10 @@
             <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="border_registro">
                 <EasingDoubleKeyFrame KeyTime="0:0:1" Value="0"/>
             </DoubleAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="border_registro">
+                <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Visible}"/>
+                <DiscreteObjectKeyFrame KeyTime="0:0:1" Value="{x:Static Visibility.Hidden}"/>
+            </ObjectAnimationUsingKeyFrames>
         </Storyboard>
         <Storyboard x:Key="esconderDormir">
             <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="btnDormir">
@@ -1315,8 +1316,35 @@
                 <EasingDoubleKeyFrame KeyTime="0:0:1" Value="1"/>
             </DoubleAnimationUsingKeyFrames>
         </Storyboard>
+        <Storyboard x:Key="ocultarRegistro">
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="border_fondo_registro">
+                <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Visible}"/>
+                <DiscreteObjectKeyFrame KeyTime="0:0:1" Value="{x:Static Visibility.Hidden}"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="border_inicio_sesion">
+                <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Hidden}"/>
+                <DiscreteObjectKeyFrame KeyTime="0:0:1" Value="{x:Static Visibility.Hidden}"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="border_registro">
+                <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Visible}"/>
+                <DiscreteObjectKeyFrame KeyTime="0:0:1" Value="{x:Static Visibility.Hidden}"/>
+            </ObjectAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="border_registro">
+                <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="border_fondo_registro">
+                <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="border_inicio_sesion">
+                <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
 
     </Window.Resources>
+  
 
     <Window.Background>
         <ImageBrush ImageSource="Presentacion/Recursos/venom-background.png"/>
@@ -1845,8 +1873,8 @@
             <Image x:Name="estrella_nivel" Source="Presentacion/Resources/estrella.png" Stretch="Fill" Margin="22.666,0,20.334,0"/>
             <Label x:Name="lbl_subir_nivel" Content="" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontFamily="Comic Sans MS" FontWeight="Bold" FontSize="32" Margin="0,5,0,0"/>
         </Grid>
-        <Border x:Name="border_fondo_registro" BorderBrush="Black" BorderThickness="1" Grid.Row="1" CornerRadius="20" Background="#FFC7D2DC" Margin="259,129,624.6,121.4" Grid.ColumnSpan="2" d:IsHidden="True"/>
-        <Border x:Name="border_inicio_sesion" BorderThickness="1" CornerRadius="20" Grid.Column="1" Grid.Row="1" Margin="10,129,649.4,121.4" d:IsHidden="True">
+        <Border x:Name="border_fondo_registro" BorderBrush="Black" BorderThickness="1" Grid.Row="1" CornerRadius="20" Background="#FFC7D2DC" Margin="259,129,624.6,121.4" Grid.ColumnSpan="2"/>
+        <Border x:Name="border_inicio_sesion" BorderThickness="1" CornerRadius="20" Grid.Column="1" Grid.Row="1" Margin="10,129,649.4,121.4">
             <Grid x:Name="grid" Margin="-40.2,9,58,8.6" Background="#00000000">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="0.1*"/>
@@ -2124,15 +2152,15 @@
                     <ColumnDefinition Width="0.4*"/>
 
                 </Grid.ColumnDefinitions>
-                <Label x:Name="label5" Content="Usuario:" Grid.Column="1" Margin="0,10,78.4,10" Grid.Row="1" VerticalContentAlignment="Center" HorizontalContentAlignment="Right" FontFamily="Comic Sans MS" FontSize="16" Foreground="White" FontWeight="Bold" HorizontalAlignment="Right" RenderTransformOrigin="-0.429,0.442"/>
-                <Label x:Name="label3_Copy1" Content="Contraseña:" Grid.Column="1" Margin="0,0,78.4,20" Grid.Row="2" VerticalContentAlignment="Center" HorizontalContentAlignment="Right" FontFamily="Comic Sans MS" FontSize="16" FontWeight="Bold" Foreground="White" HorizontalAlignment="Right"/>
+                <Label x:Name="label5" Content="Usuario:" Grid.Column="1" Margin="0,10,78.4,10" Grid.Row="1" VerticalContentAlignment="Center" HorizontalContentAlignment="Right" FontFamily="Comic Sans MS" FontSize="16" Foreground="Black" HorizontalAlignment="Right" RenderTransformOrigin="-0.429,0.442" FontWeight="Bold"/>
+                <Label x:Name="label3_Copy1" Content="Contraseña:" Grid.Column="1" Margin="0,0,78.4,20" Grid.Row="2" VerticalContentAlignment="Center" HorizontalContentAlignment="Right" FontFamily="Comic Sans MS" FontSize="16" FontWeight="Bold" Foreground="Black" HorizontalAlignment="Right"/>
                 <TextBox x:Name="tb_registro_usuario" Grid.Column="1" Margin="157.434,10,153.227,10" Grid.Row="1" TextWrapping="Wrap" RenderTransformOrigin="0.511,0" VerticalContentAlignment="Center" FontFamily="Comic Sans MS" FontSize="16" Grid.ColumnSpan="2"/>
                 <PasswordBox x:Name="tb_registro_contrasena" Grid.Column="1" Margin="157.434,10,153.227,10" Grid.Row="2" FontFamily="Comic Sans MS" FontSize="16" VerticalContentAlignment="Center" Grid.ColumnSpan="2"/>
-                <Label x:Name="label6" Content="VenomGotchi" Grid.Column="1" FontFamily="Comic Sans MS" FontSize="16" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="White" Grid.ColumnSpan="2" Margin="131.207,0,148.227,0"/>
+                <Label x:Name="label6" Content="VenomGotchi" Grid.Column="1" FontFamily="Comic Sans MS" FontSize="16" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="Black" Grid.ColumnSpan="2" Margin="131.207,0,148.227,0"/>
                 <Image x:Name="Batman_Logo_01_png1" Source="Presentacion/Recursos/logo-venom.png" Grid.Column="1" Grid.Row="4" Grid.ColumnSpan="2" Margin="157.434,30.08,148.227,10" Grid.RowSpan="2"/>
-                <Button x:Name="btn_registrarse1" Content="Registrarme" Grid.Column="1" Grid.Row="3" FontFamily="Comic Sans MS" FontSize="16" Click="animacion_ir_inicio" Background="#FFF2EBEB" Margin="157.434,20.04,153.227,0" Grid.ColumnSpan="2"/>
+                <Button x:Name="btn_registrarse1" Content="Registrarme" Grid.Column="1" Grid.Row="3" FontFamily="Comic Sans MS" FontSize="16" Click="animacion_ir_inicio" Background="#FF639EB5" Margin="157.434,20.04,153.227,0" Grid.ColumnSpan="2"/>
                 <Label x:Name="lbl_msg_registro" Content="" Margin="10,0,0,0" Grid.Row="6" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontFamily="Comic Sans MS" FontSize="16" Foreground="Red" Grid.ColumnSpan="5" FontWeight="Bold"/>
-                <Button x:Name="btn_atras" Content="Atrás" Grid.Column="1" Grid.Row="5" FontFamily="Comic Sans MS" FontSize="16" Click="volver_atras_registro" Background="#FFF1ECEC" Margin="0,0,56.4,0"/>
+                <Button x:Name="btn_atras" Content="Atrás" Grid.Column="1" Grid.Row="5" FontFamily="Comic Sans MS" FontSize="16" Click="volver_atras_registro" Background="#FF639EB5" Margin="0,0,56.4,0"/>
             </Grid>
         </Border>
         <Grid x:Name="grid_inferior" Margin="10" Grid.Row="2" Grid.ColumnSpan="3" RenderTransformOrigin="0.5,0.5" >

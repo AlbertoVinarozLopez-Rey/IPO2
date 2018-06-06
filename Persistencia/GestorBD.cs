@@ -10,40 +10,39 @@ namespace MiAppVenom.Persistencia
 {
     public class GestorBD
     {
-        private OleDbConnection connection;
-        private OleDbCommand command;
-        private OleDbDataReader reader;
+        //private OleDbConnection connection;
+        //private OleDbCommand command;
+        //private OleDbDataReader reader;
+        private String connString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\alber\Source\Repos\IPO2\bbddVenomGotchi.accdb";
 
         public GestorBD()
         {
-            connectTo();
+
         }
-        private void connectTo()
-        {
-            connection = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\alber\Source\Repos\IPO2\bbddVenomGotchi.accdb;Integrated Security=True");
-            command = connection.CreateCommand();
-        }
+
 
         public void registrarUsuario(String usuario, String pass)
         {
             Avatar av = new Avatar(usuario, 0, 0, 0, 100, 100, 100,"", 0, 0, 0);
             try
             {
-                command.CommandText = "INSERT INTO tb_usuario (usuario, pass) VALUES ('" + usuario + "', '" + pass + "')";
-                command.CommandType = System.Data.CommandType.Text;
-                connection.Open();
-                command.ExecuteNonQuery();
+                using (OleDbConnection connection = new OleDbConnection(connString))
+                {
+                    connection.Open();
 
-                insertarNuevoAvatar(av);
+                    string query = @"INSERT INTO tb_usuario (usuario, pass) VALUES ('" + usuario + "', '" + pass + "')";
+
+                    OleDbCommand command = new OleDbCommand(query, connection);
+
+                    command.ExecuteNonQuery();
+                    insertarNuevoAvatar(av);
+                }
             }
             catch (Exception)
             {
                 throw;
             }
-            finally
-            {
-                connection.Close();
-            }
+           
            
         }
 
@@ -52,22 +51,24 @@ namespace MiAppVenom.Persistencia
             String logros = "";
             try
             {
-                command.CommandText = "INSERT INTO tb_avatar (usuario, nivel, puntos, monedas, apetito, energia, diversion, logros, monedasConseguidas, partidas, puzzles) VALUES ('" + av.Usuario + "', " + av.Nivel + "," +
-                    " " + av.Puntos_nivel + ", " + av.Monedas +", " + av.Apetito + ", " + av.Energia + ", " + av.Diversion + ", '" + logros + "', " + av.Monedas_conseguidas + ", " + av.Partidas_jugadas + "," +
-                    " " + av.Puzzles_resueltos+ ")";
-                command.CommandType = System.Data.CommandType.Text;
-                connection.Open();
-                command.ExecuteNonQuery();
+                using (OleDbConnection connection = new OleDbConnection(connString))
+                {
+                    connection.Open();
 
+                    string query = @"INSERT INTO tb_avatar (usuario, nivel, puntos, monedas, apetito, energia, diversion, logros, monedasConseguidas, partidas, puzzles) VALUES ('" + av.Usuario + "', " + av.Nivel + "," +
+                    " " + av.Puntos_nivel + ", " + av.Monedas + ", " + av.Apetito + ", " + av.Energia + ", " + av.Diversion + ", '" + logros + "', " + av.Monedas_conseguidas + ", " + av.Partidas_jugadas + "," +
+                    " " + av.Puzzles_resueltos + ")";
+
+                    OleDbCommand command = new OleDbCommand(query, connection);
+
+                    command.ExecuteNonQuery();
+                }
             }
             catch (Exception)
             {
                 throw;
             }
-            finally
-            {
-                connection.Close();
-            }
+         
 
         }
 
@@ -76,29 +77,28 @@ namespace MiAppVenom.Persistencia
             Avatar av = new Avatar();
             try
             {
-                command.CommandText = "SELECT * FROM tb_avatar WHERE usuario='" + usuario + "'";
-                command.CommandType = System.Data.CommandType.Text;
-                connection.Open();
-
-                reader = command.ExecuteReader();
-                while (reader.Read())
+                using (OleDbConnection connection = new OleDbConnection(connString))
                 {
-                    av = new Avatar(usuario, Convert.ToInt32(reader["nivel"].ToString()), Convert.ToInt32(reader["puntos"].ToString()), 
-                        Convert.ToInt32(reader["monedas"].ToString()), Convert.ToInt32(reader["apetito"].ToString()), 
-                        Convert.ToInt32(reader["energia"].ToString()), Convert.ToInt32(reader["diversion"].ToString()), 
-                        "", Convert.ToInt32(reader["monedasConseguidas"].ToString()), Convert.ToInt32(reader["partidas"].ToString()), Convert.ToInt32(reader["puzzles"].ToString()));
-                }
+                    connection.Open();
 
+                    string query = @"SELECT * FROM tb_avatar WHERE usuario='" + usuario + "'";
+                    OleDbCommand command = new OleDbCommand(query, connection);
+
+                    OleDbDataReader reader = command.ExecuteReader();
+                    while (reader.Read())
+                    {
+                        av = new Avatar(usuario, Convert.ToInt32(reader["nivel"].ToString()), Convert.ToInt32(reader["puntos"].ToString()),
+                            Convert.ToInt32(reader["monedas"].ToString()), Convert.ToInt32(reader["apetito"].ToString()),
+                            Convert.ToInt32(reader["energia"].ToString()), Convert.ToInt32(reader["diversion"].ToString()),
+                            "", Convert.ToInt32(reader["monedasConseguidas"].ToString()), Convert.ToInt32(reader["partidas"].ToString()), Convert.ToInt32(reader["puzzles"].ToString()));
+                    }
+                }
             }
             catch (Exception)
             {
                 throw;
             }
-            finally
-            {
-                connection.Close();
-            }
-
+           
             return av;
 
         }
@@ -108,23 +108,23 @@ namespace MiAppVenom.Persistencia
             
             try
             {
-                command.CommandText = "UPDATE tb_avatar SET nivel="+av.Nivel+ ", puntos=" + av.Puntos_nivel + ", monedas=" + av.Monedas + "," +
-                    " apetito=" + av.Apetito + ", energia=" + av.Energia + ", diversion=" + av.Diversion + ", " +
-                    "logros='"+logros+"', monedasConseguidas=" + av.Monedas_conseguidas + ", partidas=" + av.Partidas_jugadas + ", puzzles=" + av.Puzzles_resueltos +
-                    " WHERE usuario='" + av.Usuario + "'";
-                command.CommandType = System.Data.CommandType.Text;
-                connection.Open();
-                command.ExecuteNonQuery();
+                using (OleDbConnection connection = new OleDbConnection(connString))
+                {
+                    connection.Open();
 
+                    string query = @"UPDATE tb_avatar SET nivel=" + av.Nivel + ", puntos=" + av.Puntos_nivel + ", monedas=" + av.Monedas + "," +
+                    " apetito=" + av.Apetito + ", energia=" + av.Energia + ", diversion=" + av.Diversion + ", " +
+                    "logros='" + logros + "', monedasConseguidas=" + av.Monedas_conseguidas + ", partidas=" + av.Partidas_jugadas + ", puzzles=" + av.Puzzles_resueltos +
+                    " WHERE usuario='" + av.Usuario + "'";
+
+                    OleDbCommand command = new OleDbCommand(query, connection);
+                    command.ExecuteNonQuery();
+                }
                 
             }
             catch (Exception)
             {
                 throw;
-            }
-            finally
-            {
-                connection.Close();
             }
 
         }
@@ -133,51 +133,51 @@ namespace MiAppVenom.Persistencia
         {
             try
             {
-                command.CommandText = "DELETE FROM tb_usuario WHERE usuario='"+av.Usuario+"'";
-                command.CommandType = System.Data.CommandType.Text;
-                connection.Open();
+                using (OleDbConnection connection = new OleDbConnection(connString))
+                {
+                    connection.Open();
+                    string query = @"DELETE FROM tb_usuario WHERE usuario='" + av.Usuario + "'";
+                    OleDbCommand command = new OleDbCommand(query, connection); 
+                    command.ExecuteNonQuery();
 
-                command.ExecuteNonQuery();
-
-
+                }
             }
             catch (Exception)
             {
                 throw;
             }
-            finally
-            {
-                connection.Close();
-            }
+       
 
         }
 
         public int autenticar (String usuario, String pass)
         {
-            int resultado=1;
+            int resultado = 1;
+
             try
             {
-                command.CommandText = "SELECT usuario FROM tb_usuario WHERE usuario='" + usuario + "' AND pass='" + pass + "'";
-                command.CommandType = System.Data.CommandType.Text;
-                connection.Open();
-
-                reader = command.ExecuteReader();
-                while (reader.Read())
+                using (OleDbConnection connection = new OleDbConnection(connString))
                 {
-                    if ((reader["usuario"].ToString()).Equals(usuario))
+                    connection.Open();
+
+                    string query = @"SELECT usuario FROM tb_usuario WHERE usuario='" + usuario + "' AND pass='" + pass + "'";
+                    OleDbCommand command = new OleDbCommand(query, connection);
+                    OleDbDataReader reader = command.ExecuteReader();
+
+                    while (reader.Read())
                     {
-                        resultado = 0;
+                        if ((reader["usuario"].ToString()).Equals(usuario))
+                        {
+                            resultado = 0;
+                        }
+
                     }
-               
                 }
-                }
+            }   
+                          
             catch (Exception e)
             {
                 e.ToString();
-            }
-            finally
-            {
-                connection.Close();
             }
 
             return resultado;

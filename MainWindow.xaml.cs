@@ -58,7 +58,6 @@ namespace MiAppVenom
         private static Boolean botones;
         private static Boolean estado_logros;
         private static Boolean estado_puzzle;
-        private static Boolean estado_ranking;
         private static Boolean jugando_puzzle;
         private static Boolean puzzle_completado;
         private static Boolean label_fin;
@@ -66,7 +65,7 @@ namespace MiAppVenom
 
         //Timers
         private static DispatcherTimer timer_global;
-        private static double intervalo_global = 8000.0;
+        private static double intervalo_global = 1000.0;
         private static int cont, prox, cierre_auto_botones, prox_logro, prox_hambre;
         private static int tiempo_juego;
         private static int tiempo_comienzo;
@@ -102,7 +101,6 @@ namespace MiAppVenom
         private void inicializar_avatar()
         {
             Boolean load = false;
-            ((Storyboard)this.Resources["ocultarAutenticacion"]).Begin();
             cont = 0;
             prox = 0;
             prox_logro = 0;
@@ -1503,6 +1501,7 @@ namespace MiAppVenom
                         btn_puzzle.IsEnabled = true;
                         btn_trofeo.IsEnabled = true;
                         cvVenom.IsEnabled = true;
+                        ((Storyboard)this.Resources["ocultarAutenticacion"]).Begin();
                         inicializar_avatar();
                         break;
                     case "1":
@@ -1530,10 +1529,13 @@ namespace MiAppVenom
             try {
                 new Avatar().registrar(tb_registro_usuario.Text.ToString(), tb_registro_contrasena.Password.ToString());
                 
-                            tb_registro_usuario.Text = "";
-                            tb_registro_contrasena.Password = "";
-                            lbl_msg_registro.Content = "";
-                            ((Storyboard)this.Resources["volverAutenticacion"]).Begin();
+                            
+                            ((Storyboard)this.Resources["ocultarRegistro"]).Begin();
+                            btn_puzzle.IsEnabled = true;
+                            btn_trofeo.IsEnabled = true;
+                            cvVenom.IsEnabled = true;
+                            inicializar_avatar();
+                
                        
                 }
                 catch (Exception)

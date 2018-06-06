@@ -854,6 +854,8 @@ namespace MiAppVenom
                             avatar.establecer_estado();
                             btnDormir.Content = "Despertar";
                             boca.AllowDrop = false;
+                            dientes.AllowDrop = false;
+                            lengua.AllowDrop = false;
                             devolver = 2;
                         }
                     }
@@ -921,6 +923,9 @@ namespace MiAppVenom
                             ((Storyboard)this.Resources["animDespertar"]).Begin();
                             devolver = 2;
                             boca.AllowDrop = true;
+                            dientes.AllowDrop = true;
+                            lengua.AllowDrop = true;
+                            boca.AllowDrop = true;
                         }
                     }
 
@@ -956,6 +961,8 @@ namespace MiAppVenom
                                     break;
                             }
                             boca.AllowDrop = false;
+                            dientes.AllowDrop = false;
+                            lengua.AllowDrop = false;
                         }
 
                     }
@@ -989,6 +996,8 @@ namespace MiAppVenom
                             }
                         }
                         boca.AllowDrop = true;
+                        dientes.AllowDrop = true;
+                        lengua.AllowDrop = true;
                     }
                     break;
             }

@@ -78,8 +78,7 @@ namespace MiAppVenom.Persistencia
                     av = new Avatar(usuario, Convert.ToInt32(reader["nivel"].ToString()), Convert.ToInt32(reader["puntos"].ToString()), 
                         Convert.ToInt32(reader["monedas"].ToString()), Convert.ToInt32(reader["apetito"].ToString()), 
                         Convert.ToInt32(reader["energia"].ToString()), Convert.ToInt32(reader["diversion"].ToString()), 
-                        reader["logros"].ToString(), Convert.ToInt32(reader["monedasConseguidas"].ToString()), 
-                        Convert.ToInt32(reader["partidas"].ToString()), Convert.ToInt32(reader["puzzles"].ToString()));
+                        "", Convert.ToInt32(reader["monedasConseguidas"].ToString()), Convert.ToInt32(reader["partidas"].ToString()), Convert.ToInt32(reader["puzzles"].ToString()));
                 }
 
             }
@@ -165,5 +164,7 @@ namespace MiAppVenom.Persistencia
                 
         }
 
-    }
+       
+
+}
 }

@@ -29,6 +29,7 @@ namespace MiAppVenom
             {
                 return this.logros;
             }
+      
         }
         public List<Logro> logros_notificar;
 
@@ -65,6 +66,10 @@ namespace MiAppVenom
             get
             {
                 return nivel;
+            }
+            set
+            {
+                nivel = value;
             }
         }
 
@@ -236,6 +241,10 @@ namespace MiAppVenom
             {
                 return this.monedas_conseguidas;
             }
+            set
+            {
+                monedas_conseguidas = value;
+            }
         }
         private int partidas_jugadas;
         public int Partidas_jugadas
@@ -243,6 +252,10 @@ namespace MiAppVenom
             get
             {
                 return this.partidas_jugadas;
+            }
+            set
+            {
+                partidas_jugadas = value;
             }
         }
         private int puzzles_resueltos;
@@ -252,6 +265,10 @@ namespace MiAppVenom
             {
                 return this.puzzles_resueltos;
             }
+            set
+            {
+               puzzles_resueltos = value;
+            }
         }
         private GestorBD gestor;
         private String usuario;
@@ -260,6 +277,10 @@ namespace MiAppVenom
             get
             {
                 return this.usuario;
+            }
+            set
+            {
+                usuario = value;
             }
         }
 

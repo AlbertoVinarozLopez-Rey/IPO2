@@ -1553,9 +1553,17 @@ namespace MiAppVenom
             
         }
 
-        private void lbl_flecha_right_MouseUp(object sender, MouseButtonEventArgs e)
-        {
 
+        private void ventana_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            try
+            {
+                avatar.actualizar();
+            }
+            catch(Exception exc)
+            {
+                exc.ToString();
+            }
         }
 
         private void volver_atras_registro(object sender, RoutedEventArgs e)
@@ -1627,6 +1635,7 @@ namespace MiAppVenom
         }
     }
 
+   
     
 
 }

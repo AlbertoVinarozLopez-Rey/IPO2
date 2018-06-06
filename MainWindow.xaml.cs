@@ -316,7 +316,7 @@ namespace MiAppVenom
                 {
                     if (avatar.Nuevo_nivel)
                     {
-                        lbl_subir_nivel.Content = "Nivel " + avatar.Nivel.ToString();
+                        lbl_subir_nivel.Content = avatar.Nivel.ToString();
                         pb_nivel.Maximum = 100 * avatar.Nivel;
                         avatar.Nuevo_nivel = false;
                         ((Storyboard)this.Resources["subirNivel"]).Begin();
@@ -1211,7 +1211,7 @@ namespace MiAppVenom
                 btn_puzzle.IsEnabled = false;
                 lbl_flecha_left.IsEnabled = false;
                 ((Storyboard)this.Resources["mostrarLogros"]).Begin();
-                cvVenom.IsEnabled = false;
+                //cvVenom.IsEnabled = false;
                 estado_logros = true;
             }
         }
@@ -1222,10 +1222,11 @@ namespace MiAppVenom
         {
             if (estado_logros)
             {
+                
+                ((Storyboard)this.Resources["cerrarLogros"]).Begin();
                 btn_puzzle.IsEnabled = true;
                 lbl_flecha_left.IsEnabled = true;
-                cvVenom.IsEnabled = true;
-                ((Storyboard)this.Resources["cerrarLogros"]).Begin();
+                //cvVenom.IsEnabled = true;
                 estado_logros = false;
             }
         }

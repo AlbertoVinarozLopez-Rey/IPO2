@@ -1349,7 +1349,7 @@
 
 
     <Window.Background>
-        <ImageBrush ImageSource="Presentacion/Recursos/venom-background.png"/>
+        <ImageBrush ImageSource="Presentacion/Resources/venom-background.png"/>
     </Window.Background>
 
 
@@ -1364,9 +1364,7 @@
             <RowDefinition/>
             <RowDefinition Height="100"/>
         </Grid.RowDefinitions>
-        <Grid.Background>
-            <ImageBrush ImageSource="Presentacion/Recursos/venom-background.png"/>
-        </Grid.Background>
+      
         <DockPanel x:Name="DockCentral"  Grid.Column="1" LastChildFill="False" Margin="-5,-4.333,5,4.333" Grid.RowSpan="2">
             <Canvas x:Name="cvVenom" Margin="376.956,0,404.556,0" Width="189" VerticalAlignment="Bottom" Height="472.4" HorizontalAlignment="Center" DockPanel.Dock="Bottom" RenderTransformOrigin="0.5,0.5">
                 <Canvas.RenderTransform>
@@ -1386,7 +1384,7 @@
                         </LinearGradientBrush>
                     </Path.Fill>
                 </Path>
-                <Image x:Name="logoVenom" MouseDown="mostrar_botones" Source="/Presentacion/Recursos/logo-venom.png" Stretch="Fill" Height="78.141" Canvas.Left="50.865" Canvas.Top="139.734" Width="86.516"/>
+                <Image x:Name="logoVenom" MouseDown="mostrar_botones" Source="/Presentacion/Resources/logo-venom.png" Stretch="Fill" Height="78.141" Canvas.Left="50.865" Canvas.Top="139.734" Width="86.516"/>
                 <Path x:Name="cabeza" MouseDown="mostrar_botones" Data="M39.106888,0 C56.49355,-7.1054274E-15 71.514092,13.40721 78.58783,32.835907 L78.601921,32.875851 78.606697,33.699146 C78.751045,46.880795 79.750901,57.938259 74.791252,70.833366 71.949517,78.221863 71.476013,85.806236 66.791252,92.833389 63.52504,97.732704 63.135628,108.25565 57.19125,110.63341 L57.105202,110.82903 56.155869,111.37866 C50.915695,114.31195 45.154423,115.934 39.106888,115.934 33.059353,115.934 27.298083,114.31195 22.057911,111.37866 L21.697726,111.17014 21.593594,110.9334 C15.649205,108.55565 15.25979,98.032707 11.993572,93.133385 7.3087972,86.106232 6.8352874,78.521866 3.9935506,71.133362 -0.96611187,58.238258 0.033740907,47.180794 0.1780953,33.999146 L0.19350882,31.339085 0.59321561,30.336485 C8.0102952,12.26671 22.476172,-7.1054274E-15 39.106888,0 z" Fill="Black" HorizontalAlignment="Left" Height="115.934" Stretch="Fill" VerticalAlignment="Top" Width="78.785" Canvas.Left="54.474" RenderTransformOrigin="0.5,0.5">
                     <Path.RenderTransform>
                         <TransformGroup>
@@ -1908,7 +1906,7 @@
                 <PasswordBox x:Name="tb_inicio_contrasena" Grid.Column="3" Margin="0,10,-52.829,10" Grid.Row="2" FontFamily="Comic Sans MS" FontSize="16" VerticalContentAlignment="Center" Grid.ColumnSpan="2"/>
                 <Button x:Name="btn_autenticacion" Content="Iniciar Sesión" Grid.Column="3" Grid.Row="3" FontFamily="Comic Sans MS" FontSize="16" Click="autenticarse" Grid.ColumnSpan="2" Margin="0,48.835,-52.829,61.805" Background="#FF819CBE" Foreground="Black" FontWeight="Bold"/>
                 <Label x:Name="lblApp" Content="VENOMGOTCHI" Grid.Column="1" FontFamily="Comic Sans MS" FontSize="16" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Grid.ColumnSpan="2" Margin="23.378,0,10.144,0" Foreground="Black" HorizontalAlignment="Center" FontWeight="Bold"/>
-                <Image x:Name="venomLogo" Source="Presentacion/Recursos/logo-venom.png" Grid.Column="3" Grid.Row="3" Grid.ColumnSpan="2" Margin="52.829,80.16,-52.829,0" Grid.RowSpan="3"/>
+                <Image x:Name="venomLogo" Source="Presentacion/Resources/logo-venom.png" Grid.Column="3" Grid.Row="3" Grid.ColumnSpan="2" Margin="52.829,80.16,-52.829,0" Grid.RowSpan="3"/>
                 <Button x:Name="btn_registrarse" Content="Registrate" Grid.Column="1" Grid.Row="4" FontFamily="Comic Sans MS" FontSize="16" Click="animacion_registro" Grid.ColumnSpan="3" Margin="23.378,0,69.449,0" Background="#FF819CBE"/>
                 <Label x:Name="lbl_msg_inicio" Content="" Grid.Column="1" Margin="44.276,0,-52.829,120.24" Grid.Row="3" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontFamily="Comic Sans MS" FontSize="16" Foreground="#FF2CB938" Grid.ColumnSpan="4" FontWeight="Bold"/>
             </Grid>
@@ -2168,7 +2166,7 @@
                 <TextBox x:Name="tb_registro_usuario" Grid.Column="1" Margin="157.434,10,153.227,10" Grid.Row="1" TextWrapping="Wrap" RenderTransformOrigin="0.511,0" VerticalContentAlignment="Center" FontFamily="Comic Sans MS" FontSize="16" Grid.ColumnSpan="2"/>
                 <PasswordBox x:Name="tb_registro_contrasena" Grid.Column="1" Margin="157.434,10,153.227,10" Grid.Row="2" FontFamily="Comic Sans MS" FontSize="16" VerticalContentAlignment="Center" Grid.ColumnSpan="2"/>
                 <Label x:Name="label6" Content="VenomGotchi" Grid.Column="1" FontFamily="Comic Sans MS" FontSize="16" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="Black" Grid.ColumnSpan="2" Margin="131.207,0,148.227,0"/>
-                <Image x:Name="Batman_Logo_01_png1" Source="Presentacion/Recursos/logo-venom.png" Grid.Column="1" Grid.Row="4" Grid.ColumnSpan="2" Margin="157.434,30.08,148.227,10" Grid.RowSpan="2"/>
+                <Image x:Name="Batman_Logo_01_png1" Source="Presentacion/Resources/logo-venom.png" Grid.Column="1" Grid.Row="4" Grid.ColumnSpan="2" Margin="157.434,30.08,148.227,10" Grid.RowSpan="2"/>
                 <Button x:Name="btn_registrarse1" Content="Registrarme" Grid.Column="1" Grid.Row="3" FontFamily="Comic Sans MS" FontSize="16" Click="animacion_ir_inicio" Background="#FF639EB5" Margin="157.434,20.04,153.227,0" Grid.ColumnSpan="2"/>
                 <Label x:Name="lbl_msg_registro" Content="" Margin="10,0,0,0" Grid.Row="6" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontFamily="Comic Sans MS" FontSize="16" Foreground="Red" Grid.ColumnSpan="5" FontWeight="Bold"/>
                 <Button x:Name="btn_atras" Content="Atrás" Grid.Column="1" Grid.Row="5" FontFamily="Comic Sans MS" FontSize="16" Click="volver_atras_registro" Background="#FF639EB5" Margin="0,0,56.4,0"/>
@@ -2203,9 +2201,9 @@
             <Image x:Name="game_png" Grid.Column="2" Source="Presentacion/Resources/consola.png" HorizontalAlignment="Right" RenderTransformOrigin="0.847,0.521"/>
             <Image x:Name="food_png" Grid.Column="5" Source="Presentacion/Resources/restaurante.png" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,-0.001,0"/>
 
-            <Label x:Name="lblEnergia" Grid.ColumnSpan="3" Content="" Margin="68,25,117.755,25" FontFamily="Comic Sans MS" FontSize="16" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontWeight="Bold"/>
-            <Label x:Name="lblApetito" Content="" Grid.Column="6" Margin="19.786,25,153.536,25" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="16" FontFamily="Comic Sans MS" FontWeight="Bold" Grid.ColumnSpan="3"/>
-            <Label x:Name="lblDiversion" Grid.ColumnSpan="3" Content="" Grid.Column="3" Margin="30.358,25,142.943,25" FontFamily="Comic Sans MS" FontSize="16" UseLayoutRounding="True" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontWeight="Bold"/>
+            <Label x:Name="lblEnergia" Grid.ColumnSpan="3" Content="" Margin="68,25,117.755,25" FontFamily="Comic Sans MS" FontSize="16" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontWeight="Bold" Foreground="White"/>
+            <Label x:Name="lblApetito" Content="" Grid.Column="6" Margin="19.786,25,153.536,25" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="16" FontFamily="Comic Sans MS" FontWeight="Bold" Grid.ColumnSpan="3" Foreground="White"/>
+            <Label x:Name="lblDiversion" Grid.ColumnSpan="3" Content="" Grid.Column="3" Margin="30.358,25,142.943,25" FontFamily="Comic Sans MS" FontSize="16" UseLayoutRounding="True" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontWeight="Bold" Foreground="White"/>
 
         </Grid>
         <Border x:Name="border_puzzle" BorderBrush="Black" BorderThickness="1" CornerRadius="10" Visibility="Hidden" Grid.Column="1" Grid.Row="1">

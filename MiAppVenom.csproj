@@ -115,13 +115,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Presentacion\Recursos\logo-venom.png" />
-    <Resource Include="Presentacion\Recursos\venom-diversion.png" />
-    <Resource Include="Presentacion\Recursos\venom-apetito.png" />
-    <Resource Include="Presentacion\Recursos\venom-energia.png" />
+    <Resource Include="Presentacion\Resources\logo-venom.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Presentacion\Recursos\venom-background.png" />
+    <Resource Include="Presentacion\Resources\venom-background.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Presentacion\Resources\Arrow_Left.png" />

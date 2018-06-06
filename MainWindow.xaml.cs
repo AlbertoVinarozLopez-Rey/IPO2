@@ -69,7 +69,7 @@ namespace MiAppVenom
         private static int cont, prox, cierre_auto_botones, prox_logro, prox_hambre;
         private static int tiempo_juego;
         private static int tiempo_comienzo;
-
+        public static String usuario;
 
         //Controlador de Twiiter
         //private TinyTwitter twitter;
@@ -110,7 +110,7 @@ namespace MiAppVenom
             tiempo_juego = -1;
             try
             {
-                avatar = (new Avatar()).LeerUsuario(tb_inicio_usuario.Text.ToString());
+                avatar = (new Avatar()).LeerUsuario(usuario);
                 load = true;
             }
             catch (Exception e1) {
@@ -631,9 +631,15 @@ namespace MiAppVenom
 
         }
 
-        private void restablecer_puzzle(object sender, MouseButtonEventArgs e)
+       /* private void restablecer_puzzle(object sender, MouseButtonEventArgs e)
         {
             restablecer_puzzle_metodo();
+        }*/
+
+        private void restablecer_puzzle(object sender, RoutedEventArgs e)
+        {
+            restablecer_puzzle_metodo();
+
         }
 
         private void moviendo_pieza(object sender, MouseEventArgs e)
@@ -1201,6 +1207,8 @@ namespace MiAppVenom
             }
         }
 
+        
+
         private void ocultar_logros(object sender, MouseButtonEventArgs e)
         {
             if (estado_logros)
@@ -1355,8 +1363,7 @@ namespace MiAppVenom
                 restablecer_puzzle_metodo();
                 btn_trofeo.IsEnabled = false;
                 lbl_flecha_left.IsEnabled = false;
-                ((Storyboard)this.Resources["abrir_puzzle"]).Begin();
-                ((Storyboard)this.Resources["empezar_juego"]).Begin();
+                ((Storyboard)this.Resources["elegirDificultadPuzzle"]).Begin();
                 border_puzzle.IsEnabled = false;
                 cvVenom.IsEnabled = false;
                 estado_puzzle = true;
@@ -1386,9 +1393,11 @@ namespace MiAppVenom
         }
 
 
-        private void empezar_juego(object sender, MouseButtonEventArgs e)
+       /* private void empezar_juego(object sender, MouseButtonEventArgs e)
         {
             ((Storyboard)this.Resources["ocultarElegirDificultad"]).Begin();
+            ((Storyboard)this.Resources["abrir_puzzle"]).Begin();
+
             prox++;
             tiempo_comienzo = cont + 4;
             if (rdb_dificil.IsChecked == true)
@@ -1409,7 +1418,7 @@ namespace MiAppVenom
             avatar.nueva_partida();
             jugando_puzzle = true;
             actualizar_reloj();
-        }
+        }*/
 
         private void actualizar_reloj()
         {
@@ -1430,11 +1439,39 @@ namespace MiAppVenom
                 btn_trofeo.IsEnabled = true;
                 lbl_flecha_left.IsEnabled = true;
                 cvVenom.IsEnabled = true;
-                ((Storyboard)this.Resources["cerrar_puzzle"]).Begin();
                 ((Storyboard)this.Resources["ocultarElegirDificultad"]).Begin();
                 border_puzzle.IsEnabled = true;
                 estado_puzzle = false;
             }
+        }
+        
+
+
+        private void empezarJuego(object sender, RoutedEventArgs e)
+        {
+            ((Storyboard)this.Resources["ocultarElegirDificultad"]).Begin();
+            ((Storyboard)this.Resources["abrir_puzzle"]).Begin();
+
+            prox++;
+            tiempo_comienzo = cont + 4;
+            if (rdb_dificil.IsChecked == true)
+            {
+                tiempo_juego = 30;
+            }
+            else
+            {
+                if (rdb_medio.IsChecked == true)
+                {
+                    tiempo_juego = 60;
+                }
+                else
+                {
+                    tiempo_juego = 90;
+                }
+            }
+            avatar.nueva_partida();
+            jugando_puzzle = true;
+            actualizar_reloj();
         }
 
         private void restablecer_puzzle_metodo()
@@ -1502,6 +1539,7 @@ namespace MiAppVenom
                         btn_trofeo.IsEnabled = true;
                         cvVenom.IsEnabled = true;
                         ((Storyboard)this.Resources["ocultarAutenticacion"]).Begin();
+                        usuario = tb_inicio_usuario.Text.ToString();
                         inicializar_avatar();
                         break;
                     case "1":
@@ -1534,6 +1572,7 @@ namespace MiAppVenom
                             btn_puzzle.IsEnabled = true;
                             btn_trofeo.IsEnabled = true;
                             cvVenom.IsEnabled = true;
+                             usuario = tb_registro_usuario.Text.ToString();
                             inicializar_avatar();
                 
                        

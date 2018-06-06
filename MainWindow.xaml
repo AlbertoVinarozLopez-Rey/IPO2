@@ -922,23 +922,23 @@
         </Storyboard>
         <Storyboard x:Key="ocultarAutenticacion">
             <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="border_inicio_sesion">
-                <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.9" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.9" Value="0"/>
             </DoubleAnimationUsingKeyFrames>
             <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="border_fondo_registro">
-                <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.9" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.9" Value="0"/>
             </DoubleAnimationUsingKeyFrames>
             <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="border_fondo_registro">
-                <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Visible}"/>
-                <DiscreteObjectKeyFrame KeyTime="0:0:1" Value="{x:Static Visibility.Hidden}"/>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.9" Value="{x:Static Visibility.Visible}"/>
+                <DiscreteObjectKeyFrame KeyTime="0:0:1.9" Value="{x:Static Visibility.Hidden}"/>
             </ObjectAnimationUsingKeyFrames>
             <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="border_inicio_sesion">
-                <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Visible}"/>
-                <DiscreteObjectKeyFrame KeyTime="0:0:1" Value="{x:Static Visibility.Hidden}"/>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.9" Value="{x:Static Visibility.Visible}"/>
+                <DiscreteObjectKeyFrame KeyTime="0:0:1.9" Value="{x:Static Visibility.Hidden}"/>
             </ObjectAnimationUsingKeyFrames>
             <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="grid">
-                <DiscreteObjectKeyFrame KeyTime="0:0:0.2" Value="{x:Static Visibility.Visible}"/>
+                <DiscreteObjectKeyFrame KeyTime="0:0:1" Value="{x:Static Visibility.Visible}"/>
             </ObjectAnimationUsingKeyFrames>
         </Storyboard>
         <Storyboard x:Key="mostrarLogros">
@@ -1322,7 +1322,7 @@
         <ImageBrush ImageSource="Presentacion/Recursos/venom-background.png"/>
     </Window.Background>
 
-   
+
     <Grid x:Name="gridPrincipal">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="60*"/>
@@ -1845,7 +1845,7 @@
             <Image x:Name="estrella_nivel" Source="Presentacion/Resources/estrella.png" Stretch="Fill" Margin="22.666,0,20.334,0"/>
             <Label x:Name="lbl_subir_nivel" Content="" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontFamily="Comic Sans MS" FontWeight="Bold" FontSize="32" Margin="0,5,0,0"/>
         </Grid>
-        <Border x:Name="border_fondo_registro" BorderBrush="Black" BorderThickness="1" Grid.Row="1" CornerRadius="20" Background="#FF427AAB" Opacity="0.7" Margin="259,129,624.6,121.4" Grid.ColumnSpan="2" d:IsHidden="True"/>
+        <Border x:Name="border_fondo_registro" BorderBrush="Black" BorderThickness="1" Grid.Row="1" CornerRadius="20" Background="#FFC7D2DC" Margin="259,129,624.6,121.4" Grid.ColumnSpan="2" d:IsHidden="True"/>
         <Border x:Name="border_inicio_sesion" BorderThickness="1" CornerRadius="20" Grid.Column="1" Grid.Row="1" Margin="10,129,649.4,121.4" d:IsHidden="True">
             <Grid x:Name="grid" Margin="-40.2,9,58,8.6" Background="#00000000">
                 <Grid.RowDefinitions>
@@ -1863,15 +1863,15 @@
                     <ColumnDefinition Width="0.3*"/>
                     <ColumnDefinition Width="0.1*"/>
                 </Grid.ColumnDefinitions>
-                <Label x:Name="lblUsuario" Content="Usuario:" Grid.Column="1" Margin="0,10,39.449,10" Grid.Row="1" VerticalContentAlignment="Center" HorizontalContentAlignment="Right" FontFamily="Comic Sans MS" FontSize="16" Grid.ColumnSpan="2" Foreground="White" HorizontalAlignment="Right"/>
-                <Label x:Name="lblPass" Content="Contraseña:" Grid.Column="1" Margin="0,10,39.45,10" Grid.Row="2" VerticalContentAlignment="Center" HorizontalContentAlignment="Right" FontFamily="Comic Sans MS" FontSize="16" HorizontalAlignment="Right" Foreground="White" Grid.ColumnSpan="2" Width="107.104"/>
+                <Label x:Name="lblUsuario" Content="Usuario:" Grid.Column="1" Margin="0,10,39.449,10" Grid.Row="1" VerticalContentAlignment="Center" HorizontalContentAlignment="Right" FontFamily="Comic Sans MS" FontSize="16" Grid.ColumnSpan="2" Foreground="Black" HorizontalAlignment="Right"/>
+                <Label x:Name="lblPass" Content="Contraseña:" Grid.Column="1" Margin="0,10,39.45,10" Grid.Row="2" VerticalContentAlignment="Center" HorizontalContentAlignment="Right" FontFamily="Comic Sans MS" FontSize="16" HorizontalAlignment="Right" Foreground="Black" Grid.ColumnSpan="2" Width="107.104"/>
                 <TextBox x:Name="tb_inicio_usuario" Grid.Column="3" Margin="0,10,-52.829,10" Grid.Row="1" TextWrapping="Wrap" RenderTransformOrigin="0.511,0" VerticalContentAlignment="Center" FontFamily="Comic Sans MS" FontSize="16" Grid.ColumnSpan="2"/>
                 <PasswordBox x:Name="tb_inicio_contrasena" Grid.Column="3" Margin="0,10,-52.829,10" Grid.Row="2" FontFamily="Comic Sans MS" FontSize="16" VerticalContentAlignment="Center" Grid.ColumnSpan="2"/>
-                <Button x:Name="btn_autenticacion" Content="Iniciar Sesión" Grid.Column="3" Grid.Row="3" FontFamily="Comic Sans MS" FontSize="16" Click="autenticarse" Grid.ColumnSpan="2" Margin="0,25.48,-52.829,85.16" Background="#FFE8ECF1" Foreground="Black" FontWeight="Bold"/>
-                <Label x:Name="lblApp" Content="VenomGotchi" Grid.Column="2" FontFamily="Comic Sans MS" FontSize="16" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Grid.ColumnSpan="2" Margin="0,0,10,0" Foreground="White" HorizontalAlignment="Center" FontWeight="Bold"/>
+                <Button x:Name="btn_autenticacion" Content="Iniciar Sesión" Grid.Column="3" Grid.Row="3" FontFamily="Comic Sans MS" FontSize="16" Click="autenticarse" Grid.ColumnSpan="2" Margin="0,48.835,-52.829,61.805" Background="#FF819CBE" Foreground="Black" FontWeight="Bold"/>
+                <Label x:Name="lblApp" Content="VenomGotchi" Grid.Column="2" FontFamily="Comic Sans MS" FontSize="16" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Grid.ColumnSpan="2" Margin="0,0,10,0" Foreground="Black" HorizontalAlignment="Center" FontWeight="Bold"/>
                 <Image x:Name="venomLogo" Source="Presentacion/Recursos/logo-venom.png" Grid.Column="3" Grid.Row="3" Grid.ColumnSpan="2" Margin="52.829,80.16,-52.829,0" Grid.RowSpan="3"/>
-                <Button x:Name="btn_registrarse" Content="Registrate" Grid.Column="1" Grid.Row="4" FontFamily="Comic Sans MS" FontSize="16" Click="animacion_registro" Grid.ColumnSpan="3" Margin="23.378,0,69.449,0" Background="#FFF4EDED"/>
-                <Label x:Name="lbl_msg_inicio" Content="" Grid.Column="1" Margin="10,0" Grid.Row="5" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontFamily="Comic Sans MS" FontSize="16" Foreground="Red" Grid.ColumnSpan="3" FontWeight="Bold"/>
+                <Button x:Name="btn_registrarse" Content="Registrate" Grid.Column="1" Grid.Row="4" FontFamily="Comic Sans MS" FontSize="16" Click="animacion_registro" Grid.ColumnSpan="3" Margin="23.378,0,69.449,0" Background="#FF819CBE"/>
+                <Label x:Name="lbl_msg_inicio" Content="" Grid.Column="1" Margin="44.276,0,-52.829,120.24" Grid.Row="3" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontFamily="Comic Sans MS" FontSize="16" Foreground="#FF2CB938" Grid.ColumnSpan="4" FontWeight="Bold"/>
             </Grid>
         </Border>
         <Border x:Name="border_barra" Grid.Column="2" Grid.RowSpan="3" RenderTransformOrigin="0.5,0.5">
@@ -2065,21 +2065,21 @@
                 <Image x:Name="logro_lv10" Source="Presentacion/Resources/logro.png" Grid.Column="1" Margin="0,0,0,-0.001" Grid.Row="4" Opacity="0.2"/>
                 <Image x:Name="logro_pz10" Source="Presentacion/Resources/logro.png" Grid.Column="4" Margin="10,0,8.74,0" Grid.Row="2" Opacity="0.2"/>
                 <Image x:Name="logro_mon500" Source="Presentacion/Resources/logro.png" Grid.Column="3" Margin="8.74,-0.035,10,0.035" Grid.Row="2" Opacity="0.2"/>
-                <Image x:Name="logro_pl10" Source="Presentacion/Resources/logro.png" Grid.Column="2" Margin="10,0,8.74,0.035" Grid.Row="2"/>
+                <Image x:Name="logro_pl10" Source="Presentacion/Resources/logro.png" Grid.Column="2" Margin="10,0,8.74,0.035" Grid.Row="2" Opacity="0.2"/>
                 <Image x:Name="logro_lv6" Source="Presentacion/Resources/logro.png" Grid.Column="1" Grid.Row="2" Margin="0,0,0,0.035"  Opacity="0.2"/>
-                <Image x:Name="logro_lv3" Source="Presentacion/Resources/logro.png" VerticalAlignment="Bottom" Margin="0.5,0,0,0" Grid.Column="1"/>
+                <Image x:Name="logro_lv3" Source="Presentacion/Resources/logro.png" VerticalAlignment="Bottom" Margin="0.5,0,0,0" Grid.Column="1" Opacity="0.2"/>
                 <TextBlock x:Name="tb_logro_lv6" Grid.Column="1" TextWrapping="Wrap" Text="Alcanza el nivel 6" FontFamily="Comic Sans MS" FontSize="18.667" Grid.Row="2" TextAlignment="Center" Margin="0,-0.035,0,0.07"  HorizontalAlignment="Center" VerticalAlignment="Top" Opacity="0.2"/>
                 <TextBlock x:Name="tb_logro_lv10" Grid.Column="1" TextWrapping="Wrap" Text="Alcanza el nivel 10" FontFamily="Comic Sans MS" FontSize="18.667" Grid.Row="4" TextAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Top" Opacity="0.2"/>
-                <TextBlock x:Name="tb_logro_lv3" Grid.Column="1" TextWrapping="Wrap" Text="Alcanza el nivel 3" FontFamily="Comic Sans MS" FontSize="18.667" TextAlignment="Center" VerticalAlignment="Top" HorizontalAlignment="Center" Opacity="0.2"/>
-                <TextBlock x:Name="tb_logro_pl10" Grid.Column="2" TextWrapping="Wrap" Text="Juega 10 veces" FontFamily="Comic Sans MS" FontSize="18.667" TextAlignment="Center" VerticalAlignment="Top" Grid.Row="2" Height="63.777" HorizontalAlignment="Center" Opacity="0.2"/>
-                <TextBlock x:Name="tb_logro_pl5" Grid.Column="2" TextWrapping="Wrap" Text="Juega 5 veces" FontFamily="Comic Sans MS" FontSize="18.667" TextAlignment="Center" VerticalAlignment="Top" Height="63.777" HorizontalAlignment="Center" Opacity="0.2"/>
-                <TextBlock x:Name="tb_logro_pl20" Grid.Column="2" TextWrapping="Wrap" Text="Juega 20 veces" FontFamily="Comic Sans MS" FontSize="18.667" TextAlignment="Center" VerticalAlignment="Top" Grid.Row="4" Height="63.777" HorizontalAlignment="Center" Opacity="0.2"/>
-                <TextBlock x:Name="tb_logro_mon200" Grid.Column="3" TextWrapping="Wrap" Text="Consigue 200 monedas" FontFamily="Comic Sans MS" FontSize="18.667" TextAlignment="Center" VerticalAlignment="Top" Height="63.777" HorizontalAlignment="Center" Opacity="0.2"/>
-                <TextBlock x:Name="tb_logro_mon1000" Grid.Column="3" TextWrapping="Wrap" Text="Consigue 1000 monedas" FontFamily="Comic Sans MS" FontSize="18.667" TextAlignment="Center" VerticalAlignment="Top" Height="63.777" Margin="0,0.001,0,-0.001" Grid.Row="4" Opacity="0.2"/>
-                <TextBlock x:Name="tb_logro_mon500" Grid.Column="3" TextWrapping="Wrap" Text="Consigue 500 monedas" FontFamily="Comic Sans MS" FontSize="18.667" TextAlignment="Center" VerticalAlignment="Top" Height="63.777" Grid.Row="2" Opacity="0.2"/>
-                <TextBlock x:Name="tb_logro_pz10" Grid.Column="4" TextWrapping="Wrap" Text="Resuelve 10 puzzles" FontFamily="Comic Sans MS" FontSize="18.667" TextAlignment="Center" VerticalAlignment="Top" Height="63.777" Grid.Row="2" Opacity="0.2"/>
-                <TextBlock x:Name="tb_logro_todos" Grid.Column="4" TextWrapping="Wrap" Text="Obten todos los logros" FontFamily="Comic Sans MS" FontSize="18.667" TextAlignment="Center" VerticalAlignment="Top" Height="63.777" Margin="0,0.001,0,-0.001" Grid.Row="4" Opacity="0.2"/>
-                <TextBlock x:Name="tb_logro_pz5" Grid.Column="4" TextWrapping="Wrap" FontFamily="Comic Sans MS" FontSize="18.667" TextAlignment="Center" VerticalAlignment="Top" Height="63.777" Opacity="0.2"><Run Text="Resuelve 5 puzzles"/></TextBlock>
+                <TextBlock x:Name="tb_logro_lv3" Grid.Column="1" TextWrapping="Wrap" Text="Alcanza el nivel 3" FontFamily="Comic Sans MS" FontSize="18.667" TextAlignment="Center" VerticalAlignment="Top" HorizontalAlignment="Center" />
+                <TextBlock x:Name="tb_logro_pl10" Grid.Column="2" TextWrapping="Wrap" Text="Juega 10 veces" FontFamily="Comic Sans MS" FontSize="18.667" TextAlignment="Center" VerticalAlignment="Top" Grid.Row="2" Height="63.777" HorizontalAlignment="Center" />
+                <TextBlock x:Name="tb_logro_pl5" Grid.Column="2" TextWrapping="Wrap" Text="Juega 5 veces" FontFamily="Comic Sans MS" FontSize="18.667" TextAlignment="Center" VerticalAlignment="Top" Height="63.777" HorizontalAlignment="Center"/>
+                <TextBlock x:Name="tb_logro_pl20" Grid.Column="2" TextWrapping="Wrap" Text="Juega 20 veces" FontFamily="Comic Sans MS" FontSize="18.667" TextAlignment="Center" VerticalAlignment="Top" Grid.Row="4" Height="63.777" HorizontalAlignment="Center"/>
+                <TextBlock x:Name="tb_logro_mon200" Grid.Column="3" TextWrapping="Wrap" Text="Consigue 200 monedas" FontFamily="Comic Sans MS" FontSize="18.667" TextAlignment="Center" VerticalAlignment="Top" Height="63.777" HorizontalAlignment="Center"/>
+                <TextBlock x:Name="tb_logro_mon1000" Grid.Column="3" TextWrapping="Wrap" Text="Consigue 1000 monedas" FontFamily="Comic Sans MS" FontSize="18.667" TextAlignment="Center" VerticalAlignment="Top" Height="63.777" Margin="0,0.001,0,-0.001" Grid.Row="4"/>
+                <TextBlock x:Name="tb_logro_mon500" Grid.Column="3" TextWrapping="Wrap" Text="Consigue 500 monedas" FontFamily="Comic Sans MS" FontSize="18.667" TextAlignment="Center" VerticalAlignment="Top" Height="63.777" Grid.Row="2" />
+                <TextBlock x:Name="tb_logro_pz10" Grid.Column="4" TextWrapping="Wrap" Text="Resuelve 10 puzzles" FontFamily="Comic Sans MS" FontSize="18.667" TextAlignment="Center" VerticalAlignment="Top" Height="63.777" Grid.Row="2"/>
+                <TextBlock x:Name="tb_logro_todos" Grid.Column="4" TextWrapping="Wrap" Text="Obten todos los logros" FontFamily="Comic Sans MS" FontSize="18.667" TextAlignment="Center" VerticalAlignment="Top" Height="63.777" Margin="0,0.001,0,-0.001" Grid.Row="4"/>
+                <TextBlock x:Name="tb_logro_pz5" Grid.Column="4" TextWrapping="Wrap" FontFamily="Comic Sans MS" FontSize="18.667" TextAlignment="Center" VerticalAlignment="Top" Height="63.777" Text="Resuelve 5 puzzles"/>
                 <Image x:Name="red_cross_png" Source="Presentacion/Resources/red_cross.png" Grid.Column="5" Margin="2.167,0,0,0" Height="22" VerticalAlignment="Top" HorizontalAlignment="Right" MouseUp="ocultar_logros"/>
             </Grid>
         </Border>

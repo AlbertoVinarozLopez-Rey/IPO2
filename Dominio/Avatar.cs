@@ -633,9 +633,30 @@ namespace MiAppVenom
         *********************************************************************/
         public void actualizar()
         {
-            this.gestor.actualizarAvatar(this);
+            String logros = establecerLogros();
+            this.gestor.actualizarAvatar(this,logros);
         }
 
+        private String establecerLogros()
+        {
+            String logros = "";
+            foreach (string key in this.Logros.Keys)
+            {
+                if (((Logro)this.Logros[key]).Conseguido)
+                {
+                    if (logros.Equals(""))
+                    {
+                        logros += ((Logro)this.Logros[key]).Id.ToString();
+                    }
+                    else
+                    {
+                        logros += "%20" + ((Logro)this.Logros[key]).Id.ToString();
+                    }
+
+                }
+            }
+            return logros;
+        }
 
         /*********************************************************************
         *

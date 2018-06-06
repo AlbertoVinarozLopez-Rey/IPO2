@@ -143,7 +143,6 @@
     <Resource Include="Presentacion\Resources\game.png" />
     <Resource Include="Presentacion\Resources\hamburguesa.png" />
     <Resource Include="Presentacion\Resources\lata.png" />
-    <Resource Include="Presentacion\Resources\logro.png" />
     <Resource Include="Presentacion\Resources\madera.jpg" />
     <Resource Include="Presentacion\Resources\mesa.png" />
     <Resource Include="Presentacion\Resources\oro.png" />
@@ -202,6 +201,7 @@
     <Content Include="bbddVenomGotchi.accdb">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Resource Include="Presentacion\Resources\logro.png" />
     <Content Include="Presentacion\Resources\venomHead.png" />
     <Resource Include="Presentacion\Resources\venomHead2.jpg" />
   </ItemGroup>

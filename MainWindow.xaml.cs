@@ -66,7 +66,7 @@ namespace MiAppVenom
 
         //Timers
         private static DispatcherTimer timer_global;
-        private static double intervalo_global = 1000.0;
+        private static double intervalo_global = 8000.0;
         private static int cont, prox, cierre_auto_botones, prox_logro, prox_hambre;
         private static int tiempo_juego;
         private static int tiempo_comienzo;
@@ -115,7 +115,9 @@ namespace MiAppVenom
                 avatar = (new Avatar()).LeerUsuario(tb_inicio_usuario.Text.ToString());
                 load = true;
             }
-            catch (Exception) { }
+            catch (Exception e1) {
+                e1.ToString();
+            }
 
             if (load)
             {
@@ -250,51 +252,39 @@ namespace MiAppVenom
             {
                 case 1:
                     logro_lv3.Opacity = 100;
-                    tb_logro_lv3.Opacity = 100;
                     break;
                 case 2:
                     logro_lv6.Opacity = 100;
-                    tb_logro_lv6.Opacity = 100;
                     break;
                 case 3:
                     logro_lv10.Opacity = 100;
-                    tb_logro_lv10.Opacity = 100;
                     break;
                 case 4:
                     logro_pl5.Opacity = 100;
-                    tb_logro_pl5.Opacity = 100;
                     break;
                 case 5:
                     logro_pl10.Opacity = 100;
-                    tb_logro_pl10.Opacity = 100;
                     break;
                 case 6:
                     logro_pl20.Opacity = 100;
-                    tb_logro_pl20.Opacity = 100;
                     break;
                 case 7:
                     logro_mon200.Opacity = 100;
-                    tb_logro_mon200.Opacity = 100;
                     break;
                 case 8:
                     logro_mon500.Opacity = 100;
-                    tb_logro_mon500.Opacity = 100;
                     break;
                 case 9:
                     logro_mon1000.Opacity = 100;
-                    tb_logro_mon1000.Opacity = 100;
                     break;
                 case 10:
                     logro_pz5.Opacity = 100;
-                    tb_logro_pz5.Opacity = 100;
                     break;
                 case 11:
                     logro_pz10.Opacity = 100;
-                    tb_logro_pz10.Opacity = 100;
                     break;
                 case 12:
                     logro_todos.Opacity = 100;
-                    tb_logro_todos.Opacity = 100;
                     break;
             }
         }
@@ -1509,14 +1499,15 @@ namespace MiAppVenom
                 switch (con)
                 {
                     case "0":
-                        lbl_msg_inicio.Content = "Usuario correcto";
+                        lbl_msg_inicio.Content = "USUARIO CORRECTO";
                         btn_puzzle.IsEnabled = true;
                         btn_trofeo.IsEnabled = true;
                         cvVenom.IsEnabled = true;
                         inicializar_avatar();
                         break;
                     case "1":
-                        lbl_msg_inicio.Content = "Credenciales incorrectos";
+                        lbl_msg_inicio.Foreground = Brushes.DarkRed;
+                        lbl_msg_inicio.Content = "CREDENCIALES INCORRECTOS";
                         break;
                 }
             }

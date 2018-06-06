@@ -26,7 +26,7 @@ namespace MiAppVenom.Persistencia
 
         public void registrarUsuario(String usuario, String pass)
         {
-            Avatar av = new Avatar(usuario, 0, 0, 0, 0, 0, 0,"", 0, 0, 0);
+            Avatar av = new Avatar(usuario, 0, 0, 0, 100, 100, 100,"", 0, 0, 0);
             try
             {
                 command.CommandText = "INSERT INTO tb_usuario (usuario, pass) VALUES ('" + usuario + "', '" + pass + "')";
@@ -91,13 +91,14 @@ namespace MiAppVenom.Persistencia
 
         }
 
-        public void actualizarAvatar(Avatar av)
+        public void actualizarAvatar(Avatar av, String logros)
         {
+            
             try
             {
                 command.CommandText = "UPDATE tb_avatar SET nivel="+av.Nivel+ ", puntos=" + av.Puntos_nivel + ", monedas=" + av.Monedas + "," +
                     " apetito=" + av.Apetito + ", energia=" + av.Energia + ", diversion=" + av.Diversion + ", " +
-                    "logros='"+av.Logros+"', monedasConseguidas=" + av.Monedas_conseguidas + ", partidas=" + av.Partidas_jugadas + ", puzzles=" + av.Puzzles_resueltos +
+                    "logros='"+logros+"', monedasConseguidas=" + av.Monedas_conseguidas + ", partidas=" + av.Partidas_jugadas + ", puzzles=" + av.Puzzles_resueltos +
                     " WHERE usuario='" + av.Usuario + "'";
                 command.CommandType = System.Data.CommandType.Text;
                 connection.Open();
@@ -134,7 +135,7 @@ namespace MiAppVenom.Persistencia
 
         public int autenticar (String usuario, String pass)
         {
-            int resultado=0;
+            int resultado=1;
             try
             {
                 command.CommandText = "SELECT usuario FROM tb_usuario WHERE usuario='" + usuario + "' AND pass='" + pass + "'";
@@ -148,15 +149,12 @@ namespace MiAppVenom.Persistencia
                     {
                         resultado = 0;
                     }
-                    else
-                    {
-                        resultado = 1;
-                    }
+               
                 }
                 }
-            catch (Exception)
+            catch (Exception e)
             {
-                throw;
+                e.ToString();
             }
           
             return resultado;

@@ -52,7 +52,6 @@ namespace MiAppVenom.Persistencia
                     " " + av.Puntos_nivel + ", " + av.Monedas +", " + av.Apetito + ", " + av.Energia + ", " + av.Diversion + ", '" + logros + "', " + av.Monedas_conseguidas + ", " + av.Partidas_jugadas + "," +
                     " " + av.Puzzles_resueltos+ ")";
                 command.CommandType = System.Data.CommandType.Text;
-                connection.Open();
                 command.ExecuteNonQuery();
 
             }

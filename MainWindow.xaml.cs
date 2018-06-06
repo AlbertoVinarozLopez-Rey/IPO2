@@ -32,9 +32,10 @@ namespace MiAppVenom
     /// </summary>
     public partial class MainWindow : Window
     {
-
+        
         //Alimentos
-        private static Comida com_banana;
+        
+        private static Comida com_platano;
         private static Comida com_chips;
         private static Comida com_cafe;
         private static Comida com_coockies;
@@ -44,6 +45,7 @@ namespace MiAppVenom
         private static Comida com_refresco;
         private static Comida com_galleta;
         private static Comida com_burguer;
+        
 
         //Animaciones
         private static Storyboard animParpadear;
@@ -141,8 +143,8 @@ namespace MiAppVenom
                 pbDiversion.Value = avatar.Diversion;
                 pbEnergia.Value = avatar.Energia;
 
-               // com_sandia = new Comida("sandia", 5, 3, 5, 3);
-                //com_banana = new Comida("banana", 6, 2, 6, 5);
+                com_sandia = new Comida("sandia", 5, 3, 5, 3);
+                com_platano = new Comida("banana", 6, 2, 6, 5);
                 com_refresco = new Comida("lata", 7, 5, 2, 4);
                 com_galleta = new Comida("coockie", 3, 1, 3, 7);
                 com_cafe = new Comida("cafe", 6, 20, 2, 8);
@@ -151,7 +153,7 @@ namespace MiAppVenom
                 com_coockies = new Comida("galleta", 12, 3, 15, 18);
                 com_pizza = new Comida("pizza", 15, 6, 20, 20);
                 com_burguer = new Comida("hamburguesa", 20, 4, 25, 20);
-
+                
                 for (int i = 2; i <= avatar.Nivel; i++)
                 {
                     desbloquear_objetos(i);
@@ -514,10 +516,10 @@ namespace MiAppVenom
             switch (aux.Name)
             {
                 case "sandia":
-                    alimento = null;//com_sandia;
+                    alimento = com_sandia;
                     break;
                 case "banana":
-                    alimento = null;// com_banana;
+                    alimento = com_platano;
                     break;
                 case "lata":
                     alimento = com_refresco;

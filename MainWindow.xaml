@@ -291,16 +291,16 @@
         </Storyboard>
         <Storyboard x:Key="animParpadear" AutoReverse="True">
             <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="ojoIzquierdo">
-                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="0.539"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="0.539"/>
             </DoubleAnimationUsingKeyFrames>
             <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="ojoIzquierdo">
-                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="6.6"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="6.6"/>
             </DoubleAnimationUsingKeyFrames>
             <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="ojoDerecho">
-                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="0.496"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="0.496"/>
             </DoubleAnimationUsingKeyFrames>
             <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="ojoDerecho">
-                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="8"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="8"/>
             </DoubleAnimationUsingKeyFrames>
         </Storyboard>
         <Storyboard x:Key="animDormir" >
@@ -1439,7 +1439,7 @@
                         </LinearGradientBrush>
                     </Path.Fill>
                 </Path>
-                <Image x:Name="logoVenom" MouseDown="logoVenom_MouseDown" Source="/Presentacion/Resources/logo-venom.png" Stretch="Fill" Height="78.141" Canvas.Left="50.865" Canvas.Top="139.734" Width="86.516"/>
+                <Image x:Name="logoVenom" MouseDown="logoVenom_MouseDown"  Source="/Presentacion/Resources/logo-venom.png" Stretch="Fill" Height="78.141" Canvas.Left="50.865" Canvas.Top="139.734" Width="86.516"/>
                 <Path x:Name="cabeza" MouseDown="mostrar_botones" Data="M39.106888,0 C56.49355,-7.1054274E-15 71.514092,13.40721 78.58783,32.835907 L78.601921,32.875851 78.606697,33.699146 C78.751045,46.880795 79.750901,57.938259 74.791252,70.833366 71.949517,78.221863 71.476013,85.806236 66.791252,92.833389 63.52504,97.732704 63.135628,108.25565 57.19125,110.63341 L57.105202,110.82903 56.155869,111.37866 C50.915695,114.31195 45.154423,115.934 39.106888,115.934 33.059353,115.934 27.298083,114.31195 22.057911,111.37866 L21.697726,111.17014 21.593594,110.9334 C15.649205,108.55565 15.25979,98.032707 11.993572,93.133385 7.3087972,86.106232 6.8352874,78.521866 3.9935506,71.133362 -0.96611187,58.238258 0.033740907,47.180794 0.1780953,33.999146 L0.19350882,31.339085 0.59321561,30.336485 C8.0102952,12.26671 22.476172,-7.1054274E-15 39.106888,0 z" Fill="Black" HorizontalAlignment="Left" Height="115.934" Stretch="Fill" VerticalAlignment="Top" Width="78.785" Canvas.Left="54.474" RenderTransformOrigin="0.5,0.5">
                     <Path.RenderTransform>
                         <TransformGroup>
@@ -1831,13 +1831,13 @@
                 <ColumnDefinition Width="70*"/>
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
-                <RowDefinition Height="8*"/>
                 <RowDefinition Height="16*"/>
-                <RowDefinition Height="21*"/>
-                <RowDefinition Height="8*"/>
+                <RowDefinition Height="31*"/>
+                <RowDefinition Height="48*"/>
                 <RowDefinition Height="16*"/>
-                <RowDefinition Height="21*"/>
-                <RowDefinition Height="297*"/>
+                <RowDefinition Height="24*"/>
+                <RowDefinition Height="60*"/>
+                <RowDefinition Height="556*"/>
             </Grid.RowDefinitions>
             <ProgressBar x:Name="pb_nivel" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Background="{x:Null}" BorderBrush="#FF7C7C7C" Value="80" Grid.Column="2" Grid.Row="2" Height="25" VerticalAlignment="Top" SmallChange="1" RenderTransformOrigin="0.5,0.5" Foreground="#FFA21010" Margin="5,10,-5,0">
                 <ProgressBar.RenderTransform>
@@ -1854,7 +1854,7 @@
                     <ImageBrush ImageSource="Presentacion/Resources/estrella.png" Stretch="Uniform"/>
                 </Label.Background>
             </Label>
-            <Label x:Name="lbl_Usuario" Content="Alberto y Jesu" Grid.Column="2" Grid.Row="1" d:LayoutOverrides="Width" FontFamily="Comic Sans MS" FontSize="14.667" VerticalAlignment="Bottom" Background="#FF0B0B0B" Foreground="White" RenderTransformOrigin="0.5,0.5">
+            <Label x:Name="lbl_Usuario" Content="Alberto y Jesu" Grid.Column="2" Grid.Row="1" FontFamily="Comic Sans MS" FontSize="14.667" VerticalAlignment="Bottom" Background="#FF0B0B0B" Foreground="White" RenderTransformOrigin="0.5,0.5" Height="30.44">
                 <Label.RenderTransform>
                     <TransformGroup>
                         <ScaleTransform/>
@@ -1864,7 +1864,7 @@
                     </TransformGroup>
                 </Label.RenderTransform>
             </Label>
-            <ProgressBar x:Name="pb_monedas" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Background="{x:Null}" BorderBrush="#FF7C7C7C" Value="80" Grid.Column="2" Grid.Row="5" Height="25" VerticalAlignment="Center" Margin="5,10,-5,5.741" SmallChange="1" Maximum="1000" RenderTransformOrigin="0.5,0.5">
+            <ProgressBar x:Name="pb_monedas" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Background="{x:Null}" BorderBrush="#FF7C7C7C" Value="80" Grid.Column="2" Grid.Row="5" Height="25" VerticalAlignment="Center" Margin="5,19.623,-5,15.361" SmallChange="1" Maximum="1000" RenderTransformOrigin="0.5,0.5">
                 <ProgressBar.RenderTransform>
                     <TransformGroup>
                         <ScaleTransform/>
@@ -1893,7 +1893,7 @@
                     <ImageBrush ImageSource="Presentacion/Resources/monedas.png" Stretch="Uniform"/>
                 </Label.Background>
             </Label>
-            <Label x:Name="lbl_monedas" Content="N monedas" Grid.Column="2" Grid.Row="5" FontFamily="Comic Sans MS" FontSize="16" HorizontalContentAlignment="Right" VerticalContentAlignment="Center" RenderTransformOrigin="0.5,0.5" Margin="38.575,0,0,0" Foreground="White" HorizontalAlignment="Left">
+            <Label x:Name="lbl_monedas" Content="monedas" Grid.Column="1" Grid.Row="5" FontFamily="Comic Sans MS" FontSize="16" HorizontalContentAlignment="Right" VerticalContentAlignment="Center" RenderTransformOrigin="0.5,0.5" Margin="23.2,10,63.724,9.624" Foreground="White" Grid.ColumnSpan="2">
                 <Label.RenderTransform>
                     <TransformGroup>
                         <ScaleTransform/>
@@ -1903,7 +1903,7 @@
                     </TransformGroup>
                 </Label.RenderTransform>
             </Label>
-            <Label x:Name="lbl_puntos_nivel" Content="12 puntos" Grid.Column="2" Grid.Row="2" FontFamily="Comic Sans MS" FontSize="16" HorizontalContentAlignment="Right" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Margin="10,5,0,0" Foreground="White" HorizontalAlignment="Left">
+            <Label x:Name="lbl_puntos_nivel" Content="puntos" Grid.Column="1" Grid.Row="2" FontFamily="Comic Sans MS" FontSize="16" HorizontalContentAlignment="Right" RenderTransformOrigin="0.634,2.128" Margin="10,4.102,76.924,0" Foreground="White" Grid.ColumnSpan="2">
                 <Label.RenderTransform>
                     <TransformGroup>
                         <ScaleTransform/>
@@ -1913,7 +1913,7 @@
                     </TransformGroup>
                 </Label.RenderTransform>
             </Label>
-            <StackPanel Margin="0,10,-26.954,-32" Grid.Row="6" Grid.ColumnSpan="2" HorizontalAlignment="Left" Width="100">
+            <StackPanel Margin="0,10,0,-32" Grid.Row="6" Grid.ColumnSpan="3" HorizontalAlignment="Left" Width="100">
                 <Image x:Name="btn_trofeo" Height="87.5" Source="Presentacion/Resources/medalla.png" Margin="0,10,0,0" MouseUp="mostrar_logros" RenderTransformOrigin="0.5,0.5">
                     <Image.RenderTransform>
                         <TransformGroup>

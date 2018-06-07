@@ -1625,7 +1625,7 @@ namespace MiAppVenom
                 SoundPlayer simpleSound = new SoundPlayer(Properties.Resources.we_are_venom);
                 simpleSound.Play();
             }
-            
+
         }
 
         private void volver_atras_registro(object sender, RoutedEventArgs e)

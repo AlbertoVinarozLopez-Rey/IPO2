@@ -10,9 +10,6 @@ namespace MiAppVenom.Persistencia
 {
     public class GestorBD
     {
-        //private OleDbConnection connection;
-        //private OleDbCommand command;
-        //private OleDbDataReader reader;
         private String connString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\alber\Source\Repos\IPO2\bbddVenomGotchi.accdb";
 
         public GestorBD()
@@ -90,7 +87,7 @@ namespace MiAppVenom.Persistencia
                         av = new Avatar(usuario, Convert.ToInt32(reader["nivel"].ToString()), Convert.ToInt32(reader["puntos"].ToString()),
                             Convert.ToInt32(reader["monedas"].ToString()), Convert.ToInt32(reader["apetito"].ToString()),
                             Convert.ToInt32(reader["energia"].ToString()), Convert.ToInt32(reader["diversion"].ToString()),
-                            "", Convert.ToInt32(reader["monedasConseguidas"].ToString()), Convert.ToInt32(reader["partidas"].ToString()), Convert.ToInt32(reader["puzzles"].ToString()));
+                            reader["logros"].ToString(), Convert.ToInt32(reader["monedasConseguidas"].ToString()), Convert.ToInt32(reader["partidas"].ToString()), Convert.ToInt32(reader["puzzles"].ToString()));
                     }
                 }
             }

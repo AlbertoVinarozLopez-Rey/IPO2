@@ -1018,7 +1018,7 @@
         <Storyboard x:Key="notificacion_logro" AutoReverse="True">
             <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="notificacion_logros">
                 <EasingDoubleKeyFrame KeyTime="0" Value="-131.2"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="3.2"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="45.2"/>
             </DoubleAnimationUsingKeyFrames>
             <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="notificacion_logros">
                 <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
@@ -1030,6 +1030,7 @@
                 <DiscreteObjectKeyFrame KeyTime="0:0:1" Value="{x:Static Visibility.Visible}"/>
                 <DiscreteObjectKeyFrame KeyTime="0:0:3" Value="{x:Static Visibility.Visible}"/>
             </ObjectAnimationUsingKeyFrames>
+         
 
 
         </Storyboard>
@@ -2195,7 +2196,7 @@
                 <Image x:Name="red_cross_png" Source="Presentacion/Resources/red_cross.png" Grid.Column="5" Margin="2.167,0,0,0" Height="22" VerticalAlignment="Top" HorizontalAlignment="Right" MouseUp="ocultar_logros"/>
             </Grid>
         </Border>
-        <Border x:Name="notificacion_logros" BorderBrush="White" BorderThickness="1" Grid.Column="1" Margin="250,5" CornerRadius="30" Background="#FF558183" RenderTransformOrigin="0.5,0.5" Visibility="Hidden">
+        <Border x:Name="notificacion_logros" BorderThickness="1" Grid.Column="1" Margin="250,5" CornerRadius="30" Background="#FF005AAD" RenderTransformOrigin="0.5,0.5" Visibility="Hidden">
             <Border.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>

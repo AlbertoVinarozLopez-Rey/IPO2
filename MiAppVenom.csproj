@@ -194,6 +194,7 @@
     <Resource Include="Presentacion\Resources\estrella.png" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Presentacion\Resources\we_are_venom.wav" />
     <Resource Include="Presentacion\Resources\nuevo_logro.png" />
     <Content Include="bbddVenomGotchi.accdb">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>

@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Media;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -1611,6 +1612,20 @@ namespace MiAppVenom
             }
         }
 
+        private void logoVenom_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            Boolean reproducido = false;
+            if (reproducido == false)
+            {
+                ((Storyboard)this.Resources["ocultarBotones"]).Begin();
+
+                ((Storyboard)this.Resources["hablar"]).Begin();
+                SoundPlayer simpleSound = new SoundPlayer(Properties.Resources.we_are_venom);
+                simpleSound.Play();
+            }
+            
+        }
+
         private void volver_atras_registro(object sender, RoutedEventArgs e)
         {
             tb_registro_usuario.Text = "";
@@ -1632,6 +1647,7 @@ namespace MiAppVenom
             avatar.Diversion += 19;
             avatar.Energia -= 3;
             botones = false;
+
         }
 
 
@@ -1669,11 +1685,14 @@ namespace MiAppVenom
             {
                 case "Dormir":
                     avatar.Puntos_nivel += 10;
+                    logoVenom.IsEnabled = false;
                     avatar.proximo_estado(Estado.DORMIDO);
                     break;
                 case "Despertar":
                     avatar.Puntos_nivel += 5;
                     despertar = true;
+                    logoVenom.IsEnabled = true;
+
                     break;
             }
             botones = false;

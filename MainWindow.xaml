@@ -1060,8 +1060,9 @@
             </DoubleAnimationUsingKeyFrames>
             <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="grid_animacion_nivel">
                 <EasingDoubleKeyFrame KeyTime="0" Value="-190.2"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:1.3" Value="118.6"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:2.2" Value="118.415"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="-89.831"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.3" Value="89"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.2" Value="85.615"/>
             </DoubleAnimationUsingKeyFrames>
             <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="grid_animacion_nivel">
                 <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
@@ -1072,32 +1073,32 @@
                 <EasingDoubleKeyFrame KeyTime="0:0:2.2" Value="1.248"/>
             </DoubleAnimationUsingKeyFrames>
             <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="grid_animacion_nivel">
-                <EasingDoubleKeyFrame KeyTime="0:0:1.3" Value="1"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:2.2" Value="1.288"/>
+                <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="1.288"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.3" Value="1.462"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.2" Value="1.8"/>
             </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="lbl_subir_nivel">
-                <EasingDoubleKeyFrame KeyTime="0" Value="0.574"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.7" Value="0.574"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:2.2" Value="1.009"/>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="estrella_nivel">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.9" Value="0.619"/>
             </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="lbl_subir_nivel">
-                <EasingDoubleKeyFrame KeyTime="0" Value="-2.8"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.7" Value="2"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:2.2" Value="-4.41"/>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="estrella_nivel">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.9" Value="-24.4"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="estrella_nivel">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.9" Value="0.975"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="estrella_nivel">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.9" Value="-1.6"/>
             </DoubleAnimationUsingKeyFrames>
             <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="lbl_subir_nivel">
-                <EasingDoubleKeyFrame KeyTime="0" Value="0.707"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.7" Value="0.707"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:2.2" Value="0.98"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="0.782"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.9" Value="0.634"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.3" Value="0.613"/>
             </DoubleAnimationUsingKeyFrames>
             <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="lbl_subir_nivel">
-                <EasingDoubleKeyFrame KeyTime="0" Value="-6.8"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.7" Value="-6"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:2.2" Value="-1.652"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(TextElement.FontSize)" Storyboard.TargetName="lbl_subir_nivel">
-                <EasingDoubleKeyFrame KeyTime="0" Value="36"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.7" Value="32"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="-13.438"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.9" Value="-22.548"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.3" Value="-23.835"/>
             </DoubleAnimationUsingKeyFrames>
         </Storyboard>
         <Storyboard x:Key="valorComida" AutoReverse="True">
@@ -1344,8 +1345,62 @@
                 <EasingDoubleKeyFrame KeyTime="0:0:1" Value="0"/>
             </DoubleAnimationUsingKeyFrames>
         </Storyboard>
+        <Storyboard x:Key="hablar" AutoReverse="True">
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="border_fondo_registro">
+                <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Hidden}"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="border_inicio_sesion">
+                <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Hidden}"/>
+            </ObjectAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="lengua">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="0.524"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="lengua">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="0.642"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="lengua">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="-6.667"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="lengua">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="-13.2"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="lengua">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="boca">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="1.132"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.9" Value="0.972"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.1" Value="1.172"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="boca">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="-0.149"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.9" Value="1.098"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.1" Value="-1.26"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="boca">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="2.947"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.9" Value="-2.746"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.1" Value="2.513"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="dientes">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="1.131"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.9" Value="0.881"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.1" Value="1.117"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="dientes">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="-0.699"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.9" Value="0.635"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.1" Value="-0.622"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="dientes">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="2.969"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.9" Value="-2.696"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.1" Value="2.644"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
 
     </Window.Resources>
+
 
 
     <Window.Background>
@@ -1364,7 +1419,7 @@
             <RowDefinition/>
             <RowDefinition Height="100"/>
         </Grid.RowDefinitions>
-      
+
         <DockPanel x:Name="DockCentral"  Grid.Column="1" LastChildFill="False" Margin="-5,-4.333,5,4.333" Grid.RowSpan="2">
             <Canvas x:Name="cvVenom" Margin="376.956,0,404.556,0" Width="189" VerticalAlignment="Bottom" Height="472.4" HorizontalAlignment="Center" DockPanel.Dock="Bottom" RenderTransformOrigin="0.5,0.5">
                 <Canvas.RenderTransform>
@@ -1384,7 +1439,7 @@
                         </LinearGradientBrush>
                     </Path.Fill>
                 </Path>
-                <Image x:Name="logoVenom" MouseDown="mostrar_botones" Source="/Presentacion/Resources/logo-venom.png" Stretch="Fill" Height="78.141" Canvas.Left="50.865" Canvas.Top="139.734" Width="86.516"/>
+                <Image x:Name="logoVenom" MouseDown="logoVenom_MouseDown" Source="/Presentacion/Resources/logo-venom.png" Stretch="Fill" Height="78.141" Canvas.Left="50.865" Canvas.Top="139.734" Width="86.516"/>
                 <Path x:Name="cabeza" MouseDown="mostrar_botones" Data="M39.106888,0 C56.49355,-7.1054274E-15 71.514092,13.40721 78.58783,32.835907 L78.601921,32.875851 78.606697,33.699146 C78.751045,46.880795 79.750901,57.938259 74.791252,70.833366 71.949517,78.221863 71.476013,85.806236 66.791252,92.833389 63.52504,97.732704 63.135628,108.25565 57.19125,110.63341 L57.105202,110.82903 56.155869,111.37866 C50.915695,114.31195 45.154423,115.934 39.106888,115.934 33.059353,115.934 27.298083,114.31195 22.057911,111.37866 L21.697726,111.17014 21.593594,110.9334 C15.649205,108.55565 15.25979,98.032707 11.993572,93.133385 7.3087972,86.106232 6.8352874,78.521866 3.9935506,71.133362 -0.96611187,58.238258 0.033740907,47.180794 0.1780953,33.999146 L0.19350882,31.339085 0.59321561,30.336485 C8.0102952,12.26671 22.476172,-7.1054274E-15 39.106888,0 z" Fill="Black" HorizontalAlignment="Left" Height="115.934" Stretch="Fill" VerticalAlignment="Top" Width="78.785" Canvas.Left="54.474" RenderTransformOrigin="0.5,0.5">
                     <Path.RenderTransform>
                         <TransformGroup>
@@ -1726,6 +1781,16 @@
                 </Grid>
             </Canvas>
             <Grid x:Name="grid_animacion_nivel" Height="128" Width="171" RenderTransformOrigin="0.5,0.5" Margin="0,0,0,170.4" Visibility="Hidden">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="6*"/>
+                    <ColumnDefinition Width="23*"/>
+                    <ColumnDefinition Width="142*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition Height="15*"/>
+                    <RowDefinition Height="0*"/>
+                </Grid.RowDefinitions>
                 <Grid.RenderTransform>
                     <TransformGroup>
                         <ScaleTransform/>
@@ -1734,8 +1799,17 @@
                         <TranslateTransform/>
                     </TransformGroup>
                 </Grid.RenderTransform>
-                <Image x:Name="estrella_nivel" Source="Presentacion/Resources/estrella.png" Stretch="Fill" Margin="22.666,0,20.334,0"/>
-                <Label x:Name="lbl_subir_nivel" Content="" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontFamily="Comic Sans MS" FontWeight="Bold" FontSize="32" Margin="0,5,0,0" RenderTransformOrigin="0.5,0.5">
+                <Image x:Name="estrella_nivel" Source="Presentacion/Resources/estrella.png" Stretch="Fill" Margin="16.754,0,20.334,0" Grid.RowSpan="2" RenderTransformOrigin="0.5,0.5" Grid.ColumnSpan="2" Grid.Column="1">
+                    <Image.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Image.RenderTransform>
+                </Image>
+                <Label x:Name="lbl_subir_nivel" Content="1" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontFamily="Comic Sans MS" FontWeight="Bold" FontSize="32" Margin="0,5,0,0" RenderTransformOrigin="0.5,0.5" Grid.RowSpan="2" Grid.ColumnSpan="3">
                     <Label.RenderTransform>
                         <TransformGroup>
                             <ScaleTransform/>

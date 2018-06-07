@@ -1958,7 +1958,7 @@
         </Grid>
         <Border x:Name="border_fondo_registro" BorderBrush="Black" BorderThickness="1" Grid.Row="1" CornerRadius="20" Background="#FFC7D2DC" Margin="259,129,624.6,121.4" Grid.ColumnSpan="2"/>
         <Border x:Name="border_inicio_sesion" BorderThickness="1" CornerRadius="20" Grid.Column="1" Grid.Row="1" Margin="10,129,649.4,121.4">
-            <Grid x:Name="grid" Margin="-40.2,9,58,8.6" Background="#00000000">
+            <Grid x:Name="grid" Margin="-1,8.6,18.8,9" Background="#00000000">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="0.1*"/>
                     <RowDefinition Height="0.15*"/>
@@ -1974,15 +1974,16 @@
                     <ColumnDefinition Width="0.3*"/>
                     <ColumnDefinition Width="0.1*"/>
                 </Grid.ColumnDefinitions>
-                <Label x:Name="lblUsuario" Content="Usuario:" Grid.Column="1" Margin="0,10,39.449,10" Grid.Row="1" VerticalContentAlignment="Center" HorizontalContentAlignment="Right" FontFamily="Comic Sans MS" FontSize="16" Grid.ColumnSpan="2" Foreground="Black" HorizontalAlignment="Right"/>
-                <Label x:Name="lblPass" Content="Contraseña:" Grid.Column="1" Margin="0,10,39.45,10" Grid.Row="2" VerticalContentAlignment="Center" HorizontalContentAlignment="Right" FontFamily="Comic Sans MS" FontSize="16" HorizontalAlignment="Right" Foreground="Black" Grid.ColumnSpan="2" Width="107.104"/>
-                <TextBox x:Name="tb_inicio_usuario" Grid.Column="3" Margin="0,10,-52.829,10" Grid.Row="1" TextWrapping="Wrap" RenderTransformOrigin="0.511,0" VerticalContentAlignment="Center" FontFamily="Comic Sans MS" FontSize="16" Grid.ColumnSpan="2"/>
-                <PasswordBox x:Name="tb_inicio_contrasena" Grid.Column="3" Margin="0,10,-52.829,10" Grid.Row="2" FontFamily="Comic Sans MS" FontSize="16" VerticalContentAlignment="Center" Grid.ColumnSpan="2"/>
-                <Button x:Name="btn_autenticacion" Content="Iniciar Sesión" Grid.Column="3" Grid.Row="3" FontFamily="Comic Sans MS" FontSize="16" Click="autenticarse" Grid.ColumnSpan="2" Margin="0,48.835,-52.829,61.805" Background="#FF819CBE" Foreground="Black" FontWeight="Bold"/>
-                <Label x:Name="lblApp" Content="VENOMGOTCHI" Grid.Column="1" FontFamily="Comic Sans MS" FontSize="16" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Grid.ColumnSpan="2" Margin="23.378,0,10.144,0" Foreground="Black" HorizontalAlignment="Center" FontWeight="Bold"/>
-                <Image x:Name="venomLogo" Source="Presentacion/Resources/logo-venom.png" Grid.Column="3" Grid.Row="3" Grid.ColumnSpan="2" Margin="52.829,80.16,-52.829,0" Grid.RowSpan="3"/>
-                <Button x:Name="btn_registrarse" Content="Registrate" Grid.Column="1" Grid.Row="4" FontFamily="Comic Sans MS" FontSize="16" Click="animacion_registro" Grid.ColumnSpan="3" Margin="23.378,0,69.449,0" Background="#FF819CBE"/>
-                <Label x:Name="lbl_msg_inicio" Content="" Grid.Column="1" Margin="44.276,0,-52.829,120.24" Grid.Row="3" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontFamily="Comic Sans MS" FontSize="16" Foreground="#FF2CB938" Grid.ColumnSpan="4" FontWeight="Bold"/>
+                <Label x:Name="lblUsuario" Content="Usuario:" Grid.Column="1" Margin="0,10,77.103,10" Grid.Row="1" VerticalContentAlignment="Center" HorizontalContentAlignment="Right" FontFamily="Comic Sans MS" FontSize="16" Foreground="Black" HorizontalAlignment="Right" RenderTransformOrigin="-0.35,0.377" Grid.ColumnSpan="2"/>
+                <Label x:Name="lblPass" Content="Contraseña:" Margin="0,10,77.104,10" Grid.Row="2" VerticalContentAlignment="Center" HorizontalContentAlignment="Right" FontFamily="Comic Sans MS" FontSize="16" HorizontalAlignment="Right" Foreground="Black" Grid.ColumnSpan="3" Width="107.104"/>
+                <TextBox x:Name="tb_inicio_usuario" Grid.Column="2" Margin="44.275,10,0,10" Grid.Row="1" TextWrapping="Wrap" RenderTransformOrigin="0.511,0" VerticalContentAlignment="Center" FontFamily="Comic Sans MS" FontSize="16" Grid.ColumnSpan="3"/>
+                <PasswordBox x:Name="tb_inicio_contrasena" Grid.Column="2" Margin="44.275,10,0,10" Grid.Row="2" FontFamily="Comic Sans MS" FontSize="16" VerticalContentAlignment="Center" Grid.ColumnSpan="3"/>
+                <Button x:Name="btn_autenticacion" Content="Iniciar Sesión" Grid.Column="1" Grid.Row="3" FontFamily="Comic Sans MS" FontSize="16" Click="autenticarse" Grid.ColumnSpan="4" Margin="0,60.28,0,50.36" Background="#FF819CBE" Foreground="Black" FontWeight="Bold"/>
+                <Label x:Name="lblApp" Content="VENOMGOTCHI - Iniciar Sesión
+                       " FontFamily="Comic Sans MS" FontSize="16" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Grid.ColumnSpan="5" Margin="10,0,0,0" Foreground="Black" HorizontalAlignment="Center" FontWeight="Bold" Width="281.312"/>
+                <Button x:Name="btn_registrarse" Content="Registrate" Grid.Column="2" Grid.Row="4" FontFamily="Comic Sans MS" FontSize="16" Click="animacion_registro" Grid.ColumnSpan="3" Margin="78.675,10,10,30.08" Background="#FF819CBE" Grid.RowSpan="2"/>
+                <Label x:Name="lbl_msg_inicio" Content="" Margin="0,0,0,120.24" Grid.Row="3" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontFamily="Comic Sans MS" FontSize="16" Foreground="#FF2CB938" Grid.ColumnSpan="4" FontWeight="Bold" Grid.Column="1"/>
+                <Label x:Name="lblSinCuenta" Content="¿No tienes cuenta?" Margin="10,10,23.429,30.08" Grid.Row="4" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontFamily="Comic Sans MS" FontSize="16" Foreground="Black" Grid.ColumnSpan="3" FontWeight="Bold" Grid.RowSpan="2"/>
             </Grid>
         </Border>
         <Border x:Name="border_barra" Grid.Column="2" Grid.RowSpan="3" RenderTransformOrigin="0.5,0.5">
@@ -2218,7 +2219,7 @@
                 <Label x:Name="lbl_logro_desbloqueado" Content="Juega 5 veces" Grid.Column="1" Grid.Row="2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontFamily="Comic Sans MS" FontSize="22" FontWeight="Bold" FontStyle="Italic" Foreground="White"/>
             </Grid>
         </Border>
-        <Border x:Name="border_registro" BorderThickness="1" CornerRadius="20" Grid.Column="1" Grid.Row="1" Margin="0,129,500,121" Visibility="Hidden">
+        <Border x:Name="border_registro" BorderThickness="1" CornerRadius="20" Grid.Column="1" Grid.Row="1" Margin="10,129,649.4,121.4" Visibility="Hidden">
             <Grid Margin="9">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="0.1*"/>
@@ -2235,15 +2236,14 @@
                     <ColumnDefinition Width="0.4*"/>
 
                 </Grid.ColumnDefinitions>
-                <Label x:Name="label5" Content="Usuario:" Grid.Column="1" Margin="0,10,78.4,10" Grid.Row="1" VerticalContentAlignment="Center" HorizontalContentAlignment="Right" FontFamily="Comic Sans MS" FontSize="16" Foreground="Black" HorizontalAlignment="Right" RenderTransformOrigin="-0.429,0.442" FontWeight="Bold"/>
-                <Label x:Name="label3_Copy1" Content="Contraseña:" Grid.Column="1" Margin="0,0,78.4,20" Grid.Row="2" VerticalContentAlignment="Center" HorizontalContentAlignment="Right" FontFamily="Comic Sans MS" FontSize="16" FontWeight="Bold" Foreground="Black" HorizontalAlignment="Right"/>
-                <TextBox x:Name="tb_registro_usuario" Grid.Column="1" Margin="157.434,10,153.227,10" Grid.Row="1" TextWrapping="Wrap" RenderTransformOrigin="0.511,0" VerticalContentAlignment="Center" FontFamily="Comic Sans MS" FontSize="16" Grid.ColumnSpan="2"/>
-                <PasswordBox x:Name="tb_registro_contrasena" Grid.Column="1" Margin="157.434,10,153.227,10" Grid.Row="2" FontFamily="Comic Sans MS" FontSize="16" VerticalContentAlignment="Center" Grid.ColumnSpan="2"/>
-                <Label x:Name="label6" Content="VenomGotchi" Grid.Column="1" FontFamily="Comic Sans MS" FontSize="16" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="Black" Grid.ColumnSpan="2" Margin="131.207,0,148.227,0"/>
-                <Image x:Name="Batman_Logo_01_png1" Source="Presentacion/Resources/logo-venom.png" Grid.Column="1" Grid.Row="4" Grid.ColumnSpan="2" Margin="157.434,30.08,148.227,10" Grid.RowSpan="2"/>
-                <Button x:Name="btn_registrarse1" Content="Registrarme" Grid.Column="1" Grid.Row="3" FontFamily="Comic Sans MS" FontSize="16" Click="animacion_ir_inicio" Background="#FF639EB5" Margin="157.434,20.04,153.227,0" Grid.ColumnSpan="2"/>
+                <Label x:Name="label5" Content="Usuario:" Grid.Column="1" Margin="0,10,10,10" Grid.Row="1" VerticalContentAlignment="Center" HorizontalContentAlignment="Right" FontFamily="Comic Sans MS" FontSize="16" Foreground="Black" HorizontalAlignment="Right" RenderTransformOrigin="-0.429,0.442" Width="114.72"/>
+                <Label x:Name="label3_Copy1" Content="Contraseña:" Grid.Column="1" Margin="0,0,10,20" Grid.Row="2" VerticalContentAlignment="Center" HorizontalContentAlignment="Right" FontFamily="Comic Sans MS" FontSize="16" Foreground="Black" HorizontalAlignment="Right" Width="114.72"/>
+                <TextBox x:Name="tb_registro_usuario" Grid.Column="2" Margin="10" Grid.Row="1" TextWrapping="Wrap" RenderTransformOrigin="0.511,0" VerticalContentAlignment="Center" FontFamily="Comic Sans MS" FontSize="16"/>
+                <PasswordBox x:Name="tb_registro_contrasena" Grid.Column="2" Margin="10" Grid.Row="2" FontFamily="Comic Sans MS" FontSize="16" VerticalContentAlignment="Center"/>
+                <Label x:Name="label6" Content="VENOMGOTCHI - Registro" Grid.Column="1" FontFamily="Comic Sans MS" FontSize="16" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="Black" Margin="10,0,31.827,0" FontWeight="Bold" Grid.ColumnSpan="2" HorizontalAlignment="Left"/>
+                <Button x:Name="btn_registrarse1" Content="Registrarme" Grid.Column="1" Grid.Row="3" FontFamily="Comic Sans MS" FontSize="16" Click="animacion_ir_inicio" Background="#FF819CBE" Margin="9.9,39.24,10.1,67.7" Grid.ColumnSpan="2" Grid.RowSpan="2" FontWeight="Bold"/>
                 <Label x:Name="lbl_msg_registro" Content="" Margin="10,0,0,0" Grid.Row="6" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontFamily="Comic Sans MS" FontSize="16" Foreground="Red" Grid.ColumnSpan="5" FontWeight="Bold"/>
-                <Button x:Name="btn_atras" Content="Atrás" Grid.Column="1" Grid.Row="5" FontFamily="Comic Sans MS" FontSize="16" Click="volver_atras_registro" Background="#FF639EB5" Margin="0,0,56.4,0"/>
+                <Button x:Name="btn_atras" Content="Atrás" Grid.Column="1" Grid.Row="4" FontFamily="Comic Sans MS" FontSize="16" Click="volver_atras_registro" Background="#FF819CBE" Margin="10,73.595,10,26.505" Grid.RowSpan="2"/>
             </Grid>
         </Border>
         <Grid x:Name="grid_inferior" Margin="10" Grid.Row="2" Grid.ColumnSpan="3" RenderTransformOrigin="0.5,0.5" >

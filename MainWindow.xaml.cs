@@ -1586,6 +1586,8 @@ namespace MiAppVenom
                             btn_puzzle.IsEnabled = true;
                             btn_trofeo.IsEnabled = true;
                             cvVenom.IsEnabled = true;
+                MessageBox.Show("Si pulsas sobre el pecho de Venom reproducirá un espeluznante sonido...\n" +
+                    "y en cualquier otra parte de su cuerpo, se mostrarán los botones de acción.\n\n¡PRUÉBALO!", "SABÍAS QUE...");
                              usuario = tb_registro_usuario.Text.ToString();
                             inicializar_avatar();
                 

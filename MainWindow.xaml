@@ -759,6 +759,27 @@
                 <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="1"/>
             </DoubleAnimationUsingKeyFrames>
+            <BooleanAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.IsEnabled)" Storyboard.TargetName="grid_piezas">
+                <DiscreteBooleanKeyFrame KeyTime="0:0:0.5" Value="True"/>
+            </BooleanAnimationUsingKeyFrames>
+            <BooleanAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.IsEnabled)" Storyboard.TargetName="fondo">
+                <DiscreteBooleanKeyFrame KeyTime="0:0:0.5" Value="True"/>
+            </BooleanAnimationUsingKeyFrames>
+            <BooleanAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.IsEnabled)" Storyboard.TargetName="puzzle">
+                <DiscreteBooleanKeyFrame KeyTime="0:0:0.5" Value="True"/>
+            </BooleanAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="grid_tapete_puzzle">
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.5" Value="{x:Static Visibility.Visible}"/>
+            </ObjectAnimationUsingKeyFrames>
+            <BooleanAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.IsEnabled)" Storyboard.TargetName="grid_tapete_puzzle">
+                <DiscreteBooleanKeyFrame KeyTime="0:0:0.5" Value="True"/>
+            </BooleanAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="lbl_monedas_ganadas">
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.5" Value="{x:Static Visibility.Hidden}"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="lbl_derrota_victoria">
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.5" Value="{x:Static Visibility.Hidden}"/>
+            </ObjectAnimationUsingKeyFrames>
         </Storyboard>
         <Storyboard x:Key="cerrar_puzzle">
             <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="border_puzzle">
@@ -1030,7 +1051,7 @@
                 <DiscreteObjectKeyFrame KeyTime="0:0:1" Value="{x:Static Visibility.Visible}"/>
                 <DiscreteObjectKeyFrame KeyTime="0:0:3" Value="{x:Static Visibility.Visible}"/>
             </ObjectAnimationUsingKeyFrames>
-         
+
 
 
         </Storyboard>
@@ -1277,49 +1298,6 @@
                 <EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="0.931"/>
             </DoubleAnimationUsingKeyFrames>
         </Storyboard>
-        <Storyboard x:Key="ocultarResultado">
-            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="border_puzzle">
-                <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Visible}"/>
-                <DiscreteObjectKeyFrame KeyTime="0:0:1.6" Value="{x:Static Visibility.Hidden}"/>
-            </ObjectAnimationUsingKeyFrames>
-            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="lbl_monedas_ganadas">
-                <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Visible}"/>
-            </ObjectAnimationUsingKeyFrames>
-            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="lbl_derrota_victoria">
-                <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Visible}"/>
-            </ObjectAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="lbl_monedas_ganadas">
-                <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="0"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="lbl_derrota_victoria">
-                <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="0"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="border_puzzle">
-                <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="0"/>
-            </DoubleAnimationUsingKeyFrames>
-        </Storyboard>
-        <Storyboard x:Key="mostrarResultado">
-            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="border_puzzle">
-                <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Visible}"/>
-            </ObjectAnimationUsingKeyFrames>
-            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="lbl_monedas_ganadas">
-                <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Visible}"/>
-            </ObjectAnimationUsingKeyFrames>
-            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="lbl_derrota_victoria">
-                <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Visible}"/>
-            </ObjectAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="lbl_monedas_ganadas">
-                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="1"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="lbl_derrota_victoria">
-                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="1"/>
-            </DoubleAnimationUsingKeyFrames>
-        </Storyboard>
         <Storyboard x:Key="ocultarRegistro">
             <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="border_fondo_registro">
                 <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Visible}"/>
@@ -1397,6 +1375,57 @@
                 <EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="2.969"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:0.9" Value="-2.696"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:1.1" Value="2.644"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="ocultarResultado">
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="border_puzzle">
+                <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Visible}"/>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.5" Value="{x:Static Visibility.Hidden}"/>
+            </ObjectAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="border_puzzle">
+                <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="lbl_reloj">
+                <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Visible}"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="lbl_monedas_ganadas">
+                <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Visible}"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="lbl_derrota_victoria">
+                <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Visible}"/>
+            </ObjectAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="mostrarResultado">
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="border_puzzle">
+                <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Visible}"/>
+            </ObjectAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="border_puzzle">
+                <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="lbl_reloj">
+                <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Visible}"/>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.7" Value="{x:Static Visibility.Visible}"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="lbl_monedas_ganadas">
+                <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Visible}"/>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.7" Value="{x:Static Visibility.Visible}"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="lbl_derrota_victoria">
+                <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Visible}"/>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.7" Value="{x:Static Visibility.Visible}"/>
+            </ObjectAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="lbl_reloj">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.7" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="lbl_monedas_ganadas">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.7" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="lbl_derrota_victoria">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.7" Value="1"/>
             </DoubleAnimationUsingKeyFrames>
         </Storyboard>
 
@@ -2281,7 +2310,7 @@
             <Label x:Name="lblDiversion" Grid.ColumnSpan="3" Content="" Grid.Column="3" Margin="30.358,25,142.943,25" FontFamily="Comic Sans MS" FontSize="16" UseLayoutRounding="True" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontWeight="Bold" Foreground="White"/>
 
         </Grid>
-        <Border x:Name="border_puzzle" BorderBrush="Black" BorderThickness="1" CornerRadius="10" Visibility="Hidden" Grid.Column="1" Grid.Row="1">
+        <Border x:Name="border_puzzle" BorderBrush="Black" BorderThickness="1" CornerRadius="10" Grid.Column="1" Grid.Row="1" Visibility="Hidden">
             <Border.Background>
                 <ImageBrush ImageSource="Presentacion/Resources/madera.jpg"/>
             </Border.Background>
@@ -2292,11 +2321,11 @@
                     <RowDefinition Height="98*"/>
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="26*"/>
-                    <ColumnDefinition Width="159*"/>
-                    <ColumnDefinition Width="26*"/>
+                    <ColumnDefinition Width="95*"/>
+                    <ColumnDefinition Width="760*"/>
+                    <ColumnDefinition Width="96*"/>
                 </Grid.ColumnDefinitions>
-                <Grid x:Name="grid_piezas" Margin="10,10,0,10" Grid.Row="2" Grid.ColumnSpan="3">
+                <Grid x:Name="grid_piezas" Margin="0.005,10,0,10" Grid.Row="2" Grid.ColumnSpan="2" Grid.Column="1">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="1*"/>
                         <RowDefinition Height="1*"/>
@@ -2402,11 +2431,11 @@
                     <Image x:Name="pieza8" Source="Presentacion/Resources/pieza.png" AllowDrop="True" Drop="soltar_pieza" MouseDown="mover_pieza" Grid.Column="1" Grid.Row="2" MouseMove="moviendo_pieza"/>
                     <Image x:Name="pieza7" Source="Presentacion/Resources/pieza.png" AllowDrop="True" Drop="soltar_pieza" MouseDown="mover_pieza" Grid.Row="2" MouseMove="moviendo_pieza"/>
                     <Image x:Name="pieza5" Source="Presentacion/Resources/pieza.png" AllowDrop="True" Drop="soltar_pieza" MouseDown="mover_pieza" Grid.Column="1" Grid.Row="1" MouseMove="moviendo_pieza"/>
+                    <Image x:Name="pieza3" Source="Presentacion/Resources/pieza.png" AllowDrop="True" Drop="soltar_pieza" MouseDown="mover_pieza" Grid.Row="0" Grid.Column="2" MouseMove="moviendo_pieza"/>
                     <Image x:Name="pieza4" Source="Presentacion/Resources/pieza.png" AllowDrop="True" Drop="soltar_pieza" MouseDown="mover_pieza" Grid.Row="1" MouseMove="moviendo_pieza"/>
-                    <Image x:Name="pieza3" Source="Presentacion/Resources/pieza.png" AllowDrop="True" Drop="soltar_pieza" MouseDown="mover_pieza" Grid.Column="2" MouseMove="moviendo_pieza"/>
                     <Image x:Name="pieza2" Source="Presentacion/Resources/pieza.png" AllowDrop="True" Drop="soltar_pieza" MouseDown="mover_pieza" Grid.Column="1" MouseMove="moviendo_pieza"/>
                 </Grid>
-                <Image x:Name="red_cross_png1" Margin="20,0,0,0" Source="Presentacion/Resources/red_cross.png" Grid.Column="2" Height="22" HorizontalAlignment="Right" VerticalAlignment="Top" MouseUp="cerrar_puzzle"/>
+                <Image x:Name="red_cross_png1" Source="Presentacion/Resources/red_cross.png" Grid.Column="2" Height="22" HorizontalAlignment="Right" VerticalAlignment="Top" MouseUp="cerrar_puzzle" Width="22"/>
                 <Label x:Name="lbl_reloj" Content="" Grid.Column="1" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontFamily="Comic Sans MS" FontSize="32" FontWeight="Bold" Foreground="#FFD6000A"/>
                 <Label x:Name="lbl_monedas_ganadas" Content="Enhorabuena,&#xD;&#xA;¡ Has ganado!" Grid.Column="1" Margin="10" Grid.Row="2" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontFamily="Comic Sans MS" FontSize="48" Visibility="Hidden"/>
                 <Label x:Name="lbl_derrota_victoria" Content="Enhorabuena,&#xD;&#xA;¡ has ganado !" Grid.Column="1" Grid.Row="1" FontFamily="Comic Sans MS" FontSize="48" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Visibility="Hidden"/>

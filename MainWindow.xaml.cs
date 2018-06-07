@@ -1014,8 +1014,7 @@ namespace MiAppVenom
         {
             int devolver = 1;
 
-            if (cont >= tiempo_comienzo)
-            {
+         
                 if (!border_puzzle.IsEnabled)
                 {
                     border_puzzle.IsEnabled = true;
@@ -1155,16 +1154,7 @@ namespace MiAppVenom
 
 
                 }
-            }
-            else
-            {
-                if ((tiempo_comienzo - cont) < 4)
-                {
-                    lbl_cuenta_atras.Content = tiempo_comienzo - cont;
-                    devolver = 1;
-                }
-
-            }
+           
 
             if (fin_juego && cont >= prox)
             {
@@ -1173,10 +1163,15 @@ namespace MiAppVenom
                 grid_piezas.IsEnabled = true;
                 puzzle.IsEnabled = true;
                 restablecer_puzzle_metodo();
-                border_puzzle.IsEnabled = false;
                 puzzle_completado = false;
                 label_fin = false;
-                ((Storyboard)this.Resources["elegirDificultadPuzzle"]).Begin();
+
+                btn_trofeo.IsEnabled = true;
+                lbl_flecha_left.IsEnabled = true;
+                cvVenom.IsEnabled = true;
+                border_puzzle.IsEnabled = false;
+                estado_puzzle = false;
+
                 devolver = 1;
             }
 

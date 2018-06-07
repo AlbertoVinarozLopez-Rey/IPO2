@@ -650,30 +650,13 @@ namespace MiAppVenom
                     }
                     else
                     {
-                        logros += "%20" + ((Logro)this.Logros[key]).Id.ToString();
+                        logros += " " + ((Logro)this.Logros[key]).Id.ToString();
                     }
 
                 }
             }
             return logros;
         }
-
-        /*********************************************************************
-        *
-        * Method name: get_mejores_jugadores
-        *
-        * Description of the Method: Devuelve una lista con los mejores jugadores del juego
-        *
-        * Calling arguments: none
-        *
-        * Return value: List<Avatar>
-        *
-        *********************************************************************/
-        //     public List<Avatar> get_mejores_jugadores()
-        //   {
-        //     return this.gestor.get_mejores_jugadores();
-        // }
-
 
     }
 }

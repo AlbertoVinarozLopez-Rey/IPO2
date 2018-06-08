@@ -13,14 +13,12 @@ namespace MiAppVenom.Persistencia
         private String connString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\alber\Source\Repos\IPO2\bbddVenomGotchi.accdb";
 
         public GestorBD()
-        {
-
-        }
+        {}
 
 
         public void registrarUsuario(String usuario, String pass)
         {
-            Avatar av = new Avatar(usuario, 0, 0, 0, 100, 100, 100,"", 0, 0, 0);
+            Avatar nuevoAvatar = new Avatar(usuario, 0, 0, 0, 100, 100, 100,"", 0, 0, 0);
             try
             {
                 using (OleDbConnection connection = new OleDbConnection(connString))
@@ -32,12 +30,12 @@ namespace MiAppVenom.Persistencia
                     OleDbCommand command = new OleDbCommand(query, connection);
 
                     command.ExecuteNonQuery();
-                    insertarNuevoAvatar(av);
+                    insertarNuevoAvatar(nuevoAvatar);
                 }
             }
-            catch (Exception)
+            catch (Exception e1)
             {
-                throw;
+                e1.ToString();
             }
            
            
@@ -53,17 +51,17 @@ namespace MiAppVenom.Persistencia
                     connection.Open();
 
                     string query = @"INSERT INTO tb_avatar (usuario, nivel, puntos, monedas, apetito, energia, diversion, logros, monedasConseguidas, partidas, puzzles) VALUES ('" + av.Usuario + "', " + av.Nivel + "," +
-                    " " + av.Puntos_nivel + ", " + av.Monedas + ", " + av.Apetito + ", " + av.Energia + ", " + av.Diversion + ", '" + logros + "', " + av.Monedas_conseguidas + ", " + av.Partidas_jugadas + "," +
-                    " " + av.Puzzles_resueltos + ")";
+                    " " + av.puntosNivel + ", " + av.Monedas + ", " + av.Apetito + ", " + av.Energia + ", " + av.Diversion + ", '" + logros + "', " + av.MonedasTotales + ", " + av.PartidasPuzzle + "," +
+                    " " + av.PuzzlesResueltos + ")";
 
                     OleDbCommand command = new OleDbCommand(query, connection);
 
                     command.ExecuteNonQuery();
                 }
             }
-            catch (Exception)
+            catch (Exception e2)
             {
-                throw;
+                e2.ToString();
             }
          
 
@@ -91,9 +89,9 @@ namespace MiAppVenom.Persistencia
                     }
                 }
             }
-            catch (Exception)
+            catch (Exception e3)
             {
-                throw;
+                e3.ToString();
             }
            
             return av;
@@ -109,9 +107,9 @@ namespace MiAppVenom.Persistencia
                 {
                     connection.Open();
 
-                    string query = @"UPDATE tb_avatar SET nivel=" + av.Nivel + ", puntos=" + av.Puntos_nivel + ", monedas=" + av.Monedas + "," +
+                    string query = @"UPDATE tb_avatar SET nivel=" + av.Nivel + ", puntos=" + av.puntosNivel + ", monedas=" + av.Monedas + "," +
                     " apetito=" + av.Apetito + ", energia=" + av.Energia + ", diversion=" + av.Diversion + ", " +
-                    "logros='" + logros + "', monedasConseguidas=" + av.Monedas_conseguidas + ", partidas=" + av.Partidas_jugadas + ", puzzles=" + av.Puzzles_resueltos +
+                    "logros='" + logros + "', monedasConseguidas=" + av.MonedasTotales + ", partidas=" + av.PartidasPuzzle + ", puzzles=" + av.PuzzlesResueltos +
                     " WHERE usuario='" + av.Usuario + "'";
 
                     OleDbCommand command = new OleDbCommand(query, connection);
@@ -119,9 +117,9 @@ namespace MiAppVenom.Persistencia
                 }
                 
             }
-            catch (Exception)
+            catch (Exception e4)
             {
-                throw;
+                e4.ToString();
             }
 
         }
@@ -139,9 +137,9 @@ namespace MiAppVenom.Persistencia
 
                 }
             }
-            catch (Exception)
+            catch (Exception e5)
             {
-                throw;
+                e5.ToString();
             }
        
 
@@ -177,12 +175,45 @@ namespace MiAppVenom.Persistencia
                 e.ToString();
             }
 
-            return resultado;
-      
-                
+            return resultado;       
         }
 
-       
+        public Boolean usuaropExistente(String usuario) 
+        {
+            Boolean usuarioExiste = false;
 
-}
+            try
+            {
+                using (OleDbConnection connection = new OleDbConnection(connString))
+                {
+                    connection.Open();
+
+                    string query = @"SELECT usuario FROM tb_usuario WHERE usuario='" + usuario + "'";
+                    OleDbCommand command = new OleDbCommand(query, connection);
+                    OleDbDataReader reader = command.ExecuteReader();
+
+                    while (reader.Read())
+                    {
+                        if ((reader["usuario"].ToString()).Equals(usuario))
+                        {
+                            usuarioExiste=true;
+                        }
+
+                    }
+                }
+            }
+
+            catch (Exception e5)
+            {
+                e5.ToString();
+            }
+
+            return usuarioExiste;
+
+
+        }
+
+
+
+    }
 }

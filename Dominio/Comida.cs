@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MiAppVenom.Dominio
 {
-    public class Comida
+    class Comida
     {
         private String nombre;
         private int coste;

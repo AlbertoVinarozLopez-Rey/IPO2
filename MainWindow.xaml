@@ -139,29 +139,29 @@
             <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="lengua">
                 <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Hidden}"/>
             </ObjectAnimationUsingKeyFrames>
-            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="baba">
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="water_drop_png">
                 <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Hidden}"/>
                 <DiscreteObjectKeyFrame KeyTime="0:0:0.1" Value="{x:Static Visibility.Visible}"/>
             </ObjectAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="baba">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="water_drop_png">
                 <EasingDoubleKeyFrame KeyTime="0" Value="6.8"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:0.1" Value="5.4"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:2" Value="6.8"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:3" Value="8.2"/>
             </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="baba">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="water_drop_png">
                 <EasingDoubleKeyFrame KeyTime="0" Value="-21.2"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:0.1" Value="-27"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:2" Value="-23"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:3" Value="-18.2"/>
             </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="baba">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="water_drop_png">
                 <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:0.1" Value="0.403"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:2" Value="0.682"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:3" Value="0.961"/>
             </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="baba">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="water_drop_png">
                 <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:0.1" Value="0.207"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:2" Value="0.636"/>
@@ -388,34 +388,34 @@
 
         </Storyboard>
         <Storyboard x:Key="animJugarYoyo" AutoReverse="True">
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)" Storyboard.TargetName="telaIzquierda">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)" Storyboard.TargetName="telaraniaIzq">
                 <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="-38.367"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:1.3" Value="12.184"/>
             </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="telaIzquierda">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="telaraniaIzq">
                 <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="7.585"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:1.3" Value="-4.015"/>
             </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="telaIzquierda">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="telaraniaIzq">
                 <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="6.259"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:1.3" Value="0.659"/>
             </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="brazoIzquierdo">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="brazoIzq">
                 <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="-1.6"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:1.3" Value="1.2"/>
             </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="brazoIzquierdo">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="brazoIzq">
                 <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="-27.2"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:1.3" Value="2"/>
             </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)" Storyboard.TargetName="brazoIzquierdo">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)" Storyboard.TargetName="brazoIzq">
                 <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="-23.411"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:1.3" Value="0.392"/>
             </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="baseYoyo">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="cir_yoyo">
                 <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="1"/>
             </DoubleAnimationUsingKeyFrames>
-            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="baseYoyo">
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="cir_yoyo">
                 <DiscreteObjectKeyFrame KeyTime="0:0:0.5" Value="{x:Static Visibility.Visible}"/>
             </ObjectAnimationUsingKeyFrames>
             <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="hilo">
@@ -424,14 +424,14 @@
             <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="hilo">
                 <DiscreteObjectKeyFrame KeyTime="0:0:0.5" Value="{x:Static Visibility.Visible}"/>
             </ObjectAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="baseYoyo">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="cir_yoyo">
                 <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="-6"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:1.3" Value="-53.2"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:3" Value="-53.6"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:4.5" Value="-54"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:6" Value="-53.6"/>
             </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="baseYoyo">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="cir_yoyo">
                 <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="16.8"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:1.3" Value="25.6"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:3" Value="68"/>
@@ -466,7 +466,7 @@
             </DoubleAnimationUsingKeyFrames>
         </Storyboard>
         <Storyboard x:Key="animTelaraña" AutoReverse="True">
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)" Storyboard.TargetName="brazoDerecho">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)" Storyboard.TargetName="brazoDer">
                 <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="34.592"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:0.7" Value="51.108"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:1" Value="77.028"/>
@@ -475,7 +475,7 @@
                 <EasingDoubleKeyFrame KeyTime="0:0:1.9" Value="155.572"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:2.2" Value="180.852"/>
             </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="brazoDerecho">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="brazoDer">
                 <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="-1.137"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="5.158"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:0.7" Value="20.758"/>
@@ -487,7 +487,7 @@
                 <EasingDoubleKeyFrame KeyTime="0:0:1.9" Value="119.758"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:2.2" Value="130.558"/>
             </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="brazoDerecho">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="brazoDer">
                 <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="-17.71"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="-42.274"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:0.7" Value="-61.074"/>
@@ -499,13 +499,13 @@
                 <EasingDoubleKeyFrame KeyTime="0:0:1.9" Value="-47.074"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:2.2" Value="-16.274"/>
             </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="brazoDerecho">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="brazoDer">
                 <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="-1.035"/>
             </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="brazoDerecho">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="brazoDer">
                 <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="0.983"/>
             </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="telaDerecha">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="telaraniaDer">
                 <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="-16.815"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="-29.215"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:0.7" Value="-38.815"/>
@@ -517,7 +517,7 @@
                 <EasingDoubleKeyFrame KeyTime="0:0:1.9" Value="-46.815"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:2.2" Value="-35.215"/>
             </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="telaDerecha">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="telaraniaDer">
                 <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="-0.941"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="-1.341"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:0.7" Value="-9.741"/>
@@ -529,7 +529,7 @@
                 <EasingDoubleKeyFrame KeyTime="0:0:1.9" Value="-74.941"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:2.2" Value="-82.541"/>
             </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)" Storyboard.TargetName="telaDerecha">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)" Storyboard.TargetName="telaraniaDer">
                 <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="-12.828"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="28.448"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:0.7" Value="28.448"/>
@@ -684,66 +684,66 @@
 
         </Storyboard>
         <Storyboard x:Key="animSaciado" AutoReverse="True">
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)" Storyboard.TargetName="brazoIzquierdo">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)" Storyboard.TargetName="brazoIzq">
                 <EasingDoubleKeyFrame KeyTime="0:0:1" Value="-45.706"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="-58.318"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:2" Value="-37.814"/>
             </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="brazoIzquierdo">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="brazoIzq">
                 <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="-2.4"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:1" Value="-16"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="-28"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:2" Value="-10"/>
             </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="brazoIzquierdo">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="brazoIzq">
                 <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="-28.6"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:1" Value="-54.8"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="-66.4"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:2" Value="-45.6"/>
             </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)" Storyboard.TargetName="telaIzquierda">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)" Storyboard.TargetName="telaraniaIzq">
                 <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="-19.716"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:1" Value="-44.37"/>
             </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="telaIzquierda">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="telaraniaIzq">
                 <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="9.185"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:1" Value="26.385"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="34.785"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:2" Value="18.785"/>
             </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="telaIzquierda">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="telaraniaIzq">
                 <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="-1.341"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:1" Value="-6.141"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="-11.741"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:2" Value="-0.941"/>
             </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)" Storyboard.TargetName="brazoDerecho">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)" Storyboard.TargetName="brazoDer">
                 <EasingDoubleKeyFrame KeyTime="0:0:1" Value="42.416"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="52.814"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:2" Value="34.358"/>
             </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="brazoDerecho">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="brazoDer">
                 <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="1.8"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:1" Value="12.4"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="22.8"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:2" Value="7.6"/>
             </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="brazoDerecho">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="brazoDer">
                 <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="-28.2"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:1" Value="-57.2"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="-66"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:2" Value="-42.4"/>
             </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)" Storyboard.TargetName="telaDerecha">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)" Storyboard.TargetName="telaraniaDer">
                 <EasingDoubleKeyFrame KeyTime="0:0:1" Value="41.634"/>
             </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="telaDerecha">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="telaraniaDer">
                 <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="-20.815"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:1" Value="-30.415"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="-42.015"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:2" Value="-26.415"/>
             </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="telaDerecha">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="telaraniaDer">
                 <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="-1.741"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:1" Value="-12.541"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="-11.741"/>
@@ -751,15 +751,15 @@
             </DoubleAnimationUsingKeyFrames>
         </Storyboard>
         <Storyboard x:Key="abrir_puzzle">
-            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="borderPuzzle">
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="border_puzzle">
                 <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Visible}"/>
                 <DiscreteObjectKeyFrame KeyTime="0:0:0.5" Value="{x:Static Visibility.Visible}"/>
             </ObjectAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="borderPuzzle">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="border_puzzle">
                 <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="1"/>
             </DoubleAnimationUsingKeyFrames>
-            <BooleanAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.IsEnabled)" Storyboard.TargetName="gridPiezas">
+            <BooleanAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.IsEnabled)" Storyboard.TargetName="grid_piezas">
                 <DiscreteBooleanKeyFrame KeyTime="0:0:0.5" Value="True"/>
             </BooleanAnimationUsingKeyFrames>
             <BooleanAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.IsEnabled)" Storyboard.TargetName="fondo">
@@ -768,25 +768,25 @@
             <BooleanAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.IsEnabled)" Storyboard.TargetName="puzzle">
                 <DiscreteBooleanKeyFrame KeyTime="0:0:0.5" Value="True"/>
             </BooleanAnimationUsingKeyFrames>
-            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="gridFondoPuzzle">
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="grid_tapete_puzzle">
                 <DiscreteObjectKeyFrame KeyTime="0:0:0.5" Value="{x:Static Visibility.Visible}"/>
             </ObjectAnimationUsingKeyFrames>
-            <BooleanAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.IsEnabled)" Storyboard.TargetName="gridFondoPuzzle">
+            <BooleanAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.IsEnabled)" Storyboard.TargetName="grid_tapete_puzzle">
                 <DiscreteBooleanKeyFrame KeyTime="0:0:0.5" Value="True"/>
             </BooleanAnimationUsingKeyFrames>
-            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="lblMonedasGanadas">
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="lbl_monedas_ganadas">
                 <DiscreteObjectKeyFrame KeyTime="0:0:0.5" Value="{x:Static Visibility.Hidden}"/>
             </ObjectAnimationUsingKeyFrames>
-            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="lblResultado">
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="lbl_derrota_victoria">
                 <DiscreteObjectKeyFrame KeyTime="0:0:0.5" Value="{x:Static Visibility.Hidden}"/>
             </ObjectAnimationUsingKeyFrames>
         </Storyboard>
         <Storyboard x:Key="cerrar_puzzle">
-            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="borderPuzzle">
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="border_puzzle">
                 <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Visible}"/>
                 <DiscreteObjectKeyFrame KeyTime="0:0:0.5" Value="{x:Static Visibility.Hidden}"/>
             </ObjectAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="borderPuzzle">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="border_puzzle">
                 <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="0"/>
             </DoubleAnimationUsingKeyFrames>
@@ -883,7 +883,7 @@
             </ObjectAnimationUsingKeyFrames>
         </Storyboard>
         <Storyboard x:Key="cerrarBarra">
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="gridBarraLateral">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="grid_barra">
                 <EasingDoubleKeyFrame KeyTime="0:0:0.7" Value="143.867"/>
             </DoubleAnimationUsingKeyFrames>
             <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="lbl_flecha_right">
@@ -895,7 +895,7 @@
 
         </Storyboard>
         <Storyboard x:Key="abrirBarra">
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="gridBarraLateral">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="grid_barra">
                 <EasingDoubleKeyFrame KeyTime="0" Value="144"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="2.933"/>
             </DoubleAnimationUsingKeyFrames>
@@ -911,112 +911,112 @@
 
         </Storyboard>
         <Storyboard x:Key="ocultarAutenticacion">
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="borderAutenticacion">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="border_inicio_sesion">
                 <EasingDoubleKeyFrame KeyTime="0:0:0.9" Value="1"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="0"/>
             </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="borderFondoAutenticacion">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="border_fondo_registro">
                 <EasingDoubleKeyFrame KeyTime="0:0:0.9" Value="1"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="0"/>
             </DoubleAnimationUsingKeyFrames>
-            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="borderFondoAutenticacion">
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="border_fondo_registro">
                 <DiscreteObjectKeyFrame KeyTime="0:0:0.9" Value="{x:Static Visibility.Visible}"/>
                 <DiscreteObjectKeyFrame KeyTime="0:0:1.6" Value="{x:Static Visibility.Hidden}"/>
             </ObjectAnimationUsingKeyFrames>
-            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="borderAutenticacion">
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="border_inicio_sesion">
                 <DiscreteObjectKeyFrame KeyTime="0:0:0.9" Value="{x:Static Visibility.Visible}"/>
                 <DiscreteObjectKeyFrame KeyTime="0:0:1.6" Value="{x:Static Visibility.Hidden}"/>
             </ObjectAnimationUsingKeyFrames>
-            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="gridAutenticacion">
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="grid">
                 <DiscreteObjectKeyFrame KeyTime="0:0:1" Value="{x:Static Visibility.Visible}"/>
             </ObjectAnimationUsingKeyFrames>
         </Storyboard>
         <Storyboard x:Key="mostrarLogros">
-            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="borderVerLogros">
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="border_logros">
                 <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Visible}"/>
                 <DiscreteObjectKeyFrame KeyTime="0:0:0.5" Value="{x:Static Visibility.Visible}"/>
             </ObjectAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="borderVerLogros">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="border_logros">
                 <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="1"/>
             </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="borderFondoVerLogros">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="border_logros_base">
                 <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="1"/>
             </DoubleAnimationUsingKeyFrames>
-            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="borderFondoVerLogros">
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="border_logros_base">
                 <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Visible}"/>
                 <DiscreteObjectKeyFrame KeyTime="0:0:0.5" Value="{x:Static Visibility.Visible}"/>
             </ObjectAnimationUsingKeyFrames>
         </Storyboard>
         <Storyboard x:Key="cerrarLogros">
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="borderFondoVerLogros">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="border_logros_base">
                 <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="0"/>
             </DoubleAnimationUsingKeyFrames>
-            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="borderFondoVerLogros">
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="border_logros_base">
                 <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Visible}"/>
                 <DiscreteObjectKeyFrame KeyTime="0:0:0.5" Value="{x:Static Visibility.Hidden}"/>
             </ObjectAnimationUsingKeyFrames>
-            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="borderVerLogros">
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="border_logros">
                 <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Visible}"/>
                 <DiscreteObjectKeyFrame KeyTime="0:0:0.5" Value="{x:Static Visibility.Hidden}"/>
             </ObjectAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="borderVerLogros">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="border_logros">
                 <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="0"/>
             </DoubleAnimationUsingKeyFrames>
         </Storyboard>
         <Storyboard x:Key="elegirDificultadPuzzle">
-            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="borderElegirDificultad">
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="border_elegir_dificultad">
                 <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Visible}"/>
                 <DiscreteObjectKeyFrame KeyTime="0:0:0.6" Value="{x:Static Visibility.Visible}"/>
             </ObjectAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="borderElegirDificultad">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="border_elegir_dificultad">
                 <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="1"/>
             </DoubleAnimationUsingKeyFrames>
-            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Panel.Background).(SolidColorBrush.Color)" Storyboard.TargetName="borderElegirDificultad">
+            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Panel.Background).(SolidColorBrush.Color)" Storyboard.TargetName="border_elegir_dificultad">
                 <EasingColorKeyFrame KeyTime="0" Value="Black"/>
                 <EasingColorKeyFrame KeyTime="0:0:0.6" Value="Black"/>
             </ColorAnimationUsingKeyFrames>
         </Storyboard>
         <Storyboard x:Key="ocultarElegirDificultad">
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="borderElegirDificultad">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="border_elegir_dificultad">
                 <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="0"/>
             </DoubleAnimationUsingKeyFrames>
-            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="borderElegirDificultad">
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="border_elegir_dificultad">
                 <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Visible}"/>
                 <DiscreteObjectKeyFrame KeyTime="0:0:0.5" Value="{x:Static Visibility.Hidden}"/>
             </ObjectAnimationUsingKeyFrames>
         </Storyboard>
         <Storyboard x:Key="inicio_registro">
-            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="borderElegirDificultad">
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="border_elegir_dificultad">
                 <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Hidden}"/>
             </ObjectAnimationUsingKeyFrames>
-            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="borderRegistro">
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="border_registro">
                 <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Visible}"/>
                 <DiscreteObjectKeyFrame KeyTime="0:0:1" Value="{x:Static Visibility.Visible}"/>
             </ObjectAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="borderAutenticacion">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="border_inicio_sesion">
                 <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="0"/>
             </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="borderRegistro">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="border_registro">
                 <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="0"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:1" Value="1"/>
             </DoubleAnimationUsingKeyFrames>
         </Storyboard>
         <Storyboard x:Key="volverAutenticacion">
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="borderAutenticacion">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="border_inicio_sesion">
                 <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="0"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:1" Value="1"/>
             </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="borderRegistro">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="border_registro">
                 <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="0"/>
             </DoubleAnimationUsingKeyFrames>
-            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="borderRegistro">
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="border_registro">
                 <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Visible}"/>
                 <DiscreteObjectKeyFrame KeyTime="0:0:0.5" Value="{x:Static Visibility.Hidden}"/>
             </ObjectAnimationUsingKeyFrames>
@@ -1037,16 +1037,16 @@
             </ObjectAnimationUsingKeyFrames>
         </Storyboard>
         <Storyboard x:Key="notificacion_logro" AutoReverse="True">
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="borderNotificacionLogro">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="notificacion_logros">
                 <EasingDoubleKeyFrame KeyTime="0" Value="-131.2"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:1" Value="45.2"/>
             </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="borderNotificacionLogro">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="notificacion_logros">
                 <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:1" Value="1"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:3" Value="0.99"/>
             </DoubleAnimationUsingKeyFrames>
-            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="borderNotificacionLogro">
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="notificacion_logros">
                 <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Visible}"/>
                 <DiscreteObjectKeyFrame KeyTime="0:0:1" Value="{x:Static Visibility.Visible}"/>
                 <DiscreteObjectKeyFrame KeyTime="0:0:3" Value="{x:Static Visibility.Visible}"/>
@@ -1073,63 +1073,63 @@
             </DoubleAnimationUsingKeyFrames>
         </Storyboard>
         <Storyboard x:Key="subirNivel" AutoReverse="True">
-            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="gridSubirNivel">
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="grid_animacion_nivel">
                 <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Visible}"/>
             </ObjectAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="gridSubirNivel">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="grid_animacion_nivel">
                 <EasingDoubleKeyFrame KeyTime="0" Value="385.2"/>
 
             </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="gridSubirNivel">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="grid_animacion_nivel">
                 <EasingDoubleKeyFrame KeyTime="0" Value="-190.2"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="-89.831"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:1.3" Value="89"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:2.2" Value="85.615"/>
             </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="gridSubirNivel">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="grid_animacion_nivel">
                 <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:1.3" Value="1"/>
             </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="gridSubirNivel">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="grid_animacion_nivel">
                 <EasingDoubleKeyFrame KeyTime="0:0:1.3" Value="1"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:2.2" Value="1.248"/>
             </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="gridSubirNivel">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="grid_animacion_nivel">
                 <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="1.288"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:1.3" Value="1.462"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:2.2" Value="1.8"/>
             </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="imagEstrella">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="estrella_nivel">
                 <EasingDoubleKeyFrame KeyTime="0:0:0.9" Value="0.619"/>
             </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="imagEstrella">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="estrella_nivel">
                 <EasingDoubleKeyFrame KeyTime="0:0:0.9" Value="-24.4"/>
             </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="imagEstrella">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="estrella_nivel">
                 <EasingDoubleKeyFrame KeyTime="0:0:0.9" Value="0.975"/>
             </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="imagEstrella">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="estrella_nivel">
                 <EasingDoubleKeyFrame KeyTime="0:0:0.9" Value="-1.6"/>
             </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="lblNumeroNivel">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="lbl_subir_nivel">
                 <EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="0.782"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:0.9" Value="0.634"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:1.3" Value="0.613"/>
             </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="lblNumeroNivel">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="lbl_subir_nivel">
                 <EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="-13.438"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:0.9" Value="-22.548"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:1.3" Value="-23.835"/>
             </DoubleAnimationUsingKeyFrames>
         </Storyboard>
         <Storyboard x:Key="valorComida" AutoReverse="True">
-            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="gridInfoAlimentacion">
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="grid_info_comida">
                 <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Hidden}"/>
                 <DiscreteObjectKeyFrame KeyTime="0:0:0.1" Value="{x:Static Visibility.Visible}"/>
                 <DiscreteObjectKeyFrame KeyTime="0:0:1.5" Value="{x:Static Visibility.Visible}"/>
             </ObjectAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="gridInfoAlimentacion">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="grid_info_comida">
                 <EasingDoubleKeyFrame KeyTime="0" Value="0.015"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="1"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:3" Value="1"/>
@@ -1299,36 +1299,36 @@
             </DoubleAnimationUsingKeyFrames>
         </Storyboard>
         <Storyboard x:Key="ocultarRegistro">
-            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="borderFondoAutenticacion">
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="border_fondo_registro">
                 <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Visible}"/>
                 <DiscreteObjectKeyFrame KeyTime="0:0:1" Value="{x:Static Visibility.Hidden}"/>
             </ObjectAnimationUsingKeyFrames>
-            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="borderAutenticacion">
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="border_inicio_sesion">
                 <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Hidden}"/>
                 <DiscreteObjectKeyFrame KeyTime="0:0:1" Value="{x:Static Visibility.Hidden}"/>
             </ObjectAnimationUsingKeyFrames>
-            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="borderRegistro">
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="border_registro">
                 <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Visible}"/>
                 <DiscreteObjectKeyFrame KeyTime="0:0:1" Value="{x:Static Visibility.Hidden}"/>
             </ObjectAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="borderRegistro">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="border_registro">
                 <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:1" Value="0"/>
             </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="borderFondoAutenticacion">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="border_fondo_registro">
                 <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:1" Value="0"/>
             </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="borderAutenticacion">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="border_inicio_sesion">
                 <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:1" Value="0"/>
             </DoubleAnimationUsingKeyFrames>
         </Storyboard>
         <Storyboard x:Key="hablar" AutoReverse="True">
-            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="borderFondoAutenticacion">
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="border_fondo_registro">
                 <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Hidden}"/>
             </ObjectAnimationUsingKeyFrames>
-            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="borderAutenticacion">
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="border_inicio_sesion">
                 <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Hidden}"/>
             </ObjectAnimationUsingKeyFrames>
             <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="lengua">
@@ -1378,52 +1378,52 @@
             </DoubleAnimationUsingKeyFrames>
         </Storyboard>
         <Storyboard x:Key="ocultarResultado">
-            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="borderPuzzle">
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="border_puzzle">
                 <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Visible}"/>
                 <DiscreteObjectKeyFrame KeyTime="0:0:0.5" Value="{x:Static Visibility.Hidden}"/>
             </ObjectAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="borderPuzzle">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="border_puzzle">
                 <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="0"/>
             </DoubleAnimationUsingKeyFrames>
-            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="lblTiempo">
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="lbl_reloj">
                 <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Visible}"/>
             </ObjectAnimationUsingKeyFrames>
-            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="lblMonedasGanadas">
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="lbl_monedas_ganadas">
                 <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Visible}"/>
             </ObjectAnimationUsingKeyFrames>
-            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="lblResultado">
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="lbl_derrota_victoria">
                 <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Visible}"/>
             </ObjectAnimationUsingKeyFrames>
         </Storyboard>
         <Storyboard x:Key="mostrarResultado">
-            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="borderPuzzle">
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="border_puzzle">
                 <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Visible}"/>
             </ObjectAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="borderPuzzle">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="border_puzzle">
                 <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
             </DoubleAnimationUsingKeyFrames>
-            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="lblTiempo">
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="lbl_reloj">
                 <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Visible}"/>
                 <DiscreteObjectKeyFrame KeyTime="0:0:0.7" Value="{x:Static Visibility.Visible}"/>
             </ObjectAnimationUsingKeyFrames>
-            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="lblMonedasGanadas">
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="lbl_monedas_ganadas">
                 <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Visible}"/>
                 <DiscreteObjectKeyFrame KeyTime="0:0:0.7" Value="{x:Static Visibility.Visible}"/>
             </ObjectAnimationUsingKeyFrames>
-            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="lblResultado">
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="lbl_derrota_victoria">
                 <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Visible}"/>
                 <DiscreteObjectKeyFrame KeyTime="0:0:0.7" Value="{x:Static Visibility.Visible}"/>
             </ObjectAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="lblTiempo">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="lbl_reloj">
                 <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:0.7" Value="1"/>
             </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="lblMonedasGanadas">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="lbl_monedas_ganadas">
                 <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:0.7" Value="1"/>
             </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="lblResultado">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="lbl_derrota_victoria">
                 <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:0.7" Value="1"/>
             </DoubleAnimationUsingKeyFrames>
@@ -1450,7 +1450,7 @@
             <RowDefinition Height="100"/>
         </Grid.RowDefinitions>
 
-        <DockPanel x:Name="dockCentral"  Grid.Column="1" LastChildFill="False" Margin="-5,-4.333,5,4.333" Grid.RowSpan="2">
+        <DockPanel x:Name="DockCentral"  Grid.Column="1" LastChildFill="False" Margin="-5,-4.333,5,4.333" Grid.RowSpan="2">
             <Canvas x:Name="cvVenom" Margin="376.956,0,404.556,0" Width="189" VerticalAlignment="Bottom" Height="472.4" HorizontalAlignment="Center" DockPanel.Dock="Bottom" RenderTransformOrigin="0.5,0.5">
                 <Canvas.RenderTransform>
                     <TransformGroup>
@@ -1536,7 +1536,7 @@
                         </TransformGroup>
                     </Path.RenderTransform>
                 </Path>
-                <Path x:Name="brazoDerecho" MouseDown="mostrar_botones" HorizontalAlignment="Left" VerticalAlignment="Top" Data="M5.1751814,70.435661 L5.2052455,70.508705 C5.3010292,70.764107 5.3509598,71.020515 5.3509608,71.25161 5.2969017,70.927315 5.2399025,70.704033 5.1944924,70.516975 z M17.679184,0 L19.337257,0.3826828 C22.592135,1.0487289 25.962219,1.3985062 29.413998,1.3985062 32.002834,1.3985062 34.545715,1.2017593 37.028507,0.82239532 L38.561237,0.54867554 38.308258,0.86647797 C37.709717,1.586731 37.020447,2.1928787 35.720402,2.1210632 35.84811,8.923996 37.074131,11.821991 34.588589,18.443069 32.584198,23.782417 31.030741,29.751221 27.929054,34.502609 25.905153,37.602913 25.364347,40.200287 25.24741,42.25441 L25.243855,42.345619 25.247263,42.345367 25.242161,42.389076 25.224003,42.854309 C25.185526,44.604889 25.404594,45.91214 25.109043,46.746727 L25.073422,46.824989 25.018648,47.694046 C24.912632,48.966393 25.39884,49.684265 27.018553,50.494209 27.141453,50.555679 27.309792,50.608978 27.511501,50.650208 L27.710785,50.684967 28.005989,50.985573 C28.983206,51.967125 29.962595,52.898125 30.78709,54.134872 32.688923,54.895607 33.75272,56.066185 34.787041,58.134819 39.999157,60.219658 43.283436,64.511192 36.920349,73.60128 35.570942,71.577171 36.001267,66.654716 34.520386,65.068031 33.890156,64.392815 31.490637,63.879799 29.50914,63.40374 L29.32206,63.358467 29.325687,63.383446 C29.331177,63.442039 29.334003,63.503639 29.334009,63.568352 29.231762,63.585396 29.032887,63.568932 28.82242,63.542427 L28.66354,63.520638 28.634749,63.598763 C28.515772,63.886925 28.276463,64.185738 27.880201,64.492531 L27.84549,64.518333 27.83255,64.562096 C27.50412,65.609077 26.963131,65.794579 25.800873,67.168159 25.676485,67.315163 24.940207,68.66906 24.448706,68.758064 L24.428495,68.759193 24.39007,68.986061 C24.100832,70.723335 23.835838,72.511665 23.608177,74.268715 L23.481358,75.277229 23.517214,75.430489 C24.019344,77.600853 24.181768,79.056389 22.950876,81.517464 22.933292,81.447136 22.918205,81.376701 22.905319,81.306175 L22.903889,81.296822 22.879921,81.68644 C22.819597,82.721031 22.787186,83.679771 22.787182,84.534447 22.422487,83.440376 22.054577,82.39576 21.693352,81.381264 L21.664503,81.300377 21.625065,81.336739 C21.527897,81.408577 21.39588,81.42318 21.217428,81.384926 20.337984,81.196434 20.90793,80.66317 20.417549,80.118172 19.401032,78.988441 20.082867,77.74073 19.551008,76.251198 19.394863,75.813881 19.388104,75.323128 19.429905,74.821022 L19.443689,74.676628 19.34516,74.329857 C18.733091,72.121773 18.275303,69.831093 18.084665,67.23748 L18.073309,67.060585 18.068653,67.055443 C17.830833,66.810616 17.559139,66.601051 17.288872,66.454216 L17.213268,66.415321 17.166452,66.553322 C16.667864,68.093834 16.390648,69.757607 16.295507,71.483696 L16.27861,71.883354 16.368376,72.306129 C17.038853,75.329964 18.014799,78.418098 17.508709,81.485176 L17.476805,81.657143 17.509838,81.785149 C17.734463,82.628136 17.98398,83.458 18.253908,84.267784 17.274031,82.308067 15.547793,78.270851 13.98729,77.334557 13.987294,75.532097 13.724799,73.671776 13.396679,71.777534 L13.276547,71.100838 13.196682,71.046516 C12.963664,70.87281 12.754225,70.650703 12.467121,70.268089 12.004695,69.651817 11.415568,68.907677 11.885737,67.966759 L11.915665,67.910835 11.890661,67.822243 C11.625178,66.862434 11.218974,65.01783 11.759118,64.478996 L11.759519,64.478661 11.734979,64.461494 C11.350493,64.19976 10.971589,63.989052 10.616978,63.918144 10.651935,63.86573 10.691289,63.805016 10.734621,63.738441 L10.799549,63.639076 10.764723,63.6343 10.711326,63.721138 C10.598191,63.91967 10.498412,64.125145 10.410873,64.337074 L10.355907,64.477989 10.474587,64.933174 C10.569755,65.306419 10.65152,65.68029 10.66769,66.068352 10.679315,66.347389 10.679518,66.572411 10.663389,66.775368 L10.656117,66.8498 10.850997,67.434273 10.755377,67.529884 10.701689,67.240166 10.644334,66.941689 10.615676,67.123772 10.57523,67.291542 10.578893,67.372993 C10.582423,67.474342 10.584246,67.583534 10.584251,67.700951 L10.755377,67.529884 10.809687,67.82296 C11.255263,70.303215 11.397241,72.227043 10.748275,74.823006 L10.743298,74.842201 10.750391,74.892082 C10.924098,76.160286 11.053981,77.431206 11.053981,78.667854 10.876216,78.667854 10.698422,78.667854 10.520661,78.667854 9.1955424,75.355034 7.3206864,73.422295 7.3206873,69.06797 7.3206864,68.942024 7.3199349,68.81739 7.3185382,68.693977 L7.3139449,68.426491 7.3159252,68.690926 C7.3186112,69.072975 7.3206864,69.464714 7.3206873,69.867989 7.2404671,69.386665 7.1241761,68.900581 6.9811349,68.4105 L6.8785162,68.077904 6.7704111,67.986977 C5.7103119,67.079079 5.2998352,66.311821 5.0007482,64.068367 4.9878731,63.971794 5.0081253,63.856499 5.0573993,63.738792 L5.1061798,63.640984 4.7877856,62.897758 C4.6451226,62.558617 4.5057488,62.219009 4.3724308,61.879135 L4.212915,61.462196 4.1337543,61.704399 C3.8312335,62.715439 3.8519969,63.691139 4.1508265,65.185066 4.4570656,66.716087 5.6006928,67.394676 5.2176142,69.118324 5.0658989,69.800941 5.0883446,70.058235 5.1687465,70.408562 L5.1751814,70.435661 5.1423045,70.355797 C4.9143868,69.847923 4.5063363,69.365181 3.9508064,69.118324 3.1744895,68.773338 3.0681928,68.435204 3.0364185,67.921501 L3.0310593,67.811104 2.9366477,67.697792 2.9198394,67.698845 C2.8947156,67.70002 2.87145,67.700661 2.8503242,67.700661 L2.8302708,67.570137 2.7173603,67.434639 C2.7173627,67.345161 2.7182784,67.254112 2.7199848,67.161644 L2.7210114,67.122353 2.7213972,67.123039 2.7848282,67.2342 2.7441473,66.781776 2.7372165,66.630196 2.7273593,66.880165 2.7210114,67.122353 2.6344529,66.968849 C1.3344783,64.652382 -1.0193444,59.966179 0.48609088,59.37793 L0.56360434,59.353905 0.47591488,59.06617 C-0.001365907,57.377548 -0.026172881,55.296326 2.9095359,54.283478 L2.9486392,54.270576 3.0234614,54.157257 C3.5783933,53.414352 4.7621766,52.932289 5.5189009,52.160767 L5.6168709,52.055229 5.6836691,51.918236 C5.8546753,51.576248 5.94627,51.400009 6.0909849,51.2724 L6.0951376,51.269043 6.0966425,51.265213 C6.1359215,51.150223 6.1654168,51.029289 6.1836505,50.901649 6.4658165,48.926476 7.0708428,48.40873 8.0536614,47.975853 L8.1304179,47.943253 8.1751357,47.718979 C8.390462,46.686172 8.6856661,45.772476 9.4006443,44.700249 L9.4526005,44.796616 9.5089932,44.598099 9.4909068,44.311539 9.4451619,43.883339 9.4941893,43.601875 C9.4137774,43.588432 9.5751925,43.557503 9.8374739,43.494568 L9.8483019,43.491882 9.9510336,43.157089 C10.550553,41.241013 11.150073,39.324768 11.150071,37.552719 11.150073,35.440399 11.256919,33.171127 11.498124,30.942909 L11.631784,29.838867 11.27045,28.694427 C10.750197,26.903305 10.43487,25.100761 10.752099,23.593361 11.365674,20.677956 11.333972,17.076126 11.81875,13.993431 12.520389,9.5316772 15.776042,5.2133408 17.618727,0.85916901 L17.807451,0.3873291 17.775148,0.30230713 z" Height="84.534" RenderTransformOrigin="2.30761249380008,0.117507941373549" Stretch="Fill" Canvas.Top="174.135" Width="40.421">
+                <Path x:Name="brazoDer" MouseDown="mostrar_botones" HorizontalAlignment="Left" VerticalAlignment="Top" Data="M5.1751814,70.435661 L5.2052455,70.508705 C5.3010292,70.764107 5.3509598,71.020515 5.3509608,71.25161 5.2969017,70.927315 5.2399025,70.704033 5.1944924,70.516975 z M17.679184,0 L19.337257,0.3826828 C22.592135,1.0487289 25.962219,1.3985062 29.413998,1.3985062 32.002834,1.3985062 34.545715,1.2017593 37.028507,0.82239532 L38.561237,0.54867554 38.308258,0.86647797 C37.709717,1.586731 37.020447,2.1928787 35.720402,2.1210632 35.84811,8.923996 37.074131,11.821991 34.588589,18.443069 32.584198,23.782417 31.030741,29.751221 27.929054,34.502609 25.905153,37.602913 25.364347,40.200287 25.24741,42.25441 L25.243855,42.345619 25.247263,42.345367 25.242161,42.389076 25.224003,42.854309 C25.185526,44.604889 25.404594,45.91214 25.109043,46.746727 L25.073422,46.824989 25.018648,47.694046 C24.912632,48.966393 25.39884,49.684265 27.018553,50.494209 27.141453,50.555679 27.309792,50.608978 27.511501,50.650208 L27.710785,50.684967 28.005989,50.985573 C28.983206,51.967125 29.962595,52.898125 30.78709,54.134872 32.688923,54.895607 33.75272,56.066185 34.787041,58.134819 39.999157,60.219658 43.283436,64.511192 36.920349,73.60128 35.570942,71.577171 36.001267,66.654716 34.520386,65.068031 33.890156,64.392815 31.490637,63.879799 29.50914,63.40374 L29.32206,63.358467 29.325687,63.383446 C29.331177,63.442039 29.334003,63.503639 29.334009,63.568352 29.231762,63.585396 29.032887,63.568932 28.82242,63.542427 L28.66354,63.520638 28.634749,63.598763 C28.515772,63.886925 28.276463,64.185738 27.880201,64.492531 L27.84549,64.518333 27.83255,64.562096 C27.50412,65.609077 26.963131,65.794579 25.800873,67.168159 25.676485,67.315163 24.940207,68.66906 24.448706,68.758064 L24.428495,68.759193 24.39007,68.986061 C24.100832,70.723335 23.835838,72.511665 23.608177,74.268715 L23.481358,75.277229 23.517214,75.430489 C24.019344,77.600853 24.181768,79.056389 22.950876,81.517464 22.933292,81.447136 22.918205,81.376701 22.905319,81.306175 L22.903889,81.296822 22.879921,81.68644 C22.819597,82.721031 22.787186,83.679771 22.787182,84.534447 22.422487,83.440376 22.054577,82.39576 21.693352,81.381264 L21.664503,81.300377 21.625065,81.336739 C21.527897,81.408577 21.39588,81.42318 21.217428,81.384926 20.337984,81.196434 20.90793,80.66317 20.417549,80.118172 19.401032,78.988441 20.082867,77.74073 19.551008,76.251198 19.394863,75.813881 19.388104,75.323128 19.429905,74.821022 L19.443689,74.676628 19.34516,74.329857 C18.733091,72.121773 18.275303,69.831093 18.084665,67.23748 L18.073309,67.060585 18.068653,67.055443 C17.830833,66.810616 17.559139,66.601051 17.288872,66.454216 L17.213268,66.415321 17.166452,66.553322 C16.667864,68.093834 16.390648,69.757607 16.295507,71.483696 L16.27861,71.883354 16.368376,72.306129 C17.038853,75.329964 18.014799,78.418098 17.508709,81.485176 L17.476805,81.657143 17.509838,81.785149 C17.734463,82.628136 17.98398,83.458 18.253908,84.267784 17.274031,82.308067 15.547793,78.270851 13.98729,77.334557 13.987294,75.532097 13.724799,73.671776 13.396679,71.777534 L13.276547,71.100838 13.196682,71.046516 C12.963664,70.87281 12.754225,70.650703 12.467121,70.268089 12.004695,69.651817 11.415568,68.907677 11.885737,67.966759 L11.915665,67.910835 11.890661,67.822243 C11.625178,66.862434 11.218974,65.01783 11.759118,64.478996 L11.759519,64.478661 11.734979,64.461494 C11.350493,64.19976 10.971589,63.989052 10.616978,63.918144 10.651935,63.86573 10.691289,63.805016 10.734621,63.738441 L10.799549,63.639076 10.764723,63.6343 10.711326,63.721138 C10.598191,63.91967 10.498412,64.125145 10.410873,64.337074 L10.355907,64.477989 10.474587,64.933174 C10.569755,65.306419 10.65152,65.68029 10.66769,66.068352 10.679315,66.347389 10.679518,66.572411 10.663389,66.775368 L10.656117,66.8498 10.850997,67.434273 10.755377,67.529884 10.701689,67.240166 10.644334,66.941689 10.615676,67.123772 10.57523,67.291542 10.578893,67.372993 C10.582423,67.474342 10.584246,67.583534 10.584251,67.700951 L10.755377,67.529884 10.809687,67.82296 C11.255263,70.303215 11.397241,72.227043 10.748275,74.823006 L10.743298,74.842201 10.750391,74.892082 C10.924098,76.160286 11.053981,77.431206 11.053981,78.667854 10.876216,78.667854 10.698422,78.667854 10.520661,78.667854 9.1955424,75.355034 7.3206864,73.422295 7.3206873,69.06797 7.3206864,68.942024 7.3199349,68.81739 7.3185382,68.693977 L7.3139449,68.426491 7.3159252,68.690926 C7.3186112,69.072975 7.3206864,69.464714 7.3206873,69.867989 7.2404671,69.386665 7.1241761,68.900581 6.9811349,68.4105 L6.8785162,68.077904 6.7704111,67.986977 C5.7103119,67.079079 5.2998352,66.311821 5.0007482,64.068367 4.9878731,63.971794 5.0081253,63.856499 5.0573993,63.738792 L5.1061798,63.640984 4.7877856,62.897758 C4.6451226,62.558617 4.5057488,62.219009 4.3724308,61.879135 L4.212915,61.462196 4.1337543,61.704399 C3.8312335,62.715439 3.8519969,63.691139 4.1508265,65.185066 4.4570656,66.716087 5.6006928,67.394676 5.2176142,69.118324 5.0658989,69.800941 5.0883446,70.058235 5.1687465,70.408562 L5.1751814,70.435661 5.1423045,70.355797 C4.9143868,69.847923 4.5063363,69.365181 3.9508064,69.118324 3.1744895,68.773338 3.0681928,68.435204 3.0364185,67.921501 L3.0310593,67.811104 2.9366477,67.697792 2.9198394,67.698845 C2.8947156,67.70002 2.87145,67.700661 2.8503242,67.700661 L2.8302708,67.570137 2.7173603,67.434639 C2.7173627,67.345161 2.7182784,67.254112 2.7199848,67.161644 L2.7210114,67.122353 2.7213972,67.123039 2.7848282,67.2342 2.7441473,66.781776 2.7372165,66.630196 2.7273593,66.880165 2.7210114,67.122353 2.6344529,66.968849 C1.3344783,64.652382 -1.0193444,59.966179 0.48609088,59.37793 L0.56360434,59.353905 0.47591488,59.06617 C-0.001365907,57.377548 -0.026172881,55.296326 2.9095359,54.283478 L2.9486392,54.270576 3.0234614,54.157257 C3.5783933,53.414352 4.7621766,52.932289 5.5189009,52.160767 L5.6168709,52.055229 5.6836691,51.918236 C5.8546753,51.576248 5.94627,51.400009 6.0909849,51.2724 L6.0951376,51.269043 6.0966425,51.265213 C6.1359215,51.150223 6.1654168,51.029289 6.1836505,50.901649 6.4658165,48.926476 7.0708428,48.40873 8.0536614,47.975853 L8.1304179,47.943253 8.1751357,47.718979 C8.390462,46.686172 8.6856661,45.772476 9.4006443,44.700249 L9.4526005,44.796616 9.5089932,44.598099 9.4909068,44.311539 9.4451619,43.883339 9.4941893,43.601875 C9.4137774,43.588432 9.5751925,43.557503 9.8374739,43.494568 L9.8483019,43.491882 9.9510336,43.157089 C10.550553,41.241013 11.150073,39.324768 11.150071,37.552719 11.150073,35.440399 11.256919,33.171127 11.498124,30.942909 L11.631784,29.838867 11.27045,28.694427 C10.750197,26.903305 10.43487,25.100761 10.752099,23.593361 11.365674,20.677956 11.333972,17.076126 11.81875,13.993431 12.520389,9.5316772 15.776042,5.2133408 17.618727,0.85916901 L17.807451,0.3873291 17.775148,0.30230713 z" Height="84.534" RenderTransformOrigin="2.30761249380008,0.117507941373549" Stretch="Fill" Canvas.Top="174.135" Width="40.421">
                     <Path.RenderTransform>
                         <TransformGroup>
                             <ScaleTransform ScaleY="1" ScaleX="-1"/>
@@ -1552,7 +1552,7 @@
                         </LinearGradientBrush>
                     </Path.Fill>
                 </Path>
-                <Rectangle x:Name="telaDerecha" MouseDown="mostrar_botones" Fill="White" HorizontalAlignment="Left" Height="9.431" VerticalAlignment="Top" Width="12.27" RenderTransformOrigin="0.801,-0.684" RadiusY="2.109" RadiusX="2.109" Canvas.Left="166.799" Canvas.Top="222.121">
+                <Rectangle x:Name="telaraniaDer" MouseDown="mostrar_botones" Fill="White" HorizontalAlignment="Left" Height="9.431" VerticalAlignment="Top" Width="12.27" RenderTransformOrigin="0.801,-0.684" RadiusY="2.109" RadiusX="2.109" Canvas.Left="166.799" Canvas.Top="222.121">
                     <Rectangle.RenderTransform>
                         <TransformGroup>
                             <ScaleTransform ScaleY="1" ScaleX="1"/>
@@ -1592,7 +1592,7 @@
                         </TransformGroup>
                     </Image.RenderTransform>
                 </Image>
-                <Image x:Name="baba" Height="18.654" Source="Presentacion/Resources/water drop.png" Stretch="Fill" Width="10.052" Canvas.Left="72.264" Canvas.Top="112.75" RenderTransformOrigin="0.5,0.5" Visibility="Hidden">
+                <Image x:Name="water_drop_png" Height="18.654" Source="Presentacion/Resources/water drop.png" Stretch="Fill" Width="10.052" Canvas.Left="72.264" Canvas.Top="112.75" RenderTransformOrigin="0.5,0.5" Visibility="Hidden">
                     <Image.RenderTransform>
                         <TransformGroup>
                             <ScaleTransform/>
@@ -1611,7 +1611,7 @@
                             <TranslateTransform/>
                         </TransformGroup>
                     </Canvas.RenderTransform>
-                    <Ellipse x:Name="baseYoyo" Height="22" Width="22" Fill="#FF0E89C3" Stroke="Black" RenderTransformOrigin="0.5,0.5" Visibility="Hidden" Opacity="0">
+                    <Ellipse x:Name="cir_yoyo" Height="22" Width="22" Fill="#FF0E89C3" Stroke="Black" RenderTransformOrigin="0.5,0.5" Visibility="Hidden" Opacity="0">
                         <Ellipse.RenderTransform>
                             <TransformGroup>
                                 <ScaleTransform/>
@@ -1689,7 +1689,7 @@
                         </TransformGroup>
                     </Path.RenderTransform>
                 </Path>
-                <Path x:Name="brazoIzquierdo" MouseDown="mostrar_botones" HorizontalAlignment="Left" VerticalAlignment="Top" Data="M5.1751814,70.435661 L5.2052455,70.508705 C5.3010292,70.764107 5.3509598,71.020515 5.3509608,71.25161 5.2969017,70.927315 5.2399025,70.704033 5.1944924,70.516975 z M17.679184,0 L19.337257,0.3826828 C22.592135,1.0487289 25.962219,1.3985062 29.413998,1.3985062 32.002834,1.3985062 34.545715,1.2017593 37.028507,0.82239532 L38.561237,0.54867554 38.308258,0.86647797 C37.709717,1.586731 37.020447,2.1928787 35.720402,2.1210632 35.84811,8.923996 37.074131,11.821991 34.588589,18.443069 32.584198,23.782417 31.030741,29.751221 27.929054,34.502609 25.905153,37.602913 25.364347,40.200287 25.24741,42.25441 L25.243855,42.345619 25.247263,42.345367 25.242161,42.389076 25.224003,42.854309 C25.185526,44.604889 25.404594,45.91214 25.109043,46.746727 L25.073422,46.824989 25.018648,47.694046 C24.912632,48.966393 25.39884,49.684265 27.018553,50.494209 27.141453,50.555679 27.309792,50.608978 27.511501,50.650208 L27.710785,50.684967 28.005989,50.985573 C28.983206,51.967125 29.962595,52.898125 30.78709,54.134872 32.688923,54.895607 33.75272,56.066185 34.787041,58.134819 39.999157,60.219658 43.283436,64.511192 36.920349,73.60128 35.570942,71.577171 36.001267,66.654716 34.520386,65.068031 33.890156,64.392815 31.490637,63.879799 29.50914,63.40374 L29.32206,63.358467 29.325687,63.383446 C29.331177,63.442039 29.334003,63.503639 29.334009,63.568352 29.231762,63.585396 29.032887,63.568932 28.82242,63.542427 L28.66354,63.520638 28.634749,63.598763 C28.515772,63.886925 28.276463,64.185738 27.880201,64.492531 L27.84549,64.518333 27.83255,64.562096 C27.50412,65.609077 26.963131,65.794579 25.800873,67.168159 25.676485,67.315163 24.940207,68.66906 24.448706,68.758064 L24.428495,68.759193 24.39007,68.986061 C24.100832,70.723335 23.835838,72.511665 23.608177,74.268715 L23.481358,75.277229 23.517214,75.430489 C24.019344,77.600853 24.181768,79.056389 22.950876,81.517464 22.933292,81.447136 22.918205,81.376701 22.905319,81.306175 L22.903889,81.296822 22.879921,81.68644 C22.819597,82.721031 22.787186,83.679771 22.787182,84.534447 22.422487,83.440376 22.054577,82.39576 21.693352,81.381264 L21.664503,81.300377 21.625065,81.336739 C21.527897,81.408577 21.39588,81.42318 21.217428,81.384926 20.337984,81.196434 20.90793,80.66317 20.417549,80.118172 19.401032,78.988441 20.082867,77.74073 19.551008,76.251198 19.394863,75.813881 19.388104,75.323128 19.429905,74.821022 L19.443689,74.676628 19.34516,74.329857 C18.733091,72.121773 18.275303,69.831093 18.084665,67.23748 L18.073309,67.060585 18.068653,67.055443 C17.830833,66.810616 17.559139,66.601051 17.288872,66.454216 L17.213268,66.415321 17.166452,66.553322 C16.667864,68.093834 16.390648,69.757607 16.295507,71.483696 L16.27861,71.883354 16.368376,72.306129 C17.038853,75.329964 18.014799,78.418098 17.508709,81.485176 L17.476805,81.657143 17.509838,81.785149 C17.734463,82.628136 17.98398,83.458 18.253908,84.267784 17.274031,82.308067 15.547793,78.270851 13.98729,77.334557 13.987294,75.532097 13.724799,73.671776 13.396679,71.777534 L13.276547,71.100838 13.196682,71.046516 C12.963664,70.87281 12.754225,70.650703 12.467121,70.268089 12.004695,69.651817 11.415568,68.907677 11.885737,67.966759 L11.915665,67.910835 11.890661,67.822243 C11.625178,66.862434 11.218974,65.01783 11.759118,64.478996 L11.759519,64.478661 11.734979,64.461494 C11.350493,64.19976 10.971589,63.989052 10.616978,63.918144 10.651935,63.86573 10.691289,63.805016 10.734621,63.738441 L10.799549,63.639076 10.764723,63.6343 10.711326,63.721138 C10.598191,63.91967 10.498412,64.125145 10.410873,64.337074 L10.355907,64.477989 10.474587,64.933174 C10.569755,65.306419 10.65152,65.68029 10.66769,66.068352 10.679315,66.347389 10.679518,66.572411 10.663389,66.775368 L10.656117,66.8498 10.850997,67.434273 10.755377,67.529884 10.701689,67.240166 10.644334,66.941689 10.615676,67.123772 10.57523,67.291542 10.578893,67.372993 C10.582423,67.474342 10.584246,67.583534 10.584251,67.700951 L10.755377,67.529884 10.809687,67.82296 C11.255263,70.303215 11.397241,72.227043 10.748275,74.823006 L10.743298,74.842201 10.750391,74.892082 C10.924098,76.160286 11.053981,77.431206 11.053981,78.667854 10.876216,78.667854 10.698422,78.667854 10.520661,78.667854 9.1955424,75.355034 7.3206864,73.422295 7.3206873,69.06797 7.3206864,68.942024 7.3199349,68.81739 7.3185382,68.693977 L7.3139449,68.426491 7.3159252,68.690926 C7.3186112,69.072975 7.3206864,69.464714 7.3206873,69.867989 7.2404671,69.386665 7.1241761,68.900581 6.9811349,68.4105 L6.8785162,68.077904 6.7704111,67.986977 C5.7103119,67.079079 5.2998352,66.311821 5.0007482,64.068367 4.9878731,63.971794 5.0081253,63.856499 5.0573993,63.738792 L5.1061798,63.640984 4.7877856,62.897758 C4.6451226,62.558617 4.5057488,62.219009 4.3724308,61.879135 L4.212915,61.462196 4.1337543,61.704399 C3.8312335,62.715439 3.8519969,63.691139 4.1508265,65.185066 4.4570656,66.716087 5.6006928,67.394676 5.2176142,69.118324 5.0658989,69.800941 5.0883446,70.058235 5.1687465,70.408562 L5.1751814,70.435661 5.1423045,70.355797 C4.9143868,69.847923 4.5063363,69.365181 3.9508064,69.118324 3.1744895,68.773338 3.0681928,68.435204 3.0364185,67.921501 L3.0310593,67.811104 2.9366477,67.697792 2.9198394,67.698845 C2.8947156,67.70002 2.87145,67.700661 2.8503242,67.700661 L2.8302708,67.570137 2.7173603,67.434639 C2.7173627,67.345161 2.7182784,67.254112 2.7199848,67.161644 L2.7210114,67.122353 2.7213972,67.123039 2.7848282,67.2342 2.7441473,66.781776 2.7372165,66.630196 2.7273593,66.880165 2.7210114,67.122353 2.6344529,66.968849 C1.3344783,64.652382 -1.0193444,59.966179 0.48609088,59.37793 L0.56360434,59.353905 0.47591488,59.06617 C-0.001365907,57.377548 -0.026172881,55.296326 2.9095359,54.283478 L2.9486392,54.270576 3.0234614,54.157257 C3.5783933,53.414352 4.7621766,52.932289 5.5189009,52.160767 L5.6168709,52.055229 5.6836691,51.918236 C5.8546753,51.576248 5.94627,51.400009 6.0909849,51.2724 L6.0951376,51.269043 6.0966425,51.265213 C6.1359215,51.150223 6.1654168,51.029289 6.1836505,50.901649 6.4658165,48.926476 7.0708428,48.40873 8.0536614,47.975853 L8.1304179,47.943253 8.1751357,47.718979 C8.390462,46.686172 8.6856661,45.772476 9.4006443,44.700249 L9.4526005,44.796616 9.5089932,44.598099 9.4909068,44.311539 9.4451619,43.883339 9.4941893,43.601875 C9.4137774,43.588432 9.5751925,43.557503 9.8374739,43.494568 L9.8483019,43.491882 9.9510336,43.157089 C10.550553,41.241013 11.150073,39.324768 11.150071,37.552719 11.150073,35.440399 11.256919,33.171127 11.498124,30.942909 L11.631784,29.838867 11.27045,28.694427 C10.750197,26.903305 10.43487,25.100761 10.752099,23.593361 11.365674,20.677956 11.333972,17.076126 11.81875,13.993431 12.520389,9.5316772 15.776042,5.2133408 17.618727,0.85916901 L17.807451,0.3873291 17.775148,0.30230713 z" Height="84.534" RenderTransformOrigin="2.30761249380008,0.117507941373549" Stretch="Fill" Canvas.Top="176.135" Width="40.421">
+                <Path x:Name="brazoIzq" MouseDown="mostrar_botones" HorizontalAlignment="Left" VerticalAlignment="Top" Data="M5.1751814,70.435661 L5.2052455,70.508705 C5.3010292,70.764107 5.3509598,71.020515 5.3509608,71.25161 5.2969017,70.927315 5.2399025,70.704033 5.1944924,70.516975 z M17.679184,0 L19.337257,0.3826828 C22.592135,1.0487289 25.962219,1.3985062 29.413998,1.3985062 32.002834,1.3985062 34.545715,1.2017593 37.028507,0.82239532 L38.561237,0.54867554 38.308258,0.86647797 C37.709717,1.586731 37.020447,2.1928787 35.720402,2.1210632 35.84811,8.923996 37.074131,11.821991 34.588589,18.443069 32.584198,23.782417 31.030741,29.751221 27.929054,34.502609 25.905153,37.602913 25.364347,40.200287 25.24741,42.25441 L25.243855,42.345619 25.247263,42.345367 25.242161,42.389076 25.224003,42.854309 C25.185526,44.604889 25.404594,45.91214 25.109043,46.746727 L25.073422,46.824989 25.018648,47.694046 C24.912632,48.966393 25.39884,49.684265 27.018553,50.494209 27.141453,50.555679 27.309792,50.608978 27.511501,50.650208 L27.710785,50.684967 28.005989,50.985573 C28.983206,51.967125 29.962595,52.898125 30.78709,54.134872 32.688923,54.895607 33.75272,56.066185 34.787041,58.134819 39.999157,60.219658 43.283436,64.511192 36.920349,73.60128 35.570942,71.577171 36.001267,66.654716 34.520386,65.068031 33.890156,64.392815 31.490637,63.879799 29.50914,63.40374 L29.32206,63.358467 29.325687,63.383446 C29.331177,63.442039 29.334003,63.503639 29.334009,63.568352 29.231762,63.585396 29.032887,63.568932 28.82242,63.542427 L28.66354,63.520638 28.634749,63.598763 C28.515772,63.886925 28.276463,64.185738 27.880201,64.492531 L27.84549,64.518333 27.83255,64.562096 C27.50412,65.609077 26.963131,65.794579 25.800873,67.168159 25.676485,67.315163 24.940207,68.66906 24.448706,68.758064 L24.428495,68.759193 24.39007,68.986061 C24.100832,70.723335 23.835838,72.511665 23.608177,74.268715 L23.481358,75.277229 23.517214,75.430489 C24.019344,77.600853 24.181768,79.056389 22.950876,81.517464 22.933292,81.447136 22.918205,81.376701 22.905319,81.306175 L22.903889,81.296822 22.879921,81.68644 C22.819597,82.721031 22.787186,83.679771 22.787182,84.534447 22.422487,83.440376 22.054577,82.39576 21.693352,81.381264 L21.664503,81.300377 21.625065,81.336739 C21.527897,81.408577 21.39588,81.42318 21.217428,81.384926 20.337984,81.196434 20.90793,80.66317 20.417549,80.118172 19.401032,78.988441 20.082867,77.74073 19.551008,76.251198 19.394863,75.813881 19.388104,75.323128 19.429905,74.821022 L19.443689,74.676628 19.34516,74.329857 C18.733091,72.121773 18.275303,69.831093 18.084665,67.23748 L18.073309,67.060585 18.068653,67.055443 C17.830833,66.810616 17.559139,66.601051 17.288872,66.454216 L17.213268,66.415321 17.166452,66.553322 C16.667864,68.093834 16.390648,69.757607 16.295507,71.483696 L16.27861,71.883354 16.368376,72.306129 C17.038853,75.329964 18.014799,78.418098 17.508709,81.485176 L17.476805,81.657143 17.509838,81.785149 C17.734463,82.628136 17.98398,83.458 18.253908,84.267784 17.274031,82.308067 15.547793,78.270851 13.98729,77.334557 13.987294,75.532097 13.724799,73.671776 13.396679,71.777534 L13.276547,71.100838 13.196682,71.046516 C12.963664,70.87281 12.754225,70.650703 12.467121,70.268089 12.004695,69.651817 11.415568,68.907677 11.885737,67.966759 L11.915665,67.910835 11.890661,67.822243 C11.625178,66.862434 11.218974,65.01783 11.759118,64.478996 L11.759519,64.478661 11.734979,64.461494 C11.350493,64.19976 10.971589,63.989052 10.616978,63.918144 10.651935,63.86573 10.691289,63.805016 10.734621,63.738441 L10.799549,63.639076 10.764723,63.6343 10.711326,63.721138 C10.598191,63.91967 10.498412,64.125145 10.410873,64.337074 L10.355907,64.477989 10.474587,64.933174 C10.569755,65.306419 10.65152,65.68029 10.66769,66.068352 10.679315,66.347389 10.679518,66.572411 10.663389,66.775368 L10.656117,66.8498 10.850997,67.434273 10.755377,67.529884 10.701689,67.240166 10.644334,66.941689 10.615676,67.123772 10.57523,67.291542 10.578893,67.372993 C10.582423,67.474342 10.584246,67.583534 10.584251,67.700951 L10.755377,67.529884 10.809687,67.82296 C11.255263,70.303215 11.397241,72.227043 10.748275,74.823006 L10.743298,74.842201 10.750391,74.892082 C10.924098,76.160286 11.053981,77.431206 11.053981,78.667854 10.876216,78.667854 10.698422,78.667854 10.520661,78.667854 9.1955424,75.355034 7.3206864,73.422295 7.3206873,69.06797 7.3206864,68.942024 7.3199349,68.81739 7.3185382,68.693977 L7.3139449,68.426491 7.3159252,68.690926 C7.3186112,69.072975 7.3206864,69.464714 7.3206873,69.867989 7.2404671,69.386665 7.1241761,68.900581 6.9811349,68.4105 L6.8785162,68.077904 6.7704111,67.986977 C5.7103119,67.079079 5.2998352,66.311821 5.0007482,64.068367 4.9878731,63.971794 5.0081253,63.856499 5.0573993,63.738792 L5.1061798,63.640984 4.7877856,62.897758 C4.6451226,62.558617 4.5057488,62.219009 4.3724308,61.879135 L4.212915,61.462196 4.1337543,61.704399 C3.8312335,62.715439 3.8519969,63.691139 4.1508265,65.185066 4.4570656,66.716087 5.6006928,67.394676 5.2176142,69.118324 5.0658989,69.800941 5.0883446,70.058235 5.1687465,70.408562 L5.1751814,70.435661 5.1423045,70.355797 C4.9143868,69.847923 4.5063363,69.365181 3.9508064,69.118324 3.1744895,68.773338 3.0681928,68.435204 3.0364185,67.921501 L3.0310593,67.811104 2.9366477,67.697792 2.9198394,67.698845 C2.8947156,67.70002 2.87145,67.700661 2.8503242,67.700661 L2.8302708,67.570137 2.7173603,67.434639 C2.7173627,67.345161 2.7182784,67.254112 2.7199848,67.161644 L2.7210114,67.122353 2.7213972,67.123039 2.7848282,67.2342 2.7441473,66.781776 2.7372165,66.630196 2.7273593,66.880165 2.7210114,67.122353 2.6344529,66.968849 C1.3344783,64.652382 -1.0193444,59.966179 0.48609088,59.37793 L0.56360434,59.353905 0.47591488,59.06617 C-0.001365907,57.377548 -0.026172881,55.296326 2.9095359,54.283478 L2.9486392,54.270576 3.0234614,54.157257 C3.5783933,53.414352 4.7621766,52.932289 5.5189009,52.160767 L5.6168709,52.055229 5.6836691,51.918236 C5.8546753,51.576248 5.94627,51.400009 6.0909849,51.2724 L6.0951376,51.269043 6.0966425,51.265213 C6.1359215,51.150223 6.1654168,51.029289 6.1836505,50.901649 6.4658165,48.926476 7.0708428,48.40873 8.0536614,47.975853 L8.1304179,47.943253 8.1751357,47.718979 C8.390462,46.686172 8.6856661,45.772476 9.4006443,44.700249 L9.4526005,44.796616 9.5089932,44.598099 9.4909068,44.311539 9.4451619,43.883339 9.4941893,43.601875 C9.4137774,43.588432 9.5751925,43.557503 9.8374739,43.494568 L9.8483019,43.491882 9.9510336,43.157089 C10.550553,41.241013 11.150073,39.324768 11.150071,37.552719 11.150073,35.440399 11.256919,33.171127 11.498124,30.942909 L11.631784,29.838867 11.27045,28.694427 C10.750197,26.903305 10.43487,25.100761 10.752099,23.593361 11.365674,20.677956 11.333972,17.076126 11.81875,13.993431 12.520389,9.5316772 15.776042,5.2133408 17.618727,0.85916901 L17.807451,0.3873291 17.775148,0.30230713 z" Height="84.534" RenderTransformOrigin="2.30761249380008,0.117507941373549" Stretch="Fill" Canvas.Top="176.135" Width="40.421">
                     <Path.RenderTransform>
                         <TransformGroup>
                             <ScaleTransform/>
@@ -1705,7 +1705,7 @@
                         </LinearGradientBrush>
                     </Path.Fill>
                 </Path>
-                <Rectangle x:Name="telaIzquierda" MouseDown="mostrar_botones" Fill="White" HorizontalAlignment="Left" Height="9.431" VerticalAlignment="Top" Width="12.27" RenderTransformOrigin="0.801,-0.684" RadiusY="2.109" RadiusX="2.109" Canvas.Left="10.799" Canvas.Top="224.521">
+                <Rectangle x:Name="telaraniaIzq" MouseDown="mostrar_botones" Fill="White" HorizontalAlignment="Left" Height="9.431" VerticalAlignment="Top" Width="12.27" RenderTransformOrigin="0.801,-0.684" RadiusY="2.109" RadiusX="2.109" Canvas.Left="10.799" Canvas.Top="224.521">
                     <Rectangle.RenderTransform>
                         <TransformGroup>
                             <ScaleTransform ScaleY="1" ScaleX="-1"/>
@@ -1745,7 +1745,7 @@
                         </TransformGroup>
                     </Button.RenderTransform>
                 </Button>
-                <Grid x:Name="gridInfoAlimentacion" Height="150.562" Canvas.Left="164.772" Canvas.Top="10" Width="241.5" RenderTransformOrigin="0.5,0.5" Visibility="Hidden">
+                <Grid x:Name="grid_info_comida" Height="150.562" Canvas.Left="164.772" Canvas.Top="10" Width="241.5" RenderTransformOrigin="0.5,0.5" Visibility="Hidden">
                     <Grid.RenderTransform>
                         <TransformGroup>
                             <ScaleTransform/>
@@ -1764,7 +1764,7 @@
                         <ColumnDefinition Width="0.3*"/>
                         <ColumnDefinition Width="0.7*"/>
                     </Grid.ColumnDefinitions>
-                    <Image x:Name="imagApetito" Source="Presentacion/Resources/restaurante.png" Grid.Row="1" HorizontalAlignment="Right" RenderTransformOrigin="0.5,0.5">
+                    <Image x:Name="food_png1" Source="Presentacion/Resources/restaurante.png" Grid.Row="1" HorizontalAlignment="Right" RenderTransformOrigin="0.5,0.5">
                         <Image.RenderTransform>
                             <TransformGroup>
                                 <ScaleTransform/>
@@ -1774,7 +1774,7 @@
                             </TransformGroup>
                         </Image.RenderTransform>
                     </Image>
-                    <Image x:Name="imagNivel" Source="Presentacion/Resources/estrella.png" Grid.Row="2" HorizontalAlignment="Right" RenderTransformOrigin="0.5,0.5">
+                    <Image x:Name="star_png" Source="Presentacion/Resources/estrella.png" Grid.Row="2" HorizontalAlignment="Right" RenderTransformOrigin="0.5,0.5">
                         <Image.RenderTransform>
                             <TransformGroup>
                                 <ScaleTransform/>
@@ -1784,7 +1784,7 @@
                             </TransformGroup>
                         </Image.RenderTransform>
                     </Image>
-                    <Image x:Name="imagMonedas" Source="Presentacion/Resources/monedas.png" HorizontalAlignment="Right" RenderTransformOrigin="0.5,0.5">
+                    <Image x:Name="coins_png" Source="Presentacion/Resources/monedas.png" HorizontalAlignment="Right" RenderTransformOrigin="0.5,0.5">
                         <Image.RenderTransform>
                             <TransformGroup>
                                 <ScaleTransform/>
@@ -1794,10 +1794,10 @@
                             </TransformGroup>
                         </Image.RenderTransform>
                     </Image>
-                    <Label x:Name="lblInfoCoste" Content="" Grid.Column="1" VerticalContentAlignment="Center" FontFamily="Comic Sans MS" FontSize="18.667" Foreground="White" HorizontalAlignment="Center"/>
-                    <Label x:Name="lblInfoApetito" Content="" Grid.Column="1" Grid.Row="1" FontFamily="Comic Sans MS" FontSize="18.667" VerticalContentAlignment="Center" Foreground="White" HorizontalAlignment="Center"/>
-                    <Label x:Name="lblInfoPuntos" Content="" Grid.Column="1" Grid.Row="2" VerticalContentAlignment="Center" FontFamily="Comic Sans MS" FontSize="18.667" Foreground="White" HorizontalAlignment="Center"/>
-                    <Image x:Name="imagEnergia" Source="Presentacion/Resources/bateria.png" Grid.Row="3" HorizontalAlignment="Right" RenderTransformOrigin="0.5,0.5">
+                    <Label x:Name="lbl_gridcomida_coste" Content="" Grid.Column="1" VerticalContentAlignment="Center" FontFamily="Comic Sans MS" FontSize="18.667" Foreground="White" HorizontalAlignment="Center"/>
+                    <Label x:Name="lbl_gridcomida_apetito" Content="" Grid.Column="1" Grid.Row="1" FontFamily="Comic Sans MS" FontSize="18.667" VerticalContentAlignment="Center" Foreground="White" HorizontalAlignment="Center"/>
+                    <Label x:Name="lbl_gridcomida_puntos" Content="" Grid.Column="1" Grid.Row="2" VerticalContentAlignment="Center" FontFamily="Comic Sans MS" FontSize="18.667" Foreground="White" HorizontalAlignment="Center"/>
+                    <Image x:Name="energy_png1" Source="Presentacion/Resources/bateria.png" Grid.Row="3" HorizontalAlignment="Right" RenderTransformOrigin="0.5,0.5">
                         <Image.RenderTransform>
                             <TransformGroup>
                                 <ScaleTransform/>
@@ -1807,10 +1807,10 @@
                             </TransformGroup>
                         </Image.RenderTransform>
                     </Image>
-                    <Label x:Name="lblInfoEnergia" Content="" Grid.Column="1" Grid.Row="3" FontFamily="Comic Sans MS" FontSize="18.667" VerticalAlignment="Center" Foreground="White" HorizontalAlignment="Center"/>
+                    <Label x:Name="lbl_gridcomida_energia" Content="" Grid.Column="1" Grid.Row="3" FontFamily="Comic Sans MS" FontSize="18.667" VerticalAlignment="Center" Foreground="White" HorizontalAlignment="Center"/>
                 </Grid>
             </Canvas>
-            <Grid x:Name="gridSubirNivel" Height="128" Width="171" RenderTransformOrigin="0.5,0.5" Margin="0,0,0,170.4" Visibility="Hidden">
+            <Grid x:Name="grid_animacion_nivel" Height="128" Width="171" RenderTransformOrigin="0.5,0.5" Margin="0,0,0,170.4" Visibility="Hidden">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="6*"/>
                     <ColumnDefinition Width="23*"/>
@@ -1829,7 +1829,7 @@
                         <TranslateTransform/>
                     </TransformGroup>
                 </Grid.RenderTransform>
-                <Image x:Name="imagEstrella" Source="Presentacion/Resources/estrella.png" Stretch="Fill" Margin="16.754,0,20.334,0" Grid.RowSpan="2" RenderTransformOrigin="0.5,0.5" Grid.ColumnSpan="2" Grid.Column="1">
+                <Image x:Name="estrella_nivel" Source="Presentacion/Resources/estrella.png" Stretch="Fill" Margin="16.754,0,20.334,0" Grid.RowSpan="2" RenderTransformOrigin="0.5,0.5" Grid.ColumnSpan="2" Grid.Column="1">
                     <Image.RenderTransform>
                         <TransformGroup>
                             <ScaleTransform/>
@@ -1839,7 +1839,7 @@
                         </TransformGroup>
                     </Image.RenderTransform>
                 </Image>
-                <Label x:Name="lblNumeroNivel" Content="1" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontFamily="Comic Sans MS" FontWeight="Bold" FontSize="32" Margin="0,5,0,0" RenderTransformOrigin="0.5,0.5" Grid.RowSpan="2" Grid.ColumnSpan="3">
+                <Label x:Name="lbl_subir_nivel" Content="1" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontFamily="Comic Sans MS" FontWeight="Bold" FontSize="32" Margin="0,5,0,0" RenderTransformOrigin="0.5,0.5" Grid.RowSpan="2" Grid.ColumnSpan="3">
                     <Label.RenderTransform>
                         <TransformGroup>
                             <ScaleTransform/>
@@ -1854,7 +1854,7 @@
 
         </DockPanel>
 
-        <Grid x:Name="gridIzquierda" Margin="10" Grid.RowSpan="2">
+        <Grid x:Name="grid_lateral_izquierdo" Margin="10" Grid.RowSpan="2">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="15*"/>
                 <ColumnDefinition Width="15*"/>
@@ -1869,7 +1869,7 @@
                 <RowDefinition Height="60*"/>
                 <RowDefinition Height="556*"/>
             </Grid.RowDefinitions>
-            <ProgressBar x:Name="pbNivel" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Background="{x:Null}" BorderBrush="#FF7C7C7C" Value="80" Grid.Column="2" Grid.Row="2" Height="25" VerticalAlignment="Top" SmallChange="1" RenderTransformOrigin="0.5,0.5" Foreground="#FFA21010" Margin="5,10,-5,0">
+            <ProgressBar x:Name="pb_nivel" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Background="{x:Null}" BorderBrush="#FF7C7C7C" Value="80" Grid.Column="2" Grid.Row="2" Height="25" VerticalAlignment="Top" SmallChange="1" RenderTransformOrigin="0.5,0.5" Foreground="#FFA21010" Margin="5,10,-5,0">
                 <ProgressBar.RenderTransform>
                     <TransformGroup>
                         <ScaleTransform/>
@@ -1884,7 +1884,7 @@
                     <ImageBrush ImageSource="Presentacion/Resources/estrella.png" Stretch="Uniform"/>
                 </Label.Background>
             </Label>
-            <Label x:Name="lblNombreUsuario" Content="Alberto y Jesu" Grid.Column="2" Grid.Row="1" FontFamily="Comic Sans MS" FontSize="14.667" VerticalAlignment="Bottom" Background="#FF0B0B0B" Foreground="White" RenderTransformOrigin="0.5,0.5" Height="30.44">
+            <Label x:Name="lbl_Usuario" Content="Alberto y Jesu" Grid.Column="2" Grid.Row="1" FontFamily="Comic Sans MS" FontSize="14.667" VerticalAlignment="Bottom" Background="#FF0B0B0B" Foreground="White" RenderTransformOrigin="0.5,0.5" Height="30.44">
                 <Label.RenderTransform>
                     <TransformGroup>
                         <ScaleTransform/>
@@ -1894,7 +1894,7 @@
                     </TransformGroup>
                 </Label.RenderTransform>
             </Label>
-            <ProgressBar x:Name="pbMonedas" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Background="{x:Null}" BorderBrush="#FF7C7C7C" Value="80" Grid.Column="2" Grid.Row="5" Height="25" VerticalAlignment="Center" Margin="5,19.623,-5,15.361" SmallChange="1" Maximum="1000" RenderTransformOrigin="0.5,0.5">
+            <ProgressBar x:Name="pb_monedas" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Background="{x:Null}" BorderBrush="#FF7C7C7C" Value="80" Grid.Column="2" Grid.Row="5" Height="25" VerticalAlignment="Center" Margin="5,19.623,-5,15.361" SmallChange="1" Maximum="1000" RenderTransformOrigin="0.5,0.5">
                 <ProgressBar.RenderTransform>
                     <TransformGroup>
                         <ScaleTransform/>
@@ -1923,7 +1923,7 @@
                     <ImageBrush ImageSource="Presentacion/Resources/monedas.png" Stretch="Uniform"/>
                 </Label.Background>
             </Label>
-            <Label x:Name="lblCantidadMonedas" Content="monedas" Grid.Column="1" Grid.Row="5" FontFamily="Comic Sans MS" FontSize="16" HorizontalContentAlignment="Right" VerticalContentAlignment="Center" RenderTransformOrigin="0.5,0.5" Margin="23.2,10,63.724,9.624" Foreground="White" Grid.ColumnSpan="2">
+            <Label x:Name="lbl_monedas" Content="monedas" Grid.Column="1" Grid.Row="5" FontFamily="Comic Sans MS" FontSize="16" HorizontalContentAlignment="Right" VerticalContentAlignment="Center" RenderTransformOrigin="0.5,0.5" Margin="23.2,10,63.724,9.624" Foreground="White" Grid.ColumnSpan="2">
                 <Label.RenderTransform>
                     <TransformGroup>
                         <ScaleTransform/>
@@ -1933,7 +1933,7 @@
                     </TransformGroup>
                 </Label.RenderTransform>
             </Label>
-            <Label x:Name="lblPuntosNivel" Content="puntos" Grid.Column="1" Grid.Row="2" FontFamily="Comic Sans MS" FontSize="16" HorizontalContentAlignment="Right" RenderTransformOrigin="0.634,2.128" Margin="10,4.102,76.924,0" Foreground="White" Grid.ColumnSpan="2">
+            <Label x:Name="lbl_puntos_nivel" Content="puntos" Grid.Column="1" Grid.Row="2" FontFamily="Comic Sans MS" FontSize="16" HorizontalContentAlignment="Right" RenderTransformOrigin="0.634,2.128" Margin="10,4.102,76.924,0" Foreground="White" Grid.ColumnSpan="2">
                 <Label.RenderTransform>
                     <TransformGroup>
                         <ScaleTransform/>
@@ -1944,7 +1944,7 @@
                 </Label.RenderTransform>
             </Label>
             <StackPanel Margin="0,10,0,-32" Grid.Row="6" Grid.ColumnSpan="3" HorizontalAlignment="Left" Width="100">
-                <Image x:Name="btnLogros" Height="87.5" Source="Presentacion/Resources/medalla.png" Margin="0,10,0,0" MouseUp="mostrar_logros" RenderTransformOrigin="0.5,0.5">
+                <Image x:Name="btn_trofeo" Height="87.5" Source="Presentacion/Resources/medalla.png" Margin="0,10,0,0" MouseUp="mostrar_logros" RenderTransformOrigin="0.5,0.5">
                     <Image.RenderTransform>
                         <TransformGroup>
                             <ScaleTransform/>
@@ -1964,7 +1964,7 @@
                         </TransformGroup>
                     </Label.RenderTransform>
                 </Label>
-                <Image x:Name="btnPuzzle" Height="92.5" Source="Presentacion/Resources/rompecabezas.png" Margin="0,30,0,0" MouseUp="abrirPuzzle" RenderTransformOrigin="0.5,0.5">
+                <Image x:Name="btn_puzzle" Height="92.5" Source="Presentacion/Resources/rompecabezas.png" Margin="0,30,0,0" MouseUp="abrirPuzzle" RenderTransformOrigin="0.5,0.5">
                     <Image.RenderTransform>
                         <TransformGroup>
                             <ScaleTransform/>
@@ -1986,9 +1986,9 @@
                 </Label>
             </StackPanel>
         </Grid>
-        <Border x:Name="borderFondoAutenticacion" BorderBrush="Black" BorderThickness="1" Grid.Row="1" CornerRadius="20" Background="#FFC7D2DC" Margin="259,129,624.6,121.4" Grid.ColumnSpan="2"/>
-        <Border x:Name="borderAutenticacion" BorderThickness="1" CornerRadius="20" Grid.Column="1" Grid.Row="1" Margin="10,129,649.4,121.4">
-            <Grid x:Name="gridAutenticacion" Margin="-1,8.6,18.8,9" Background="#00000000">
+        <Border x:Name="border_fondo_registro" BorderBrush="Black" BorderThickness="1" Grid.Row="1" CornerRadius="20" Background="#FFC7D2DC" Margin="259,129,624.6,121.4" Grid.ColumnSpan="2"/>
+        <Border x:Name="border_inicio_sesion" BorderThickness="1" CornerRadius="20" Grid.Column="1" Grid.Row="1" Margin="10,129,649.4,121.4">
+            <Grid x:Name="grid" Margin="-1,8.6,18.8,9" Background="#00000000">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="0.1*"/>
                     <RowDefinition Height="0.15*"/>
@@ -2006,17 +2006,17 @@
                 </Grid.ColumnDefinitions>
                 <Label x:Name="lblUsuario" Content="Usuario:" Grid.Column="1" Margin="0,10,77.103,10" Grid.Row="1" VerticalContentAlignment="Center" HorizontalContentAlignment="Right" FontFamily="Comic Sans MS" FontSize="16" Foreground="Black" HorizontalAlignment="Right" RenderTransformOrigin="-0.35,0.377" Grid.ColumnSpan="2"/>
                 <Label x:Name="lblPass" Content="Contraseña:" Margin="0,10,77.104,10" Grid.Row="2" VerticalContentAlignment="Center" HorizontalContentAlignment="Right" FontFamily="Comic Sans MS" FontSize="16" HorizontalAlignment="Right" Foreground="Black" Grid.ColumnSpan="3" Width="107.104"/>
-                <TextBox x:Name="txtAutenticacionUsuario" Grid.Column="2" Margin="44.275,10,0,10" Grid.Row="1" TextWrapping="Wrap" RenderTransformOrigin="0.511,0" VerticalContentAlignment="Center" FontFamily="Comic Sans MS" FontSize="16" Grid.ColumnSpan="3"/>
-                <PasswordBox x:Name="txtAutenticacionPass" Grid.Column="2" Margin="44.275,10,0,10" Grid.Row="2" FontFamily="Comic Sans MS" FontSize="16" VerticalContentAlignment="Center" Grid.ColumnSpan="3"/>
-                <Button x:Name="btnEntrar" Content="Iniciar Sesión" Grid.Column="1" Grid.Row="3" FontFamily="Comic Sans MS" FontSize="16" Click="autenticarse" Grid.ColumnSpan="4" Margin="0,60.28,0,50.36" Background="#FF819CBE" Foreground="Black" FontWeight="Bold"/>
+                <TextBox x:Name="tb_inicio_usuario" Grid.Column="2" Margin="44.275,10,0,10" Grid.Row="1" TextWrapping="Wrap" RenderTransformOrigin="0.511,0" VerticalContentAlignment="Center" FontFamily="Comic Sans MS" FontSize="16" Grid.ColumnSpan="3"/>
+                <PasswordBox x:Name="tb_inicio_contrasena" Grid.Column="2" Margin="44.275,10,0,10" Grid.Row="2" FontFamily="Comic Sans MS" FontSize="16" VerticalContentAlignment="Center" Grid.ColumnSpan="3"/>
+                <Button x:Name="btn_autenticacion" Content="Iniciar Sesión" Grid.Column="1" Grid.Row="3" FontFamily="Comic Sans MS" FontSize="16" Click="autenticarse" Grid.ColumnSpan="4" Margin="0,60.28,0,50.36" Background="#FF819CBE" Foreground="Black" FontWeight="Bold"/>
                 <Label x:Name="lblApp" Content="VENOMGOTCHI - Iniciar Sesión
                        " FontFamily="Comic Sans MS" FontSize="16" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Grid.ColumnSpan="5" Margin="10,0,0,0" Foreground="Black" HorizontalAlignment="Center" FontWeight="Bold" Width="281.312"/>
-                <Button x:Name="btnRegistro" Content="Registrate" Grid.Column="2" Grid.Row="4" FontFamily="Comic Sans MS" FontSize="16" Click="animacion_registro" Grid.ColumnSpan="3" Margin="78.675,10,10,30.08" Background="#FF819CBE" Grid.RowSpan="2"/>
-                <Label x:Name="lblInfoAutenticacion" Content="" Margin="0,0,0,120.24" Grid.Row="3" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontFamily="Comic Sans MS" FontSize="16" Foreground="#FF2CB938" Grid.ColumnSpan="4" FontWeight="Bold" Grid.Column="1"/>
+                <Button x:Name="btn_registrarse" Content="Registrate" Grid.Column="2" Grid.Row="4" FontFamily="Comic Sans MS" FontSize="16" Click="animacion_registro" Grid.ColumnSpan="3" Margin="78.675,10,10,30.08" Background="#FF819CBE" Grid.RowSpan="2"/>
+                <Label x:Name="lbl_msg_inicio" Content="" Margin="0,0,0,120.24" Grid.Row="3" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontFamily="Comic Sans MS" FontSize="16" Foreground="#FF2CB938" Grid.ColumnSpan="4" FontWeight="Bold" Grid.Column="1"/>
                 <Label x:Name="lblSinCuenta" Content="¿No tienes cuenta?" Margin="10,10,23.429,30.08" Grid.Row="4" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontFamily="Comic Sans MS" FontSize="16" Foreground="Black" Grid.ColumnSpan="3" FontWeight="Bold" Grid.RowSpan="2"/>
             </Grid>
         </Border>
-        <Border x:Name="borderDerecha" Grid.Column="2" Grid.RowSpan="3" RenderTransformOrigin="0.5,0.5">
+        <Border x:Name="border_barra" Grid.Column="2" Grid.RowSpan="3" RenderTransformOrigin="0.5,0.5">
             <Border.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -2025,7 +2025,7 @@
                     <TranslateTransform/>
                 </TransformGroup>
             </Border.RenderTransform>
-            <Grid x:Name="gridBarraLateral" RenderTransformOrigin="0.5,0.5">
+            <Grid x:Name="grid_barra" RenderTransformOrigin="0.5,0.5">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="23*"/>
                     <RowDefinition Height="166*"/>
@@ -2047,7 +2047,7 @@
                     <ColumnDefinition Width="129*"/>
                     <ColumnDefinition Width="15*"/>
                 </Grid.ColumnDefinitions>
-                <Path x:Name="barraLateral" Data="M23.464885,0.5 L113.465,0.5 113.465,505.5 23.464885,505.5 23.464885,343.40042 0.5,316.03186 0.5,190.14557 23.464885,162.77711 z" Fill="#FF7C7C7C" Stretch="Fill" Stroke="Black" StrokeThickness="3" RenderTransformOrigin="0.5,0.5" Width="200" Grid.ColumnSpan="4" Grid.RowSpan="5" HorizontalAlignment="Right" d:LayoutOverrides="Width">
+                <Path x:Name="Barra_lateral" Data="M23.464885,0.5 L113.465,0.5 113.465,505.5 23.464885,505.5 23.464885,343.40042 0.5,316.03186 0.5,190.14557 23.464885,162.77711 z" Fill="#FF7C7C7C" Stretch="Fill" Stroke="Black" StrokeThickness="3" RenderTransformOrigin="0.5,0.5" Width="200" Grid.ColumnSpan="4" Grid.RowSpan="5" HorizontalAlignment="Right" d:LayoutOverrides="Width">
                     <Path.RenderTransform>
                         <TransformGroup>
                             <ScaleTransform/>
@@ -2057,7 +2057,7 @@
                         </TransformGroup>
                     </Path.RenderTransform>
                 </Path>
-                <Label x:Name="lblFlechaDerecha" Content="&#xA;" MouseUp="MouseUp_label_right" RenderTransformOrigin="0.5,0.5" Grid.Row="2">
+                <Label x:Name="lbl_flecha_right" Content="&#xA;" MouseUp="MouseUp_label_right" RenderTransformOrigin="0.5,0.5" Grid.Row="2">
                     <Label.RenderTransform>
                         <TransformGroup>
                             <ScaleTransform/>
@@ -2070,7 +2070,7 @@
                         <ImageBrush ImageSource="Presentacion/Resources/Arrow_Right.png" Stretch="Uniform"/>
                     </Label.Background>
                 </Label>
-                <Label x:Name="lblFlechaIzquierda" Content="&#xA;" MouseUp="MouseUp_label_left" IsEnabled="False" RenderTransformOrigin="0.5,0.5" Grid.Row="2" Visibility="Hidden">
+                <Label x:Name="lbl_flecha_left" Content="&#xA;" MouseUp="MouseUp_label_left" IsEnabled="False" RenderTransformOrigin="0.5,0.5" Grid.Row="2" Visibility="Hidden">
                     <Label.RenderTransform>
                         <TransformGroup>
                             <ScaleTransform/>
@@ -2083,7 +2083,7 @@
                         <ImageBrush ImageSource="Presentacion/Resources/Arrow_Left.png" Stretch="Uniform"/>
                     </Label.Background>
                 </Label>
-                <Label x:Name="lblAlimentos" Content="Alimentos" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Comic Sans MS" FontWeight="Bold" FontSize="18.667" Margin="16.296,0" RenderTransformOrigin="0.5,0.5">
+                <Label x:Name="lbl_alimentos" Content="Alimentos" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Comic Sans MS" FontWeight="Bold" FontSize="18.667" Margin="16.296,0" RenderTransformOrigin="0.5,0.5">
                     <Label.RenderTransform>
                         <TransformGroup>
                             <ScaleTransform/>
@@ -2094,7 +2094,7 @@
                     </Label.RenderTransform>
                 </Label>
 
-                <Grid x:Name="gridAlimentos" Grid.Column="2" Grid.Row="1" Grid.RowSpan="3" RenderTransformOrigin="0.5,0.5">
+                <Grid x:Name="grid_comidas" Grid.Column="2" Grid.Row="1" Grid.RowSpan="3" RenderTransformOrigin="0.5,0.5">
                     <Grid.RenderTransform>
                         <TransformGroup>
                             <ScaleTransform/>
@@ -2136,8 +2136,8 @@
 
             </Grid>
         </Border>
-        <Border x:Name="borderElegirDificultad" BorderBrush="Black" BorderThickness="1" Grid.Column="1" Grid.Row="1" CornerRadius="10" Margin="250,125" Background="Black" RenderTransformOrigin="0.489,0.485" Visibility="Hidden">
-            <Grid x:Name="gridElegirDificultad" Margin="9" OpacityMask="Black">
+        <Border x:Name="border_elegir_dificultad" BorderBrush="Black" BorderThickness="1" Grid.Column="1" Grid.Row="1" CornerRadius="10" Margin="250,125" Background="Black" RenderTransformOrigin="0.489,0.485" Visibility="Hidden">
+            <Grid x:Name="grid_start" Margin="9" OpacityMask="Black">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="0.333*"/>
                     <ColumnDefinition Width="0.333*"/>
@@ -2147,7 +2147,7 @@
                     <RowDefinition Height="0.6*"/>
                     <RowDefinition Height="0.4*"/>
                 </Grid.RowDefinitions>
-                <StackPanel x:Name="pnlVenom" Grid.ColumnSpan="3" Margin="10" >
+                <StackPanel Grid.ColumnSpan="3" Margin="10" >
                     <Image x:Name="imagVenom" Margin="120.256,0,128.522,0" Source="Presentacion/Resources/venomHead2.jpg" HorizontalAlignment="Center" VerticalAlignment="Center" Height="178" Width="181.734"  RenderTransformOrigin="0.5,0.5">
                         <Image.RenderTransform>
                             <TransformGroup>
@@ -2159,28 +2159,29 @@
                         </Image.RenderTransform>
                     </Image>
                 </StackPanel>
-                <GroupBox x:Name="gbDificultad" Grid.ColumnSpan="3" Header="Elija la dificultad" Margin="10,180.48,10,70" FontFamily="Comic Sans MS" FontSize="18.667" Foreground="White" Grid.RowSpan="2">
-                    <Grid x:Name="gridDificultad" Margin="6.5,0,-2,4">
+                <GroupBox x:Name="gb_dificultad" Grid.ColumnSpan="3" Header="Elija la dificultad" Margin="10,180.48,10,70" FontFamily="Comic Sans MS" FontSize="18.667" Foreground="White" Grid.RowSpan="2">
+                    <Grid x:Name="grid_dificultad" Margin="6.5,0,-2,4">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="0.333*"/>
                             <ColumnDefinition Width="0.333*"/>
                             <ColumnDefinition Width="0.333*"/>
                         </Grid.ColumnDefinitions>
-                        <RadioButton x:Name="rdbFacil" Content="Fácil" Margin="10" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" GroupName="gb_dificultad" IsChecked="True" Foreground="White"/>
-                        <RadioButton x:Name="rdbDificil" Content="Dificil" Margin="10" Grid.Column="2" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" GroupName="gb_dificultad" Foreground="White"/>
-                        <RadioButton x:Name="rdbMedio" Content="Media" Margin="10" Grid.Column="1" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" GroupName="gb_dificultad" Foreground="White"/>
+                        <RadioButton x:Name="rdb_facil" Content="Fácil" Margin="10" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" GroupName="gb_dificultad" IsChecked="True" Foreground="White"/>
+                        <RadioButton x:Name="rdb_dificil" Content="Dificil" Margin="10" Grid.Column="2" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" GroupName="gb_dificultad" Foreground="White"/>
+                        <RadioButton x:Name="rdb_medio" Content="Media" Margin="10" Grid.Column="1" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" GroupName="gb_dificultad" Foreground="White"/>
                     </Grid>
                 </GroupBox>
-                <Image x:Name="imagSalir1" HorizontalAlignment="Right" Height="22" Source="Presentacion/Resources/red_cross.png" VerticalAlignment="Top" Grid.Column="2" MouseUp="cerrar_empezar_juego"/>
-                <Button x:Name="btnJugar" Content="JUGAR" Height="55" VerticalAlignment="Top" Margin="10,95.32,10,0" Grid.Row="1" Click="empezarJuego" Grid.ColumnSpan="3" FontWeight="Bold" Background="White"/>
+                <Image x:Name="red_cross_png2" HorizontalAlignment="Right" Height="22" Source="Presentacion/Resources/red_cross.png" VerticalAlignment="Top" Grid.Column="2" MouseUp="cerrar_empezar_juego"/>
+                <Button Content="JUGAR" Height="55" VerticalAlignment="Top" Margin="10,95.32,10,0" Grid.Row="1" Click="empezarJuego" Grid.ColumnSpan="3" FontWeight="Bold" Background="White"/>
             </Grid>
         </Border>
-        <Border x:Name="borderFondoVerLogros" BorderBrush="Black" BorderThickness="1" Grid.Column="1" Grid.Row="1" CornerRadius="10" Opacity="0.6" Background="White" Visibility="Hidden"/>
-        <Border x:Name="borderVerLogros" BorderBrush="Black" BorderThickness="0" Grid.Column="1" Grid.Row="1" CornerRadius="10" Visibility="Hidden">
+        <Label x:Name="lbl_cuenta_atras" Content="3" Grid.Column="1" Margin="10" Grid.Row="1" HorizontalContentAlignment="Center" FontFamily="Comic Sans MS" FontSize="133.333" Foreground="#FFF73E3E" VerticalContentAlignment="Center" Visibility="Hidden"/>
+        <Border x:Name="border_logros_base" BorderBrush="Black" BorderThickness="1" Grid.Column="1" Grid.Row="1" CornerRadius="10" Opacity="0.6" Background="White" Visibility="Hidden"/>
+        <Border x:Name="border_logros" BorderBrush="Black" BorderThickness="0" Grid.Column="1" Grid.Row="1" CornerRadius="10" Visibility="Hidden">
             <Border.Background>
                 <ImageBrush ImageSource="Presentacion/Resources/estanteria.png"/>
             </Border.Background>
-            <Grid x:Name="gridVerLogros" Margin="10">
+            <Grid x:Name="grid_logros" Margin="10">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="25*"/>
                     <ColumnDefinition Width="93*"/>
@@ -2197,34 +2198,34 @@
                     <RowDefinition Height="64*"/>
                     <RowDefinition Height="38*"/>
                 </Grid.RowDefinitions>
-                <Image x:Name="logro200Monedas" Source="Presentacion/Resources/logro.png" Grid.Column="3" Margin="10,0,8.74,30"  Opacity="0.2"/>
-                <Image x:Name="logroJuega5Veces" Source="Presentacion/Resources/logro.png" Grid.Column="2" Margin="10,0,8.74,30" Opacity="0.2"/>
-                <Image x:Name="logroResuelve5Puzzles" Source="Presentacion/Resources/logro.png" Grid.Column="4" Margin="10,0,8.74,30"  Opacity="0.2"/>
-                <Image x:Name="logroSecreto" Source="Presentacion/Resources/trofeo_especial.png" Grid.Column="4" Margin="10,0,8.74,41.599"  Grid.Row="4" Opacity="0.2"/>
-                <Image x:Name="logro1000Monedas" Source="Presentacion/Resources/logro.png" Grid.Column="3" Margin="10,0,8.74,41.599" Grid.Row="4"  Opacity="0.2"/>
-                <Image x:Name="logroJuega20Veces" Source="Presentacion/Resources/logro.png" Grid.Column="2" Margin="10,0,8.74,41.599" Grid.Row="4" Opacity="0.2"/>
-                <Image x:Name="logroNivel10" Source="Presentacion/Resources/logro.png" Grid.Column="1" Margin="0,0,0,41.599" Grid.Row="4" Opacity="0.2"/>
-                <Image x:Name="LogroResuelve10Puzzles" Source="Presentacion/Resources/logro.png" Grid.Column="4" Margin="10,65.753,8.74,30.4" Grid.Row="1" Opacity="0.2" Grid.RowSpan="2"/>
-                <Image x:Name="logro500Monedas" Source="Presentacion/Resources/logro.png" Grid.Column="3" Margin="8.74,65.725,10,30.428" Grid.Row="1" Opacity="0.2" Grid.RowSpan="2"/>
-                <Image x:Name="logroJuega10Veces" Source="Presentacion/Resources/logro.png" Grid.Column="2" Margin="10,65.753,8.74,30.428" Grid.Row="1" Opacity="0.2" Grid.RowSpan="2"/>
-                <Image x:Name="logroNivel6" Source="Presentacion/Resources/logro.png" Grid.Column="1" Grid.Row="1" Margin="0,65.753,0,30.428"  Opacity="0.2" Grid.RowSpan="2"/>
-                <Image x:Name="logroNivel3" Source="Presentacion/Resources/logro.png" VerticalAlignment="Bottom" Margin="0.5,0,0,30" Grid.Column="1" Opacity="0.2" Height="115.126"/>
-                <TextBlock x:Name="txtNivel6" Grid.Column="1" TextWrapping="Wrap" Text="Alcanza el nivel 6" FontFamily="Comic Sans MS" FontSize="18.667" Grid.Row="2" TextAlignment="Center" Margin="0,-0.035,0,0.07"  HorizontalAlignment="Center" VerticalAlignment="Top"/>
-                <TextBlock x:Name="txtNivel10" Grid.Column="1" TextWrapping="Wrap" Text="Alcanza el nivel 10" FontFamily="Comic Sans MS" FontSize="18.667" Grid.Row="4" TextAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Top" />
-                <TextBlock x:Name="txtNivel3" Grid.Column="1" TextWrapping="Wrap" Text="Alcanza el nivel 3" FontFamily="Comic Sans MS" FontSize="18.667" TextAlignment="Center" VerticalAlignment="Top" HorizontalAlignment="Center" />
-                <TextBlock x:Name="txtJuega10Veces" Grid.Column="2" TextWrapping="Wrap" Text="Juega 10 veces" FontFamily="Comic Sans MS" FontSize="18.667" TextAlignment="Center" VerticalAlignment="Top" Grid.Row="2" Height="63.777" HorizontalAlignment="Center" />
-                <TextBlock x:Name="txtJuega5Veces" Grid.Column="2" TextWrapping="Wrap" Text="Juega 5 veces" FontFamily="Comic Sans MS" FontSize="18.667" TextAlignment="Center" VerticalAlignment="Top" Height="63.777" HorizontalAlignment="Center"/>
-                <TextBlock x:Name="txtJuega20Veces" Grid.Column="2" TextWrapping="Wrap" Text="Juega 20 veces" FontFamily="Comic Sans MS" FontSize="18.667" TextAlignment="Center" VerticalAlignment="Top" Grid.Row="4" Height="63.777" HorizontalAlignment="Center"/>
-                <TextBlock x:Name="txt200Monedas" Grid.Column="3" TextWrapping="Wrap" Text="Consigue 200 monedas totales" FontFamily="Comic Sans MS" FontSize="18.667" TextAlignment="Center" VerticalAlignment="Top" Height="63.777" HorizontalAlignment="Center"/>
-                <TextBlock x:Name="txt1000Monedas" Grid.Column="3" TextWrapping="Wrap" Text="Consigue 1000 monedas totales" FontFamily="Comic Sans MS" FontSize="18.667" TextAlignment="Center" VerticalAlignment="Top" Height="63.777" Margin="0,0.001,0,-0.001" Grid.Row="4"/>
-                <TextBlock x:Name="txt500Monedas" Grid.Column="3" TextWrapping="Wrap" Text="Consigue 500 monedas totales" FontFamily="Comic Sans MS" FontSize="18.667" TextAlignment="Center" VerticalAlignment="Top" Height="63.777" Grid.Row="2" />
-                <TextBlock x:Name="txtResuelve10Puzzles" Grid.Column="4" TextWrapping="Wrap" Text="Resuelve 10 puzzles" FontFamily="Comic Sans MS" FontSize="18.667" TextAlignment="Center" VerticalAlignment="Top" Height="63.777" Grid.Row="2"/>
-                <TextBlock x:Name="txtLogroSecreto" Grid.Column="4" TextWrapping="Wrap" Text="Logro secreto" FontFamily="Comic Sans MS" FontSize="18.667" TextAlignment="Center" VerticalAlignment="Top" Height="63.777" Margin="0,0.001,0,-0.001" Grid.Row="4"/>
-                <TextBlock x:Name="txtResuelve5Puzzles" Grid.Column="4" TextWrapping="Wrap" FontFamily="Comic Sans MS" FontSize="18.667" TextAlignment="Center" VerticalAlignment="Top" Height="63.777" Text="Resuelve 5 puzzles"/>
-                <Image x:Name="imagSalir" Source="Presentacion/Resources/red_cross.png" Grid.Column="5" Margin="2.167,0,0,0" Height="22" VerticalAlignment="Top" HorizontalAlignment="Right" MouseUp="ocultar_logros"/>
+                <Image x:Name="logro_mon200" Source="Presentacion/Resources/logro.png" Grid.Column="3" Margin="10,0,8.74,30"  Opacity="0.2"/>
+                <Image x:Name="logro_pl5" Source="Presentacion/Resources/logro.png" Grid.Column="2" Margin="10,0,8.74,30" Opacity="0.2"/>
+                <Image x:Name="logro_pz5" Source="Presentacion/Resources/logro.png" Grid.Column="4" Margin="10,0,8.74,30"  Opacity="0.2"/>
+                <Image x:Name="logro_todos" Source="Presentacion/Resources/trofeo_especial.png" Grid.Column="4" Margin="10,0,8.74,41.599"  Grid.Row="4" Opacity="0.2"/>
+                <Image x:Name="logro_mon1000" Source="Presentacion/Resources/logro.png" Grid.Column="3" Margin="10,0,8.74,41.599" Grid.Row="4"  Opacity="0.2"/>
+                <Image x:Name="logro_pl20" Source="Presentacion/Resources/logro.png" Grid.Column="2" Margin="10,0,8.74,41.599" Grid.Row="4" Opacity="0.2"/>
+                <Image x:Name="logro_lv10" Source="Presentacion/Resources/logro.png" Grid.Column="1" Margin="0,0,0,41.599" Grid.Row="4" Opacity="0.2"/>
+                <Image x:Name="logro_pz10" Source="Presentacion/Resources/logro.png" Grid.Column="4" Margin="10,65.753,8.74,30.4" Grid.Row="1" Opacity="0.2" Grid.RowSpan="2"/>
+                <Image x:Name="logro_mon500" Source="Presentacion/Resources/logro.png" Grid.Column="3" Margin="8.74,65.725,10,30.428" Grid.Row="1" Opacity="0.2" Grid.RowSpan="2"/>
+                <Image x:Name="logro_pl10" Source="Presentacion/Resources/logro.png" Grid.Column="2" Margin="10,65.753,8.74,30.428" Grid.Row="1" Opacity="0.2" Grid.RowSpan="2"/>
+                <Image x:Name="logro_lv6" Source="Presentacion/Resources/logro.png" Grid.Column="1" Grid.Row="1" Margin="0,65.753,0,30.428"  Opacity="0.2" Grid.RowSpan="2"/>
+                <Image x:Name="logro_lv3" Source="Presentacion/Resources/logro.png" VerticalAlignment="Bottom" Margin="0.5,0,0,30" Grid.Column="1" Opacity="0.2" Height="115.126"/>
+                <TextBlock x:Name="tb_logro_lv6" Grid.Column="1" TextWrapping="Wrap" Text="Alcanza el nivel 6" FontFamily="Comic Sans MS" FontSize="18.667" Grid.Row="2" TextAlignment="Center" Margin="0,-0.035,0,0.07"  HorizontalAlignment="Center" VerticalAlignment="Top"/>
+                <TextBlock x:Name="tb_logro_lv10" Grid.Column="1" TextWrapping="Wrap" Text="Alcanza el nivel 10" FontFamily="Comic Sans MS" FontSize="18.667" Grid.Row="4" TextAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Top" />
+                <TextBlock x:Name="tb_logro_lv3" Grid.Column="1" TextWrapping="Wrap" Text="Alcanza el nivel 3" FontFamily="Comic Sans MS" FontSize="18.667" TextAlignment="Center" VerticalAlignment="Top" HorizontalAlignment="Center" />
+                <TextBlock x:Name="tb_logro_pl10" Grid.Column="2" TextWrapping="Wrap" Text="Juega 10 veces" FontFamily="Comic Sans MS" FontSize="18.667" TextAlignment="Center" VerticalAlignment="Top" Grid.Row="2" Height="63.777" HorizontalAlignment="Center" />
+                <TextBlock x:Name="tb_logro_pl5" Grid.Column="2" TextWrapping="Wrap" Text="Juega 5 veces" FontFamily="Comic Sans MS" FontSize="18.667" TextAlignment="Center" VerticalAlignment="Top" Height="63.777" HorizontalAlignment="Center"/>
+                <TextBlock x:Name="tb_logro_pl20" Grid.Column="2" TextWrapping="Wrap" Text="Juega 20 veces" FontFamily="Comic Sans MS" FontSize="18.667" TextAlignment="Center" VerticalAlignment="Top" Grid.Row="4" Height="63.777" HorizontalAlignment="Center"/>
+                <TextBlock x:Name="tb_logro_mon200" Grid.Column="3" TextWrapping="Wrap" Text="Consigue 200 monedas" FontFamily="Comic Sans MS" FontSize="18.667" TextAlignment="Center" VerticalAlignment="Top" Height="63.777" HorizontalAlignment="Center"/>
+                <TextBlock x:Name="tb_logro_mon1000" Grid.Column="3" TextWrapping="Wrap" Text="Consigue 1000 monedas" FontFamily="Comic Sans MS" FontSize="18.667" TextAlignment="Center" VerticalAlignment="Top" Height="63.777" Margin="0,0.001,0,-0.001" Grid.Row="4"/>
+                <TextBlock x:Name="tb_logro_mon500" Grid.Column="3" TextWrapping="Wrap" Text="Consigue 500 monedas" FontFamily="Comic Sans MS" FontSize="18.667" TextAlignment="Center" VerticalAlignment="Top" Height="63.777" Grid.Row="2" />
+                <TextBlock x:Name="tb_logro_pz10" Grid.Column="4" TextWrapping="Wrap" Text="Resuelve 10 puzzles" FontFamily="Comic Sans MS" FontSize="18.667" TextAlignment="Center" VerticalAlignment="Top" Height="63.777" Grid.Row="2"/>
+                <TextBlock x:Name="tb_logro_todos" Grid.Column="4" TextWrapping="Wrap" Text="Logro secreto" FontFamily="Comic Sans MS" FontSize="18.667" TextAlignment="Center" VerticalAlignment="Top" Height="63.777" Margin="0,0.001,0,-0.001" Grid.Row="4"/>
+                <TextBlock x:Name="tb_logro_pz5" Grid.Column="4" TextWrapping="Wrap" FontFamily="Comic Sans MS" FontSize="18.667" TextAlignment="Center" VerticalAlignment="Top" Height="63.777" Text="Resuelve 5 puzzles"/>
+                <Image x:Name="red_cross_png" Source="Presentacion/Resources/red_cross.png" Grid.Column="5" Margin="2.167,0,0,0" Height="22" VerticalAlignment="Top" HorizontalAlignment="Right" MouseUp="ocultar_logros"/>
             </Grid>
         </Border>
-        <Border x:Name="borderNotificacionLogro" BorderThickness="1" Grid.Column="1" Margin="250,5" CornerRadius="30" Background="#FF005AAD" RenderTransformOrigin="0.5,0.5" Visibility="Hidden">
+        <Border x:Name="notificacion_logros" BorderThickness="1" Grid.Column="1" Margin="250,5" CornerRadius="30" Background="#FF005AAD" RenderTransformOrigin="0.5,0.5" Visibility="Hidden">
             <Border.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -2233,7 +2234,7 @@
                     <TranslateTransform/>
                 </TransformGroup>
             </Border.RenderTransform>
-            <Grid x:Name="gridNuevoLogro" Margin="9,-1">
+            <Grid x:Name="desbloqueo_logros" Margin="9,-1">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="0.2*"/>
                     <ColumnDefinition Width="0.8*"/>
@@ -2243,13 +2244,13 @@
                     <RowDefinition Height="4*"/>
                     <RowDefinition Height="9*"/>
                 </Grid.RowDefinitions>
-                <Image x:Name="imagLogro" Grid.RowSpan="3" Source="Presentacion/Resources/nuevo_logro.png" Stretch="Fill" VerticalAlignment="Center" HorizontalAlignment="Center" Height="80" Width="80.102" Margin="5,6,5,4"/>
-                <Label x:Name="lblNuevoLogro" Content="¡Nuevo logro desbloqueado!" Grid.Column="1" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontFamily="Comic Sans MS" FontSize="24" Grid.RowSpan="2" FontWeight="Bold" Foreground="White"/>
-                <Label x:Name="lblInfoNuevoLogro" Content="Juega 5 veces" Grid.Column="1" Grid.Row="2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontFamily="Comic Sans MS" FontSize="22" FontWeight="Bold" FontStyle="Italic" Foreground="White"/>
+                <Image x:Name="logro_png" Grid.RowSpan="3" Source="Presentacion/Resources/nuevo_logro.png" Stretch="Fill" VerticalAlignment="Center" HorizontalAlignment="Center" Height="80" Width="80.102" Margin="5,6,5,4"/>
+                <Label x:Name="lbl_logro" Content="¡Nuevo logro desbloqueado!" Grid.Column="1" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontFamily="Comic Sans MS" FontSize="24" Grid.RowSpan="2" FontWeight="Bold" Foreground="White"/>
+                <Label x:Name="lbl_logro_desbloqueado" Content="Juega 5 veces" Grid.Column="1" Grid.Row="2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontFamily="Comic Sans MS" FontSize="22" FontWeight="Bold" FontStyle="Italic" Foreground="White"/>
             </Grid>
         </Border>
-        <Border x:Name="borderRegistro" BorderThickness="1" CornerRadius="20" Grid.Column="1" Grid.Row="1" Margin="10,129,649.4,121.4" Visibility="Hidden">
-            <Grid x:Name="gridRegistro" Margin="9">
+        <Border x:Name="border_registro" BorderThickness="1" CornerRadius="20" Grid.Column="1" Grid.Row="1" Margin="10,129,649.4,121.4" Visibility="Hidden">
+            <Grid Margin="9">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="0.1*"/>
                     <RowDefinition Height="0.15*"/>
@@ -2265,17 +2266,17 @@
                     <ColumnDefinition Width="0.4*"/>
 
                 </Grid.ColumnDefinitions>
-                <Label x:Name="lblUsuario1" Content="Usuario:" Grid.Column="1" Margin="0,10,10,10" Grid.Row="1" VerticalContentAlignment="Center" HorizontalContentAlignment="Right" FontFamily="Comic Sans MS" FontSize="16" Foreground="Black" HorizontalAlignment="Right" RenderTransformOrigin="-0.429,0.442" Width="114.72"/>
-                <Label x:Name="lblPass1" Content="Contraseña:" Grid.Column="1" Margin="0,0,10,20" Grid.Row="2" VerticalContentAlignment="Center" HorizontalContentAlignment="Right" FontFamily="Comic Sans MS" FontSize="16" Foreground="Black" HorizontalAlignment="Right" Width="114.72"/>
-                <TextBox x:Name="txtRegistroUsuario" Grid.Column="2" Margin="10" Grid.Row="1" TextWrapping="Wrap" RenderTransformOrigin="0.511,0" VerticalContentAlignment="Center" FontFamily="Comic Sans MS" FontSize="16"/>
-                <PasswordBox x:Name="txtRegistroPass" Grid.Column="2" Margin="10" Grid.Row="2" FontFamily="Comic Sans MS" FontSize="16" VerticalContentAlignment="Center"/>
-                <Label x:Name="lblApp1" Content="VENOMGOTCHI - Registro" Grid.Column="1" FontFamily="Comic Sans MS" FontSize="16" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="Black" Margin="10,0,31.827,0" FontWeight="Bold" Grid.ColumnSpan="2" HorizontalAlignment="Left"/>
-                <Button x:Name="btnRegistrarse" Content="Registrarme" Grid.Column="1" Grid.Row="3" FontFamily="Comic Sans MS" FontSize="16" Click="animacion_ir_inicio" Background="#FF819CBE" Margin="9.9,39.24,10.1,67.7" Grid.ColumnSpan="2" Grid.RowSpan="2" FontWeight="Bold"/>
-                <Label x:Name="lblInfoRegistro" Content="" Margin="10,0,0,0" Grid.Row="6" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontFamily="Comic Sans MS" FontSize="16" Foreground="Red" Grid.ColumnSpan="5" FontWeight="Bold"/>
-                <Button x:Name="btnVolver" Content="Atrás" Grid.Column="1" Grid.Row="4" FontFamily="Comic Sans MS" FontSize="16" Click="volver_atras_registro" Background="#FF819CBE" Margin="10,73.595,10,26.505" Grid.RowSpan="2"/>
+                <Label x:Name="label5" Content="Usuario:" Grid.Column="1" Margin="0,10,10,10" Grid.Row="1" VerticalContentAlignment="Center" HorizontalContentAlignment="Right" FontFamily="Comic Sans MS" FontSize="16" Foreground="Black" HorizontalAlignment="Right" RenderTransformOrigin="-0.429,0.442" Width="114.72"/>
+                <Label x:Name="label3_Copy1" Content="Contraseña:" Grid.Column="1" Margin="0,0,10,20" Grid.Row="2" VerticalContentAlignment="Center" HorizontalContentAlignment="Right" FontFamily="Comic Sans MS" FontSize="16" Foreground="Black" HorizontalAlignment="Right" Width="114.72"/>
+                <TextBox x:Name="tb_registro_usuario" Grid.Column="2" Margin="10" Grid.Row="1" TextWrapping="Wrap" RenderTransformOrigin="0.511,0" VerticalContentAlignment="Center" FontFamily="Comic Sans MS" FontSize="16"/>
+                <PasswordBox x:Name="tb_registro_contrasena" Grid.Column="2" Margin="10" Grid.Row="2" FontFamily="Comic Sans MS" FontSize="16" VerticalContentAlignment="Center"/>
+                <Label x:Name="label6" Content="VENOMGOTCHI - Registro" Grid.Column="1" FontFamily="Comic Sans MS" FontSize="16" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="Black" Margin="10,0,31.827,0" FontWeight="Bold" Grid.ColumnSpan="2" HorizontalAlignment="Left"/>
+                <Button x:Name="btn_registrarse1" Content="Registrarme" Grid.Column="1" Grid.Row="3" FontFamily="Comic Sans MS" FontSize="16" Click="animacion_ir_inicio" Background="#FF819CBE" Margin="9.9,39.24,10.1,67.7" Grid.ColumnSpan="2" Grid.RowSpan="2" FontWeight="Bold"/>
+                <Label x:Name="lbl_msg_registro" Content="" Margin="10,0,0,0" Grid.Row="6" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontFamily="Comic Sans MS" FontSize="16" Foreground="Red" Grid.ColumnSpan="5" FontWeight="Bold"/>
+                <Button x:Name="btn_atras" Content="Atrás" Grid.Column="1" Grid.Row="4" FontFamily="Comic Sans MS" FontSize="16" Click="volver_atras_registro" Background="#FF819CBE" Margin="10,73.595,10,26.505" Grid.RowSpan="2"/>
             </Grid>
         </Border>
-        <Grid x:Name="gridInferior" Margin="10" Grid.Row="2" Grid.ColumnSpan="3" RenderTransformOrigin="0.5,0.5" >
+        <Grid x:Name="grid_inferior" Margin="10" Grid.Row="2" Grid.ColumnSpan="3" RenderTransformOrigin="0.5,0.5" >
             <Grid.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -2300,20 +2301,20 @@
             <ProgressBar x:Name="pbApetito"  Grid.Column="6" Margin="19.786,25,153.536,25" Height="30" VerticalAlignment="Center" Background="{x:Null}" BorderBrush="#FF7C7C7C" BorderThickness="2" Foreground="#FFDEA50E" Value="100" Grid.ColumnSpan="3"/>
             <ProgressBar x:Name="pbEnergia" Margin="68,25,117.755,25" Height="30" VerticalAlignment="Center" Grid.ColumnSpan="3" Background="{x:Null}" BorderBrush="#FF7C7C7C" BorderThickness="2" Value="100"/>
             <ProgressBar x:Name="pbDiversion"  Grid.Column="3" Margin="30.716,25,142.486,25" Height="30" VerticalAlignment="Center" BorderBrush="#FF7C7C7C" BorderThickness="2" Background="{x:Null}"  Foreground="#FF0F9EBD" Value="100" Grid.ColumnSpan="3" />
-            <Image x:Name="imagEnergia1" Source="Presentacion/Resources/bateria.png" Width="53" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,10,22.755,17"/>
-            <Image x:Name="imagDiversion" Grid.Column="2" Source="Presentacion/Resources/consola.png" HorizontalAlignment="Right" RenderTransformOrigin="0.847,0.521"/>
-            <Image x:Name="imagApetido" Grid.Column="5" Source="Presentacion/Resources/restaurante.png" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,-0.001,0"/>
+            <Image x:Name="energy_png" Source="Presentacion/Resources/bateria.png" Width="53" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,10,22.755,17"/>
+            <Image x:Name="game_png" Grid.Column="2" Source="Presentacion/Resources/consola.png" HorizontalAlignment="Right" RenderTransformOrigin="0.847,0.521"/>
+            <Image x:Name="food_png" Grid.Column="5" Source="Presentacion/Resources/restaurante.png" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,-0.001,0"/>
 
             <Label x:Name="lblEnergia" Grid.ColumnSpan="3" Content="" Margin="68,25,117.755,25" FontFamily="Comic Sans MS" FontSize="16" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontWeight="Bold" Foreground="White"/>
             <Label x:Name="lblApetito" Content="" Grid.Column="6" Margin="19.786,25,153.536,25" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="16" FontFamily="Comic Sans MS" FontWeight="Bold" Grid.ColumnSpan="3" Foreground="White"/>
             <Label x:Name="lblDiversion" Grid.ColumnSpan="3" Content="" Grid.Column="3" Margin="30.358,25,142.943,25" FontFamily="Comic Sans MS" FontSize="16" UseLayoutRounding="True" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontWeight="Bold" Foreground="White"/>
 
         </Grid>
-        <Border x:Name="borderPuzzle" BorderBrush="Black" BorderThickness="1" CornerRadius="10" Grid.Column="1" Grid.Row="1" Visibility="Hidden">
+        <Border x:Name="border_puzzle" BorderBrush="Black" BorderThickness="1" CornerRadius="10" Grid.Column="1" Grid.Row="1" Visibility="Hidden">
             <Border.Background>
                 <ImageBrush ImageSource="Presentacion/Resources/madera.jpg"/>
             </Border.Background>
-            <Grid x:Name="gridFondoPuzzle" Margin="9">
+            <Grid x:Name="grid_tapete_puzzle" Margin="9">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="21*"/>
                     <RowDefinition Height="167*"/>
@@ -2324,7 +2325,7 @@
                     <ColumnDefinition Width="760*"/>
                     <ColumnDefinition Width="96*"/>
                 </Grid.ColumnDefinitions>
-                <Grid x:Name="gridPiezas" Margin="0.005,10,0,10" Grid.Row="2" Grid.ColumnSpan="2" Grid.Column="1">
+                <Grid x:Name="grid_piezas" Margin="0.005,10,0,10" Grid.Row="2" Grid.ColumnSpan="2" Grid.Column="1">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="1*"/>
                         <RowDefinition Height="1*"/>
@@ -2354,7 +2355,7 @@
                             </TransformGroup>
                         </Image.RenderTransform>
                     </Image>
-                    <Button x:Name="btnRestablecerPiezas" Content="Restablecer Puzzle" Grid.Column="4" Margin="10,35" Grid.Row="1" FontFamily="Comic Sans MS" FontSize="16" Click="restablecer_puzzle"/>
+                    <Button x:Name="btn_restablecer_puzzle" Content="Restablecer Puzzle" Grid.Column="4" Margin="10,35" Grid.Row="1" FontFamily="Comic Sans MS" FontSize="16" Click="restablecer_puzzle"/>
                 </Grid>
                 <Grid x:Name="fondo" Grid.Column="1" Grid.Row="1" Opacity="0.6" Background="White">
                     <Grid.RowDefinitions>
@@ -2434,10 +2435,10 @@
                     <Image x:Name="pieza4" Source="Presentacion/Resources/pieza.png" AllowDrop="True" Drop="soltar_pieza" MouseDown="mover_pieza" Grid.Row="1" MouseMove="moviendo_pieza"/>
                     <Image x:Name="pieza2" Source="Presentacion/Resources/pieza.png" AllowDrop="True" Drop="soltar_pieza" MouseDown="mover_pieza" Grid.Column="1" MouseMove="moviendo_pieza"/>
                 </Grid>
-                <Image x:Name="iconoSalir" Source="Presentacion/Resources/red_cross.png" Grid.Column="2" Height="22" HorizontalAlignment="Right" VerticalAlignment="Top" MouseUp="cerrar_puzzle" Width="22"/>
-                <Label x:Name="lblTiempo" Content="" Grid.Column="1" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontFamily="Comic Sans MS" FontSize="32" FontWeight="Bold" Foreground="#FFD6000A"/>
-                <Label x:Name="lblMonedasGanadas" Content="Enhorabuena,&#xD;&#xA;¡ Has ganado!" Grid.Column="1" Margin="10" Grid.Row="2" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontFamily="Comic Sans MS" FontSize="48" Visibility="Hidden"/>
-                <Label x:Name="lblResultado" Content="Enhorabuena,&#xD;&#xA;¡ has ganado !" Grid.Column="1" Grid.Row="1" FontFamily="Comic Sans MS" FontSize="48" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Visibility="Hidden"/>
+                <Image x:Name="red_cross_png1" Source="Presentacion/Resources/red_cross.png" Grid.Column="2" Height="22" HorizontalAlignment="Right" VerticalAlignment="Top" MouseUp="cerrar_puzzle" Width="22"/>
+                <Label x:Name="lbl_reloj" Content="" Grid.Column="1" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontFamily="Comic Sans MS" FontSize="32" FontWeight="Bold" Foreground="#FFD6000A"/>
+                <Label x:Name="lbl_monedas_ganadas" Content="Enhorabuena,&#xD;&#xA;¡ Has ganado!" Grid.Column="1" Margin="10" Grid.Row="2" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontFamily="Comic Sans MS" FontSize="48" Visibility="Hidden"/>
+                <Label x:Name="lbl_derrota_victoria" Content="Enhorabuena,&#xD;&#xA;¡ has ganado !" Grid.Column="1" Grid.Row="1" FontFamily="Comic Sans MS" FontSize="48" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Visibility="Hidden"/>
             </Grid>
         </Border>
     </Grid>

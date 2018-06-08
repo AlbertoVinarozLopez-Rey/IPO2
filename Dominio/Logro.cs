@@ -26,32 +26,55 @@ namespace MiAppVenom.Dominio
             }
         }
 
-        private Boolean desbloqueado;
-        public Boolean Desbloqueado
+        private Boolean conseguido;
+        public Boolean Conseguido
         {
             get
             {
-                return this.desbloqueado;
+                return this.conseguido;
             }
             set
             {
-                this.desbloqueado = value;
+                this.conseguido = value;
             }
         }
 
+
+        /*********************************************************************
+        *
+        * Method name: Logro (Constructor)
+        *
+        * Description of the Method: Constructor del objeto Logro.
+        *
+        * Calling arguments: int : id, String : texto, Boolean : conseguido
+        *
+        * Return value: none
+        *
+        *********************************************************************/
         public Logro(int id, String texto, Boolean conseguido)
         {
             this.id = id;
             this.texto = texto;
-            this.desbloqueado = conseguido;
+            this.conseguido = conseguido;
         }
 
 
+        /*********************************************************************
+        *
+        * Method name: Logro (Constructor)
+        *
+        * Description of the Method: Constructor del objeto Logro.
+        *
+        * Calling arguments: none
+        *
+        * Return value: none
+        *
+        *********************************************************************/
         public Logro()
         {
             this.id = -1;
             this.texto = null;
-            this.desbloqueado = false;
+            this.conseguido = false;
         }
     }
 }

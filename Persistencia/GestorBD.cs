@@ -18,7 +18,7 @@ namespace MiAppVenom.Persistencia
 
         public void registrarUsuario(String usuario, String pass)
         {
-            Avatar av = new Avatar(usuario, 0, 0, 0, 100, 100, 100,"", 0, 0, 0);
+            Avatar av = new Avatar(usuario, 1, 0, 0, 100, 100, 100,"", 0, 0, 0);
             try
             {
                 using (OleDbConnection connection = new OleDbConnection(connString))

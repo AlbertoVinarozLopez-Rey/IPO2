@@ -1392,7 +1392,7 @@ namespace MiAppVenom
             try
             {
                 if ((new Avatar().usuarioExistente(tb_registro_usuario.Text.ToString()))){
-                    lbl_msg_registro.Content="EL USUARIO INTRODUCIDO YA EXISTE";
+                    lbl_msg_registro.Content="EL USUARIO INTRODUCIDO\nYA EXISTE";
                 }
                 else
                 {

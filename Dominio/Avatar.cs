@@ -3,9 +3,6 @@ using MiAppVenom.Persistencia;
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace MiAppVenom
 {
@@ -585,6 +582,12 @@ namespace MiAppVenom
                 }
             }
             return logros;
+        }
+
+        public Boolean usuarioExistente(String usuario)
+        {
+            Boolean existente = this.gestor.comprobarUsuarioExistente(usuario);
+            return existente;
         }
 
     }

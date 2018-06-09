@@ -28,9 +28,6 @@ namespace MiAppVenom
         NINGUNA
     }
 
-    /// <summary>
-    /// Lógica de interacción para MainWindow.xaml
-    /// </summary>
     public partial class MainWindow : Window
     {
         
@@ -175,11 +172,7 @@ namespace MiAppVenom
                 lbl_flecha_left.IsEnabled = true;
 
 
-                /*//Se crea el modulo de twitter 
-                twitter = new TwitterService("Ldt80izwntbF0YeGeJqjRAvFH", "f56SsNbK99P9lIvWtrjxsoAaJh24T0SlF6SYjy4nGmyomJOaNb");
-                twitter.AuthenticateWith("702046118222372864-NmQOGATRDJnQDaSdmYfAGNnqDDLM0XA", "3Lthr2I49OVqlJlHULvMRocig3W56OP3xAeOOojtvt8Do");
-                */
-
+        
 
                /* //Se crea el diccionario del reconocimiento de voz y se inicializa el mismo
                 reconocimiento_voz = new SpeechRecognizer();
@@ -204,16 +197,7 @@ namespace MiAppVenom
                 timer_global.Tick += new EventHandler(reloj);
                 timer_global.Start();
 
-                /*try
-                {
-                    twitter.SendTweet(
-                        new SendTweetOptions
-                        {
-                            Status = "@" + avatar.Usuario.ToString() + " está ahora mismo jugando a BatGotchi!!\n\nJuega tu también!"
-                        }
-                    );
-                }
-                catch (Exception) { };*/
+           
             }
 
         }
@@ -324,16 +308,7 @@ namespace MiAppVenom
                         pb_nivel.Maximum = 100 * avatar.Nivel;
                         avatar.NuevoNivel = false;
                         ((Storyboard)this.Resources["subirNivel"]).Begin();
-                       /* try
-                        {
-                            twitter.SendTweet(
-                                new SendTweetOptions
-                                {
-                                    Status = "¡Enhorabuena @" + avatar.Usuario.ToString() + " ! Has alcanzado el nivel " + avatar.Nivel.ToString() + ".\nSigue jugando para subir de nivel!!"
-                                }
-                            );
-                        }
-                        catch (Exception) { }*/
+                  
                         prox += 3;
                         desbloquear_objetos(avatar.Nivel);
                     }
@@ -635,10 +610,7 @@ namespace MiAppVenom
 
         }
 
-       /* private void restablecer_puzzle(object sender, MouseButtonEventArgs e)
-        {
-            restablecer_puzzle_metodo();
-        }*/
+  
 
         private void restablecer_puzzle(object sender, RoutedEventArgs e)
         {
@@ -1076,16 +1048,7 @@ namespace MiAppVenom
                                     tiempo = 30 - tiempo_juego;
                                 }
                             }
-                           /* try
-                            {
-                                twitter.SendTweet(
-                                    new SendTweetOptions
-                                    {
-                                        Status = "¡Enhorabuena @" + avatar.Usuario.ToString() + " !\nHas conseguido " + monedas + " monedas resolviendo un puzzle en dificultad " + dificultad + ", en " + tiempo.ToString() + " segundos.\nSigue jugando para conseguir más monedas!"
-                                    }
-                                );
-                            }
-                            catch (Exception) { }*/
+                          
                             avatar.puzzleGanado();
                             label_fin = true;
 
@@ -1128,16 +1091,7 @@ namespace MiAppVenom
                                     dificultad = "difícil";
                                 }
                             }
-                           /* try
-                            {
-                                twitter.SendTweet(
-                                    new SendTweetOptions
-                                    {
-                                        Status = "¡Lo siento @" + avatar.Usuario.ToString() + " ! No has conseguido resolver el puzze en dificultad " + dificultad + ".\nInténtalo de nuevo para conseguir monedas!!."
-                                    }
-                                );
-                            }
-                            catch (Exception) { }*/
+                         
                             devolver = 5;
                         }
                         else
@@ -1230,134 +1184,21 @@ namespace MiAppVenom
             }
         }
 
-        /*private void tickConsumoHandler(object sender, EventArgs e)
-        {
-
-            int aux;
-            avatar.Apetito = (aux = avatar.Apetito - aleatorizar(20)) < 0 ? 0 : aux;
-            avatar.Diversion = (aux = avatar.Diversion - aleatorizar(15)) < 0 ? 0 : aux;
-            avatar.Energia = (aux = avatar.Energia - aleatorizar(10)) < 0 ? 0 : aux;
-            this.pbApetito.Value = avatar.Apetito;
-            this.pbDiversion.Value = avatar.Diversion;
-            this.pbEnergia.Value = avatar.Energia;
-            this.lblEnergia.Content = this.pbEnergia.Value + "%";
-            this.lblDiversion.Content = this.pbDiversion.Value + "%";
-            this.lblApetito.Content = this.pbApetito.Value + "%";
-            controlCansado();
-            controlHambre();
-        }
-    
-
-        private void controlHambre()
-        {
-            if (avatar.Apetito <= 25)
-            {
-
-                Storyboard sbHambre = (Storyboard)this.FindResource("animHambreKey");
-                sbHambre.Begin();
-            }
-
-        }
-        */
+       
         private int proximo_logro()
         {
             Logro logro = avatar.logrosParaNotificar[0];
             avatar.logrosParaNotificar.RemoveAt(0);
             int dev = cont + 4;
             lbl_logro_desbloqueado.Content = logro.Descripcion;
-           /* try
-            {
-                twitter.SendTweet(
-                    new SendTweetOptions
-                    {
-                        Status = "¡Enhorabuena @" + avatar.Usuario.ToString() + " ! Has desbloqueado el siguiente logro: " + logro.Texto.ToString() + ".\nSigue jugando para desbloquear más logros y subir de nivel."
-                    }
-                );
-            }
-            catch (Exception) { }*/
+        
 
            ((Storyboard)this.Resources["notificacion_logro"]).Begin();
             desbloquear_logro(logro.Id);
             return dev;
         }
 
-     /*   private void controlCansado()
-        {
-            if (avatar.Energia <= 25) { 
-
-            Storyboard sbCansado = (Storyboard)this.FindResource("animCansadoKey");
-            sbCansado.Begin();
-        }
-            
-        }
-
-        private int aleatorizar(int max)
-        {
-            Random generadorAleat = new Random();
-            return 1 + generadorAleat.Next(max);
-        }
-
-
-        private void BEnergia_Click(object sender, RoutedEventArgs e)
-        {
-            if (avatar.Energia < 100)
-            {
-                intervalo -= 20;
-                if (intervalo > 0)
-                {
-                    temporizador.Interval = TimeSpan.FromMilliseconds(intervalo);
-                }
-                else
-                {
-                    temporizador.Interval = TimeSpan.FromMilliseconds(5);
-                }
-                avatar.Energia += aleatorizar(10);
-                this.pbEnergia.Value = avatar.Energia;
-                this.lblEnergia.Content = this.pbEnergia.Value + "%";
-            }
-        }
-
-        private void BApetito_Click(object sender, RoutedEventArgs e)
-        {
-            if (avatar.Apetito < 100)
-            {
-                intervalo -= 20;
-                if (intervalo > 0)
-                {
-                    temporizador.Interval = TimeSpan.FromMilliseconds(intervalo);
-                }
-                else
-                {
-                    temporizador.Interval = TimeSpan.FromMilliseconds(5);
-                }
-                avatar.Apetito += aleatorizar(10);
-                this.pbApetito.Value = avatar.Apetito;
-                this.lblApetito.Content = this.pbApetito.Value + "%";
-            }
-        }
-
-        private void BDiversion_Click(object sender, RoutedEventArgs e)
-        {
-            if (avatar.Diversion < 100)
-            {
-                intervalo -= 20;
-                if (intervalo > 0)
-                {
-                    temporizador.Interval = TimeSpan.FromMilliseconds(intervalo);
-                }
-                else
-                {
-                    temporizador.Interval = TimeSpan.FromMilliseconds(5);
-                }
-                avatar.Diversion += aleatorizar(10);
-                this.pbDiversion.Value = avatar.Diversion;
-                this.lblDiversion.Content = this.pbDiversion.Value + "%";
-            }
-        }
-        private void dormir(object sender, RoutedEventArgs e)
-        {
-
-        }*/
+    
 
         private void abrirPuzzle(object sender, RoutedEventArgs e)
         {
@@ -1402,32 +1243,7 @@ namespace MiAppVenom
         }
 
 
-       /* private void empezar_juego(object sender, MouseButtonEventArgs e)
-        {
-            ((Storyboard)this.Resources["ocultarElegirDificultad"]).Begin();
-            ((Storyboard)this.Resources["abrir_puzzle"]).Begin();
-
-            prox++;
-            tiempo_comienzo = cont + 4;
-            if (rdb_dificil.IsChecked == true)
-            {
-                tiempo_juego = 30;
-            }
-            else
-            {
-                if (rdb_medio.IsChecked == true)
-                {
-                    tiempo_juego = 60;
-                }
-                else
-                {
-                    tiempo_juego = 90;
-                }
-            }
-            avatar.nueva_partida();
-            jugando_puzzle = true;
-            actualizar_reloj();
-        }*/
+      
 
         private void actualizar_reloj()
         {
@@ -1573,20 +1389,27 @@ namespace MiAppVenom
 
         private void animacion_ir_inicio(object sender, RoutedEventArgs e)
         {
-            try {
+            try
+            {
+                if ((new Avatar().usuarioExistente(tb_registro_usuario.Text.ToString()))){
+                    lbl_msg_registro.Content="EL USUARIO INTRODUCIDO YA EXISTE";
+                }
+                else
+                {
+               
                 new Avatar().registrar(tb_registro_usuario.Text.ToString(), tb_registro_contrasena.Password.ToString());
-                
-                            
-                            ((Storyboard)this.Resources["ocultarRegistro"]).Begin();
-                            btn_puzzle.IsEnabled = true;
-                            btn_trofeo.IsEnabled = true;
-                            cvVenom.IsEnabled = true;
+
+
+                ((Storyboard)this.Resources["ocultarRegistro"]).Begin();
+                btn_puzzle.IsEnabled = true;
+                btn_trofeo.IsEnabled = true;
+                cvVenom.IsEnabled = true;
                 MessageBox.Show("Si pulsas sobre el pecho de Venom reproducirá un espeluznante sonido...\n" +
                     "y en cualquier otra parte de su cuerpo, se mostrarán los botones de acción.\n\n¡PRUÉBALO!", "SABÍAS QUE...");
-                             usuario = tb_registro_usuario.Text.ToString();
-                            inicializar_avatar();
-                
-                       
+                usuario = tb_registro_usuario.Text.ToString();
+                inicializar_avatar();
+
+            }
                 }
                 catch (Exception)
                 {

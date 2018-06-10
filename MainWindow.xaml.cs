@@ -1411,6 +1411,8 @@ namespace MiAppVenom
                         cargarAvatar();
                         break;
                     case "1":
+                        lbl_msg_inicio.Foreground = Brushes.Red;
+
                         lbl_msg_inicio.Content = "CREDENCIALES INCORRECTOS";
                         break;
                 }

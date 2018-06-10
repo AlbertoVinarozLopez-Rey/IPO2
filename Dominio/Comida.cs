@@ -3,7 +3,7 @@
 
 namespace MiAppVenom.Dominio
 {
-    class Comida
+    public class Comida
     {
         private String nombre;
         private int coste;

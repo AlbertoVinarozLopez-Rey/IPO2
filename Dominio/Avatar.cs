@@ -63,30 +63,24 @@ namespace MiAppVenom
                             case 3:
                                 if (!((Logro)logros["1"]).Desbloqueado)
                                 {
-                                    Logro logroNuevo = (Logro)logros["1"];
-                                    logroNuevo.Desbloqueado = true;
-                                    logrosParaNotificar.Add(logroNuevo);
-                                    logros["1"] = logroNuevo;
+                                    desbloquearNuevoLogro("1");
+
                                 }
                                 break;
 
                             case 6:
                                 if (!((Logro)logros["2"]).Desbloqueado)
                                 {
-                                    Logro logroNuevo = (Logro)logros["2"];
-                                    logroNuevo.Desbloqueado = true;
-                                    logrosParaNotificar.Add(logroNuevo);
-                                    logros["2"] = logroNuevo;
+                                    desbloquearNuevoLogro("2");
+
                                 }
                                 break;
 
                             case 10:
                                 if (!((Logro)logros["3"]).Desbloqueado)
                                 {
-                                    Logro logroNuevo = (Logro)logros["3"];
-                                    logroNuevo.Desbloqueado = true;
-                                    logrosParaNotificar.Add(logroNuevo);
-                                    logros["3"] = logroNuevo;
+                                    desbloquearNuevoLogro("3");
+
                                     comprobarLogroOculto();
                                 }
                                 break;
@@ -363,10 +357,8 @@ namespace MiAppVenom
 
                 if (!((Logro)logros["7"]).Desbloqueado)
                 {
-                    Logro nuevoLogro = (Logro)logros["7"];
-                    nuevoLogro.Desbloqueado = true;
-                    logrosParaNotificar.Add(nuevoLogro);
-                    logros["7"] = nuevoLogro;
+                    desbloquearNuevoLogro("7");
+
                 }
             }
             else
@@ -375,20 +367,16 @@ namespace MiAppVenom
                 {
                     if (!((Logro)logros["8"]).Desbloqueado)
                     {
-                        Logro nuevoLogro = (Logro)logros["8"];
-                        nuevoLogro.Desbloqueado = true;
-                        logrosParaNotificar.Add(nuevoLogro);
-                        logros["8"] = nuevoLogro;
+                        desbloquearNuevoLogro("8");
+
                     }
                 }
                 else
                 {
                     if (!((Logro)logros["9"]).Desbloqueado && monedasTotales > 1000)
                     {
-                        Logro nuevoLogro = (Logro)logros["9"];
-                        nuevoLogro.Desbloqueado = true;
-                        logrosParaNotificar.Add(nuevoLogro);
-                        logros["9"] = nuevoLogro;
+                        desbloquearNuevoLogro("9");
+
                         comprobarLogroOculto();
                     }
                 }
@@ -407,54 +395,34 @@ namespace MiAppVenom
                 case 5:
                     if (!((Logro)logros["4"]).Desbloqueado)
                     {
-                        Logro logroNuevo = (Logro)logros["4"];
-                        logroNuevo.Desbloqueado = true;
-                        logrosParaNotificar.Add(logroNuevo);
-                        logros["4"] = logroNuevo;
+                        desbloquearNuevoLogro("4");
+
                     }
                     break;
                 case 10:
                     if (!((Logro)logros["5"]).Desbloqueado)
                     {
-                        Logro logroNuevo = (Logro)logros["5"];
-                        logroNuevo.Desbloqueado = true;
-                        logrosParaNotificar.Add(logroNuevo);
-                        logros["5"] = logroNuevo;
+                        desbloquearNuevoLogro("5");
+
                     }
                     break;
                 case 20:
                     if (!((Logro)logros["6"]).Desbloqueado)
                     {
-                        Logro logroNuevo = (Logro)logros["6"];
-                        logroNuevo.Desbloqueado = true;
-                        logrosParaNotificar.Add(logroNuevo);
-                        logros["6"] = logroNuevo;
+                        desbloquearNuevoLogro("6");
+
                         comprobarLogroOculto();
                     }
                     break;
             }
         }
 
-
-
-        private void comprobarLogroOculto()
+        private void desbloquearNuevoLogro(String id)
         {
-            int cont = 0;
-            for (int i = 1; i < 13; i++)
-            {
-                if (((Logro)logros[i.ToString()]).Desbloqueado)
-                {
-                    cont++;
-                }
-
-            }
-            if (cont == 11 && !((Logro)logros["12"]).Desbloqueado)
-            {
-                Logro logroOculto = (Logro)logros["12"];
-                logroOculto.Desbloqueado = true;
-                logrosParaNotificar.Add(logroOculto);
-                logros["12"] = logroOculto;
-            }
+            Logro nuevoLogro = (Logro)logros[id];
+            nuevoLogro.Desbloqueado = true;
+            logrosParaNotificar.Add(nuevoLogro);
+            logros[id] = nuevoLogro;
         }
 
 
@@ -483,14 +451,31 @@ namespace MiAppVenom
                     }
                     break;
             }
+
         }
 
 
-       
+        private void comprobarLogroOculto()
+        {
+            int cont = 0;
+            for (int i = 1; i < 13; i++)
+            {
+                if (((Logro)logros[i.ToString()]).Desbloqueado)
+                {
+                    cont++;
+                }
 
-        
+            }
+            if (cont == 11 && !((Logro)logros["12"]).Desbloqueado)
+            {
+                desbloquearNuevoLogro("12");
+            }
+        }
 
-    
+
+
+
+
         public void proximoEstado(Estado nuevoEstado)
         {
             this.estadoAnterior = this.estadoActual;

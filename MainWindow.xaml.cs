@@ -103,57 +103,69 @@ namespace MiAppVenom
             if (avatarCargado)
             {
                 cargarLogros();
+                cargarEstadisticas();
+                cargarAlimentos();
+                cargarEstados();
+
                 lblUsuario.Content = avatar.Usuario;
                 despertar = false;
                 piezaCogida = null;
                 piezaPuzzle = new Image();
                 piezaPuzzle.Source = pieza9.Source;
 
-                lblNivel.Content = avatar.Nivel.ToString();
-                lblPuntos.Content = avatar.PuntosNivel.ToString();
-                lblMonedasRestantes.Content = avatar.Monedas.ToString();
-                pbNivel.Maximum = 100 * avatar.Nivel;
-                pbNivel.Value = avatar.PuntosNivel;
-                pbMonedas.Value = avatar.Monedas;
-                lblApetito.Content = avatar.Apetito.ToString() + " %";
-                lblDiversion.Content = avatar.Diversion.ToString() + " %";
-                lblEnergia.Content = avatar.Energia.ToString() + " %";
-
-                pbApetito.Value = avatar.Apetito;
-                pbDiversion.Value = avatar.Diversion;
-                pbEnergia.Value = avatar.Energia;
-
-                comSandia = new Comida("sandia", 5, 3, 5, 3);
-                comPlatano = new Comida("banana", 6, 2, 6, 5);
-                comRefresco = new Comida("lata", 7, 5, 2, 4);
-                comGalleta = new Comida("coockie", 3, 1, 3, 7);
-                comCafe = new Comida("cafe", 6, 20, 2, 8);
-                comPatatas = new Comida("patatas", 7, 2, 20, 5);
-                comVino = new Comida("cocktail", 10, 5, 7, 15);
-                comSnacks = new Comida("galleta", 12, 3, 15, 18);
-                comPizza = new Comida("pizza", 15, 6, 20, 20);
-                comBurguer = new Comida("hamburguesa", 20, 4, 25, 20);
-                
-                for (int i = 2; i <= avatar.Nivel; i++)
-                {
-                    desbloquearAlimentos(i);
-                }
-
-                barraActiva = false;
-                verLogrosActivo = false;
-                puzzleAbierto = false;
-                lblFin = false;
-                finJuego = false;
-                botonesActivos = false;
-                jugandoPuzzle = false;
-                puzzleTerminado = false;
-                lblFlechaDcha.IsEnabled = false;
-                lblFlechaIzda.IsEnabled = true;
-
                 inicializarAnimaciones();
                 inicializarTimers();
             }
 
+        }
+
+        private void cargarEstados()
+        {
+            barraActiva = false;
+            verLogrosActivo = false;
+            puzzleAbierto = false;
+            lblFin = false;
+            finJuego = false;
+            botonesActivos = false;
+            jugandoPuzzle = false;
+            puzzleTerminado = false;
+            lblFlechaDcha.IsEnabled = false;
+            lblFlechaIzda.IsEnabled = true;
+        }
+
+        private void cargarAlimentos()
+        {
+            comSandia = new Comida("sandia", 5, 3, 5, 3);
+            comPlatano = new Comida("banana", 6, 2, 6, 5);
+            comRefresco = new Comida("lata", 7, 5, 2, 4);
+            comGalleta = new Comida("coockie", 3, 1, 3, 7);
+            comCafe = new Comida("cafe", 6, 20, 2, 8);
+            comPatatas = new Comida("patatas", 7, 2, 20, 5);
+            comVino = new Comida("cocktail", 10, 5, 7, 15);
+            comSnacks = new Comida("galleta", 12, 3, 15, 18);
+            comPizza = new Comida("pizza", 15, 6, 20, 20);
+            comBurguer = new Comida("hamburguesa", 20, 4, 25, 20);
+
+            for (int i = 2; i <= avatar.Nivel; i++)
+            {
+                desbloquearAlimentos(i);
+            }
+        }
+
+        private void cargarEstadisticas()
+        {
+            lblNivel.Content = avatar.Nivel.ToString();
+            lblPuntos.Content = avatar.PuntosNivel.ToString();
+            lblMonedasRestantes.Content = avatar.Monedas.ToString();
+            pbNivel.Maximum = 100 * avatar.Nivel;
+            pbNivel.Value = avatar.PuntosNivel;
+            pbMonedas.Value = avatar.Monedas;
+            lblApetito.Content = avatar.Apetito.ToString() + " %";
+            lblDiversion.Content = avatar.Diversion.ToString() + " %";
+            lblEnergia.Content = avatar.Energia.ToString() + " %";
+            pbApetito.Value = avatar.Apetito;
+            pbDiversion.Value = avatar.Diversion;
+            pbEnergia.Value = avatar.Energia;
         }
 
         private void inicializarTimers()
@@ -539,6 +551,11 @@ namespace MiAppVenom
 
                 ((Storyboard)this.Resources["animComer"]).Begin();
                 ((Storyboard)this.Resources["valorComida"]).Begin();
+            }
+            else
+            {
+                MessageBox.Show("Ups... parece que aún no tienes suficientes monedas para comprar este alimento...\n¡Juega un poco o realiza algunos puzzles para conseguir monedas!", "DINERO INSUFICIENTE");
+
             }
         }
 

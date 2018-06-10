@@ -32,10 +32,10 @@ namespace MiAppVenom
         private static Comida comCafe;
         private static Comida comSandia;
         private static Comida comRefresco;
-        private static Comida comGalleta;
-        private static Comida comPizza;
-        private static Comida comVino;
         private static Comida comSnacks;
+        private static Comida comPizza;
+        private static Comida comCocktail;
+        private static Comida comGalleta;
         private static Comida comBurguer;
 
         //ESTADO INTERFACES
@@ -138,11 +138,11 @@ namespace MiAppVenom
             comSandia = new Comida("sandia", 5, 3, 5, 3);
             comPlatano = new Comida("banana", 6, 2, 6, 5);
             comRefresco = new Comida("lata", 7, 5, 2, 4);
-            comGalleta = new Comida("coockie", 3, 1, 3, 7);
+            comSnacks = new Comida("coockie", 3, 1, 3, 7);
             comCafe = new Comida("cafe", 6, 20, 2, 8);
             comPatatas = new Comida("patatas", 7, 2, 20, 5);
-            comVino = new Comida("cocktail", 10, 5, 7, 15);
-            comSnacks = new Comida("galleta", 12, 3, 15, 18);
+            comCocktail = new Comida("cocktail", 10, 5, 7, 15);
+            comGalleta = new Comida("galleta", 12, 3, 15, 18);
             comPizza = new Comida("pizza", 15, 6, 20, 20);
             comBurguer = new Comida("hamburguesa", 20, 4, 25, 20);
 
@@ -508,7 +508,7 @@ namespace MiAppVenom
                     alimento = comRefresco;
                     break;
                 case "coockie":
-                    alimento = comGalleta;
+                    alimento = comSnacks;
                     break;
                 case "patatas":
                     alimento = comPatatas;
@@ -517,13 +517,13 @@ namespace MiAppVenom
                     alimento = comCafe;
                     break;
                 case "galletas":
-                    alimento = comSnacks;
+                    alimento = comGalleta;
                     break;
                 case "pizza":
                     alimento = comPizza;
                     break;
                 case "cocktail":
-                    alimento = comVino;
+                    alimento = comCocktail;
                     break;
                 case "hamburguesa":
                     alimento = comBurguer;
@@ -573,26 +573,41 @@ namespace MiAppVenom
                     coockie.Opacity = 100;
                     patatas.Opacity = 100;
                     cafe.Opacity = 100;
+                    lblMonedasSnacks.Opacity = 100;
+                    lblMonedasPatatas.Opacity = 100;
+                    lblPrecioPatatas.Opacity = 100;
+                    lblPrecioSnacks.Opacity = 100;
+                    lblMonedasCafe.Opacity = 100;
+                    lblPrecioCafe.Opacity = 100;
+                    
                     break;
                 case 3:
                     lblNivel3.Visibility = Visibility.Hidden;                   
                     galletas.IsEnabled = true;
                     galletas.Opacity = 100;
+                    lblMonedasGalleta.Opacity = 100;
+                    lblPrecioGalleta.Opacity = 100;
                     break;
                 case 6:
                     lblNivel6.Visibility = Visibility.Hidden;
                     pizza.IsEnabled = true;
                     pizza.Opacity = 100;
+                    lblMonedasPizza.Opacity = 100;
+                    lblPrecioPizza.Opacity = 100;
                     break;
                 case 8:
                     lblNivel8.Visibility = Visibility.Hidden;
                     cocktail.IsEnabled = true;
                     cocktail.Opacity = 100;
+                    lblMonedasCocktail.Opacity = 100;
+                    lblPrecioCocktail.Opacity = 100;
                     break;
                 case 10:
                     lblNivel10.Visibility = Visibility.Hidden;
                     hamburguesa.IsEnabled = true;
                     hamburguesa.Opacity = 100;
+                    lblMonedasBurguer.Opacity = 100;
+                    lblPrecioBurguer.Opacity = 100;
                     break;
                 default:
                     break;

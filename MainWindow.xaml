@@ -2115,7 +2115,7 @@
                         <RowDefinition Height="0.1*"/>
                     </Grid.RowDefinitions>
                     <Image x:Name="coockie" Margin="-9,0,0,0" Grid.Row="3" Source="Presentacion/Resources/coockie.png" MouseDown="iniciarArrastre" Opacity="0.5" IsEnabled="False"/>
-                    <Image x:Name="banana" Source="Presentacion/Resources/sandia.png" MouseDown="iniciarArrastre" Height="79" VerticalAlignment="Top"/>
+                    <Image x:Name="sandia" Source="Presentacion/Resources/sandia.png" MouseDown="iniciarArrastre" Height="79" VerticalAlignment="Top"/>
                     <Image x:Name="lata" Source="Presentacion/Resources/lata.png" Grid.Row="2" MouseDown="iniciarArrastre"/>
                     <Image x:Name="patatas" Source="Presentacion/Resources/patatas.png" Grid.Row="4" MouseDown="iniciarArrastre" Opacity="0.5" IsEnabled="False"/>
                     <Image x:Name="cafe" Source="Presentacion/Resources/cafe.png" Grid.Row="5" MouseDown="iniciarArrastre" Opacity="0.5"/>
@@ -2123,7 +2123,8 @@
                     <Image x:Name="pizza" Source="Presentacion/Resources/pizza.png" Grid.Row="7" MouseDown="iniciarArrastre" Opacity="0.5" IsEnabled="False"/>
                     <Image x:Name="cocktail" Source="Presentacion/Resources/cocktail.png" Grid.Row="8" MouseDown="iniciarArrastre" Opacity="0.5" IsEnabled="False"/>
                     <Image x:Name="hamburguesa" Margin="0,0,10,0" Source="Presentacion/Resources/hamburguesa.png" Grid.Row="9" MouseDown="iniciarArrastre" Opacity="0.5" IsEnabled="False"/>
-                    <Image x:Name="sandia" Grid.Row="1" Source="Presentacion/Resources/banana.png" MouseDown="iniciarArrastre"/>
+                    <Image x:Name="banana" Grid.Row="1" Source="Presentacion/Resources/banana.png" MouseDown="iniciarArrastre" Margin="0,0,0,-0.001"/>
+
                     <Label x:Name="lblNivel2_1" Content="Nivel 2" Grid.Row="3" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontFamily="Comic Sans MS" FontSize="18.667" FontWeight="Bold"/>
                     <Label x:Name="lblNivel10" Content="Nivel 10" Grid.Row="9" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontFamily="Comic Sans MS" FontSize="18.667" FontWeight="Bold"/>
                     <Label x:Name="lblNivel8" Content="Nivel 8" Grid.Row="8" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontFamily="Comic Sans MS" FontSize="18.667" FontWeight="Bold"/>
@@ -2131,6 +2132,70 @@
                     <Label x:Name="lblNivel3" Content="Nivel 3" Grid.Row="6" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontFamily="Comic Sans MS" FontSize="18.667" FontWeight="Bold"/>
                     <Label x:Name="lblNivel2_3" Content="Nivel 2" Grid.Row="5" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontFamily="Comic Sans MS" FontSize="18.667" FontWeight="Bold"/>
                     <Label x:Name="lblNivel2_2" Content="Nivel 2" Grid.Row="4" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontFamily="Comic Sans MS" FontSize="18.667" FontWeight="Bold"/>
+
+                    <Label x:Name="lblPrecioSandia"  RenderTransformOrigin="0.5,0.5" Margin="112.263,63.44,0,0.164" VerticalAlignment="Center" Height="15.56" Width="16.737" HorizontalAlignment="Center" Foreground="White" FontWeight="Bold">
+                        <Label.Background>
+                            <ImageBrush ImageSource="Presentacion/Resources/monedas.png" Stretch="Uniform"/>
+                        </Label.Background>
+                    </Label>
+                    <Label x:Name="lblMonedasSandia" Content="5" RenderTransformOrigin="0.5,0.5" Margin="87.532,55.173,16.737,0.164" VerticalAlignment="Center" Height="23.827" Width="24.731" HorizontalAlignment="Center" Foreground="White"/>
+                    <Label x:Name="lblPrecioRefresco"  RenderTransformOrigin="0.5,0.5" Margin="112.263,64.107,0,-0.001" VerticalAlignment="Center" Height="15.057" Width="16.737" HorizontalAlignment="Center" Foreground="White" FontWeight="Bold" Grid.Row="1">
+                        <Label.Background>
+                            <ImageBrush ImageSource="Presentacion/Resources/monedas.png" Stretch="Uniform"/>
+                        </Label.Background>
+                    </Label>
+                    <Label x:Name="lblPrecioPlatano"  RenderTransformOrigin="0.5,0.5" Margin="112.263,64.272,-0.267,0" VerticalAlignment="Center" Height="14.892" Width="17.004" HorizontalAlignment="Center" Foreground="White" FontWeight="Bold" Grid.Row="2">
+                        <Label.Background>
+                            <ImageBrush ImageSource="Presentacion/Resources/monedas.png" Stretch="Uniform"/>
+                        </Label.Background>
+                    </Label>
+                    <Label x:Name="lblPrecioSnacks" Opacity="0.5" RenderTransformOrigin="0.5,0.5" Margin="112.263,64.272,0,0" VerticalAlignment="Center" Height="14.892" Width="16.737" HorizontalAlignment="Center" Foreground="White" FontWeight="Bold" Grid.Row="3">
+                        <Label.Background>
+                            <ImageBrush ImageSource="Presentacion/Resources/monedas.png" Stretch="Uniform"/>
+                        </Label.Background>
+                    </Label>
+                    <Label x:Name="lblPrecioPatatas" Opacity="0.5" RenderTransformOrigin="0.5,0.5" Margin="112.263,64.27,0,0" VerticalAlignment="Center" Height="14.893" Width="16.737" HorizontalAlignment="Center" Foreground="White" FontWeight="Bold" Grid.Row="4">
+                        <Label.Background>
+                            <ImageBrush ImageSource="Presentacion/Resources/monedas.png" Stretch="Uniform"/>
+                        </Label.Background>
+                    </Label>
+                    <Label x:Name="lblPrecioCafe"  Opacity="0.5" RenderTransformOrigin="0.5,0.5" Margin="112.263,64.271,-0.267,0" VerticalAlignment="Center" Height="14.893" Width="17.004" HorizontalAlignment="Center" Foreground="White" FontWeight="Bold" Grid.Row="5">
+                        <Label.Background>
+                            <ImageBrush ImageSource="Presentacion/Resources/monedas.png" Stretch="Uniform"/>
+                        </Label.Background>
+                    </Label>
+                    <Label x:Name="lblPrecioGalleta" Opacity="0.5" RenderTransformOrigin="0.5,0.5" Margin="112.263,64.27,0,0" VerticalAlignment="Center" Height="14.893" Width="16.737" HorizontalAlignment="Center" Foreground="White" FontWeight="Bold" Grid.Row="6">
+                        <Label.Background>
+                            <ImageBrush ImageSource="Presentacion/Resources/monedas.png" Stretch="Uniform"/>
+                        </Label.Background>
+                    </Label>
+                    <Label x:Name="lblPrecioPizza" Opacity="0.5" RenderTransformOrigin="0.5,0.5" Margin="112.263,64.271,-0.267,0" VerticalAlignment="Center" Height="14.893" Width="17.004" HorizontalAlignment="Center" Foreground="White" FontWeight="Bold" Grid.Row="7">
+                        <Label.Background>
+                            <ImageBrush ImageSource="Presentacion/Resources/monedas.png" Stretch="Uniform"/>
+                        </Label.Background>
+                    </Label>
+                    <Label x:Name="lblPrecioCocktail" Opacity="0.5" RenderTransformOrigin="0.5,0.5" Margin="111.729,64.271,0,0" VerticalAlignment="Center" Height="14.893" Width="17.271" HorizontalAlignment="Center" Foreground="White" FontWeight="Bold" Grid.Row="8">
+                        <Label.Background>
+                            <ImageBrush ImageSource="Presentacion/Resources/monedas.png" Stretch="Uniform"/>
+                        </Label.Background>
+                    </Label>
+                    <Label x:Name="lblPrecioBurguer" Opacity="0.5" RenderTransformOrigin="0.5,0.5" Margin="112.263,64.27,0,0" VerticalAlignment="Center" Height="14.893" Width="16.737" HorizontalAlignment="Center" Foreground="White" FontWeight="Bold" Grid.Row="9">
+                        <Label.Background>
+                            <ImageBrush ImageSource="Presentacion/Resources/monedas.png" Stretch="Uniform"/>
+                        </Label.Background>
+                    </Label>
+                    <Label x:Name="lblMonedasPlatano" Content="6" RenderTransformOrigin="0.5,0.5" Margin="87.532,55.337,16.737,-0.001" VerticalAlignment="Center" Height="23.827" Width="24.731" HorizontalAlignment="Center" Foreground="White" Grid.Row="1"/>
+                    <Label x:Name="lblMonedasRefresco" Content="7" RenderTransformOrigin="0.5,0.5" Margin="87.532,55.337,16.737,0" VerticalAlignment="Center" Height="23.827" Width="24.731" HorizontalAlignment="Center" Foreground="White" Grid.Row="2"/>
+                    <Label x:Name="lblMonedasSnacks" Opacity="0.5" Content="3" RenderTransformOrigin="0.5,0.5" Margin="87.532,55.337,16.737,0" VerticalAlignment="Center" Height="23.827" Width="24.731" HorizontalAlignment="Center" Foreground="White" Grid.Row="3"/>
+                    <Label x:Name="lblMonedasPatatas" Opacity="0.5" Content="7" RenderTransformOrigin="0.5,0.5" Margin="87.532,55.336,16.737,0" VerticalAlignment="Center" Height="23.827" Width="24.731" HorizontalAlignment="Center" Foreground="White" Grid.Row="4"/>
+                    <Label x:Name="lblMonedasCafe" Opacity="0.5" Content="6" RenderTransformOrigin="0.5,0.5" Margin="87.532,55.337,16.737,0" VerticalAlignment="Center" Height="23.827" Width="24.731" HorizontalAlignment="Center" Foreground="White" Grid.Row="5"/>
+                    <Label x:Name="lblMonedasGalleta" Opacity="0.5" Content="12" RenderTransformOrigin="0.5,0.5" Margin="87.532,55.336,16.737,0" VerticalAlignment="Center" Height="23.827" Width="24.731" HorizontalAlignment="Center" Foreground="White" Grid.Row="6"/>
+                    <Label x:Name="lblMonedasPizza" Opacity="0.5" Content="15" RenderTransformOrigin="0.5,0.5" Margin="87.532,55.337,16.737,0" VerticalAlignment="Center" Height="23.827" Width="24.731" HorizontalAlignment="Center" Foreground="White" Grid.Row="7"/>
+                    <Label x:Name="lblMonedasCocktail" Opacity="0.5" Content="10" RenderTransformOrigin="0.5,0.5" Margin="87.532,55.337,16.737,0" VerticalAlignment="Center" Height="23.827" Width="24.731" HorizontalAlignment="Center" Foreground="White" Grid.Row="8"/>
+                    <Label x:Name="lblMonedasBurguer" Opacity="0.5" Content="20" RenderTransformOrigin="0.5,0.5" Margin="87.532,55.336,16.737,0" VerticalAlignment="Center" Height="23.827" Width="24.731" HorizontalAlignment="Center" Foreground="White" Grid.Row="9"/>
+
+
+
                 </Grid>
 
             </Grid>

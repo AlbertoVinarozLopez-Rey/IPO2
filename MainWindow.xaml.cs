@@ -1,20 +1,11 @@
 ﻿using MiAppVenom.Dominio;
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Media;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Animation;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 using System.Windows.Threading;
 
 
@@ -25,63 +16,54 @@ namespace MiAppVenom
     {
         YOYO,
         TELARAÑA,
-        NINGUNA
+        NINGUNO
     }
 
     public partial class MainWindow : Window
     {
-        
-        //Alimentos
-        
-        private static Comida com_platano;
-        private static Comida com_chips;
-        private static Comida com_cafe;
-        private static Comida com_coockies;
-        private static Comida com_sandia;
-        private static Comida com_pizza;
-        private static Comida com_vino;
-        private static Comida com_refresco;
-        private static Comida com_galleta;
-        private static Comida com_burguer;
-        
-
-        //Animaciones
+      
+        //ANIMACIONES
         private static Storyboard animParpadear;
         private static Storyboard animDormir;
 
-        //Acciones
+        // ALIMENTOS        
+        private static Comida comPlatano;
+        private static Comida comPatatas;
+        private static Comida comCafe;
+        private static Comida comSandia;
+        private static Comida comRefresco;
+        private static Comida comGalleta;
+        private static Comida comPizza;
+        private static Comida comVino;
+        private static Comida comSnacks;
+        private static Comida comBurguer;
+
+        //ESTADO INTERFACES
+        private static Boolean barraActiva;
+        private static Boolean finJuego;
+        private static Boolean puzzleTerminado;
+        private static Boolean lblFin;
+        private static Boolean jugandoPuzzle;
+        private static Boolean puzzleAbierto;
+        private static Boolean botonesActivos;
+        private static Boolean verLogrosActivo;
+
+        //INTERACCION
+        private Image piezaPuzzle;
+        private Object piezaCogida;
+
+        //ACCIONES
         private static Juegos jugar;
         private static Boolean despertar;
 
-        //Estado Intefaces
-        private static Boolean estado_barra;
-        private static Boolean botones;
-        private static Boolean estado_logros;
-        private static Boolean estado_puzzle;
-        private static Boolean jugando_puzzle;
-        private static Boolean puzzle_completado;
-        private static Boolean label_fin;
-        private static Boolean fin_juego;
+        //TIEMPOS
+        private static DispatcherTimer temporizador;
+        private static double intervalo = 1000.0;
+        private static int contadorTiempo, prox, cierreBotonesAccion, proxLogro, proxHambre;
+        private static int tiempoPuzzle;
+        private static int tiempoComienzoPuzzle;
 
-        //Timers
-        private static DispatcherTimer timer_global;
-        private static double intervalo_global = 1000.0;
-        private static int cont, prox, cierre_auto_botones, prox_logro, prox_hambre;
-        private static int tiempo_juego;
-        private static int tiempo_comienzo;
-
-        //Controlador de Twiiter
-        //private TinyTwitter twitter;
-        //private TwitterService twitter;
-
-        //Motor de reconocimienot de voz
-        //private static SpeechRecognizer reconocimiento_voz;
-
-        //Imagenes
-        private Object pieza_cogida;
-        private Image pieza_puzzle;
-
-        //Avatar
+        //AVATAR Y NOMBRE DE USUARIO
         private Avatar avatar;
         public static String usuario;
 
@@ -92,47 +74,47 @@ namespace MiAppVenom
 
             InitializeComponent();
             ((Storyboard)this.Resources["cerrarBarra"]).Begin();
-            btn_puzzle.IsEnabled = false;
-            btn_trofeo.IsEnabled = false;
             cvVenom.IsEnabled = false;
-
-          
+            btnPuzzle.IsEnabled = false;
+            btnLogros.IsEnabled = false;
+            
         }
 
-        private void inicializar_avatar()
+        private void cargarAvatar()
         {
-            Boolean load = false;
-            cont = 0;
+            Boolean avatarCargado = false;
+            contadorTiempo = 0;
+            cierreBotonesAccion = -1;
+            tiempoComienzoPuzzle = 0;
+            tiempoPuzzle = -1;
             prox = 0;
-            prox_logro = 0;
-            prox_hambre = 0;
-            cierre_auto_botones = -1;
-            tiempo_comienzo = 0;
-            tiempo_juego = -1;
+            proxLogro = 0;
+            proxHambre = 0;
+
             try
             {
                 avatar = (new Avatar()).leerUsuario(usuario);
-                load = true;
+                avatarCargado = true;
             }
             catch (Exception e1) {
                 e1.ToString();
             }
 
-            if (load)
+            if (avatarCargado)
             {
-                desbloquear_logros();
-                lbl_Usuario.Content = avatar.Usuario;
+                cargarLogros();
+                lblUsuario.Content = avatar.Usuario;
                 despertar = false;
-                pieza_cogida = null;
-                pieza_puzzle = new Image();
-                pieza_puzzle.Source = pieza9.Source;
+                piezaCogida = null;
+                piezaPuzzle = new Image();
+                piezaPuzzle.Source = pieza9.Source;
 
                 lblNivel.Content = avatar.Nivel.ToString();
-                lbl_puntos_nivel.Content = avatar.PuntosNivel.ToString();
-                lbl_monedas.Content = avatar.Monedas.ToString();
-                pb_nivel.Maximum = 100 * avatar.Nivel;
-                pb_nivel.Value = avatar.PuntosNivel;
-                pb_monedas.Value = avatar.Monedas;
+                lblPuntos.Content = avatar.PuntosNivel.ToString();
+                lblMonedasRestantes.Content = avatar.Monedas.ToString();
+                pbNivel.Maximum = 100 * avatar.Nivel;
+                pbNivel.Value = avatar.PuntosNivel;
+                pbMonedas.Value = avatar.Monedas;
                 lblApetito.Content = avatar.Apetito.ToString() + " %";
                 lblDiversion.Content = avatar.Diversion.ToString() + " %";
                 lblEnergia.Content = avatar.Energia.ToString() + " %";
@@ -141,68 +123,126 @@ namespace MiAppVenom
                 pbDiversion.Value = avatar.Diversion;
                 pbEnergia.Value = avatar.Energia;
 
-                com_sandia = new Comida("sandia", 5, 3, 5, 3);
-                com_platano = new Comida("banana", 6, 2, 6, 5);
-                com_refresco = new Comida("lata", 7, 5, 2, 4);
-                com_galleta = new Comida("coockie", 3, 1, 3, 7);
-                com_cafe = new Comida("cafe", 6, 20, 2, 8);
-                com_chips = new Comida("patatas", 7, 2, 20, 5);
-                com_vino = new Comida("cocktail", 10, 5, 7, 15);
-                com_coockies = new Comida("galleta", 12, 3, 15, 18);
-                com_pizza = new Comida("pizza", 15, 6, 20, 20);
-                com_burguer = new Comida("hamburguesa", 20, 4, 25, 20);
+                comSandia = new Comida("sandia", 5, 3, 5, 3);
+                comPlatano = new Comida("banana", 6, 2, 6, 5);
+                comRefresco = new Comida("lata", 7, 5, 2, 4);
+                comGalleta = new Comida("coockie", 3, 1, 3, 7);
+                comCafe = new Comida("cafe", 6, 20, 2, 8);
+                comPatatas = new Comida("patatas", 7, 2, 20, 5);
+                comVino = new Comida("cocktail", 10, 5, 7, 15);
+                comSnacks = new Comida("galleta", 12, 3, 15, 18);
+                comPizza = new Comida("pizza", 15, 6, 20, 20);
+                comBurguer = new Comida("hamburguesa", 20, 4, 25, 20);
                 
                 for (int i = 2; i <= avatar.Nivel; i++)
                 {
-                    desbloquear_objetos(i);
+                    desbloquearAlimentos(i);
                 }
 
+                barraActiva = false;
+                verLogrosActivo = false;
+                puzzleAbierto = false;
+                lblFin = false;
+                finJuego = false;
+                botonesActivos = false;
+                jugandoPuzzle = false;
+                puzzleTerminado = false;
+                lblFlechaDcha.IsEnabled = false;
+                lblFlechaIzda.IsEnabled = true;
 
-
-                //Se inicializan las comidas
-                estado_barra = false;
-                estado_logros = false;
-                estado_puzzle = false;
-                label_fin = false;
-                fin_juego = false;
-                botones = false;
-                jugando_puzzle = false;
-                puzzle_completado = false;
-                lbl_flecha_right.IsEnabled = false;
-                lbl_flecha_left.IsEnabled = true;
-
-
-        
-
-               /* //Se crea el diccionario del reconocimiento de voz y se inicializa el mismo
-                reconocimiento_voz = new SpeechRecognizer();
-                Choices acciones = new Choices();
-                acciones.Add(new string[] { "dormir", "despertar", "rapel", "yoyo", "logros", "puzzle", "ocultar", "ranking" });
-                GrammarBuilder gb = new GrammarBuilder();
-                gb.Append(acciones);
-                Grammar g = new Grammar(gb);
-                reconocimiento_voz.LoadGrammar(g);
-                reconocimiento_voz.SpeechRecognized += new EventHandler<SpeechRecognizedEventArgs>(reconocimiento_voz_SpeechRecognized);
-                */
-
-                //Inicializacion animaciones
-                animParpadear = (Storyboard)this.Resources["animParpadear"];
-                animDormir = (Storyboard)this.Resources["animSoñar"];
-
-
-
-                //Empieza el Timer principal
-                timer_global = new DispatcherTimer();
-                timer_global.Interval = TimeSpan.FromMilliseconds(intervalo_global);
-                timer_global.Tick += new EventHandler(reloj);
-                timer_global.Start();
-
-           
+                inicializarAnimaciones();
+                inicializarTimers();
             }
 
         }
 
-        private void desbloquear_logros()
+        private void inicializarTimers()
+        {
+            temporizador = new DispatcherTimer();
+            temporizador.Interval = TimeSpan.FromMilliseconds(intervalo);
+            temporizador.Tick += new EventHandler(tick);
+            temporizador.Start();
+        }
+
+        private void inicializarAnimaciones()
+        {
+            animParpadear = (Storyboard)this.Resources["animParpadear"];
+            animDormir = (Storyboard)this.Resources["animSoñar"];
+        }
+
+        private void tick(object sender, EventArgs e)
+        {
+            if (contadorTiempo >= proxLogro && avatar.logrosParaNotificar.Count > 0)
+            {
+                proxLogro = notificarProximoLogro();
+            }
+            if (contadorTiempo == cierreBotonesAccion + 4 && botonesActivos)
+            {
+                if (avatar.estadoActual == Estado.DORMIDO || avatar.estadoActual == Estado.SOÑANDO)
+                {
+                    ((Storyboard)this.Resources["esconderDormir"]).Begin();
+
+                }
+                else
+                {
+                    ((Storyboard)this.Resources["ocultarBotones"]).Begin();
+                }
+                botonesActivos = false;
+            }
+            if (contadorTiempo >= prox)
+            {
+                if (jugandoPuzzle)
+                {
+                    prox += mecanismoComportamientoPuzzle();
+                }
+                else
+                {
+                    if (avatar.NuevoNivel)
+                    {
+                        lblSubirNivel.Content = avatar.Nivel.ToString();
+                        pbNivel.Maximum = 100 * avatar.Nivel;
+                        avatar.NuevoNivel = false;
+                        ((Storyboard)this.Resources["subirNivel"]).Begin();
+
+                        prox += 3;
+                        desbloquearAlimentos(avatar.Nivel);
+                    }
+                    else
+                    {
+                        prox += proximaAnimacion();
+                    }
+                }
+
+            }
+
+            consumirValoresPB();
+
+            pbDiversion.Value = avatar.Diversion;
+            pbApetito.Value = avatar.Apetito;
+            pbEnergia.Value = avatar.Energia;
+
+            lblApetito.Content = avatar.Apetito.ToString() + " %";
+            lblDiversion.Content = avatar.Diversion.ToString() + " %";
+            lblEnergia.Content = avatar.Energia.ToString() + " %";
+
+            lblNivel.Content = avatar.Nivel.ToString();
+            lblPuntos.Content = avatar.PuntosNivel.ToString();
+            lblMonedasRestantes.Content = avatar.Monedas.ToString();
+
+            pbMonedas.Value = avatar.Monedas;
+            pbNivel.Maximum = avatar.Nivel * 100;
+            pbNivel.Value = avatar.PuntosNivel;
+
+            //ACTUALIZAMOS NUESTRO AVATAR CADA 2 MIN
+            if (contadorTiempo % 120 == 0)
+            {
+                avatar.actualizar();
+            }
+
+            contadorTiempo++;
+        }
+
+        private void cargarLogros()
         {
             String logros = "";
             foreach (string key in avatar.Logros.Keys)
@@ -223,147 +263,102 @@ namespace MiAppVenom
 
             if (!logros.Equals(""))
             {
-                char[] delimiterChars = { ' ' };
-                string[] words = logros.Split(delimiterChars);
-                for (int i = 0; i < words.Length; i++)
+                char[] separador = { ' ' };
+                string[] idLogros = logros.Split(separador);
+                for (int i = 0; i < idLogros.Length; i++)
                 {
-                    desbloquear_logro(int.Parse(words[i]));
+                    desbloquearLogro(int.Parse(idLogros[i]));
                 }
             }
         }
 
-        private void desbloquear_logro(int id)
+        private void desbloquearLogro(int id)
         {
             switch (id)
             {
                 case 1:
-                    logro_lv3.Opacity = 100;
+
+                    logroNivel3.Opacity = 100;
                     break;
+
                 case 2:
-                    logro_lv6.Opacity = 100;
+
+                    logroNivel6.Opacity = 100;
                     break;
+
                 case 3:
-                    logro_lv10.Opacity = 100;
+
+                    logroNivel10.Opacity = 100;
                     break;
+
                 case 4:
-                    logro_pl5.Opacity = 100;
+
+                    logroJuega5Veces.Opacity = 100;
                     break;
+
                 case 5:
-                    logro_pl10.Opacity = 100;
+
+                    logroJuega10Veces.Opacity = 100;
                     break;
+
                 case 6:
-                    logro_pl20.Opacity = 100;
+
+                    logroJuega20Veces.Opacity = 100;
                     break;
+
                 case 7:
-                    logro_mon200.Opacity = 100;
+
+                    logro200Monedas.Opacity = 100;
                     break;
+
                 case 8:
-                    logro_mon500.Opacity = 100;
+
+                    logro500Monedas.Opacity = 100;
                     break;
+
                 case 9:
-                    logro_mon1000.Opacity = 100;
+
+                    logro1000Monedas.Opacity = 100;
                     break;
+
                 case 10:
-                    logro_pz5.Opacity = 100;
+
+                    logro5PuzzlesGanados.Opacity = 100;
                     break;
+
                 case 11:
-                    logro_pz10.Opacity = 100;
+
+                    logro10PuzzlesGanados.Opacity = 100;
                     break;
+
                 case 12:
-                    logro_todos.Opacity = 100;
+
+                    logroSecreto.Opacity = 100;
+                    txtLogroSecreto.Text = "Desbloquea todos los logros";
                     break;
             }
         }
 
-        private void reloj(object sender, EventArgs e)
-        {
-            if (cont >= prox_logro && avatar.logrosParaNotificar.Count > 0)
-            {
-                prox_logro = proximo_logro();
-            }
-            if (cont == cierre_auto_botones + 4 && botones)
-            {
-                if (avatar.estadoActual == Estado.DORMIDO || avatar.estadoActual == Estado.SOÑANDO)
-                {
-                    ((Storyboard)this.Resources["esconderDormir"]).Begin();
-
-                }
-                else
-                {
-                    ((Storyboard)this.Resources["ocultarBotones"]).Begin();
-                }
-                botones = false;
-            }
-            if (cont >= prox)
-            {
-                if (jugando_puzzle)
-                {
-                    prox += comportamiento_juego_puzzle();
-                }
-                else
-                {
-                    if (avatar.NuevoNivel)
-                    {
-                        lbl_subir_nivel.Content = avatar.Nivel.ToString();
-                        pb_nivel.Maximum = 100 * avatar.Nivel;
-                        avatar.NuevoNivel = false;
-                        ((Storyboard)this.Resources["subirNivel"]).Begin();
-                  
-                        prox += 3;
-                        desbloquear_objetos(avatar.Nivel);
-                    }
-                    else
-                    {
-                        prox += proxima_animacion();
-                    }
-                }
-
-            }
-
-            consumir_valores();
-
-            pbDiversion.Value = avatar.Diversion;
-            pbApetito.Value = avatar.Apetito;
-            pbEnergia.Value = avatar.Energia;
-
-            lblNivel.Content = avatar.Nivel.ToString();
-            lbl_puntos_nivel.Content = avatar.PuntosNivel.ToString();
-            lbl_monedas.Content = avatar.Monedas.ToString();
-
-            pb_monedas.Value = avatar.Monedas;
-            pb_nivel.Maximum = avatar.Nivel * 100;
-            pb_nivel.Value = avatar.PuntosNivel;
-
-            lblApetito.Content = avatar.Apetito.ToString() + " %";
-            lblDiversion.Content = avatar.Diversion.ToString() + " %";
-            lblEnergia.Content = avatar.Energia.ToString() + " %";
-
-            if (cont % 120 == 0)
-            {
-                avatar.actualizar();
-            }
-
-            cont++;
-        }
+       
 
         private void MouseUp_label_right(object sender, MouseButtonEventArgs e)
         {
             ((Storyboard)this.Resources["cerrarBarra"]).Begin();
-            lbl_flecha_right.IsEnabled = false;
-            lbl_flecha_left.IsEnabled = true;
-            estado_barra = false;
+            lblFlechaDcha.IsEnabled = false;
+            lblFlechaIzda.IsEnabled = true;
+            barraActiva = false;
         }
 
         private void MouseUp_label_left(object sender, MouseButtonEventArgs e)
         {
             ((Storyboard)this.Resources["abrirBarra"]).Begin();
-            lbl_flecha_left.IsEnabled = false;
-            lbl_flecha_right.IsEnabled = true;
-            estado_barra = true;
+            lblFlechaIzda.IsEnabled = false;
+            lblFlechaDcha.IsEnabled = true;
+            barraActiva = true;
         }
 
 
-        private void consumir_valores()
+        private void consumirValoresPB()
         {
             Estado x;
             if (avatar.estadoEstablecido())
@@ -377,99 +372,99 @@ namespace MiAppVenom
             switch (x)
             {
                 case Estado.FELIZ:
-                    if (cont % 432 == 0)
+                    if (contadorTiempo % 434 == 0)
                     {
                         avatar.Energia--;
                     }
-                    if (cont % 72 == 0)
+                    if (contadorTiempo % 74 == 0)
                     {
                         avatar.Apetito--;
                     }
-                    if (cont % 36 == 0)
+                    if (contadorTiempo % 38 == 0)
                     {
                         avatar.Diversion--;
                     }
                     break;
                 case Estado.JUGANDO:
-                    if (cont % 5 == 0)
+                    if (contadorTiempo % 6 == 0)
                     {
                         avatar.Energia--;
                     }
-                    if (cont % 7 == 0)
+                    if (contadorTiempo % 5 == 0)
                     {
                         avatar.Apetito--;
                     }
-                    if (cont % 2 == 0)
+                    if (contadorTiempo % 1 == 0)
                     {
                         avatar.Diversion++;
                     }
                     break;
                 case Estado.ABURRIDO:
-                    if (cont % 450 == 0)
+                    if (contadorTiempo % 450 == 0)
                     {
                         avatar.Energia--;
                     }
-                    if (cont % 60 == 0)
+                    if (contadorTiempo % 60 == 0)
                     {
                         avatar.Apetito--;
                     }
-                    if (cont % 60 == 0)
+                    if (contadorTiempo % 60 == 0)
                     {
                         avatar.Diversion--;
                     }
                     break;
                 case Estado.DORMIDO:
-                    if (cont % 72 == 0)
+                    if (contadorTiempo % 6 == 0)
                     {
                         avatar.Energia++;
                     }
-                    if (cont % 432 == 0)
+                    if (contadorTiempo % 300 == 0)
                     {
                         avatar.Apetito--;
                     }
-                    if (cont % 360 == 0)
+                    if (contadorTiempo % 360 == 0)
                     {
                         avatar.Diversion--;
                     }
                     break;
                 case Estado.SOÑANDO:
-                    if (cont % 36 == 0)
+                    if (contadorTiempo % 3 == 0)
                     {
                         avatar.Energia++;
                     }
-                    if (cont % 432 == 0)
+                    if (contadorTiempo % 432 == 0)
                     {
                         avatar.Apetito--;
                     }
-                    if (cont % 360 == 0)
+                    if (contadorTiempo % 360 == 0)
                     {
                         avatar.Diversion--;
                     }
                     break;
                 case Estado.HAMBRIENTO:
-                    if (cont % 360 == 0)
+                    if (contadorTiempo % 360 == 0)
                     {
                         avatar.Energia--;
                     }
-                    if (cont % 36 == 0)
+                    if (contadorTiempo % 18 == 0)
                     {
                         avatar.Apetito--;
                     }
-                    if (cont % 36 == 0)
+                    if (contadorTiempo % 36 == 0)
                     {
                         avatar.Diversion--;
                     }
                     break;
                 case Estado.ENFADADO:
-                    if (cont % 288 == 0)
+                    if (contadorTiempo % 288 == 0)
                     {
                         avatar.Energia--;
                     }
-                    if (cont % 72 == 0)
+                    if (contadorTiempo % 72 == 0)
                     {
                         avatar.Apetito--;
                     }
-                    if (cont % 72 == 0)
+                    if (contadorTiempo % 72 == 0)
                     {
                         avatar.Diversion--;
                     }
@@ -492,37 +487,44 @@ namespace MiAppVenom
             switch (aux.Name)
             {
                 case "sandia":
-                    alimento = com_sandia;
+                    alimento = comSandia;
                     break;
                 case "banana":
-                    alimento = com_platano;
+                    alimento = comPlatano;
                     break;
                 case "lata":
-                    alimento = com_refresco;
+                    alimento = comRefresco;
                     break;
                 case "coockie":
-                    alimento = com_galleta;
+                    alimento = comGalleta;
                     break;
                 case "patatas":
-                    alimento = com_chips;
+                    alimento = comPatatas;
                     break;
                 case "cafe":
-                    alimento = com_cafe;
+                    alimento = comCafe;
                     break;
                 case "galletas":
-                    alimento = com_coockies;
+                    alimento = comSnacks;
                     break;
                 case "pizza":
-                    alimento = com_pizza;
+                    alimento = comPizza;
                     break;
                 case "cocktail":
-                    alimento = com_vino;
+                    alimento = comVino;
                     break;
                 case "hamburguesa":
-                    alimento = com_burguer;
+                    alimento = comBurguer;
                     break;
             }
 
+            comprobarPrecio(alimento);
+           
+
+        }
+
+        private void comprobarPrecio(Comida alimento)
+        {
             if (avatar.Monedas >= alimento.Coste)
             {
                 lbl_gridcomida_coste.Content = "-" + alimento.Coste.ToString();
@@ -530,25 +532,24 @@ namespace MiAppVenom
                 lbl_gridcomida_puntos.Content = "+" + alimento.Puntos.ToString();
                 lbl_gridcomida_energia.Content = "+" + alimento.Energia.ToString();
 
-                ((Storyboard)this.Resources["animComer"]).Begin();
-                ((Storyboard)this.Resources["valorComida"]).Begin();
-
                 avatar.Apetito += alimento.Apetito;
                 avatar.Energia += alimento.Energia;
                 avatar.Monedas -= alimento.Coste;
                 avatar.PuntosNivel += alimento.Puntos;
-            }
 
+                ((Storyboard)this.Resources["animComer"]).Begin();
+                ((Storyboard)this.Resources["valorComida"]).Begin();
+            }
         }
 
-        private void desbloquear_objetos(int nivel)
+        private void desbloquearAlimentos(int nivel)
         {
             switch (nivel)
             {
                 case 2:
-                    lbl_lv2_1.Visibility = Visibility.Hidden;
-                    lbl_lv2_2.Visibility = Visibility.Hidden;
-                    lbl_lv2_3.Visibility = Visibility.Hidden;
+                    lblNivel2_1.Visibility = Visibility.Hidden;
+                    lblNivel2_2.Visibility = Visibility.Hidden;
+                    lblNivel2_3.Visibility = Visibility.Hidden;
                     coockie.IsEnabled = true;
                     patatas.IsEnabled = true;
                     cafe.IsEnabled = true;
@@ -557,18 +558,24 @@ namespace MiAppVenom
                     cafe.Opacity = 100;
                     break;
                 case 3:
-                    lbl_lv3_1.Visibility = Visibility.Hidden;
-                    lbl_lv3_2.Visibility = Visibility.Hidden;
-                    lbl_lv3_3.Visibility = Visibility.Hidden;
-                    lbl_lv3_4.Visibility = Visibility.Hidden;
+                    lblNivel3.Visibility = Visibility.Hidden;                   
                     galletas.IsEnabled = true;
-                    hamburguesa.IsEnabled = true;
+                    galletas.Opacity = 100;
+                    break;
+                case 6:
+                    lblNivel6.Visibility = Visibility.Hidden;
                     pizza.IsEnabled = true;
+                    pizza.Opacity = 100;
+                    break;
+                case 8:
+                    lblNivel8.Visibility = Visibility.Hidden;
                     cocktail.IsEnabled = true;
                     cocktail.Opacity = 100;
-                    pizza.Opacity = 100;
+                    break;
+                case 10:
+                    lblNivel10.Visibility = Visibility.Hidden;
+                    hamburguesa.IsEnabled = true;
                     hamburguesa.Opacity = 100;
-                    galletas.Opacity = 100;
                     break;
                 default:
                     break;
@@ -576,27 +583,27 @@ namespace MiAppVenom
         }
 
 
-        private void mover_pieza(object sender, MouseButtonEventArgs e)
+        private void moverPieza(object sender, MouseButtonEventArgs e)
         {
             DataObject dataO = new DataObject((Image)sender);
             DragDrop.DoDragDrop((Image)sender, dataO, DragDropEffects.Move);
         }
 
-        private void soltar_pieza(object sender, DragEventArgs e)
+        private void soltarPieza(object sender, DragEventArgs e)
         {
             Image aux = (Image)e.Data.GetData(typeof(Image));
 
-            if (((Image)pieza_cogida).Name.Length == 6)
+            if (((Image)piezaCogida).Name.Length == 6)
             {
                 comparar(sender);
 
                 ((Image)sender).Source = aux.Source;
-                if (((Image)sender).Source.ToString() != pieza_puzzle.Source.ToString())
+                if (((Image)sender).Source.ToString() != piezaPuzzle.Source.ToString())
                 {
                     ((Image)sender).Stretch = Stretch.Fill;
                 }
-                ((Image)pieza_cogida).Stretch = Stretch.Uniform;
-                ((Image)pieza_cogida).Source = pieza_puzzle.Source;
+                ((Image)piezaCogida).Stretch = Stretch.Uniform;
+                ((Image)piezaCogida).Source = piezaPuzzle.Source;
 
             }
             else
@@ -604,7 +611,7 @@ namespace MiAppVenom
                 comparar(sender);
                 ((Image)sender).Stretch = Stretch.Fill;
                 ((Image)sender).Source = aux.Source;
-                ((Image)pieza_cogida).Visibility = Visibility.Hidden;
+                ((Image)piezaCogida).Visibility = Visibility.Hidden;
             }
 
 
@@ -612,15 +619,15 @@ namespace MiAppVenom
 
   
 
-        private void restablecer_puzzle(object sender, RoutedEventArgs e)
+        private void restablecerPuzzle(object sender, RoutedEventArgs e)
         {
-            restablecer_puzzle_metodo();
+            restablecerPuzzlePublic();
 
         }
 
-        private void moviendo_pieza(object sender, MouseEventArgs e)
+        private void moviendoPieza(object sender, MouseEventArgs e)
         {
-            pieza_cogida = sender;
+            piezaCogida = sender;
         }
 
         private void comparar(object sender)
@@ -687,46 +694,81 @@ namespace MiAppVenom
             }
         }
 
-        private int proxima_animacion()
+        private int proximaAnimacion()
         {
             int devolver = 1;
 
 
             switch (avatar.estadoActual)
             {
-                case Estado.FELIZ:
+                case Estado.JUGANDO:
                     if (!avatar.estadoEstablecido())
                     {
-                        if (!avatar.parpadeando)
+
+                        if (avatar.estadoAnterior == Estado.ABURRIDO)
                         {
-                            animParpadear.Begin();
-                            avatar.parpadear();
+                            ((Storyboard)this.Resources["animJugarYoyo"]).Begin();
+                            devolver = 2;
+                            avatar.estadoAnterior = Estado.DORMIDO;
                         }
-                        btnDormir.Content = "Dormir";
-                        avatar.establecerEstado();
+                        else
+                        {
+                            switch (jugar)
+                            {
+                                case Juegos.TELARAÑA:
+                                    ((Storyboard)this.Resources["animTelaraña"]).Begin();
+                                    devolver = 15;
+                                    jugar = Juegos.NINGUNO;
+                                    avatar.establecerEstado();
+
+                                    break;
+                                case Juegos.YOYO:
+                                    ((Storyboard)this.Resources["animJugarYoyo"]).Begin();
+                                    devolver = 13;
+                                    jugar = Juegos.NINGUNO;
+                                    avatar.establecerEstado();
+
+                                    break;
+                            }
+                            boca.AllowDrop = false;
+                            dientes.AllowDrop = false;
+                            lengua.AllowDrop = false;
+                        }
+
                     }
                     else
                     {
-                        if ((avatar.Diversion < 35 && avatar.Apetito < 35) || avatar.Energia < 35)
+                        if ((avatar.Diversion < 40 && avatar.Apetito < 40) || avatar.Energia < 40)
                         {
                             avatar.proximoEstado(Estado.ENFADADO);
                         }
                         else
                         {
-                            if (avatar.Diversion < 35 && avatar.Apetito > 35 && avatar.Energia > 35)
+                            if (avatar.Diversion < 40 && avatar.Apetito > 40 && avatar.Energia > 40)
                             {
                                 avatar.proximoEstado(Estado.ABURRIDO);
                             }
                             else
                             {
-                                if (avatar.Apetito < 35 && avatar.Diversion > 35 && avatar.Energia > 35)
+                                if (avatar.Apetito < 40 && avatar.Diversion > 40 && avatar.Energia > 40)
                                 {
                                     avatar.proximoEstado(Estado.HAMBRIENTO);
                                 }
+                                else
+                                {
+                                    if (avatar.Apetito > 40 && avatar.Diversion > 40 && avatar.Energia > 40)
+                                    {
+                                        avatar.proximoEstado(Estado.FELIZ);
+                                        ((Storyboard)this.Resources["animContento"]).Begin();
+                                        devolver = 2;
+                                    }
+                                }
                             }
                         }
+                        boca.AllowDrop = true;
+                        dientes.AllowDrop = true;
+                        lengua.AllowDrop = true;
                     }
-
                     break;
                 case Estado.ENFADADO:
                     if (!avatar.estadoEstablecido())
@@ -739,19 +781,19 @@ namespace MiAppVenom
                     }
                     else
                     {
-                        if (avatar.Diversion < 35 && avatar.Apetito > 35 && avatar.Energia > 35)
+                        if (avatar.Diversion < 40 && avatar.Apetito > 40 && avatar.Energia > 40)
                         {
                             avatar.proximoEstado(Estado.ABURRIDO);
                         }
                         else
                         {
-                            if (avatar.Apetito < 35 && avatar.Diversion > 35 && avatar.Energia > 35)
+                            if (avatar.Apetito < 40 && avatar.Diversion > 40 && avatar.Energia > 40)
                             {
                                 avatar.proximoEstado(Estado.HAMBRIENTO);
                             }
                             else
                             {
-                                if (avatar.Apetito > 35 && avatar.Diversion > 35 && avatar.Energia > 35)
+                                if (avatar.Apetito > 40 && avatar.Diversion > 40 && avatar.Energia > 40)
                                 {
                                     avatar.proximoEstado(Estado.FELIZ);
                                     ((Storyboard)this.Resources["animContento"]).Begin();
@@ -768,48 +810,42 @@ namespace MiAppVenom
                         }
                     }
                     break;
-                case Estado.HAMBRIENTO:
+                case Estado.FELIZ:
                     if (!avatar.estadoEstablecido())
                     {
-                        prox_hambre = cont + 12;
-                        ((Storyboard)this.Resources["animSaciado"]).Begin();
-                        devolver = 6;
+                        if (!avatar.parpadeando)
+                        {
+                            animParpadear.Begin();
+                            avatar.parpadear();
+                        }
+                        btnDormir.Content = "Dormir";
                         avatar.establecerEstado();
                     }
                     else
                     {
-                        if (avatar.Apetito > 35 && avatar.Diversion > 35 && avatar.Energia > 35)
+                        if ((avatar.Diversion < 40 && avatar.Apetito < 40) || avatar.Energia < 40)
                         {
-                            avatar.proximoEstado(Estado.FELIZ);
-                            ((Storyboard)this.Resources["animContento"]).Begin();
-                            devolver = 2;
-
+                            avatar.proximoEstado(Estado.ENFADADO);
                         }
                         else
                         {
-                            if (avatar.Apetito > 35 && avatar.Energia > 35 && avatar.Diversion < 35)
+                            if (avatar.Diversion < 40 && avatar.Apetito > 40 && avatar.Energia > 40)
                             {
                                 avatar.proximoEstado(Estado.ABURRIDO);
                             }
                             else
                             {
-                                if (avatar.Energia < 35 || (avatar.Apetito < 35 && avatar.Diversion < 35))
+                                if (avatar.Apetito < 40 && avatar.Diversion > 40 && avatar.Energia > 40)
                                 {
-                                    avatar.proximoEstado(Estado.ENFADADO);
-                                }
-                                else
-                                {
-                                    if (avatar.estadoAnterior == Estado.HAMBRIENTO && prox_hambre <= cont)
-                                    {
-                                        prox_hambre = cont + 12;
-                                        ((Storyboard)this.Resources["animSaciado"]).Begin();
-                                        devolver = 6;
-                                    }
+                                    avatar.proximoEstado(Estado.HAMBRIENTO);
                                 }
                             }
                         }
                     }
+
                     break;
+                
+                
                 case Estado.DORMIDO:
                     if (!avatar.estadoEstablecido())
                     {
@@ -841,42 +877,43 @@ namespace MiAppVenom
 
                     }
                     break;
-                case Estado.ABURRIDO:
+                case Estado.HAMBRIENTO:
                     if (!avatar.estadoEstablecido())
                     {
-                        if (!avatar.parpadeando)
-                        {
-                            animParpadear.Stop();
-                            avatar.parpadeando = false;
-                        }
-
-                        ((Storyboard)this.Resources["animTriste"]).Begin();
+                        proxHambre = contadorTiempo + 12;
+                        ((Storyboard)this.Resources["animSaciado"]).Begin();
+                        devolver = 6;
                         avatar.establecerEstado();
-                        devolver = 2;
                     }
                     else
                     {
-                        if (avatar.Apetito > 35 && avatar.Diversion > 35 && avatar.Energia > 35)
+                        if (avatar.Apetito > 40 && avatar.Diversion > 40 && avatar.Energia > 40)
                         {
                             avatar.proximoEstado(Estado.FELIZ);
-                            ((Storyboard)this.Resources["animTelaraña"]).Begin();
+                            ((Storyboard)this.Resources["animContento"]).Begin();
                             devolver = 2;
+
                         }
                         else
                         {
-                            if (avatar.Diversion > 35 && avatar.Energia > 35 && avatar.Apetito < 35)
+                            if (avatar.Apetito > 40 && avatar.Energia > 40 && avatar.Diversion < 40)
                             {
-                                avatar.proximoEstado(Estado.HAMBRIENTO);
-                                ((Storyboard)this.Resources["animJugarYoyo"]).Begin();
-                                devolver = 2;
+                                avatar.proximoEstado(Estado.ABURRIDO);
                             }
                             else
                             {
-                                if (avatar.Energia < 35 || (avatar.Apetito < 35 && avatar.Diversion < 35))
+                                if (avatar.Energia < 40 || (avatar.Apetito < 40 && avatar.Diversion < 40))
                                 {
                                     avatar.proximoEstado(Estado.ENFADADO);
-                                    ((Storyboard)this.Resources["animTelaraña"]).Begin();
-                                    devolver = 2;
+                                }
+                                else
+                                {
+                                    if (avatar.estadoAnterior == Estado.HAMBRIENTO && proxHambre <= contadorTiempo)
+                                    {
+                                        proxHambre = contadorTiempo + 12;
+                                        ((Storyboard)this.Resources["animSaciado"]).Begin();
+                                        devolver = 6;
+                                    }
                                 }
                             }
                         }
@@ -906,83 +943,57 @@ namespace MiAppVenom
                     }
 
                     break;
-
-                case Estado.JUGANDO:
+                case Estado.ABURRIDO:
                     if (!avatar.estadoEstablecido())
                     {
-
-                        if (avatar.estadoAnterior == Estado.ABURRIDO)
+                        if (!avatar.parpadeando)
                         {
-                            ((Storyboard)this.Resources["animJugarYoyo"]).Begin();
-                            devolver = 2;
-                            avatar.estadoAnterior = Estado.DORMIDO;
-                        }
-                        else
-                        {
-                            switch (jugar)
-                            {
-                                case Juegos.TELARAÑA:
-                                    ((Storyboard)this.Resources["animTelaraña"]).Begin();
-                                    devolver = 15;
-                                    jugar = Juegos.NINGUNA;
-                                    avatar.establecerEstado();
-
-                                    break;
-                                case Juegos.YOYO:
-                                    ((Storyboard)this.Resources["animJugarYoyo"]).Begin();
-                                    devolver = 13;
-                                    jugar = Juegos.NINGUNA;
-                                    avatar.establecerEstado();
-
-                                    break;
-                            }
-                            boca.AllowDrop = false;
-                            dientes.AllowDrop = false;
-                            lengua.AllowDrop = false;
+                            animParpadear.Stop();
+                            avatar.parpadeando = false;
                         }
 
+                        ((Storyboard)this.Resources["animTriste"]).Begin();
+                        avatar.establecerEstado();
+                        devolver = 2;
                     }
                     else
                     {
-                        if ((avatar.Diversion < 35 && avatar.Apetito < 35) || avatar.Energia < 35)
+                        if (avatar.Apetito > 40 && avatar.Diversion > 40 && avatar.Energia > 40)
                         {
-                            avatar.proximoEstado(Estado.ENFADADO);
+                            avatar.proximoEstado(Estado.FELIZ);
+                            ((Storyboard)this.Resources["animTelaraña"]).Begin();
+                            devolver = 2;
                         }
                         else
                         {
-                            if (avatar.Diversion < 35 && avatar.Apetito > 35 && avatar.Energia > 35)
+                            if (avatar.Diversion > 40 && avatar.Energia > 40 && avatar.Apetito < 40)
                             {
-                                avatar.proximoEstado(Estado.ABURRIDO);
+                                avatar.proximoEstado(Estado.HAMBRIENTO);
+                                ((Storyboard)this.Resources["animJugarYoyo"]).Begin();
+                                devolver = 2;
                             }
                             else
                             {
-                                if (avatar.Apetito < 35 && avatar.Diversion > 35 && avatar.Energia > 35)
+                                if (avatar.Energia < 40 || (avatar.Apetito < 40 && avatar.Diversion < 40))
                                 {
-                                    avatar.proximoEstado(Estado.HAMBRIENTO);
-                                }
-                                else
-                                {
-                                    if (avatar.Apetito > 35 && avatar.Diversion > 35 && avatar.Energia > 35)
-                                    {
-                                        avatar.proximoEstado(Estado.FELIZ);
-                                        ((Storyboard)this.Resources["animContento"]).Begin();
-                                        devolver = 2;
-                                    }
+                                    avatar.proximoEstado(Estado.ENFADADO);
+                                    ((Storyboard)this.Resources["animTelaraña"]).Begin();
+                                    devolver = 2;
                                 }
                             }
                         }
-                        boca.AllowDrop = true;
-                        dientes.AllowDrop = true;
-                        lengua.AllowDrop = true;
                     }
                     break;
+                
+
+                
             }
 
             return devolver;
         }
 
 
-        private int comportamiento_juego_puzzle()
+        private int mecanismoComportamientoPuzzle()
         {
             int devolver = 1;
 
@@ -991,41 +1002,38 @@ namespace MiAppVenom
                 {
                     border_puzzle.IsEnabled = true;
                 }
-                if (tiempo_juego > 0 && !puzzle_completado)
+                if (tiempoPuzzle > 0 && !puzzleTerminado)
                 {
-                    tiempo_juego--;
-                    comprobar_puzzle();
-                    actualizar_reloj();
+                    tiempoPuzzle--;
+                    comprobarPuzzle();
+                    actualizarMinutero();
                 }
                 else
                 {
                     grid_piezas.IsEnabled = false;
                     puzzle.IsEnabled = false;
-                    if (puzzle_completado)
+                    if (puzzleTerminado)
                     {
-                        if (!label_fin)
+                        if (!lblFin)
                         {
                             grid_piezas.Visibility = Visibility.Hidden;
                             puzzle.Visibility = Visibility.Hidden;
                             int monedas = 0;
                             if (rdb_dificil.IsChecked == true)
                             {
-                                monedas = 3 * tiempo_juego;
+                                monedas = 3 * tiempoPuzzle;
                             }
                             else
                             {
                                 if (rdb_medio.IsChecked == true)
                                 {
-                                    monedas = tiempo_juego;
+                                    monedas = tiempoPuzzle;
                                 }
                                 else
                                 {
-                                    monedas = tiempo_juego / 3;
+                                    monedas = tiempoPuzzle / 3;
                                 }
                             }
-                            lbl_monedas_ganadas.Content = "Has ganado :" + Environment.NewLine + monedas.ToString() + " monedas";
-                            lbl_derrota_victoria.Content = "Enhorabuena," + Environment.NewLine + "¡ has ganado !";
-                            ((Storyboard)this.Resources["mostrarResultado"]).Begin();
                             avatar.Monedas += monedas;
                             avatar.sumarMonedas(monedas);
                             String dificultad = null;
@@ -1033,25 +1041,26 @@ namespace MiAppVenom
                             if (rdb_facil.IsChecked == true)
                             {
                                 dificultad = "fácil";
-                                tiempo = 90 - tiempo_juego;
+                                tiempo = 90 - tiempoPuzzle;
                             }
                             else
                             {
                                 if (rdb_medio.IsChecked == true)
                                 {
                                     dificultad = "media";
-                                    tiempo = 60 - tiempo_juego;
+                                    tiempo = 60 - tiempoPuzzle;
                                 }
                                 else
                                 {
                                     dificultad = "difícil";
-                                    tiempo = 30 - tiempo_juego;
+                                    tiempo = 30 - tiempoPuzzle;
                                 }
                             }
-                          
+                            lblPremio.Content = "PREMIO: " + Environment.NewLine + monedas.ToString() + " monedas";
+                            lblResultado.Content = "¡GANASTE" + Environment.NewLine + "EN "+dificultad.ToUpper()+"!";
+                            ((Storyboard)this.Resources["mostrarResultado"]).Begin();
                             avatar.puzzleGanado();
-                            label_fin = true;
-
+                            lblFin = true;
                             devolver = 5;
                         }
                         else
@@ -1059,22 +1068,20 @@ namespace MiAppVenom
                             grid_piezas.Visibility = Visibility.Visible;
                             puzzle.Visibility = Visibility.Visible;
                             ((Storyboard)this.Resources["ocultarResultado"]).Begin();
-                            label_fin = false;
+                            lblFin = false;
                             devolver = 1;
-                            fin_juego = true;
+                            finJuego = true;
                         }
 
                     }
                     else
                     {
-                        if (!label_fin)
+                        if (!lblFin)
                         {
                             grid_piezas.Visibility = Visibility.Hidden;
                             puzzle.Visibility = Visibility.Hidden;
-                            lbl_monedas_ganadas.Content = "";
-                            lbl_derrota_victoria.Content = "Lo siento," + Environment.NewLine + "¡ has perdido !";
-                            ((Storyboard)this.Resources["mostrarResultado"]).Begin();
-                            label_fin = true;
+                            lblPremio.Content = "";
+                            lblFin = true;
                             String dificultad = null;
                             if (rdb_facil.IsChecked == true)
                             {
@@ -1091,7 +1098,8 @@ namespace MiAppVenom
                                     dificultad = "difícil";
                                 }
                             }
-                         
+                            lblResultado.Content = "PERDISTE" + Environment.NewLine + "EN DIFICULTAD "+dificultad.ToUpper()+" :(";
+                            ((Storyboard)this.Resources["mostrarResultado"]).Begin();
                             devolver = 5;
                         }
                         else
@@ -1099,9 +1107,9 @@ namespace MiAppVenom
                             grid_piezas.Visibility = Visibility.Visible;
                             puzzle.Visibility = Visibility.Visible;
                             ((Storyboard)this.Resources["ocultarResultado"]).Begin();
-                            label_fin = false;
+                            lblFin = false;
                             devolver = 1;
-                            fin_juego = true;
+                            finJuego = true;
                         }
 
                     }
@@ -1110,21 +1118,21 @@ namespace MiAppVenom
                 }
            
 
-            if (fin_juego && cont >= prox)
+            if (finJuego && contadorTiempo >= prox)
             {
-                fin_juego = false;
-                jugando_puzzle = false;
+                finJuego = false;
+                jugandoPuzzle = false;
                 grid_piezas.IsEnabled = true;
                 puzzle.IsEnabled = true;
-                restablecer_puzzle_metodo();
-                puzzle_completado = false;
-                label_fin = false;
+                restablecerPuzzlePublic();
+                puzzleTerminado = false;
+                lblFin = false;
 
-                btn_trofeo.IsEnabled = true;
-                lbl_flecha_left.IsEnabled = true;
+                btnLogros.IsEnabled = true;
+                lblFlechaIzda.IsEnabled = true;
                 cvVenom.IsEnabled = true;
                 border_puzzle.IsEnabled = false;
-                estado_puzzle = false;
+                puzzleAbierto = false;
 
                 devolver = 1;
             }
@@ -1133,9 +1141,9 @@ namespace MiAppVenom
             return devolver;
         }
 
-        private void mostrar_botones(object sender, MouseButtonEventArgs e)
+        private void mostrarBotones(object sender, MouseButtonEventArgs e)
         {
-            if ((!botones && cont >= prox) || (!botones && avatar.estadoActual == Estado.SOÑANDO))
+            if ((!botonesActivos && contadorTiempo >= prox) || (!botonesActivos && avatar.estadoActual == Estado.SOÑANDO))
             {
                 if (avatar.estadoActual == Estado.DORMIDO || avatar.estadoActual == Estado.SOÑANDO)
                 {
@@ -1145,56 +1153,58 @@ namespace MiAppVenom
                 {
                     ((Storyboard)this.Resources["mostrarBotones"]).Begin();
                 }
-                botones = true;
-                cierre_auto_botones = cont;
+                botonesActivos = true;
+                cierreBotonesAccion = contadorTiempo;
             }
         }
 
 
-        private void mostrar_logros(object sender, MouseButtonEventArgs e)
+        private void mostrarLogros(object sender, MouseButtonEventArgs e)
         {
-            if (!estado_logros && cont >= prox)
+            if (!verLogrosActivo && contadorTiempo >= prox)
             {
-                if (estado_barra)
+                if (barraActiva)
                 {
                     ((Storyboard)this.Resources["cerrarBarra"]).Begin();
-                    lbl_flecha_right.IsEnabled = false;
-                    estado_barra = false;
+                    lblFlechaDcha.IsEnabled = false;
+                    barraActiva = false;
                 }
-                btn_puzzle.IsEnabled = false;
-                lbl_flecha_left.IsEnabled = false;
                 ((Storyboard)this.Resources["mostrarLogros"]).Begin();
+                btnPuzzle.IsEnabled = false;
+                lblFlechaIzda.IsEnabled = false;
                 cvVenom.IsEnabled = false;
-                estado_logros = true;
+                verLogrosActivo = true;
+                
+                
             }
         }
 
         
 
-        private void ocultar_logros(object sender, MouseButtonEventArgs e)
+        private void ocultarLogros(object sender, MouseButtonEventArgs e)
         {
-            if (estado_logros)
+            if (verLogrosActivo)
             {
                 
                 ((Storyboard)this.Resources["cerrarLogros"]).Begin();
-                btn_puzzle.IsEnabled = true;
-                lbl_flecha_left.IsEnabled = true;
+                btnPuzzle.IsEnabled = true;
+                lblFlechaIzda.IsEnabled = true;
                 cvVenom.IsEnabled = true;
-                estado_logros = false;
+                verLogrosActivo = false;
             }
         }
 
        
-        private int proximo_logro()
+        private int notificarProximoLogro()
         {
             Logro logro = avatar.logrosParaNotificar[0];
             avatar.logrosParaNotificar.RemoveAt(0);
-            int dev = cont + 4;
-            lbl_logro_desbloqueado.Content = logro.Descripcion;
+            int dev = contadorTiempo + 6;
+            lblTipoLogro.Content = logro.Descripcion;
         
 
            ((Storyboard)this.Resources["notificacion_logro"]).Begin();
-            desbloquear_logro(logro.Id);
+            desbloquearLogro(logro.Id);
             return dev;
         }
 
@@ -1202,42 +1212,42 @@ namespace MiAppVenom
 
         private void abrirPuzzle(object sender, RoutedEventArgs e)
         {
-            if (!estado_puzzle && cont >= prox)
+            if (!puzzleAbierto && contadorTiempo >= prox)
             {
-                if (estado_barra)
+                if (barraActiva)
                 {
                     ((Storyboard)this.Resources["cerrarBarra"]).Begin();
-                    lbl_flecha_right.IsEnabled = false;
-                    estado_barra = false;
+                    lblFlechaDcha.IsEnabled = false;
+                    barraActiva = false;
                 }
-                restablecer_puzzle_metodo();
-                btn_trofeo.IsEnabled = false;
-                lbl_flecha_left.IsEnabled = false;
-                ((Storyboard)this.Resources["elegirDificultadPuzzle"]).Begin();
+                restablecerPuzzlePublic();
                 border_puzzle.IsEnabled = false;
                 cvVenom.IsEnabled = false;
-                estado_puzzle = true;
+                puzzleAbierto = true;
+                btnLogros.IsEnabled = false;
+                lblFlechaIzda.IsEnabled = false;
+                ((Storyboard)this.Resources["elegirDificultadPuzzle"]).Begin();
+                
             }
         }
 
-        private void cerrar_puzzle(object sender, MouseButtonEventArgs e)
+        private void cerrarPuzzle(object sender, MouseButtonEventArgs e)
         {
-            if (estado_puzzle)
+            if (puzzleAbierto)
             {
-                btn_trofeo.IsEnabled = true;
-                lbl_flecha_left.IsEnabled = true;
-                cvVenom.IsEnabled = true;
                 ((Storyboard)this.Resources["cerrar_puzzle"]).Begin();
-                estado_puzzle = false;
-
-                fin_juego = false;
-                label_fin = false;
-                jugando_puzzle = false;
+                btnLogros.IsEnabled = true;
+                lblFlechaIzda.IsEnabled = true;
+                cvVenom.IsEnabled = true;
+                puzzleAbierto = false;
+                finJuego = false;
+                lblFin = false;
+                jugandoPuzzle = false;
                 grid_piezas.IsEnabled = true;
                 puzzle.IsEnabled = true;
-                restablecer_puzzle_metodo();
+                restablecerPuzzlePublic();
                 border_puzzle.IsEnabled = false;
-                puzzle_completado = false;
+                puzzleTerminado = false;
             }
 
         }
@@ -1245,28 +1255,28 @@ namespace MiAppVenom
 
       
 
-        private void actualizar_reloj()
+        private void actualizarMinutero()
         {
-            if ((tiempo_juego % 60).ToString().Length == 1)
+            if ((tiempoPuzzle % 60).ToString().Length == 1)
             {
-                lbl_reloj.Content = (tiempo_juego / 60).ToString() + " : 0" + (tiempo_juego % 60);
+                lbl_reloj.Content = (tiempoPuzzle / 60).ToString() + " : 0" + (tiempoPuzzle % 60);
             }
             else
             {
-                lbl_reloj.Content = (tiempo_juego / 60).ToString() + " : " + (tiempo_juego % 60);
+                lbl_reloj.Content = (tiempoPuzzle / 60).ToString() + " : " + (tiempoPuzzle % 60);
             }
         }
 
-        private void cerrar_empezar_juego(object sender, MouseButtonEventArgs e)
+        private void cerrarElegirDificultad(object sender, MouseButtonEventArgs e)
         {
-            if (estado_puzzle)
+            if (puzzleAbierto)
             {
-                btn_trofeo.IsEnabled = true;
-                lbl_flecha_left.IsEnabled = true;
+                btnLogros.IsEnabled = true;
+                lblFlechaIzda.IsEnabled = true;
                 cvVenom.IsEnabled = true;
                 ((Storyboard)this.Resources["ocultarElegirDificultad"]).Begin();
                 border_puzzle.IsEnabled = true;
-                estado_puzzle = false;
+                puzzleAbierto = false;
             }
         }
         
@@ -1278,28 +1288,28 @@ namespace MiAppVenom
             ((Storyboard)this.Resources["abrir_puzzle"]).Begin();
 
             prox++;
-            tiempo_comienzo = cont + 4;
+            tiempoComienzoPuzzle = contadorTiempo + 4;
             if (rdb_dificil.IsChecked == true)
             {
-                tiempo_juego = 30;
+                tiempoPuzzle = 30;
             }
             else
             {
                 if (rdb_medio.IsChecked == true)
                 {
-                    tiempo_juego = 60;
+                    tiempoPuzzle = 60;
                 }
                 else
                 {
-                    tiempo_juego = 90;
+                    tiempoPuzzle = 90;
                 }
             }
             avatar.nuevoPuzzle();
-            jugando_puzzle = true;
-            actualizar_reloj();
+            jugandoPuzzle = true;
+            actualizarMinutero();
         }
 
-        private void restablecer_puzzle_metodo()
+        private void restablecerPuzzlePublic()
         {
             pz1_1.Visibility = Visibility.Visible;
             pz1_2.Visibility = Visibility.Visible;
@@ -1311,27 +1321,27 @@ namespace MiAppVenom
             pz1_8.Visibility = Visibility.Visible;
             pz1_9.Visibility = Visibility.Visible;
 
-            pieza1.Source = pieza_puzzle.Source;
+            pieza1.Source = piezaPuzzle.Source;
             pieza1.Stretch = Stretch.Uniform;
-            pieza2.Source = pieza_puzzle.Source;
+            pieza2.Source = piezaPuzzle.Source;
             pieza2.Stretch = Stretch.Uniform;
-            pieza3.Source = pieza_puzzle.Source;
+            pieza3.Source = piezaPuzzle.Source;
             pieza3.Stretch = Stretch.Uniform;
-            pieza4.Source = pieza_puzzle.Source;
+            pieza4.Source = piezaPuzzle.Source;
             pieza4.Stretch = Stretch.Uniform;
-            pieza5.Source = pieza_puzzle.Source;
+            pieza5.Source = piezaPuzzle.Source;
             pieza5.Stretch = Stretch.Uniform;
-            pieza6.Source = pieza_puzzle.Source;
+            pieza6.Source = piezaPuzzle.Source;
             pieza6.Stretch = Stretch.Uniform;
-            pieza7.Source = pieza_puzzle.Source;
+            pieza7.Source = piezaPuzzle.Source;
             pieza7.Stretch = Stretch.Uniform;
-            pieza8.Source = pieza_puzzle.Source;
+            pieza8.Source = piezaPuzzle.Source;
             pieza8.Stretch = Stretch.Uniform;
-            pieza9.Source = pieza_puzzle.Source;
+            pieza9.Source = piezaPuzzle.Source;
             pieza9.Stretch = Stretch.Uniform;
         }
 
-        private void comprobar_puzzle()
+        private void comprobarPuzzle()
         {
             Boolean p1 = pieza1.Source.ToString().Equals(pz1_1.Source.ToString());
             Boolean p2 = pieza2.Source.ToString().Equals(pz1_2.Source.ToString());
@@ -1345,7 +1355,7 @@ namespace MiAppVenom
 
             if (p1 && p2 && p3 && p4 && p5 && p6 && p7 && p8 && p9)
             {
-                puzzle_completado = true;
+                puzzleTerminado = true;
             }
         }
 
@@ -1359,16 +1369,16 @@ namespace MiAppVenom
                 switch (con)
                 {
                     case "0":
+                        lbl_msg_inicio.Foreground = Brushes.Green;
                         lbl_msg_inicio.Content = "USUARIO CORRECTO";
-                        btn_puzzle.IsEnabled = true;
-                        btn_trofeo.IsEnabled = true;
+                        btnPuzzle.IsEnabled = true;
+                        btnLogros.IsEnabled = true;
                         cvVenom.IsEnabled = true;
                         ((Storyboard)this.Resources["ocultarAutenticacion"]).Begin();
                         usuario = tb_inicio_usuario.Text.ToString();
-                        inicializar_avatar();
+                        cargarAvatar();
                         break;
                     case "1":
-                        lbl_msg_inicio.Foreground = Brushes.DarkRed;
                         lbl_msg_inicio.Content = "CREDENCIALES INCORRECTOS";
                         break;
                 }
@@ -1379,7 +1389,7 @@ namespace MiAppVenom
             }
         }
 
-        private void animacion_registro(object sender, RoutedEventArgs e)
+        private void animIrRegistro(object sender, RoutedEventArgs e)
         {
             tb_inicio_usuario.Text = "";
             tb_inicio_contrasena.Password = "";
@@ -1387,7 +1397,7 @@ namespace MiAppVenom
             ((Storyboard)this.Resources["inicio_registro"]).Begin();
         }
 
-        private void animacion_ir_inicio(object sender, RoutedEventArgs e)
+        private void animIrAutenticar(object sender, RoutedEventArgs e)
         {
             try
             {
@@ -1401,13 +1411,13 @@ namespace MiAppVenom
 
 
                 ((Storyboard)this.Resources["ocultarRegistro"]).Begin();
-                btn_puzzle.IsEnabled = true;
-                btn_trofeo.IsEnabled = true;
+                btnPuzzle.IsEnabled = true;
+                btnLogros.IsEnabled = true;
                 cvVenom.IsEnabled = true;
                 MessageBox.Show("Si pulsas sobre el pecho de Venom reproducirá un espeluznante sonido...\n" +
                     "y en cualquier otra parte de su cuerpo, se mostrarán los botones de acción.\n\n¡PRUÉBALO!", "SABÍAS QUE...");
                 usuario = tb_registro_usuario.Text.ToString();
-                inicializar_avatar();
+                cargarAvatar();
 
             }
                 }
@@ -1446,7 +1456,7 @@ namespace MiAppVenom
 
         }
 
-        private void volver_atras_registro(object sender, RoutedEventArgs e)
+        private void volverAutenticar(object sender, RoutedEventArgs e)
         {
             tb_registro_usuario.Text = "";
             tb_registro_contrasena.Password = "";
@@ -1455,9 +1465,9 @@ namespace MiAppVenom
         }
 
 
-        private void jugar_yoyo(object sender, RoutedEventArgs e)
+        private void jugarYoyo(object sender, RoutedEventArgs e)
         {
-            if (botones)
+            if (botonesActivos)
             {
                 ((Storyboard)this.Resources["ocultarBotones"]).Begin();
             }
@@ -1466,14 +1476,14 @@ namespace MiAppVenom
             avatar.PuntosNivel += 15;
             avatar.Diversion += 19;
             avatar.Energia -= 3;
-            botones = false;
+            botonesActivos = false;
 
         }
 
 
-        private void lanzar_tela(object sender, RoutedEventArgs e)
+        private void lanzarTela(object sender, RoutedEventArgs e)
         {
-            if (botones)
+            if (botonesActivos)
             {
                 ((Storyboard)this.Resources["ocultarBotones"]).Begin();
             }
@@ -1482,12 +1492,12 @@ namespace MiAppVenom
             avatar.PuntosNivel += 20;
             avatar.Energia -= 7;
             avatar.Diversion += 25;
-            botones = false;
+            botonesActivos = false;
         }
 
         private void dormir(object sender, RoutedEventArgs e)
         {
-            if (botones)
+            if (botonesActivos)
             {
                 if (avatar.estadoActual == Estado.DORMIDO || avatar.estadoActual == Estado.SOÑANDO)
                 {
@@ -1515,7 +1525,7 @@ namespace MiAppVenom
 
                     break;
             }
-            botones = false;
+            botonesActivos = false;
         }
     }
 

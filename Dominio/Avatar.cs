@@ -55,8 +55,8 @@ namespace MiAppVenom
                 {
                     if (value > (nivel * 100))
                     {
-                        nivel++;
                         puntos = value - (nivel * 100);
+                        nivel++;
 
                         switch (nivel)
                         {

@@ -10,7 +10,9 @@ namespace MiAppVenom.Persistencia
 {
     public class GestorBD
     {
-        private String connString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=bbddVenomGotchi.accdb";
+        private String connString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\alber\Source\Repos\IPO2\bbddVenomGotchi.accdb";
+      //  private String connString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|\//bbddVenomGotchi.accdb"; //RUTA GENERICA FUNCIONA PERO NO ACTUALIZA NI INSERTA DATOS
+
 
         public GestorBD()
         {     }
